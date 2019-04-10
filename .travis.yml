@@ -8,4 +8,4 @@ install: yarn install
 
 script: yarn build
 
-# after_success: yarn deploy # cant deploy without creds
+after_success: yarn test
