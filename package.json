@@ -1,36 +1,31 @@
 {
-  "name": "folio",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build": "run-p clean:before parcel clean:after",
-    "clean:before": "rimraf dist/*",
-    "clean:after": "rimraf dist/*.svg",
-    "deploy": "cd dist && 1mb deploy && cd ..",
-    "dev": "parcel src/index.html --open",
-    "lint": "standard \"src/*\" --fix",
-    "parcel": "parcel build src/index.html --public-url .",
-    "serve": "http-server dist -o"
+  "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/Shuunen/folio/issues"
   },
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-inliner": "^1.0.10"
+  },
+  "description": "",
+  "homepage": "https://github.com/Shuunen/folio#readme",
+  "keywords": [],
+  "license": "GPL-3.0",
+  "name": "folio",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shuunen/folio.git"
   },
-  "keywords": [],
-  "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shuunen/folio/issues"
+  "scripts": {
+    "build": "run-s clean:before parcel clean:after",
+    "clean:after": "npx rimraf dist/*.svg",
+    "clean:before": "npx rimraf dist/*",
+    "deploy": "cd dist && npx 1mb-cli deploy && cd ..",
+    "dev": "parcel src/index.html",
+    "lint": "npx standard \"src/**/*.js\" --fix",
+    "parcel": "parcel build src/index.html --public-url .",
+    "serve": "npx http-server dist -o"
   },
-  "homepage": "https://github.com/Shuunen/folio#readme",
-  "dependencies": {
-    "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.3",
-    "parcel-plugin-inliner": "^1.0.7",
-    "rimraf": "^2.6.3"
-  },
-  "devDependencies": {
-    "http-server": "^0.11.1",
-    "standard": "^12.0.1"
-  }
+  "version": "1.0.0"
 }
