@@ -1,0 +1,11 @@
+language: node_js
+
+cache: yarn
+
+env: NODE_ENV=production
+
+install: yarn install
+
+script: yarn build
+
+# after_success: yarn deploy # cant deploy without creds
