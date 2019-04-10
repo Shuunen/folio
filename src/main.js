@@ -1,1 +1,1 @@
-document.write('<small>This fix HMR \\o/</small>')
+console.log('folio started')
