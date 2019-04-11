@@ -1,0 +1,21 @@
+$background: #202b38;
+$background-alt: #161f27;
+
+$text-main: #dbdbdb;
+$text-bright: #eeeeee;
+
+$links: #41adff;
+$focus: #0096bfab;
+$border: #dbdbdb;
+$code: #ffbe85;
+
+$button-hover: #324759;
+$animation-duration: 0.1s;
+
+$scrollbar-thumb: $button-hover;
+$scrollbar-thumb-hover: lighten($button-hover, 8%);
+
+$form-placeholder: #a9a9a9;
+$form-text: #ffffff;
+
+@import '~water.css/src/dark';

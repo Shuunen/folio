@@ -3,13 +3,19 @@
   "bugs": {
     "url": "https://github.com/Shuunen/folio/issues"
   },
+  "config": {
+    "port": 8080
+  },
   "dependencies": {
+    "cross-var": "^1.1.0",
     "google-lighthouse-puppeteer": "0.5.1",
     "http-server": "0.11.1",
     "npm-run-all": "4.1.5",
     "parcel-bundler": "1.12.3",
     "parcel-plugin-inliner": "1.0.10",
-    "parcel-plugin-static-files-copy": "2.0.0"
+    "parcel-plugin-static-files-copy": "2.0.0",
+    "sass": "^1.18.0",
+    "water.css": "https://github.com/kognise/water.css"
   },
   "description": "",
   "homepage": "https://github.com/Shuunen/folio#readme",
@@ -22,17 +28,18 @@
   },
   "scripts": {
     "build": "run-s clean:before parcel clean:after",
-    "clean:after": "npx rimraf dist/*.svg",
+    "build-and-serve": "run-s build serve",
+    "clean:after": "npx rimraf \"dist/*.{css,js,svg}\"",
     "clean:before": "npx rimraf dist/*",
     "deploy": "cd dist && npx 1mb-cli deploy && cd ..",
-    "dev": "parcel src/index.html",
+    "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
     "lint": "npx standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
-    "parcel": "parcel build src/index.html --public-url .",
-    "serve": "http-server dist",
+    "parcel": "parcel build src/index.html --public-url . --no-source-maps",
+    "serve": "cross-var http-server dist -p $npm_package_config_port",
     "test": "npm-run-all build --parallel serve test:lh --race",
     "test:lh": "run-s test:lh:*",
-    "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports",
-    "test:lh:check-metrics": "node tests/check.js"
+    "test:lh:check-metrics": "node tests/check.js",
+    "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports"
   },
   "version": "1.0.0"
 }
