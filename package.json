@@ -12,7 +12,7 @@
     "http-server": "0.11.1",
     "npm-run-all": "4.1.5",
     "parcel-bundler": "1.12.3",
-    "parcel-plugin-inliner": "1.0.10",
+    "parcel-plugin-purgecss": "^2.1.0",
     "parcel-plugin-static-files-copy": "2.0.0",
     "sass": "^1.18.0",
     "water.css": "https://github.com/kognise/water.css"
@@ -27,7 +27,7 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "run-s clean:before parcel clean:after",
+    "build": "run-s clean:before parcel",
     "build-and-serve": "run-s build serve",
     "clean:after": "npx rimraf \"dist/*.{css,js,svg}\"",
     "clean:before": "npx rimraf dist/*",

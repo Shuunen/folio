@@ -19,3 +19,18 @@ $form-placeholder: #a9a9a9;
 $form-text: #ffffff;
 
 @import '~water.css/src/dark';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 18px;
+  padding: 12px 14px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+main {
+  background: linear-gradient(to left top, #6441a5 7%, #2a0845 90%);
+}

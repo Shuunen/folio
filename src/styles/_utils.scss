@@ -1,0 +1,14 @@
+.center {
+  text-align: center;
+}
+
+.row, .col {
+  display: flex;
+  &.center {
+    justify-content: center;
+  }
+}
+
+.col {
+  flex-direction: column;
+}
