@@ -37,7 +37,7 @@
     "parcel": "parcel build src/index.html --public-url . --no-source-maps",
     "serve": "cross-var http-server dist -p $npm_package_config_port",
     "test": "npm-run-all build --parallel serve test:lh --race",
-    "test:lh": "run-s test:lh:*",
+    "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
     "test:lh:check-metrics": "node tests/check.js",
     "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports"
   },
