@@ -1,7 +1,15 @@
+.links {
+  justify-content: center;
+}
 .link {
   border: 1px solid $border;
-  margin-right: 1em;
+  margin-top: 2em;
+  margin-right: 1.5em;
   padding: 1em 2em 1.2em;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &--icon {
     background-repeat: repeat-x;
@@ -37,4 +45,13 @@
     background-image: url("icons/code.svg");
   }
   */
+}
+
+@media (max-width: 660px) {
+  .links {
+    justify-content: space-around;
+  }
+  .link {
+    margin-right: 0;
+  }
 }

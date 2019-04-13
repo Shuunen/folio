@@ -14,6 +14,7 @@
     "parcel-bundler": "1.12.3",
     "parcel-plugin-purgecss": "^2.1.0",
     "parcel-plugin-static-files-copy": "2.0.0",
+    "rfs": "^8.0.4",
     "sass": "^1.18.0",
     "water.css": "https://github.com/kognise/water.css"
   },
@@ -34,7 +35,7 @@
     "deploy": "cd dist && npx 1mb-cli deploy && cd ..",
     "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
     "lint": "npx standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
-    "parcel": "parcel build src/index.html --public-url . --no-source-maps",
+    "parcel": "parcel build src/index.html --no-source-maps",
     "serve": "cross-var http-server dist -p $npm_package_config_port",
     "test": "npm-run-all build --parallel serve test:lh --race",
     "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
