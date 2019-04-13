@@ -7,6 +7,15 @@
   &.center {
     justify-content: center;
   }
+  &.around {
+    justify-content: space-around;
+  }
+  &.evenly {
+    justify-content: space-evenly;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
 }
 
 .col {

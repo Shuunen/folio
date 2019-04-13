@@ -1,3 +1,5 @@
+@import '~rfs/scss';
+
 $spaces: (1, 2, 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 150, 200); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right);
 
@@ -11,6 +13,14 @@ $sides: (top, bottom, left, right);
   .m#{$space} {
     margin: #{$space}em;
   }
+  .mv#{$space} {
+    margin-top: #{$space}em;
+    margin-bottom: #{$space}em;
+  }
+  .mh#{$space} {
+    margin-left: #{$space}em;
+    margin-right: #{$space}em;
+  }
   .p#{$space} {
     padding: #{$space}em;
   }
@@ -23,7 +33,7 @@ $sides: (top, bottom, left, right);
     padding-right: #{$space}em;
   }
   .fz#{$space} {
-    font-size: #{$space}rem;
+    @include rfs($space);
   }
   @each $side in $sides {
     .m#{str-slice($side, 0, 1)}#{$space} {
