@@ -31,6 +31,10 @@ body {
 }
 
 main {
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   border-radius: 0 42px;
   box-sizing: border-box;
   background: linear-gradient(to left top, $blue 7%, darken($blue, 12%) 90%);
