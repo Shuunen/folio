@@ -20,6 +20,9 @@
     "water.css": "https://github.com/kognise/water.css"
   },
   "description": "",
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
   "homepage": "https://github.com/Shuunen/folio#readme",
   "keywords": [],
   "license": "GPL-3.0",
@@ -35,7 +38,7 @@
     "clean:before": "npx rimraf dist/*",
     "deploy": "cd dist && npx 1mb-cli deploy && cd ..",
     "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
-    "lint": "npx standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
+    "lint": "standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
     "parcel": "parcel build src/index.html --public-url . --no-source-maps",
     "serve": "cross-var http-server dist -p $npm_package_config_port",
     "test": "npm-run-all build --parallel serve test:lh --race",
