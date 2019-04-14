@@ -3,6 +3,3 @@
 
 # HTTPS enforcement
 http://rrl-folio.netlify.com https://rrl-folio.netlify.com
-
-# History Pushstate and Single Page Apps
-/*    /index.html   200
