@@ -21,7 +21,7 @@
   },
   "description": "",
   "devDependencies": {
-    "standard": "^12.0.1"
+    "standard": "12.0.1"
   },
   "homepage": "https://github.com/Shuunen/folio#readme",
   "keywords": [],
