@@ -1,26 +1,23 @@
-$background: #202b38;
-$background-alt: #161f27;
-
-$text-main: #dbdbdb;
-$text-bright: #eeeeee;
-
-$links: #41adff;
-$focus: #0096bfab;
-$border: #dbdbdb;
-$code: #ffbe85;
-
-$button-hover: #324759;
+@import "./variables";
+/* Variables used by water.css */
+$background-alt: $blue;
+$text-bright: $white;
+$links: $accent;
+$border: $orange;
+$button-hover: $grey;
+/* It's also possible to use/customize these
+$background: orange;
+$text-main: red;
+$focus: yellow;
+$code: red;
 $animation-duration: 0.1s;
+$form-placeholder: green;
+$form-text: orange;
+*/
+@import "~water.css/src/dark";
 
-$scrollbar-thumb: $button-hover;
-$scrollbar-thumb-hover: lighten($button-hover, 8%);
-
-$form-placeholder: #a9a9a9;
-$form-text: #ffffff;
-
-@import '~water.css/src/dark';
-
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -30,8 +27,15 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   max-width: inherit;
+  background: linear-gradient(to right bottom, $blue 7%, darken($blue, 12%) 90%);
 }
 
 main {
-  background: linear-gradient(to left top, #6441a5 7%, #2a0845 90%);
+  border-radius: 0 42px;
+  box-sizing: border-box;
+  background: linear-gradient(to left top, $blue 7%, darken($blue, 12%) 90%);
+}
+
+strong {
+  color: lighten($blue, 66%);
 }
