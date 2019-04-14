@@ -1,8 +1,11 @@
 .links {
   justify-content: center;
 }
+
 .link {
-  border: 1px solid $border;
+  display: flex;
+  align-items: center;
+  border: 1px solid $grey;
   margin-top: 2em;
   margin-right: 1.5em;
   padding: 1em 2em 1.2em;
@@ -18,33 +21,34 @@
   }
 
   &,
-  span {
-    transition: border 0.2s, color 0.3s;
+  .text,
+  .icon {
+    transition: border 0.2s, color 0.2s;
   }
 
-  span {
+  .icon {
+    color: $grey;
+    height: 24px;
+    margin-bottom: -2px;
+    margin-left: -0.8em;
+    margin-right: 0.6em;
+  }
+
+  .text {
     border-bottom: 1px solid currentColor;
   }
 
   &:hover {
     text-decoration: none;
-    border: 1px solid currentColor;
+    border: 1px solid $accent;
 
-    span {
-      color: $border;
+    .text {
+      color: $orange;
+    }
+    .icon {
+      color: currentColor;
     }
   }
-  /*
-  &.github {
-    background-image: url("icons/github.svg");
-  }
-  &.linkedin {
-    background-image: url("icons/linkedin.svg");
-  }
-  &.codepen {
-    background-image: url("icons/code.svg");
-  }
-  */
 }
 
 @media (max-width: 660px) {
