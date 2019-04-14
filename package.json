@@ -46,5 +46,5 @@
     "test:lh:check-metrics": "node tests/check.js",
     "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }
