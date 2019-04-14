@@ -8,5 +8,7 @@ Then I thought what's another cool framework which is not react and that has don
 
 ## Thanks
 
-- [Feather Icons](https://feathericons.com/)
-- [Parcel Js](https://parceljs.org/)
+- [Feather Icons](https://feathericons.com/) : nice looking svg icons
+- [Parcel Js](https://parceljs.org/) : fast & easy bundler
+- [Web App Manifest Generator](https://app-manifest.firebaseapp.com/) : generate manifest.json easily
+- [GTmetrix](https://gtmetrix.com) : great tool to check & monitor websites performances
