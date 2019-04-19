@@ -5786,7 +5786,7 @@ parcel-plugin-static-files-copy@2.0.0:
     minimatch "3.0.4"
     path "0.12.7"
 
-parcel-plugin-sw-precache@^1.1.1:
+parcel-plugin-sw-precache@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/parcel-plugin-sw-precache/-/parcel-plugin-sw-precache-1.1.1.tgz#e47a6d3e137942af70d7822d04a055f1bc2e61b1"
   integrity sha512-MOhPi/7RPy6UyP7DKWoiOSKt7s+m1tm4WIGhdTMohFdTtPIZS/GI8asNPkH8sdFbF7VDp62sjmr8ugWh81Jq2w==
@@ -7039,10 +7039,10 @@ safer-eval@^1.3.0:
   dependencies:
     clones "^1.2.0"
 
-sass@1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.18.0.tgz#f34371c31e268e555c2ac8e43d2b64d194e7d090"
-  integrity sha512-Mc579V+BhH693tqt+lvph+gmRqmC6BjtsEVsjkW1944DEA5a0wPuCi781hL3fY4EDuqZnEVPbu42CZRywwE97g==
+sass@1.19.0:
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.19.0.tgz#5de82c713d4299fac57384ef5219534a37fe3e6c"
+  integrity sha512-8kzKCgxCzh8/zEn3AuRwzLWVSSFj8omkiGwqdJdeOufjM+I88dXxu9LYJ/Gw4rRTHXesN0r1AixBuqM6yLQUJw==
   dependencies:
     chokidar "^2.0.0"
 
@@ -7366,7 +7366,7 @@ standard-engine@~9.0.0:
     minimist "^1.1.0"
     pkg-conf "^2.0.0"
 
-standard@^12.0.1:
+standard@12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/standard/-/standard-12.0.1.tgz#0fc5a8aa6c34c546c5562aae644242b24dae2e61"
   integrity sha512-UqdHjh87OG2gUrNCSM4QRLF5n9h3TFPwrCNyVlkqu31Hej0L/rc8hzKqVvkb2W3x0WMq7PzZdkLfEcBhVOR6lg==
