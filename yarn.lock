@@ -5770,10 +5770,10 @@ parcel-bundler@1.12.3:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-parcel-plugin-purgecss@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/parcel-plugin-purgecss/-/parcel-plugin-purgecss-2.1.0.tgz#c66404b1b1b0ee874147c3126a76be26c9ffc8da"
-  integrity sha512-0d0e7mtmIsKChz4jVyFh1KftP8d+Xv5UX2QTj0PKeT8gRmyPqWYHtxIau6zFqCnOdgKOfqD8qpGfYM7hVgtyNA==
+parcel-plugin-purgecss@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-purgecss/-/parcel-plugin-purgecss-2.1.2.tgz#3358ebbfaee113969be4b6c7573894007189f85a"
+  integrity sha512-Tm1yny3tvryWhy5FIa9J1IbNE7KEo/uE/PnOT003vF4H2qzWaiTlIxkM1BAiaDfc5nuqhBlMdhvQOapkacfhmw==
   dependencies:
     purgecss "^1.1.0"
 
