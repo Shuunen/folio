@@ -1,6 +1,6 @@
 /*
   Cache-Control: public, max-age=31536000
-  Content-Security-Policy: script-src 'self'; base-uri 'self';
+  Content-Security-Policy: script-src 'self' 'strict-dynamic' 'nonce-rAnd0m123' 'unsafe-inline' http: https:; object-src 'none'; base-uri 'self';
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
