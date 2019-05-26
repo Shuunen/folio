@@ -1,7 +1,8 @@
 .cache
-.vscode
+.env
+*.log
+*.tgz
 dist
 node_modules
 package-lock.json
 tests/reports
-yarn-error.log
