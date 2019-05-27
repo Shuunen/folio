@@ -3,10 +3,10 @@
 [![Travis (.org)](https://img.shields.io/travis/shuunen/folio.svg)](https://travis-ci.org/Shuunen/folio)
 [![David](https://img.shields.io/david/shuunen/folio.svg)](https://david-dm.org/shuunen/folio)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/rrl-folio.netlify.com.svg?publish)](https://observatory.mozilla.org/analyze/rrl-folio.netlify.com)
+[![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Shuunen/folio.svg)](https://lgtm.com/projects/g/Shuunen/folio/)
 [![Website](https://img.shields.io/website/https/rrl-folio.netlify.com.svg)](https://rrl-folio.netlify.com)
-[![GitHub license](https://img.shields.io/github/license/shuunen/folio.svg?color=blue)](https://github.com/Shuunen/folio/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/shuunen/folio.svg?color=success)](https://github.com/Shuunen/folio/blob/master/LICENSE)
 [![BCH compliance](https://bettercodehub.com/edge/badge/Shuunen/folio?branch=master)](https://bettercodehub.com/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a0e37cb6-d2c2-4bc5-bf50-67f09c8aad9c/deploy-status)](https://app.netlify.com/sites/rrl-folio/deploys)
 
 This is my personal promoting / landing / minimalist page.
 
