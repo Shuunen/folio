@@ -44,8 +44,9 @@
         "lint": "standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
         "prebuild": "npx rimraf dist/*",
         "prestart": "npm run build",
-        "start": "cross-var http-server dist -p $npm_package_config_port",
-        "test": "npm-run-all check lint --parallel start test:lh --race",
+        "serve": "cross-var http-server dist -p $npm_package_config_port",
+        "start": "npm run serve",
+        "test": "npm-run-all check lint build --parallel serve test:lh --race",
         "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
         "test:lh:check-metrics": "node tests/check.js",
         "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports"
