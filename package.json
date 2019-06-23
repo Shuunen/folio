@@ -29,16 +29,13 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "run-s clean:before parcel",
-    "build-and-serve": "run-s build serve",
-    "clean:after": "npx rimraf \"dist/*.{css,js,svg}\"",
-    "clean:before": "npx rimraf dist/*",
-    "deploy": "cd dist && npx 1mb-cli deploy && cd ..",
+        "build": "parcel build src/index.html --public-url . --no-source-maps",
     "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
     "lint": "standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
-    "parcel": "parcel build src/index.html --public-url . --no-source-maps",
-    "serve": "cross-var http-server dist -p $npm_package_config_port",
-    "test": "npm-run-all build --parallel serve test:lh --race",
+        "prebuild": "npx rimraf dist/*",
+        "prestart": "npm run build",
+        "start": "cross-var http-server dist -p $npm_package_config_port",
+        "test": "npm-run-all check lint --parallel start test:lh --race",
     "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
     "test:lh:check-metrics": "node tests/check.js",
     "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports"
