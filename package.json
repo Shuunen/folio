@@ -10,6 +10,7 @@
         "http-server": "0.11.1",
         "npm-run-all": "4.1.5",
         "parcel-bundler": "1.12.3",
+        "parcel-plugin-inliner": "1.0.10",
         "parcel-plugin-purgecss": "2.1.2",
         "parcel-plugin-static-files-copy": "2.1.2",
         "parcel-plugin-sw-precache": "1.1.1"
@@ -22,7 +23,6 @@
         "src/",
         "static/"
     ],
-    "private": true,
     "homepage": "https://github.com/Shuunen/folio#readme",
     "keywords": [
         "Romain Racamier-Lafon",
@@ -33,6 +33,7 @@
     ],
     "license": "GPL-3.0",
     "name": "folio",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Shuunen/folio.git"
@@ -42,6 +43,7 @@
         "check": "npx repo-check",
         "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
         "lint": "standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
+        "postbuild": "npx rimraf dist/{*.css,main.*.js}",
         "prebuild": "npx rimraf dist/*",
         "prestart": "npm run build",
         "serve": "cross-var http-server dist -p $npm_package_config_port",
