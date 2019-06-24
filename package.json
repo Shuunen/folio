@@ -2,18 +2,21 @@
     "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
     "bugs": "https://github.com/Shuunen/folio/issues",
     "config": {
+        "lh-port": 8088,
         "port": 8080
     },
     "dependencies": {
         "cross-var": "1.1.0",
         "google-lighthouse-puppeteer": "0.5.2",
-        "http-server": "0.11.1",
         "npm-run-all": "4.1.5",
         "parcel-bundler": "1.12.3",
         "parcel-plugin-inliner": "1.0.10",
         "parcel-plugin-purgecss": "2.1.2",
         "parcel-plugin-static-files-copy": "2.1.2",
-        "parcel-plugin-sw-precache": "1.1.1"
+        "parcel-plugin-sw-precache": "1.1.1",
+        "repo-check": "1.1.4",
+        "rimraf": "2.6.3",
+        "serve": "11.0.2"
     },
     "description": "My personal portfolio",
     "devDependencies": {
@@ -40,15 +43,16 @@
     },
     "scripts": {
         "build": "parcel build src/index.html --public-url . --no-source-maps",
-        "check": "npx repo-check",
+        "check": "repo-check",
         "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
         "lint": "standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
-        "postbuild": "npx rimraf dist/{*.css,main.*.js}",
-        "prebuild": "npx rimraf dist/*",
+        "postbuild": "rimraf dist/{*.css,main.*.js}",
+        "prebuild": "rimraf dist/*",
         "prestart": "npm run build",
-        "serve": "cross-var http-server dist -p $npm_package_config_port",
+        "serve": "cross-var serve dist --listen $npm_package_config_port --single",
+        "serve:lh": "cross-var serve dist --listen $npm_package_config_lh_port --single",
         "start": "npm run serve",
-        "test": "npm-run-all check lint build --parallel serve test:lh --race",
+        "test": "npm-run-all check lint build --parallel serve:lh test:lh --race",
         "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
         "test:lh:check-metrics": "node tests/check.js",
         "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports"
