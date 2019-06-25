@@ -1,5 +1,5 @@
 // Activate the service worker
-if ('serviceWorker' in navigator && document.location.hostname !== 'localhost') {
+if ('serviceWorker' in navigator && document.location.port !== '8080') {
   window.addEventListener('load', function () {
     // this way Parcel won't look for service-worker.js file
     const swName = 'service-worker.js'
