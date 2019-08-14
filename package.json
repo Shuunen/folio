@@ -15,7 +15,7 @@
         "parcel-plugin-static-files-copy": "2.2.1",
         "parcel-plugin-sw-precache": "1.1.1",
         "repo-check": "1.1.4",
-        "rimraf": "2.7.0",
+        "rimraf": "2.7.1",
         "serve": "11.1.0"
     },
     "description": "My personal portfolio",
