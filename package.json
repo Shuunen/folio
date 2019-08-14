@@ -20,7 +20,7 @@
     },
     "description": "My personal portfolio",
     "devDependencies": {
-        "standard": "12.0.1"
+        "standard": "13.1.0"
     },
     "files": [
         "src/",
