@@ -40,13 +40,14 @@
   ],
   "license": "GPL-3.0",
   "name": "folio",
+  "optionalDependencies": {
+    "acorn": "7.1.0",
+    "https-proxy-agent": "3.0.0"
+  },
   "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shuunen/folio.git"
-  },
-  "optionalDependencies": {
-    "acorn": "7.1.0"
   },
   "scripts": {
     "build": "parcel build src/index.html --public-url . --no-source-maps",
