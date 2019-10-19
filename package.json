@@ -45,6 +45,9 @@
     "type": "git",
     "url": "git+https://github.com/Shuunen/folio.git"
   },
+  "optionalDependencies": {
+    "acorn": "7.1.0"
+  },
   "scripts": {
     "build": "parcel build src/index.html --public-url . --no-source-maps",
     "check": "npx repo-check",
