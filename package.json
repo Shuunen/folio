@@ -1,61 +1,70 @@
 {
-    "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
-    "bugs": "https://github.com/Shuunen/folio/issues",
-    "config": {
-        "lh-port": 8088,
-        "port": 8080
-    },
-    "dependencies": {
-        "cross-var": "1.1.0",
-        "google-lighthouse-puppeteer": "0.5.3",
-        "npm-run-all": "4.1.5",
-        "parcel-bundler": "1.12.4",
-        "parcel-plugin-inliner": "1.0.10",
-        "parcel-plugin-purgecss": "2.1.2",
-        "parcel-plugin-static-files-copy": "2.2.1",
-        "parcel-plugin-sw-precache": "1.1.1",
-        "repo-check": "1.1.4",
-        "rimraf": "3.0.0",
-        "serve": "11.2.0"
-    },
-    "description": "My personal portfolio",
-    "devDependencies": {
-        "standard": "12.0.1"
-    },
-    "files": [
-        "src/",
-        "static/"
-    ],
-    "homepage": "https://github.com/Shuunen/folio#readme",
-    "keywords": [
-        "Romain Racamier-Lafon",
-        "personal",
-        "website",
-        "page",
-        "portfolio"
-    ],
-    "license": "GPL-3.0",
-    "name": "folio",
-    "private": true,
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Shuunen/folio.git"
-    },
-    "scripts": {
-        "build": "parcel build src/index.html --public-url . --no-source-maps",
-        "check": "repo-check",
-        "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
-        "lint": "standard \"src/**/*.js\" \"tests/**/*.js\" --fix",
-        "postbuild": "rimraf dist/{*.css,main.*.js}",
-        "prebuild": "rimraf dist/*",
-        "prestart": "npm run build",
-        "serve": "cross-var serve dist --listen $npm_package_config_port --single",
-        "serve:lh": "cross-var serve dist --listen $npm_package_config_lh_port --single",
-        "start": "npm run serve",
-        "test": "npm-run-all check lint build --parallel serve:lh test:lh --race",
-        "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
-        "test:lh:check-metrics": "node tests/check.js",
-        "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports"
-    },
-    "version": "2.0.0"
+  "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
+  "bugs": "https://github.com/Shuunen/folio/issues",
+  "config": {
+    "lh-port": 8088,
+    "port": 8080
+  },
+  "dependencies": {
+    "cross-var": "1.1.0",
+    "google-lighthouse-puppeteer": "0.5.3",
+    "npm-run-all": "4.1.5",
+    "parcel-bundler": "1.12.4",
+    "parcel-plugin-inliner": "1.0.10",
+    "parcel-plugin-purgecss": "2.1.2",
+    "parcel-plugin-static-files-copy": "2.2.1",
+    "parcel-plugin-sw-precache": "1.1.1",
+    "rimraf": "3.0.0",
+    "serve": "11.2.0"
+  },
+  "description": "My personal portfolio",
+  "devDependencies": {
+    "eslint": "6.5.1",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1"
+  },
+  "files": [
+    "src",
+    "static"
+  ],
+  "homepage": "https://github.com/Shuunen/folio#readme",
+  "keywords": [
+    "Romain Racamier-Lafon",
+    "personal",
+    "website",
+    "page",
+    "portfolio"
+  ],
+  "license": "GPL-3.0",
+  "name": "folio",
+  "optionalDependencies": {
+    "acorn": "7.1.0"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shuunen/folio.git"
+  },
+  "scripts": {
+    "build": "parcel build src/index.html --public-url . --no-source-maps",
+    "check": "npx repo-check",
+    "ci": "npm run test",
+    "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
+    "lint": "eslint \"**/*.js\" --fix --ignore-path .gitignore",
+    "postbuild": "rimraf dist/{*.css,main.*.js}",
+    "prebuild": "rimraf dist/*",
+    "prestart": "npm run build",
+    "serve": "cross-var serve dist --listen $npm_package_config_port --single",
+    "serve:lh": "cross-var serve dist --listen $npm_package_config_lh_port --single",
+    "start": "npm run serve",
+    "test": "npm-run-all check lint build --parallel serve:lh test:lh --race",
+    "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
+    "test:lh:check-metrics": "node tests/check.js",
+    "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports",
+    "update": "npx npm-check-updates -u"
+  },
+  "version": "2.0.0"
 }

@@ -4,6 +4,5 @@
 *.tgz
 dist
 node_modules
-package-lock.json
 tests/reports
 *.stackdump
