@@ -41,8 +41,7 @@
   "license": "GPL-3.0",
   "name": "folio",
   "optionalDependencies": {
-    "acorn": "7.1.0",
-    "https-proxy-agent": "3.0.0"
+    "acorn": "7.1.0"
   },
   "private": true,
   "repository": {
