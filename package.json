@@ -53,7 +53,7 @@
     "check": "npx repo-check",
     "ci": "npm run test",
     "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
-    "lint": "eslint **/*.js --fix --ignore-path .gitignore",
+    "lint": "eslint \"**/*.js\" --fix --ignore-path .gitignore",
     "postbuild": "rimraf dist/{*.css,main.*.js}",
     "prebuild": "rimraf dist/*",
     "prestart": "npm run build",
