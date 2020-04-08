@@ -1,22 +1,6 @@
 {
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/folio/issues",
-  "config": {
-    "lh-port": 8088,
-    "port": 8080
-  },
-  "dependencies": {
-    "cross-var": "1.1.0",
-    "google-lighthouse-puppeteer": "1.0.0",
-    "npm-run-all": "4.1.5",
-    "parcel-bundler": "1.12.4",
-    "parcel-plugin-inliner": "1.0.14",
-    "parcel-plugin-purgecss": "2.1.3",
-    "parcel-plugin-static-files-copy": "2.3.1",
-    "parcel-plugin-sw-precache": "1.1.1",
-    "rimraf": "3.0.2",
-    "serve": "11.3.0"
-  },
   "description": "My personal portfolio",
   "devDependencies": {
     "eslint": "6.8.0",
@@ -24,7 +8,17 @@
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.0.1"
+    "eslint-plugin-standard": "4.0.1",
+    "google-lighthouse-puppeteer": "1.0.0",
+    "npm-run-all": "4.1.5",
+    "parcel-bundler": "1.12.4",
+    "parcel-plugin-inliner": "1.0.14",
+    "parcel-plugin-purgecss": "2.1.3",
+    "parcel-plugin-static-files-copy": "2.3.1",
+    "parcel-plugin-sw-precache": "1.1.1",
+    "repo-check": "1.5.0",
+    "rimraf": "3.0.2",
+    "serve": "11.3.0"
   },
   "files": [
     "src",
@@ -40,9 +34,6 @@
   ],
   "license": "GPL-3.0",
   "name": "folio",
-  "optionalDependencies": {
-    "acorn": "7.1.1"
-  },
   "private": true,
   "repository": {
     "type": "git",
@@ -50,15 +41,17 @@
   },
   "scripts": {
     "build": "parcel build src/index.html --public-url . --no-source-maps",
-    "check": "npx repo-check",
+    "check": "repo-check",
     "ci": "npm run test",
-    "dev": "cross-var parcel src/index.html --port $npm_package_config_port",
-    "lint": "eslint \"**/*.js\" --fix --ignore-path .gitignore",
+    "dev": "parcel src/index.html --port 8080",
+    "lint": "eslint --fix --ignore-path .gitignore --ext .js .",
     "postbuild": "rimraf dist/{*.css,main.*.js}",
+    "postversion": "git push && git push --tags",
     "prebuild": "rimraf dist/*",
     "prestart": "npm run build",
-    "serve": "cross-var serve dist --listen $npm_package_config_port --single",
-    "serve:lh": "cross-var serve dist --listen $npm_package_config_lh_port --single",
+    "preversion": "npm run ci",
+    "serve": "serve dist --listen 8080 --single",
+    "serve:lh": "serve dist --listen 8088 --single",
     "start": "npm run serve",
     "test": "npm-run-all check lint build --parallel serve:lh test:lh --race",
     "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
