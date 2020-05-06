@@ -41,7 +41,7 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "parcel build src/index.html --public-url . --no-source-maps",
+    "build": "parcel build src/index.html --public-url . --no-source-maps --detailed-report",
     "check": "repo-check",
     "ci": "npm run test",
     "dev": "parcel src/index.html --port 8080",
