@@ -6,16 +6,8 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: [
-    'standard'
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module'
-  },
+  extends: ['standard'],
+  parserOptions: { ecmaVersion: 2018 },
+  plugins: ['html'],
   rules
 }
