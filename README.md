@@ -4,9 +4,9 @@
 
 [![Build Status](https://travis-ci.org/Shuunen/folio.svg?branch=master)](https://travis-ci.org/Shuunen/folio)
 [![David](https://img.shields.io/david/shuunen/folio.svg)](https://david-dm.org/shuunen/folio)
-[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/rrl-folio.netlify.com.svg?publish)](https://observatory.mozilla.org/analyze/rrl-folio.netlify.com)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/rrl-folio.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/rrl-folio.netlify.app)
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Shuunen/folio.svg)](https://lgtm.com/projects/g/Shuunen/folio/)
-[![Website](https://img.shields.io/website/https/rrl-folio.netlify.com.svg)](https://rrl-folio.netlify.com)
+[![Website](https://img.shields.io/website/https/rrl-folio.netlify.app.svg)](https://rrl-folio.netlify.app)
 [![BCH compliance](https://bettercodehub.com/edge/badge/Shuunen/folio?branch=master)](https://bettercodehub.com/)
 
 > This is my personal promoting / landing / minimalist page.
