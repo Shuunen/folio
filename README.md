@@ -15,7 +15,7 @@
 
 - [Feather Icons](https://feathericons.com) : nice looking svg icons
 - [Gtmetrix](https://gtmetrix.com) : great tool to check & monitor websites performances
-- [Netlify](https://www.netlify.com) : awesome company that offers hosting for OSS
+- [Netlify](https://netlify.com) : awesome company that offers hosting for OSS
 - [Parcel Js](https://parceljs.org) : fast & easy to use bundler
 - [Shields.io](https://shields.io) : super platform centralizing badges
 - [Travis-ci.org](https://travis-ci.org) : for providing free continuous deployments
