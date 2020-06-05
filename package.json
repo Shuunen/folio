@@ -19,7 +19,7 @@
     "parcel-plugin-sw-precache": "1.1.2",
     "repo-check": "1.10.0",
     "rimraf": "3.0.2",
-    "serve": "11.3.0"
+    "serve": "11.3.2"
   },
   "files": [
     "src",
