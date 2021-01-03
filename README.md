@@ -22,5 +22,5 @@
 - [Parcel Js](https://parceljs.org) : fast & easy to use bundler
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : super platform centralizing badges
-- [travis-ci.com](https://travis-ci.com) : for providing free continuous deployments
+- [Travis-ci.com](https://travis-ci.com) : for providing free continuous deployments
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
