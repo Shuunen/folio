@@ -15,7 +15,7 @@
     "parcel-bundler": "1.12.5",
     "parcel-plugin-inliner": "1.0.16",
     "parcel-plugin-purgecss": "3.0.0",
-    "parcel-plugin-static-files-copy": "2.5.1",
+    "parcel-plugin-static-files-copy": "2.6.0",
     "parcel-plugin-sw-precache": "1.1.2",
     "repo-check": "1.15.1",
     "rimraf": "3.0.2",
