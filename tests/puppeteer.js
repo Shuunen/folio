@@ -1,15 +1,10 @@
 class Puppeteer {
   getUrls () {
-    return [
-      'http://localhost:8088',
-    ]
+    return ['http://localhost:8088']
   }
-
   connect (browser) {
-    return new Promise((resolve, reject) => {
-      resolve(browser)
-    })
+    return new Promise((resolve) => { resolve(browser) })
   }
 }
 
-module.exports = new Puppeteer()
+export default new Puppeteer()
