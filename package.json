@@ -3,27 +3,10 @@
   "bugs": "https://github.com/Shuunen/folio/issues",
   "description": "My personal portfolio",
   "devDependencies": {
-    "eslint": "7.29.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-html": "6.1.2",
-    "eslint-plugin-import": "2.23.4",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.1.0",
-    "eslint-plugin-standard": "4.1.0",
-    "google-lighthouse-puppeteer": "1.2.0",
-    "npm-run-all": "4.1.5",
-    "parcel-bundler": "1.12.5",
-    "parcel-plugin-inliner": "1.0.16",
-    "parcel-plugin-purgecss": "3.0.0",
-    "parcel-plugin-static-files-copy": "2.6.0",
-    "parcel-plugin-sw-precache": "1.1.2",
-    "repo-check": "1.17.0",
-    "rimraf": "3.0.2",
-    "serve": "12.0.0"
+    "shuunen-stack": "0.9.6"
   },
   "files": [
-    "src",
-    "static"
+    "public"
   ],
   "homepage": "https://github.com/Shuunen/folio#readme",
   "keywords": [
@@ -41,24 +24,12 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "parcel build src/index.html --public-url . --no-source-maps --detailed-report",
-    "check": "repo-check",
-    "ci": "npm run test",
-    "dev": "parcel src/index.html --port 8080",
-    "lint": "eslint --fix --ignore-path .gitignore --ext .js .",
-    "postbuild": "rimraf dist/{*.css,main.*.js}",
+    "build": "echo no need to build :p",
+    "dev": "stack serve public",
+    "lint": "stack lint",
     "postversion": "git push && git push --tags",
-    "prebuild": "rimraf dist/*",
-    "prestart": "npm run build",
-    "preversion": "npm run ci",
-    "serve": "serve dist --listen 8080 --single",
-    "serve:lh": "serve dist --listen 8088 --single",
-    "start": "npm run serve",
-    "test": "npm-run-all check lint build --parallel serve:lh test:lh --race",
-    "test:lh": "run-s test:lh:generate-report test:lh:check-metrics",
-    "test:lh:check-metrics": "node tests/check.js",
-    "test:lh:generate-report": "lighthouse-puppeteer --file ../../tests/puppeteer.js --output_directory tests/reports",
-    "update": "npx npm-check-updates -u"
+    "preversion": "npm run lint",
+    "update": "stack update"
   },
   "version": "2.0.0"
 }
