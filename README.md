@@ -2,7 +2,6 @@
 
 [![GitHub license](https://img.shields.io/github/license/shuunen/folio.svg?color=success)](https://github.com/Shuunen/folio/blob/master/LICENSE)
 
-[![Build Status](https://travis-ci.com/Shuunen/folio.svg?branch=master)](https://travis-ci.com/Shuunen/folio)
 [![David](https://img.shields.io/david/shuunen/folio.svg)](https://david-dm.org/shuunen/folio)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/rrl-folio.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/rrl-folio.netlify.app)
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Shuunen/folio.svg)](https://lgtm.com/projects/g/Shuunen/folio/)
