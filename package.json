@@ -3,7 +3,7 @@
   "bugs": "https://github.com/Shuunen/folio/issues",
   "description": "My personal portfolio",
   "devDependencies": {
-    "shuunen-stack": "0.9.6"
+    "shuunen-stack": "0.10.0"
   },
   "files": [
     "public"
