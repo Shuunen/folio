@@ -14,6 +14,7 @@
 
 ## Thanks
 
+- [C8](https://github.com/bcoe/c8) : simple & effective cli for code coverage
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Feather Icons](https://feathericons.com) : nice looking svg icons
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
@@ -23,7 +24,9 @@
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : super platform centralizing badges
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
+- [UvU](https://github.com/lukeed/uvu) : extremely fast and lightweight test runner for Node.js and the browser
 - [Vue](https://vuejs.org) : when I need a front framework, this is the one I choose <3
+- [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
 
 ## Notes

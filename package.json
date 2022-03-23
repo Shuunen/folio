@@ -7,14 +7,18 @@
     "@typescript-eslint/eslint-plugin": "^5.16",
     "@typescript-eslint/parser": "^5.16",
     "autoprefixer": "^10.4",
+    "c8": "^7.11",
     "eslint": "^8.11",
     "eslint-plugin-unicorn": "^41.0",
     "eslint-plugin-vue": "^8.5",
     "postcss": "^8.4",
     "repo-check": "^1.23",
     "tailwindcss": "^3.0",
+    "tsm": "^2.2",
     "typescript": "^4.6",
-    "vitepress": "^0.22"
+    "uvu": "^0.5",
+    "vitepress": "^0.22",
+    "watchlist": "^0.3"
   },
   "files": [
     "public"
@@ -43,12 +47,14 @@
   "scripts": {
     "build": "vitepress build pages",
     "check": "repo-check",
-    "ci": "npm run build && npm run lint && npm run check",
+    "ci": "npm run build && npm run lint && npm run check && npm run test",
     "dev": "vitepress dev pages",
     "lint": "tsc --noEmit && eslint --fix --ignore-path .gitignore --ext .js,.ts,.html,.vue .",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
-    "serve": "vitepress serve pages"
+    "serve": "vitepress serve pages",
+    "test": "c8 uvu -r tsm tests",
+    "test:watch": "watchlist src tests -eager -- npm test"
   },
   "version": "2.0.0"
 }
