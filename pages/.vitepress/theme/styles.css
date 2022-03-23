@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #app, .layout--content > div {
+  @apply h-full;
+}
+
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-500;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 border border-current;
+}
+
+.header-anchor {
+  @apply hidden;
+}
+
+a[href^="https://"] {
+  @apply hover:text-orange-400 text-orange-200 transition-colors;
+}

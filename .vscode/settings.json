@@ -3,7 +3,9 @@
         "GTmetrix",
         "nosniff",
         "purgecss",
-        "sourcerer"
+        "sourcerer",
+        "tada",
+        "vitepress"
     ],
     "workbench.colorCustomizations": {
         "activityBar.background": "#382258",

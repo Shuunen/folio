@@ -1,5 +1,0 @@
-/*
-  Content-Security-Policy: script-src 'self' 'strict-dynamic' 'nonce-shu6162n1' 'unsafe-inline' http: https:; object-src 'none'; base-uri 'self';
-  X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
