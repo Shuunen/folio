@@ -10,6 +10,8 @@
 
 > This is my personal promoting / landing / minimalist page.
 
+![logo](pages/assets/icons/logo.svg)
+
 ## Thanks
 
 - [Eslint](https://eslint.org) : super tool to find & fix problems
@@ -23,3 +25,7 @@
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
 - [Vue](https://vuejs.org) : when I need a front framework, this is the one I choose <3
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
+
+## Notes
+
+This project does not need demo.
