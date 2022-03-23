@@ -1,4 +1,4 @@
-import assert from 'assert'
+import assert from 'node:assert'
 import data from './reports/summary.json'
 
 const score = Number.parseFloat(data[0].score) * 100

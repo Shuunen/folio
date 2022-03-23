@@ -1,8 +1,9 @@
 .cache
 .env
 *.log
+*.stackdump
 *.tgz
 dist
 node_modules
+pnpm-lock.yaml
 tests/reports
-*.stackdump

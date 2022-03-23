@@ -3,7 +3,18 @@
   "bugs": "https://github.com/Shuunen/folio/issues",
   "description": "My personal portfolio",
   "devDependencies": {
-    "shuunen-stack": "0.14.0"
+    "@tailwindcss/typography": "^0.5",
+    "@typescript-eslint/eslint-plugin": "^5.16",
+    "@typescript-eslint/parser": "^5.16",
+    "autoprefixer": "^10.4",
+    "eslint": "^8.11",
+    "eslint-plugin-unicorn": "^41.0",
+    "eslint-plugin-vue": "^8.5",
+    "postcss": "^8.4",
+    "repo-check": "^1.23",
+    "tailwindcss": "^3.0",
+    "typescript": "^4.6",
+    "vitepress": "^0.22"
   },
   "files": [
     "public"
@@ -18,18 +29,26 @@
   ],
   "license": "GPL-3.0",
   "name": "folio",
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "tailwindcss": {}
+    }
+  },
   "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "echo no need to build :p",
-    "dev": "stack serve public",
-    "lint": "stack lint",
+    "build": "vitepress build pages",
+    "check": "repo-check",
+    "ci": "npm run build && npm run lint && npm run check",
+    "dev": "vitepress dev pages",
+    "lint": "tsc --noEmit && eslint --fix --ignore-path .gitignore --ext .js,.ts,.html,.vue .",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
-    "update": "stack update"
+    "serve": "vitepress serve pages"
   },
   "version": "2.0.0"
 }
