@@ -9,7 +9,7 @@
     "autoprefixer": "^10.4",
     "c8": "^7.11",
     "eslint": "^8.11",
-    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-unicorn": "^43.0.0",
     "eslint-plugin-vue": "^9.0.0",
     "postcss": "^8.4",
     "repo-check": "^1.23",
