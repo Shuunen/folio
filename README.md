@@ -19,7 +19,9 @@
 - [Feather Icons](https://feathericons.com) : nice looking svg icons
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
 - [Gtmetrix](https://gtmetrix.com) : great tool to check & monitor websites performances
+- [IconPark](https://iconpark.oceanengine.com/official): nice svg icons
 - [Netlify](https://netlify.com) : awesome company that offers hosting for OSS
+- [Nnnoise](https://fffuel.co) : sexy svg noise texture generator
 - [Npm-run-all](https://github.com/mysticatea/npm-run-all) : to keep my npm scripts clean & readable
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : super platform centralizing badges

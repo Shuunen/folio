@@ -1,11 +1,58 @@
 <template>
-  <div class="w-60 h-24 mx-auto border-2 rounded-md">
-    <div class="animate-pulse flex flex-row items-center justify-center h-full space-x-5">
-      <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-      <div class="flex flex-col space-y-3">
-        <div class="w-36 h-6 bg-gray-300 rounded-md"></div>
-        <div class="w-24 h-6 bg-gray-300 rounded-md"></div>
-      </div>
-    </div>
+  <div class="photo-gallery not-prose flex flex-wrap gap-4">
+    <a
+      v-for="{ label, src, size, thumb }, index in images"
+      :key="'photo-' + index"
+      :href="src"
+      :data-lg-size="size"
+    >
+      <img :alt="label" :src="thumb ?? guessThumb(src)" class="h-60" />
+    </a>
   </div>
 </template>
+
+<script lang="ts">
+import lightGallery from 'lightgallery'
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgVideo from 'lightgallery/plugins/video'
+import lgZoom from 'lightgallery/plugins/zoom'
+import { defineComponent } from 'vue'
+
+interface Image {
+  label: string
+  src: string
+  size: string
+  thumb: string
+}
+
+export default defineComponent({
+  props: {
+    images: {
+      type: Array as () => Image[],
+      required: true,
+    },
+  },
+  mounted () {
+    this.initLightGallery()
+  },
+  methods: {
+    initLightGallery () {
+      lightGallery(this.$el, {
+        plugins: [lgZoom, lgThumbnail, lgVideo],
+        thumbnail: true,
+        licenseKey: 'B71019E7-24F2485D-9D04849F-4F8C909F',
+      })
+    },
+    guessThumb (source: string) {
+      return source.replace(/(.+)\.(jpg|gif|png)$/, '$1-thumb.$2')
+    },
+  },
+})
+</script>
+
+<style>
+@import url("lightgallery/css/lightgallery.css");
+@import url("lightgallery/css/lg-thumbnail.css");
+@import url("lightgallery/css/lg-zoom.css");
+@import url("lightgallery/css/lg-video.css");
+</style>

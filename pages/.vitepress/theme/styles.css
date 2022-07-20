@@ -6,6 +6,14 @@ html {
   scroll-behavior: smooth;
 }
 
+html .prose :where(h1):not(:where([class~="not-prose"] *)) {
+  @apply text-primary-500;
+}
+
+h1 {
+  @apply dark:text-primary-100;
+}
+
 html, body, #app, .layout--content > div {
   @apply h-full;
 }
@@ -15,17 +23,29 @@ html, body, #app, .layout--content > div {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-500;
+  @apply bg-primary-500;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 border border-current;
+  @apply bg-primary-700 border border-current;
 }
 
 .header-anchor {
   @apply hidden;
 }
 
-a[href^="https://"] {
-  @apply hover:text-orange-400 text-orange-200 transition-colors;
+a[href^="/"], .link {
+  @apply hover:text-accent-600 dark:hover:text-accent-400 no-underline border-b-2 border-transparent;
+}
+
+a[href^="/"].link {
+  @apply hover:border-accent-500;
+}
+
+a[href^="/"], .link, .accent {
+  @apply dark:text-accent-300 text-accent-500 transition-colors;
+}
+
+.layout--content > div {
+  @apply flex flex-col;
 }

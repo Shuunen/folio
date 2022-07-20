@@ -12,8 +12,8 @@
   ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
-    "parser": "@typescript-eslint/parser",
     "ecmaVersion": 2021,
+    "parser": "@typescript-eslint/parser",
     "sourceType": "module"
   },
   "plugins": [
@@ -92,6 +92,8 @@
         }
       }
     ],
+    "vue/first-attribute-linebreak": "off",
+    "vue/html-closing-bracket-newline": "off",
     "vue/html-self-closing": "off",
     "vue/max-attributes-per-line": "off",
     "vue/no-multiple-template-root": "off",
