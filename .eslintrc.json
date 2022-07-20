@@ -8,7 +8,8 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:unicorn/recommended",
-    "plugin:vue/vue3-recommended"
+    "plugin:vue/vue3-recommended",
+    "@vue/typescript/recommended"
   ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
@@ -18,6 +19,7 @@
   },
   "plugins": [
     "@typescript-eslint",
+    "vue",
     "unicorn"
   ],
   "rules": {
@@ -28,6 +30,7 @@
         "allowSingleLine": true
       }
     ],
+    "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {

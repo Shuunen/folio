@@ -1,7 +1,7 @@
 /**
  * @type {import('tailwindcss/tailwind-config').TailwindConfig}
  */
-var config = {
+const config = {
   darkMode: 'class',
   content: [
     './pages/.vitepress/**/*.{js,ts,vue}',
