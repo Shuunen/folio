@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 400">
-  <defs>
-    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-      <stop stop-color="hsl(206, 75%, 49%)" offset="0%"/>
-      <stop stop-color="#ff7c27" offset="100%"/>
-    </linearGradient>
-  </defs>
-  <g stroke-width="2" stroke="url(#a)" fill="none" stroke-linecap="round">
-    <path d="M0 336q600 64 1200 64t1200-64" opacity=".93"/>
-    <path d="M0 294q600 106 1200 106t1200-106" opacity=".65"/>
-    <path d="M0 252q600 148 1200 148t1200-148" opacity=".9"/>
-    <path d="M0 210q600 190 1200 190t1200-190" opacity=".31"/>
-    <path d="M0 168q600 232 1200 232t1200-232" opacity=".33"/>
-    <path d="M0 126q600 274 1200 274t1200-274" opacity=".67"/>
-    <path d="M0 84q600 316 1200 316T2400 84" opacity=".53"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 400"><defs><linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="hsl(206, 75%, 49%)"/><stop offset="100%" stop-color="#ff7c27"/></linearGradient></defs><g fill="none" stroke="url(#a)" stroke-linecap="round" stroke-width="2"><path d="M0 336q600 64 1200 64t1200-64" opacity=".93"/><path d="M0 294q600 106 1200 106t1200-106" opacity=".65"/><path d="M0 252q600 148 1200 148t1200-148" opacity=".9"/><path d="M0 210q600 190 1200 190t1200-190" opacity=".31"/><path d="M0 168q600 232 1200 232t1200-232" opacity=".33"/><path d="M0 126q600 274 1200 274t1200-274" opacity=".67"/><path d="M0 84q600 316 1200 316T2400 84" opacity=".53"/></g></svg>
