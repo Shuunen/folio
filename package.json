@@ -10,7 +10,7 @@
     "@vue/eslint-config-typescript": "11",
     "autoprefixer": "10",
     "c8": "7",
-    "eslint": "8.24",
+    "eslint": "8.25",
     "eslint-plugin-unicorn": "44",
     "eslint-plugin-vue": "9",
     "lightgallery": "2",
