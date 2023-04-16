@@ -5,7 +5,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "0.5",
     "autoprefixer": "10",
-    "c8": "7",
+    "dependency-cruiser": "latest",
     "eslint": "8.38",
     "eslint-config-hardcore": "35",
     "eslint-plugin-tailwindcss": "3",
@@ -38,11 +38,8 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "vitepress build pages",
-    "check": "repo-check",
-    "ci": "npm run build && npm run lint && npm run check && npm run test",
-    "dev": "vitepress dev pages",
-    "lint": "tsc --noEmit && eslint --fix --ignore-path .gitignore --ext .js,.ts,.html,.vue .",
+    "check": "repo-check && pnpm build && pnpm lint && pnpm test && echo check success",
+    "lint": "tsc --noEmit && eslint --cache --fix --ext .ts,.vue . && depcruise components pages --config && echo lint success",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
     "serve": "vitepress serve pages",
