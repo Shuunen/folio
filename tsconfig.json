@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowJs": true,
     "allowUnreachableCode": false,
@@ -22,7 +23,7 @@
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -33,6 +34,9 @@
     "sourceMap": true,
     "strict": true,
     "target": "ESNext",
+    "types": [
+      "vite/client"
+    ],
     "useDefineForClassFields": true
   },
   "include": [

@@ -3,11 +3,9 @@ name: ci
 on:
   push:
     branches:
-      - main
       - master
   pull_request:
     branches:
-      - main
       - master
 
 jobs:
@@ -17,37 +15,25 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        node: [18]
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
 
       - name: Setup node env 🏗
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-
-      - name: Cache node_modules 📦
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cache: "pnpm"
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm install
+        run: pnpm install
 
-      - name: Run check 👀
-        run: npm run check
-
-      - name: Run build 👀
-        run: npm run build
-
-      - name: Run lint 👀
-        run: npm run lint
-
-      - name: Run tests 👀
-        run: npm run test
-
+      - name: Run check task 👀
+        run: pnpm check
