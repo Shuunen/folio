@@ -4,13 +4,11 @@
 
 [![Libraries.io](https://img.shields.io/librariesio/github/shuunen/folio.svg)](https://libraries.io/github/Shuunen/folio)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/rrl-folio.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/rrl-folio.netlify.app)
-[![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Shuunen/folio.svg)](https://lgtm.com/projects/g/Shuunen/folio/)
 [![Website](https://img.shields.io/website/https/rrl-folio.netlify.app.svg)](https://rrl-folio.netlify.app)
-[![BCH compliance](https://bettercodehub.com/edge/badge/Shuunen/folio?branch=master)](https://bettercodehub.com/)
 
 > This is my personal promoting / landing / minimalist page.
 
-![logo](pages/assets/icons/logo.svg)
+![logo](docs/banner.svg)
 
 ## Todo
 
