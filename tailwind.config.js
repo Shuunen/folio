@@ -1,19 +1,22 @@
-/**
- * @type {import('tailwindcss/tailwind-config').TailwindConfig}
- */
+/* eslint-disable regexp/require-unicode-regexp */
+/* eslint-disable regexp/prefer-named-capture-group */
+/* eslint-disable prefer-named-capture-group */
+/* eslint-disable require-unicode-regexp */
+/** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: 'class',
   content: [
-    './pages/.vitepress/**/*.{js,ts,vue}',
+    './.vitepress/theme/**/*.{ts,vue}',
     './pages/**/*.md',
     './components/**/*.vue',
   ],
   safelist: [
     {
-      pattern: /(primary|accent)-\d/,
+      pattern: /(accent|primary)-\d/,
     },
   ],
   plugins: [
+    // @ts-ignore
     require('@tailwindcss/typography'),
   ],
   theme: {
