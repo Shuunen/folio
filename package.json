@@ -20,7 +20,7 @@
     "tailwindcss": "3",
     "typescript": "5.0",
     "vite": "*",
-    "vitepress": "1.0.0-alpha.70",
+    "vitepress": "1.0.0-alpha.71",
     "vue": "*"
   },
   "files": [
