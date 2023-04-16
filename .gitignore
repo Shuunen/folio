@@ -1,8 +1,11 @@
 .cache
 .env
+.eslintcache
+.temp
 *.log
 *.stackdump
 *.tgz
+cache
 coverage
 dist
 node_modules
