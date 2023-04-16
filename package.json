@@ -37,12 +37,6 @@
   ],
   "license": "GPL-3.0",
   "name": "folio",
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {},
-      "tailwindcss": {}
-    }
-  },
   "private": true,
   "repository": {
     "type": "git",
