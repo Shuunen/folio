@@ -1,8 +1,14 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/folio/issues",
+  "dependencies": {
+    "lightgallery": "2.7",
+    "shuutils": "7.2"
+  },
   "description": "My personal portfolio",
   "devDependencies": {
+    "@icon-park/vue-next": "1.4",
     "@tailwindcss/typography": "0.5",
     "autoprefixer": "10",
     "dependency-cruiser": "latest",
@@ -12,12 +18,10 @@
     "postcss": "8",
     "repo-check": "1.31",
     "tailwindcss": "3",
-    "tsm": "2",
-    "typescript": "4",
-    "uvu": "0",
-    "vitepress": "0",
-    "vue": "3",
-    "watchlist": "0"
+    "typescript": "5.0",
+    "vite": "*",
+    "vitepress": "1.0.0-alpha.69",
+    "vue": "*"
   },
   "files": [
     "public"
@@ -38,13 +42,14 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
+    "build": "vitepress build && unique-mark .vitepress/dist/index.html && echo build success",
     "check": "repo-check && pnpm build && pnpm lint && pnpm test && echo check success",
+    "dev": "vitepress dev",
     "lint": "tsc --noEmit && eslint --cache --fix --ext .ts,.vue . && depcruise components pages --config && echo lint success",
     "postversion": "git push && git push --tags",
-    "preversion": "npm run lint",
-    "serve": "vitepress serve pages",
-    "test": "c8 uvu -r tsm tests",
-    "test:watch": "watchlist src tests -eager -- npm test"
+    "preversion": "pnpm lint",
+    "serve": "vitepress serve",
+    "test": "echo no test yet"
   },
   "version": "3.0.0"
 }

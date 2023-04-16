@@ -2,22 +2,23 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "checkJs": true,
     "esModuleInterop": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
-      "ES2016",
       "DOM",
-      "DOM.Iterable"
+      "DOM.Iterable",
+      "ESNext"
     ],
     "module": "ESNext",
     "moduleResolution": "node",
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
@@ -28,10 +29,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "./dist",
-    "preserveValueImports": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "sourceMap": true,
     "strict": true,
     "target": "ESNext",
     "types": [
@@ -40,8 +39,10 @@
     "useDefineForClassFields": true
   },
   "include": [
-    "./components/**/*",
-    "./src/**/*",
-    "./pages/**/*"
+    ".*.js",
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.vue",
+    "*.js",
+    "components/**/*.vue"
   ]
 }

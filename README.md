@@ -12,9 +12,61 @@
 
 ![logo](pages/assets/icons/logo.svg)
 
+## Todo
+
+Bring back `state.ts` :
+
+```ts
+import { createState, storage } from 'shuutils'
+
+export const { state, watchState } = createState({
+  theme: typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+}, storage)
+```
+
+Bring back `logger.ts` :
+
+```ts
+import { Logger } from 'shuutils'
+
+export const logger = new Logger()
+```
+
+Bring back `dark-switch.vue` :
+
+```vue
+<script setup lang="ts">
+import { computed, ref } from 'vue'
+import { logger } from '../src/logger'
+import { state, watchState } from '../src/state'
+
+const theme = ref(state.theme)
+const isDark = computed(() => theme.value === 'dark')
+
+function setTheme (value: string): void {
+  logger.info('theme is now', value)
+  theme.value = value
+  if (typeof document !== 'undefined') document.documentElement.classList.toggle('dark', isDark.value)
+}
+
+function doSwitch (): void {
+  state.theme = isDark.value ? 'light' : 'dark'
+}
+
+setTheme(state.theme)
+watchState('theme', () => { setTheme(state.theme) })
+</script>
+
+<template>
+  <button type="button" @click="doSwitch">
+    <dark-mode class="link" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" :theme="isDark ? 'outline' : 'filled'" />
+  </button>
+</template>
+```
+
 ## Thanks
 
-- [C8](https://github.com/bcoe/c8) : simple & effective cli for code coverage
+- [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) : handy tool to validate and visualize dependencies
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Feather Icons](https://feathericons.com) : nice looking svg icons
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
@@ -22,13 +74,12 @@
 - [IconPark](https://iconpark.oceanengine.com/official): nice svg icons
 - [Netlify](https://netlify.com) : awesome company that offers hosting for OSS
 - [Nnnoise](https://fffuel.co) : sexy svg noise texture generator
-- [Npm-run-all](https://github.com/mysticatea/npm-run-all) : to keep my npm scripts clean & readable
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : super platform centralizing badges
+- [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
-- [UvU](https://github.com/lukeed/uvu) : extremely fast and lightweight test runner for Node.js and the browser
+- [Vite](https://github.com/vitejs/vite) : super fast frontend tooling
 - [Vue](https://vuejs.org) : when I need a front framework, this is the one I choose <3
-- [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
 
 ## Notes
