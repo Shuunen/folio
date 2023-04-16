@@ -1,29 +1,28 @@
+<!-- eslint-disable no-console -->
+<!-- eslint-disable vue/no-ref-object-destructure -->
+<!-- eslint-disable etc/no-commented-out-code -->
+<script setup lang="ts">
+import { computed, ref } from 'vue'
+
+const theme = ref('dark')
+const isDark = computed(() => theme.value === 'dark')
+
+function setTheme (value: string): void {
+  console.info('theme is now', value)
+  theme.value = value
+  if (typeof document !== 'undefined') document.documentElement.classList.toggle('dark', isDark.value)
+}
+
+function doSwitch (): void {
+  setTheme(isDark.value ? 'light' : 'dark')
+}
+
+setTheme(theme.value)
+// watchState('theme', () => { setTheme(state.theme) })
+</script>
+
 <template>
-  <button @click="doSwitch()">
-    <dark-mode class="link" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" :theme="isDark ? 'outline' : 'filled'" />
+  <button type="button" @click="doSwitch">
+    <dark-mode class="app-link" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" :theme="isDark ? 'outline' : 'filled'" />
   </button>
 </template>
-
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  data: () => ({
-    isDark: typeof localStorage === 'undefined' || localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
-  }),
-  mounted () {
-    this.applyState()
-  },
-  methods: {
-    applyState () {
-      if (typeof localStorage !== 'undefined') localStorage.setItem('color-theme', this.isDark ? 'dark' : 'light')
-      document.documentElement.classList.toggle('dark', this.isDark)
-    },
-    doSwitch () {
-      this.isDark = !this.isDark
-      this.applyState()
-    },
-  },
-})
-</script>

@@ -1,22 +1,6 @@
-<template>
-  <div class="photo-gallery not-prose flex flex-wrap gap-4">
-    <a
-      v-for="{ label, src, size, thumb }, index in images"
-      :key="'photo-' + index"
-      :href="src"
-      :data-lg-size="size"
-    >
-      <img :alt="label" :src="thumb ?? guessThumb(src)" class="h-60" />
-    </a>
-  </div>
-</template>
-
-<script lang="ts">
+<script setup lang="ts">
 import lightGallery from 'lightgallery'
-import lgThumbnail from 'lightgallery/plugins/thumbnail'
-import lgVideo from 'lightgallery/plugins/video'
-import lgZoom from 'lightgallery/plugins/zoom'
-import { defineComponent } from 'vue'
+import { onMounted, ref } from 'vue'
 
 interface Image {
   label: string
@@ -25,31 +9,37 @@ interface Image {
   thumb: string
 }
 
-export default defineComponent({
-  props: {
-    images: {
-      type: Array as () => Image[],
-      required: true,
-    },
-  },
-  mounted () {
-    this.initLightGallery()
-  },
-  methods: {
-    initLightGallery () {
-      lightGallery(this.$el, {
-        plugins: [lgZoom, lgThumbnail, lgVideo],
-        thumbnail: true,
-        licenseKey: 'B71019E7-24F2485D-9D04849F-4F8C909F',
-      })
-    },
-    guessThumb (source: string) {
-      return source.replace(/(.+)\.(jpg|gif|png)$/, '$1-thumb.$2')
-    },
-  },
-})
+defineProps<{
+  images: Image[]
+}>()
+
+const wrapper = ref<HTMLElement>()
+
+function initLightGallery (): void {
+  if (!wrapper.value) throw new Error('no wrapper found for lightgallery')
+  lightGallery(wrapper.value, {
+    thumbnail: true, // eslint-disable-line @typescript-eslint/naming-convention
+    licenseKey: 'B71019E7-24F2485D-9D04849F-4F8C909F',
+  })
+}
+
+function guessThumb (source: string): string {
+  // eslint-disable-next-line regexp/no-super-linear-move
+  return source.replace(/(?<name>.+)\.(?=(?:gif|jpg|png)$)/u, '$<name>-thumb.')
+}
+
+onMounted(initLightGallery)
 </script>
 
+<template>
+  <div ref="wrapper" class="app-photo-gallery not-prose flex flex-wrap gap-4">
+    <a v-for="{ label, src, size, thumb }, index in images" :key="`photo-${index}`" :href="src" :data-lg-size="size">
+      <img :alt="label" :src="thumb ?? guessThumb(src)" class="h-60" />
+    </a>
+  </div>
+</template>
+
+<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type -->
 <style>
 @import url("lightgallery/css/lightgallery.css");
 @import url("lightgallery/css/lg-thumbnail.css");

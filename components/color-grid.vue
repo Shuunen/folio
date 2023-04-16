@@ -1,22 +1,19 @@
+<script setup lang="ts">
+defineProps<{
+  name: {
+    type: string
+    required: true
+  }
+}>()
+</script>
+
 <template>
+  <!-- eslint-disable tailwindcss/no-custom-classname -->
   <div class="grid grid-cols-3">
-    <div v-for="n in [900, 800, 700, 600, 500, 400, 300, 200, 100]" :key="'color-' + n" class="flex flex-row items-center justify-center h-16"
-         :class="[`bg-${name}-${n}`, n > 400 ? 'text-white' : 'text-black']">
+    <div v-for="n in [900, 800, 700, 600, 500, 400, 300, 200, 100]" :key="`color-${n}`" class="flex h-16 flex-row items-center justify-center"
+      :class="[`bg-${name}-${n}`, n > 400 ? 'text-white' : 'text-black']">
       {{ name }}-{{ n }}
     </div>
   </div>
 </template>
 
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  props: {
-    name: {
-      type: String,
-      required: true,
-    },
-  },
-})
-</script>
