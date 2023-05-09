@@ -5,8 +5,8 @@ dependencies:
     specifier: '2.7'
     version: 2.7.1
   shuutils:
-    specifier: '7.2'
-    version: 7.2.0
+    specifier: '7.3'
+    version: 7.3.0
 
 devDependencies:
   '@icon-park/vue-next':
@@ -20,7 +20,7 @@ devDependencies:
     version: 10.4.14(postcss@8.4.21)
   dependency-cruiser:
     specifier: latest
-    version: 12.11.3
+    version: 12.12.1
   eslint:
     specifier: '8.39'
     version: 8.39.0
@@ -3186,11 +3186,6 @@ packages:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
     dev: true
 
-  /commander@10.0.0:
-    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
-    engines: {node: '>=14'}
-    dev: true
-
   /commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
@@ -3397,8 +3392,8 @@ packages:
       object-keys: 1.1.1
     dev: true
 
-  /dependency-cruiser@12.11.3:
-    resolution: {integrity: sha512-SNKCgV5+QE3S0zLjezmEKEkOzHNz/dgiX1p9gDgudmdYJkpNJYOA0E8l5o+LvjYxguM534i55gfrNpZ6RjwzBQ==}
+  /dependency-cruiser@12.12.1:
+    resolution: {integrity: sha512-tMWkSjaXOmneiwqygV8FbypS+u5KI2cHyeakRb7x2WQDoxaSxRxEEqfdKNughHqO1LNOn8GOmvd2PuWF8EVPAQ==}
     engines: {node: ^14||^16||>=18}
     hasBin: true
     dependencies:
@@ -3428,13 +3423,14 @@ packages:
       semver-try-require: 6.2.2
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.0.1
-      watskeburt: 0.10.2
+      watskeburt: 0.11.1
       wrap-ansi: 7.0.0
     dev: true
 
   /dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
+    dev: true
 
   /detect-indent@5.0.0:
     resolution: {integrity: sha512-rlpvsxUtM0PQvy9iZe640/IWwWYyBsTApREbA1pHOpmOUIl9MkP/U4z7vTtg4Oaojvqhxt7sdufnT0EzGaR31g==}
@@ -3461,6 +3457,7 @@ packages:
   /diff@5.1.0:
     resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
     engines: {node: '>=0.3.1'}
+    dev: true
 
   /dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
@@ -5597,6 +5594,7 @@ packages:
   /kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
+    dev: true
 
   /known-css-properties@0.26.0:
     resolution: {integrity: sha512-5FZRzrZzNTBruuurWpvZnvP9pum+fe0HcK8z/ooo+U+Hmp4vtbyp1/QDsqmufirXy4egGzbaH/y2uCZf+6W5Kg==}
@@ -6083,6 +6081,7 @@ packages:
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
+    dev: true
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -7210,6 +7209,7 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mri: 1.2.0
+    dev: true
 
   /safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
@@ -7319,6 +7319,14 @@ packages:
     dependencies:
       tiny-glob: 0.2.9
       uvu: 0.5.6
+    dev: true
+
+  /shuutils@7.3.0:
+    resolution: {integrity: sha512-M1i5OiV4McnXMCNoN2Ao+MKR+C+UEV784QZtGQzX53WYKEUBbJ5yH43qln8VsXl75AM15xKnRHZrLNtMHv3u4A==}
+    hasBin: true
+    dependencies:
+      tiny-glob: 0.2.9
+    dev: false
 
   /side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
@@ -8043,6 +8051,7 @@ packages:
       diff: 5.1.0
       kleur: 4.1.5
       sade: 1.8.1
+    dev: true
 
   /v8-compile-cache@2.3.0:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
@@ -8253,12 +8262,12 @@ packages:
       '@vue/shared': 3.2.47
     dev: true
 
-  /watskeburt@0.10.2:
-    resolution: {integrity: sha512-tM1gGD4hbof1m7VgnISerjTuoW+wdfQ53swyPKhf0/v/03OPKoQ8qhCrqdARk/EvpWI7WXDQJ5AhyCLFC0rkqA==}
+  /watskeburt@0.11.1:
+    resolution: {integrity: sha512-pRg7lw1R5kazren0jhcWSWNNfv3HE5Mzggj9MaruziQYMpxLJL1BrcwJWFSDwgOVbQrmtUZNgbbkKSv6SIyLew==}
     engines: {node: ^14||^16||>=18}
     hasBin: true
     dependencies:
-      commander: 10.0.0
+      commander: 10.0.1
     dev: true
 
   /which-boxed-primitive@1.0.2:
