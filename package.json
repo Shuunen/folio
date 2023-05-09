@@ -4,7 +4,7 @@
   "bugs": "https://github.com/Shuunen/folio/issues",
   "dependencies": {
     "lightgallery": "2.7",
-    "shuutils": "7.2"
+    "shuutils": "7.3"
   },
   "description": "My personal portfolio",
   "devDependencies": {
