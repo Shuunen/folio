@@ -20,7 +20,7 @@ devDependencies:
     version: 10.4.14(postcss@8.4.21)
   dependency-cruiser:
     specifier: latest
-    version: 13.0.1
+    version: 13.0.2
   eslint:
     specifier: '8.39'
     version: 8.39.0
@@ -46,8 +46,8 @@ devDependencies:
     specifier: '*'
     version: 4.2.1
   vitepress:
-    specifier: 1.0.0-alpha.76
-    version: 1.0.0-alpha.76(@algolia/client-search@4.17.0)
+    specifier: 1.0.0-beta.1
+    version: 1.0.0-beta.1(@algolia/client-search@4.17.0)
   vue:
     specifier: '*'
     version: 3.2.47
@@ -3569,8 +3569,8 @@ packages:
       object-keys: 1.1.1
     dev: true
 
-  /dependency-cruiser@13.0.1:
-    resolution: {integrity: sha512-zXTyzJPQQFKpGF3RL8+1nJe2PxY5QoQKmcMy1iuzDnvD5TbvzJS/ITTRmGoK9H9QfjqDpEwXzJAWVYADm6H+xQ==}
+  /dependency-cruiser@13.0.2:
+    resolution: {integrity: sha512-N7kQk6F7nEL5z2Yr7zLcDbPKWmqWacH/5GN6piFsMYgwLkLgZFQvpd7Z8BwlVT9G1v/+shb+IQZa+ilfVAD9rA==}
     engines: {node: ^16.14||>=18}
     hasBin: true
     dependencies:
@@ -3585,7 +3585,7 @@ packages:
       enhanced-resolve: 5.14.0
       figures: 5.0.0
       get-stream: 6.0.1
-      glob: 10.2.4
+      glob: 10.2.6
       handlebars: 4.7.7
       ignore: 5.2.4
       indent-string: 5.0.0
@@ -5107,14 +5107,14 @@ packages:
       is-glob: 4.0.3
     dev: true
 
-  /glob@10.2.4:
-    resolution: {integrity: sha512-fDboBse/sl1oXSLhIp0FcCJgzW9KmhC/q8ULTKC82zc+DL3TL7FNb8qlt5qqXN53MsKEUSIcb+7DLmEygOE5Yw==}
+  /glob@10.2.6:
+    resolution: {integrity: sha512-U/rnDpXJGF414QQQZv5uVsabTVxMSwzS5CH0p3DRCIV6ownl4f7PzGnkGmvlum2wB+9RlJWJZ6ACU1INnBqiPA==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.2.0
-      minimatch: 9.0.0
+      minimatch: 9.0.1
       minipass: 6.0.2
       path-scurry: 1.9.2
     dev: true
@@ -6284,8 +6284,8 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimatch@9.0.0:
-    resolution: {integrity: sha512-0jJj8AvgKqWN05mrwuqi8QYKx1WmYSUoKSxu5Qhs9prezTz10sxAHGNZe9J9cqIJzta8DWsleh2KaVaLl6Ru2w==}
+  /minimatch@9.0.1:
+    resolution: {integrity: sha512-0jWhJpD/MdhPXwPuiRkCbfYfSKp2qnn2eOc279qI7f+osl/l+prKSrvhg157zSYvx/1nmgn2NqdT6k2Z7zSH9w==}
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
@@ -8434,8 +8434,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-alpha.76(@algolia/client-search@4.17.0):
-    resolution: {integrity: sha512-fzR1pDpGnSMeCJ+AnDdMe/ETD2G0Go+g6mTxDv9ps7Hmr1JjVqw97nasCyZg3jgfQxi2nt78EJ/bw7hY5n/rlw==}
+  /vitepress@1.0.0-beta.1(@algolia/client-search@4.17.0):
+    resolution: {integrity: sha512-V2yyCwQ+v9fh7rbnGDLp8M7vHa9sLElexXf/JHtBOsOwv7ed9wt1QI4WUagYgKR3TeoJT9v2s6f0UaQSne0EvQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.5
