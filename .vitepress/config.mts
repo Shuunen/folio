@@ -16,7 +16,7 @@ export default defineConfig({
     ['meta', { content: title, name: 'application-name' }],
     ['meta', { content: 'yes', name: 'mobile-web-app-capable' }],
     ['meta', { content: '#00314f', name: 'theme-color' }],
-    ['meta', { content: '', name: 'unique-mark' }],
+    ['meta', { content: '__unique-mark__', name: 'unique-mark' }],
     ['meta', { content: description, property: 'og:description' }],
     // ['meta', { property: 'og:image', content: '/icons/icon-192x192.png' }],
     ['meta', { content: title, property: 'og:title' }],
