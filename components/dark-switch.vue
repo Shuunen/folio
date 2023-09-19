@@ -8,7 +8,7 @@ const theme = ref('dark')
 const isDark = computed(() => theme.value === 'dark')
 
 function setTheme (value: string): void {
-  console.info('theme is now', value)
+  // console.info('theme is now', value)
   theme.value = value
   if (typeof document !== 'undefined') document.documentElement.classList.toggle('dark', isDark.value)
 }
