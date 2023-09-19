@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="app-layout flex min-h-screen w-full flex-col bg-gradient-to-br from-white to-accent-100 p-3 dark:from-primary-700 dark:to-primary-900">
     <div class="app-layout--bg relative flex grow bg-gradient-to-tl from-white to-accent-100 pt-12 dark:from-primary-700 dark:to-primary-900">

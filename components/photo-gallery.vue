@@ -4,8 +4,8 @@ import { onMounted, ref } from 'vue'
 
 interface Image {
   label: string
-  src: string
   size: string
+  src: string
   thumb: string
 }
 
@@ -33,8 +33,9 @@ onMounted(initLightGallery)
 
 <template>
   <div ref="wrapper" class="app-photo-gallery not-prose flex flex-wrap gap-4">
-    <a v-for="{ label, src, size, thumb }, index in images" :key="`photo-${index}`" :href="src" :data-lg-size="size">
-      <img :alt="label" :src="thumb ?? guessThumb(src)" class="h-60" />
+    <!-- eslint-disable sonar/no-vue-bypass-sanitization -->
+    <a v-for="{ label, src, size, thumb }, index in images" :key="`photo-${index}`" :data-lg-size="size" :href="src">
+      <img :alt="label" class="h-60" :src="thumb ?? guessThumb(src)" />
     </a>
   </div>
 </template>
