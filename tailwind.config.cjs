@@ -2,36 +2,38 @@
 /* eslint-disable regexp/prefer-named-capture-group */
 /* eslint-disable prefer-named-capture-group */
 /* eslint-disable require-unicode-regexp */
+'use strict'
+
 /** @type {import('tailwindcss').Config} */
 const config = {
-  darkMode: 'class',
   content: [
     './.vitepress/theme/**/*.{ts,vue}',
     './pages/**/*.md',
     './components/**/*.vue',
+  ],
+  darkMode: 'class',
+  plugins: [
+    // @ts-ignore
+    require('@tailwindcss/typography'),
   ],
   safelist: [
     {
       pattern: /(accent|primary)-\d/,
     },
   ],
-  plugins: [
-    // @ts-ignore
-    require('@tailwindcss/typography'),
-  ],
   theme: {
     extend: {
       colors: { // http://vis4.net/palettes/#/21|d|000000,ff7c27,ffffff|ffffff,005fb4,000000|0|0
         accent: {
-          900: '#331908',
-          800: '#663210',
-          700: '#994a18',
-          600: '#cc631f',
-          500: '#ff7c27',
-          400: '#ff9652',
-          300: '#ffb07e',
-          200: '#ffcba9',
           100: '#ffe5d4',
+          200: '#ffcba9',
+          300: '#ffb07e',
+          400: '#ff9652',
+          500: '#ff7c27',
+          600: '#cc631f',
+          700: '#994a18',
+          800: '#663210',
+          900: '#331908',
         },
         primary: {
           100: '#ccdff0',

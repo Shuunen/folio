@@ -20,7 +20,7 @@
     "tailwindcss": "3",
     "typescript": "5.1",
     "vite": "*",
-    "vitepress": "1.0.0-beta.1",
+    "vitepress": "1.0.0-rc.14",
     "vue": "*"
   },
   "files": [
@@ -36,6 +36,14 @@
   ],
   "license": "GPL-3.0",
   "name": "folio",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  },
   "private": true,
   "repository": {
     "type": "git",
@@ -51,5 +59,6 @@
     "serve": "vitepress serve",
     "test": "echo no test yet"
   },
+  "type": "module",
   "version": "4.0.0"
 }
