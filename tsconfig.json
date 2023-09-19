@@ -44,6 +44,12 @@
     ".vitepress/**/*.ts",
     ".vitepress/**/*.vue",
     "*.js",
-    "components/**/*.vue"
+    "components/**/*.vue",
+    ".dependency-cruiser.mjs",
+    "tailwind.config.cjs",
+    "postcss.config.mjs",
+    ".vitepress/config.mts",
+    "postcss.config.cjs",
+    ".dependency-cruiser.cjs"
   ]
 }
