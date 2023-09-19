@@ -18,7 +18,8 @@
         </svg>
       </a>
     </div>
-    <p class="text-center text-sm font-bold text-primary-400">© {{ new Date().getFullYear() }} Romain.cloud - All rights reserved.</p>
+    <p class="text-center text-sm font-bold text-primary-400" title="__unique-mark__">© {{ new Date().getFullYear() }} Romain.cloud - All rights
+      reserved.</p>
   </div>
 </template>
 
