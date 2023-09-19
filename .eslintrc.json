@@ -161,6 +161,7 @@
     ],
     "padding-line-between-statements": "off",
     "prettier/prettier": "off",
+    "putout/putout": "off",
     "quote-props": [
       "error",
       "consistent-as-needed"
