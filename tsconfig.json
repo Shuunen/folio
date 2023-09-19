@@ -36,7 +36,8 @@
     "types": [
       "vite/client"
     ],
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "verbatimModuleSyntax": true
   },
   "include": [
     ".*.js",

@@ -16,6 +16,7 @@ function toggle (): void {
 
 <template>
   <div>
+    <!-- eslint-disable sonar/no-vue-bypass-sanitization -->
     <nav class="mb-24">
       <div class="mx-auto">
         <div class="flex h-16 items-center justify-between">

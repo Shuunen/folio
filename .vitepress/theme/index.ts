@@ -1,4 +1,3 @@
-/* eslint-disable total-functions/no-unsafe-readonly-mutable-assignment */
 // https://vitepress.dev/guide/custom-theme
 import { DarkMode, DEFAULT_ICON_CONFIGS, HamburgerButton, IconProvider } from '@icon-park/vue-next'
 import '@icon-park/vue-next/styles/index.css'

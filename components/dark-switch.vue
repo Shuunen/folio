@@ -17,12 +17,13 @@ function doSwitch (): void {
   setTheme(isDark.value ? 'light' : 'dark')
 }
 
+// eslint-disable-next-line vue/no-ref-object-reactivity-loss
 setTheme(theme.value)
 // watchState('theme', () => { setTheme(state.theme) })
 </script>
 
 <template>
   <button type="button" @click="doSwitch">
-    <dark-mode class="app-link" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" :theme="isDark ? 'outline' : 'filled'" />
+    <dark-mode class="app-link" :theme="isDark ? 'outline' : 'filled'" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" />
   </button>
 </template>
