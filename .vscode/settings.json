@@ -1,18 +1,24 @@
 {
-    "cSpell.words": [
-        "GTmetrix",
-        "lightgallery",
-        "nnnoise",
-        "nosniff",
-        "oooscillate",
-        "purgecss",
-        "sourcerer",
-        "tada",
-        "vitepress"
-    ],
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#382258",
-        "titleBar.activeBackground": "#4E2F7B",
-        "titleBar.activeForeground": "#FDFCFE"
-    }
+  "cSpell.words": [
+    "GTmetrix",
+    "lightgallery",
+    "nnnoise",
+    "nosniff",
+    "oooscillate",
+    "purgecss",
+    "sourcerer",
+    "tada",
+    "vitepress"
+  ],
+  "search.exclude": {
+    "**/.vitepress/dist": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#382258",
+    "titleBar.activeBackground": "#4E2F7B",
+    "titleBar.activeForeground": "#FDFCFE"
+  },
+  "explorer.autoRevealExclude": {
+    "**/.vitepress/dist": true
+  }
 }

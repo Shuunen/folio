@@ -9,7 +9,7 @@ interface Entry {
 const entries = ref<Entry[]>([]) // [{ label: 'About' }, { label: 'Work' }, { label: 'Contact' }] as Entry[],
 const opened = ref(false)
 
-function toggle (): void {
+function toggle () {
   opened.value = !opened.value
 }
 </script>
@@ -21,7 +21,7 @@ function toggle (): void {
       <div class="mx-auto">
         <div class="flex h-16 items-center justify-between">
           <div class="flex w-full items-center justify-between">
-            <a class="app-link relative flex shrink-0 flex-row" href="/">
+            <a class="app-link relative ml-8 flex shrink-0 flex-row items-center md:ml-0" href="/">
               <span class="absolute -left-9 text-3xl">▷&nbsp;</span>Romain.cloud
             </a>
             <div class="hidden md:block">
