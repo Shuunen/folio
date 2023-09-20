@@ -38,7 +38,7 @@ function toggle (): void {
           </div>
           <div class="-mr-2 flex md:hidden">
             <button type="button">
-              <hamburger-button size="32" theme="outline" @click="toggle" />
+              <icon-hamburger size="32" theme="outline" @click="toggle" />
             </button>
           </div>
         </div>
