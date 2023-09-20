@@ -10,11 +10,13 @@ const config = {
     './.vitepress/theme/**/*.{ts,vue}',
     './pages/**/*.md',
     './components/**/*.vue',
+    'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}',
+    'node_modules/flowbite/**/*.{js,jsx,ts,tsx}',
   ],
   darkMode: 'class',
   plugins: [
-    // @ts-ignore
     require('@tailwindcss/typography'),
+    require('flowbite/plugin'),
   ],
   safelist: [
     {
