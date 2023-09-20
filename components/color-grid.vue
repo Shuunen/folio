@@ -1,9 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  name: {
-    required: true
-    type: string
-  }
+  name: string
 }>()
 </script>
 

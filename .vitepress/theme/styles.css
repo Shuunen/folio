@@ -34,22 +34,14 @@ html, body, #app, .layout--content > div {
   @apply hidden;
 }
 
-a[href^="/"], .app-link {
+a[href^="/"]:not(.app-button), .app-link {
   @apply hover:text-accent-600 dark:hover:text-accent-400 no-underline border-b-2 border-transparent;
 }
 
-a[href^="/"].app-link {
+a[href^="/"]:not(.app-button).app-link {
   @apply hover:border-accent-500;
 }
 
-a[href^="/"], .app-link, .accent {
+a[href^="/"]:not(.app-button), .app-link, .accent {
   @apply dark:text-accent-300 text-accent-500 transition-colors;
-}
-
-.layout--content > div {
-  @apply flex flex-col;
-}
-
-.app-layout--content > div {
-  @apply min-h-full flex flex-col;
 }

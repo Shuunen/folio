@@ -1,19 +1,19 @@
-<!-- eslint-disable sonar/no-vue-bypass-sanitization -->
+<script setup lang="ts">
+defineProps<{
+  text: string
+  to?: string
+}>()
+</script>
+
 <template>
+  <!-- eslint-disable sonar/no-vue-bypass-sanitization -->
   <a class="app-button relative block cursor-pointer overflow-hidden rounded-lg border-2 border-solid border-current bg-accent-500 p-0 text-center align-middle text-sm font-semibold uppercase tracking-widest text-white no-underline hover:bg-accent-600 focus:outline-none dark:bg-accent-300 dark:text-primary-800 dark:hover:bg-accent-400"
-    :data-text="text" :href="to">
+    :data-text="text" :href="to ?? '#'">
     <span class="block align-middle">
       {{ text }}
     </span>
   </a>
 </template>
-
-<script setup lang="ts">
-defineProps<{
-  text: string
-  to: string
-}>()
-</script>
 
 <style scoped>
 /* Winona button from https://codepen.io/michealjroberts/pen/ExjYKXL credits to Michael Roberts */
