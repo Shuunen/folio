@@ -121,6 +121,9 @@ module.exports = {
       severity: 'error',
       to: {
         couldNotResolve: true,
+        pathNot: [
+          'shuutils',
+        ],
       },
     },
     {
