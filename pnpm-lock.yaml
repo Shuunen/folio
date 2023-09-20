@@ -50,8 +50,8 @@ devDependencies:
     specifier: '*'
     version: 4.4.9
   vitepress:
-    specifier: 1.0.0-rc.14
-    version: 1.0.0-rc.14
+    specifier: 1.0.0-rc.15
+    version: 1.0.0-rc.15
   vue:
     specifier: '*'
     version: 3.3.4
@@ -8701,8 +8701,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.0-rc.14:
-    resolution: {integrity: sha512-yChIeXOAcNvVnSVjhziH1vte0uhKb00PuZf7KdIMfx3ixTMAz73Nn+6gREvCv0SdH+anteGUKz5eljv0ygcgGQ==}
+  /vitepress@1.0.0-rc.15:
+    resolution: {integrity: sha512-5criiHoEibkT/du7t6wQ2xQVsuTNuirQZbMAi0M9Hp0YzJoJvEX68Ej9p2PtNC84bYb/CxAh5QkMtMutk03lHw==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
