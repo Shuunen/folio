@@ -24,6 +24,6 @@ setTheme(theme.value)
 
 <template>
   <button type="button" @click="doSwitch">
-    <dark-mode class="app-link" :theme="isDark ? 'outline' : 'filled'" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" />
+    <icon-dark class="app-link text-2xl" :theme="isDark ? 'outline' : 'filled'" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" />
   </button>
 </template>
