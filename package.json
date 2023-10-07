@@ -52,7 +52,7 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "vitepress build && unique-mark '.vitepress/dist/*.html' && echo build success",
+    "build": "vitepress build && echo vitepress build success && unique-mark .vitepress/dist/*.html && echo build success",
     "check": "pnpm install && repo-check && pnpm build && pnpm lint && pnpm test && echo check success",
     "dev": "vitepress dev",
     "lint": "tsc --noEmit && echo tsc success && eslint --cache --fix --ext .ts,.vue . && echo eslint success && depcruise components pages --config && echo lint success",
