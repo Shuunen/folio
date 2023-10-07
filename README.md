@@ -65,6 +65,7 @@ watchState('theme', () => { setTheme(state.theme) })
 ## Thanks
 
 - [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) : handy tool to validate and visualize dependencies
+- [DoYouBuzz](https://doyoubuzz.com) : for their awesome resume builder that I use to generate the JSON resume file
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Feather Icons](https://feathericons.com) : nice looking svg icons
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward

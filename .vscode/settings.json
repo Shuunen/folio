@@ -1,15 +1,31 @@
 {
   "cSpell.words": [
+    "Accessi",
+    "Alyotech",
+    "Amdocs",
     "GTmetrix",
+    "intellio",
+    "Intellio",
+    "Jouve",
+    "l'ADEME",
+    "l'UI",
+    "l'UX",
     "lightgallery",
+    "Niji",
     "nnnoise",
     "nosniff",
     "oooscillate",
     "purgecss",
+    "Sephira",
+    "sinoe",
     "sourcerer",
     "tada",
+    "Unow",
     "vitepress"
   ],
+  "explorer.autoRevealExclude": {
+    "**/.vitepress/dist": true
+  },
   "search.exclude": {
     "**/.vitepress/dist": true
   },
@@ -17,8 +33,5 @@
     "activityBar.background": "#382258",
     "titleBar.activeBackground": "#4E2F7B",
     "titleBar.activeForeground": "#FDFCFE"
-  },
-  "explorer.autoRevealExclude": {
-    "**/.vitepress/dist": true
   }
 }
