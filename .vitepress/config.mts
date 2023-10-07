@@ -5,7 +5,6 @@ const title = `${name} - Folio`
 const description = `${name} - Portfolio - Personal website`
 const url = 'https://romain.cloud'
 
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   description,
@@ -25,4 +24,9 @@ export default defineConfig({
   ],
   srcDir: 'pages',
   title,
+  vite: {
+    server: {
+      port: 8080,
+    },
+  },
 })
