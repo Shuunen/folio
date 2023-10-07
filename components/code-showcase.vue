@@ -9,7 +9,7 @@ const [first] = list
 if (!first) throw new Error('You need to provide at least one child to this component')
 // @ts-expect-error missing type definition
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, no-underscore-dangle, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-const name: string = first.type.__file.match(/\/(?<name>[\w-]+)\.vue/iu)?.groups?.name ?? ''
+const name: string = first.type.__file?.match(/\/(?<name>[\w-]+)\.vue/iu)?.groups?.name ?? ''
 const properties = first.props ?? {}
 
 const activeTab = ref('first')
