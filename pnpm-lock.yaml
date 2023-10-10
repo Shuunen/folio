@@ -9,8 +9,8 @@ dependencies:
     specifier: '1.8'
     version: 1.8.1
   flowbite-vue:
-    specifier: 0.0.17-next.13
-    version: 0.0.17-next.13(tailwindcss@3.3.3)(vue@3.3.4)
+    specifier: 0.0.17
+    version: 0.0.17(tailwindcss@3.3.3)(vue@3.3.4)
   lightgallery:
     specifier: '2.7'
     version: 2.7.1
@@ -5299,8 +5299,8 @@ packages:
       vue-resize: 2.0.0-alpha.1(vue@3.3.4)
     dev: false
 
-  /flowbite-vue@0.0.17-next.13(tailwindcss@3.3.3)(vue@3.3.4):
-    resolution: {integrity: sha512-WT9UO3SNP6vXpYzv5cbLqNehLhUQyCdkvbzwA9QQJhz6QxNoc5jgHdyt6sqkH051ytgpF7TqK7jpxo7ln2Kv6g==}
+  /flowbite-vue@0.0.17(tailwindcss@3.3.3)(vue@3.3.4):
+    resolution: {integrity: sha512-nrBkkHdqVGBVTAM4yGJmwAbkvSsK9JqNVDagrHJNGoQdkaShnUWqNc++iDke1bDCKA0wPDatp9DANyuC3MN8Bw==}
     engines: {node: '>=14.x', npm: '>=6.x'}
     peerDependencies:
       tailwindcss: ^3
