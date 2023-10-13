@@ -1,9 +1,8 @@
 {
   "basics": {
     "email": "romain.racamier@gmail.com",
-    "label": "Développeur Web Full-Stack",
-    "name": "Romain Racamier-Lafon",
-    "summary": "Curieux et motivé j'aime l’innovation, la création et la dynamique de groupe."
+    "label": "position.fullstack-dev",
+    "name": "Romain Racamier-Lafon"
   },
   "education": [
     {
@@ -115,7 +114,7 @@
     },
     {
       "keywords": [
-        "Anglais : confirmé &amp; technique (voyages pro &amp; perso à l'étranger)",
+        "Anglais : confirmé & technique (voyages pro & perso à l'étranger)",
         "Français : langue maternelle"
       ],
       "name": "Langues"
@@ -159,7 +158,7 @@
   ],
   "work": [
     {
-      "company": "WeSave, Amundi",
+      "company": "WeSave, Anatec, Amundi",
       "highlights": [],
       "keywords": [
         "TypeScript",
@@ -180,7 +179,11 @@
           "thumb": "/images/wesave-conseil-01-w410.webp"
         }
       ],
-      "position": "Développeur Web Front-End",
+      "position": "fullstack-dev",
+      "sectors": [
+        "finance",
+        "savings-management"
+      ],
       "startDate": "2022-07-01"
     },
     {
@@ -216,18 +219,22 @@
           "thumb": "/images/lyf-02-w410.webp"
         }
       ],
-      "position": "Développeur Web Full-Stack & Tuteur",
+      "position": "fullstack-dev-tutor",
+      "sectors": [
+        "finance",
+        "mobile-payment"
+      ],
       "startDate": "2018-09-01"
     },
     {
       "company": "Auchan, Enedis, Système U, Niji",
       "endDate": "2018-06-01",
       "highlights": [
-        "Pour Auchan : Création d'un chatbot avec DialogFlow &amp; VueJS pour les visiteurs du drive en ligne",
+        "Pour Auchan : Création d'un chatbot avec DialogFlow & VueJS pour les visiteurs du drive en ligne",
         "Pour la Cipav : Refonte de l'extranet en Angular pour les adhérents : bit.ly/cipav-extranet",
-        "Pour Enedis : maintenance d'une application Ionic pour iOS &amp; Android : bit.ly/app-enedis",
+        "Pour Enedis : maintenance d'une application Ionic pour iOS & Android : bit.ly/app-enedis",
         "Pour Verlingue Immobilier : Création d'un espace de souscription pour les pro",
-        "Pour Système U :  Création d'une web-app de gestion pour les employés du drive"
+        "Pour Système U : Création d'une web-app de gestion pour les employés du drive"
       ],
       "keywords": [
         "TypeScript",
@@ -247,7 +254,12 @@
           "thumb": "/images/enedis-01-w410.webp"
         }
       ],
-      "position": "Développeur Web Full-Stack",
+      "position": "fullstack-dev",
+      "sectors": [
+        "retail",
+        "energy",
+        "insurance"
+      ],
       "startDate": "2016-10-01"
     },
     {
@@ -256,7 +268,7 @@
       "highlights": [
         "Réalisation de différentes applications web internes visant à gérer un catalogue d'offres télécoms",
         "Responsable Front-End sur le projet principal qui a duré 2 ans",
-        "Création d'une interface de construction par blocs et drag &amp; drop",
+        "Création d'une interface de construction par blocs et drag & drop",
         "Mise en place des tests unitaires, tests E2E via PhantomJS et rapport de couverture"
       ],
       "keywords": [
@@ -277,7 +289,11 @@
           "thumb": "/images/optus-01-w410.webp"
         }
       ],
-      "position": "Développeur Web Full-Stack",
+      "position": "fullstack-dev",
+      "sectors": [
+        "telecoms",
+        "mobile"
+      ],
       "startDate": "2014-04-01"
     },
     {
@@ -305,11 +321,15 @@
           "thumb": "/images/ouest-france-01-w410.webp"
         }
       ],
-      "position": "Développeur Web Full-Stack",
+      "position": "fullstack-dev",
+      "sectors": [
+        "press",
+        "media"
+      ],
       "startDate": "2012-11-01"
     },
     {
-      "company": "ADEME, FCSAD, Alyotech",
+      "company": "ADEME, Alyotech",
       "endDate": "2012-10-01",
       "highlights": [
         "Refonte d'un site d'information pour l'ADEME : bit.ly/sinoe-web",
@@ -332,11 +352,15 @@
           "thumb": "/images/ademe-01-w410.webp"
         }
       ],
-      "position": "Développeur Web",
+      "position": "frontend-dev",
+      "sectors": [
+        "environment",
+        "energy"
+      ],
       "startDate": "2011-10-01"
     },
     {
-      "company": "ANTS, Jouve",
+      "company": "ANTS, FCSAD, Jouve",
       "endDate": "2011-09-01",
       "highlights": [
         "Création de page et modules pour l'Agence Nationale des Titres Sécurisés : bit.ly/ants-web",
@@ -358,7 +382,12 @@
           "thumb": "/images/ants-01-w410.webp"
         }
       ],
-      "position": "Développeur Web",
+      "position": "frontend-dev",
+      "sectors": [
+        "government",
+        "sport",
+        "matriculation"
+      ],
       "startDate": "2009-09-01"
     },
     {
@@ -383,7 +412,11 @@
           "thumb": "/images/sephira-intellio-01-w410.webp"
         }
       ],
-      "position": "Développeur logiciel",
+      "position": "software-dev",
+      "sectors": [
+        "health",
+        "insurance"
+      ],
       "startDate": "2008-03-01"
     }
   ]

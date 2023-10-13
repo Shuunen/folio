@@ -23,7 +23,7 @@ it('cleanObject D', () => {
 
 it('setIds A', () => {
   expect(setIds({
-    basics: { name: 'John Doe', label: 'Programmer', email: '', summary: 'A summary of John Doe...' },
+    basics: { name: 'John Doe', label: 'Programmer', email: '' },
     education: [],
     work: [{
       company: 'ACME Inc.',
@@ -32,6 +32,7 @@ it('setIds A', () => {
       startDate: '2013-01-01',
       photos: [],
       keywords: [],
+      sectors: [],
       endDate: '',
     }],
     interests: [],

@@ -51,6 +51,7 @@
     "data/**/*.ts",
     "postcss.config.cjs",
     "tailwind.config.cjs",
-    "tests/*.ts"
+    "tests/*.ts",
+    "utils/*.ts"
   ]
 }

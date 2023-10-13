@@ -14,6 +14,7 @@ type ResumeWork = {
   keywords: string[]
   photos: Photo[]
   position: string
+  sectors: string[]
   startDate: string
 }
 
@@ -60,9 +61,10 @@ export function setIds (input: JsonResume) {
       endDate: item.endDate ?? '',
       highlights: item.highlights,
       id: slugify(item.company),
-      photos: item.photos,
       keywords: item.keywords,
+      photos: item.photos,
       position: item.position,
+      sectors: item.sectors,
       startDate: item.startDate,
     })),
   }
