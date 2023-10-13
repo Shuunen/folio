@@ -15,6 +15,7 @@ const theme: Theme = {
     app.component('IconCopy', Copy)
     app.component('IconDark', DarkMode)
     app.component('IconHamburger', HamburgerButton)
+
     // auto import all components in the components folder
     const components = import.meta.glob('../../components/*.vue', { eager: true }) // eslint-disable-line @typescript-eslint/naming-convention
     Object.entries(components).forEach(([path, definition]) => {

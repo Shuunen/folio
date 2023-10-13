@@ -28,14 +28,6 @@
         "import/no-commonjs": "off",
         "putout/putout": "off"
       }
-    },
-    {
-      "files": [
-        "*.test.ts"
-      ],
-      "rules": {
-        "unicorn/prefer-top-level-await": "off"
-      }
     }
   ],
   "parserOptions": {
@@ -108,7 +100,9 @@
     ],
     "eslint-comments/no-use": "off",
     "etc/no-const-enum": "off",
+    "etc/no-deprecated": "off",
     "etc/no-enum": "off",
+    "etc/no-internal": "off",
     "etc/prefer-interface": "off",
     "ext/lines-between-object-properties": "off",
     "func-names": [
@@ -195,6 +189,7 @@
     "unicorn/no-process-exit": "off",
     "unicorn/prefer-module": "off",
     "unicorn/prefer-node-protocol": "off",
+    "unicorn/prefer-spread": "off",
     "unicorn/prefer-string-replace-all": "off",
     "unicorn/prefer-switch": "off",
     "unicorn/prevent-abbreviations": [
