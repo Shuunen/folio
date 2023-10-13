@@ -22,6 +22,16 @@ export default defineConfig({
     ['meta', { content: 'website', property: 'og:type' }],
     ['meta', { content: url, property: 'og:url' }],
   ],
+  locales: {
+    fr: {
+      label: 'French',
+      lang: 'fr', // optional, will be added  as `lang` attribute on `html` tag
+    },
+    root: {
+      label: 'English',
+      lang: 'en',
+    },
+  },
   srcDir: 'pages',
   title,
   vite: {

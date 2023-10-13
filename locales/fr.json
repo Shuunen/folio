@@ -1,0 +1,25 @@
+{
+	"positions": {
+		"frontend-dev": "Développeur Web Front-End",
+		"fullstack-dev": "Développeur Web Full-Stack",
+		"fullstack-dev-tutor": "Développeur Web Full-Stack & Tuteur",
+		"software-dev": "Développeur logiciel"
+	},
+	"sectors": {
+		"energy": "énergie",
+		"environment": "environnement",
+		"finance": "finance",
+		"government": "gouvernement",
+		"health": "santé",
+		"insurance": "assurance",
+		"matriculation": "immatriculation",
+		"media": "média",
+		"mobile": "mobile",
+		"mobile-payment": "paiement mobile",
+		"press": "presse",
+		"retail": "vente",
+		"savings-management": "gestion de l'épargne",
+		"sport": "sport",
+		"telecoms": "télécoms"
+	}
+}
