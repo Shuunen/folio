@@ -1,5 +1,6 @@
 import { clone, slugify } from 'shuutils'
 import rawCv from './CV-romain-racamier-lafon.json'
+import type { Photo } from './types'
 
 type JsonResume = typeof rawCv
 
@@ -10,8 +11,8 @@ type ResumeWork = {
   endDate: string
   highlights: string[]
   id: string
-  images: string[]
   keywords: string[]
+  photos: Photo[]
   position: string
   startDate: string
 }
@@ -59,7 +60,7 @@ export function setIds (input: JsonResume) {
       endDate: item.endDate ?? '',
       highlights: item.highlights,
       id: slugify(item.company),
-      images: item.images,
+      photos: item.photos,
       keywords: item.keywords,
       position: item.position,
       startDate: item.startDate,

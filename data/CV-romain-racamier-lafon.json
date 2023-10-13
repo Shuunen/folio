@@ -161,9 +161,6 @@
     {
       "company": "WeSave, Amundi",
       "highlights": [],
-      "images": [
-        "wesave-conseil-01.webp"
-      ],
       "keywords": [
         "TypeScript",
         "Nuxt",
@@ -174,6 +171,14 @@
         "Tailwind",
         "NodeJS",
         "Git"
+      ],
+      "photos": [
+        {
+          "label": "WeSave conseil",
+          "size": "1440-998",
+          "src": "/images/wesave-conseil-01.webp",
+          "thumb": "/images/wesave-conseil-01-w410.webp"
+        }
       ],
       "position": "Développeur Web Front-End",
       "startDate": "2022-07-01"
@@ -186,10 +191,6 @@
         "Ajout de fonctionnalités et maintenance sur le framework interne de gestion des données liées à l'application Lyf Pay",
         "Accompagnement et formation de mon stagiaire autour d'un projet applicatif de suivi d'activité"
       ],
-      "images": [
-        "lyf-01.webp",
-        "lyf-02.webp"
-      ],
       "keywords": [
         "TypeScript",
         "Nuxt",
@@ -200,6 +201,20 @@
         "Tailwind",
         "NodeJS",
         "Git"
+      ],
+      "photos": [
+        {
+          "label": "Lyf.eu - Page accueil",
+          "size": "1701-1079",
+          "src": "/images/lyf-01.webp",
+          "thumb": "/images/lyf-01-w410.webp"
+        },
+        {
+          "label": "Lyf.eu - Page smartphone",
+          "size": "1720-1657",
+          "src": "/images/lyf-02.webp",
+          "thumb": "/images/lyf-02-w410.webp"
+        }
       ],
       "position": "Développeur Web Full-Stack & Tuteur",
       "startDate": "2018-09-01"
@@ -214,9 +229,6 @@
         "Pour Verlingue Immobilier : Création d'un espace de souscription pour les pro",
         "Pour Système U :  Création d'une web-app de gestion pour les employés du drive"
       ],
-      "images": [
-        "enedis-01.webp"
-      ],
       "keywords": [
         "TypeScript",
         "Angular",
@@ -226,6 +238,14 @@
         "CSS",
         "Sass",
         "Git"
+      ],
+      "photos": [
+        {
+          "label": "Enedis - Présentation smartphone",
+          "size": "4096-2730",
+          "src": "/images/enedis-01.webp",
+          "thumb": "/images/enedis-01-w410.webp"
+        }
       ],
       "position": "Développeur Web Full-Stack",
       "startDate": "2016-10-01"
@@ -239,9 +259,6 @@
         "Création d'une interface de construction par blocs et drag &amp; drop",
         "Mise en place des tests unitaires, tests E2E via PhantomJS et rapport de couverture"
       ],
-      "images": [
-        "optus-01.webp"
-      ],
       "keywords": [
         "JavaScript",
         "BackboneJS",
@@ -251,6 +268,14 @@
         "CSS",
         "Sass",
         "Perforce"
+      ],
+      "photos": [
+        {
+          "label": "Optus - Interface smartphone",
+          "size": "1369-772",
+          "src": "/images/optus-01.webp",
+          "thumb": "/images/optus-01-w410.webp"
+        }
       ],
       "position": "Développeur Web Full-Stack",
       "startDate": "2014-04-01"
@@ -263,9 +288,6 @@
         "Création de 3 thèmes Drupal : front (site public), back (pour les journalistes) et mobile (public)",
         "Optimisation des performances et du référencement (SEO)"
       ],
-      "images": [
-        "ouest-france-01.webp"
-      ],
       "keywords": [
         "JavaScript",
         "Bootstrap 2",
@@ -274,6 +296,14 @@
         "Google Analytics",
         "Google Tag Manager",
         "Git"
+      ],
+      "photos": [
+        {
+          "label": "Ouest-France - Multi-écrans",
+          "size": "1551-790",
+          "src": "/images/ouest-france-01.webp",
+          "thumb": "/images/ouest-france-01-w410.webp"
+        }
       ],
       "position": "Développeur Web Full-Stack",
       "startDate": "2012-11-01"
@@ -286,9 +316,6 @@
         "Création de pages et modules front",
         "Maintien du cahier des charges AccessiWeb Bronze : bit.ly/acc-web"
       ],
-      "images": [
-        "ademe-01.webp"
-      ],
       "keywords": [
         "Zend PHP",
         "JavaScript",
@@ -296,6 +323,14 @@
         "HTML",
         "CSS",
         "SVN"
+      ],
+      "photos": [
+        {
+          "label": "Agence De l'Environnement et de la Maîtrise de l'Énergie - Page d'accueil",
+          "size": "1260-800",
+          "src": "/images/ademe-01.webp",
+          "thumb": "/images/ademe-01-w410.webp"
+        }
       ],
       "position": "Développeur Web",
       "startDate": "2011-10-01"
@@ -307,9 +342,6 @@
         "Création de page et modules pour l'Agence Nationale des Titres Sécurisés : bit.ly/ants-web",
         "Prise en charge d'évolutions pour la fédération des clubs de la Défense : bit.ly/fcd-web"
       ],
-      "images": [
-        "ants-01.webp"
-      ],
       "keywords": [
         "Cake PHP",
         "Symfony",
@@ -317,6 +349,14 @@
         "HTML",
         "CSS",
         "SVN"
+      ],
+      "photos": [
+        {
+          "label": "Agence Nationale des Titres Sécurisés - Page d'accueil",
+          "size": "1121-1638",
+          "src": "/images/ants-01.webp",
+          "thumb": "/images/ants-01-w410.webp"
+        }
       ],
       "position": "Développeur Web",
       "startDate": "2009-09-01"
@@ -328,15 +368,20 @@
         "Corrections sur le logiciel embarqué dans le lecteur de carte vitale Intellio : bit.ly/intellio",
         "Déploiement et intégration d'un service de traitement de données sur serveur"
       ],
-      "images": [
-        "sephira-intellio-01.webp"
-      ],
       "keywords": [
         "C",
         "C++",
         "Bash",
         "Linux",
         "SVN"
+      ],
+      "photos": [
+        {
+          "label": "Sephira - Terminal Intellio",
+          "size": "1184-1638",
+          "src": "/images/sephira-intellio-01.webp",
+          "thumb": "/images/sephira-intellio-01-w410.webp"
+        }
       ],
       "position": "Développeur logiciel",
       "startDate": "2008-03-01"

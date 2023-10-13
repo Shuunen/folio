@@ -1,16 +1,11 @@
 <script setup lang="ts">
 import lightGallery from 'lightgallery'
 import { onMounted, ref } from 'vue'
-
-interface Image {
-  label: string
-  size: string
-  src: string
-  thumb: string
-}
+import type { Photo } from '../data/types'
 
 defineProps<{
-  images: Image[]
+  nbToShow?: number
+  photos: Photo[]
 }>()
 
 const wrapper = ref<HTMLElement>()
@@ -34,8 +29,9 @@ onMounted(initLightGallery)
 <template>
   <div ref="wrapper" class="app-photo-gallery not-prose flex flex-wrap gap-4">
     <!-- eslint-disable sonar/no-vue-bypass-sanitization -->
-    <a v-for="{ label, src, size, thumb }, index in images" :key="`photo-${index}`" :data-lg-size="size" :href="src">
-      <img :alt="label" class="h-60" :src="thumb ?? guessThumb(src)" />
+    <a v-for="{ label, src, size, thumb }, index in photos" :key="`photo-${index}`" class="overflow-hidden"
+      :class="[nbToShow && nbToShow <= index ? 'hidden' : '']" :data-lg-size="size" :href="src">
+      <img :alt="label" class="h-60 transition-transform duration-1000 hover:scale-110" :src="thumb ?? guessThumb(src)" />
     </a>
   </div>
 </template>
