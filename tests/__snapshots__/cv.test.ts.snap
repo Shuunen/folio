@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cleanObject C 1`] = `
+{
+  "wow": [
+    "Damn !",
+    "",
+    "I love this",
+  ],
+}
+`;
+
+exports[`cleanObject D 1`] = `
+{
+  "level0": {
+    "another": {
+      "key": "",
+    },
+    "wow": [
+      "Damn !",
+      12,
+      {
+        "hello": "Que tal ?",
+      },
+      "I love this",
+    ],
+  },
+}
+`;
+
+exports[`setIds A 1`] = `
+{
+  "education": [],
+  "work": [
+    {
+      "company": "ACME Inc.",
+      "endDate": "",
+      "highlights": [
+        "Started the company",
+      ],
+      "id": "acme-inc",
+      "images": [],
+      "keywords": [],
+      "position": "President",
+      "startDate": "2013-01-01",
+    },
+  ],
+}
+`;

@@ -40,16 +40,17 @@
     "verbatimModuleSyntax": true
   },
   "include": [
-    ".*.js",
+    ".dependency-cruiser.cjs",
     ".vitepress/**/*.ts",
     ".vitepress/**/*.vue",
-    "*.js",
-    "components/**/*.vue",
-    ".dependency-cruiser.mjs",
-    "tailwind.config.cjs",
-    "postcss.config.mjs",
     ".vitepress/config.mts",
+    "*.js",
+    "*.json",
+    "*.ts",
+    "components/**/*.vue",
+    "data/**/*.ts",
     "postcss.config.cjs",
-    ".dependency-cruiser.cjs"
+    "tailwind.config.cjs",
+    "tests/*.ts"
   ]
 }

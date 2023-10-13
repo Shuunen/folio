@@ -1,8 +1,11 @@
 {
   "cSpell.words": [
     "Accessi",
+    "ademe",
     "Alyotech",
     "Amdocs",
+    "Amundi",
+    "FCSAD",
     "GTmetrix",
     "intellio",
     "Intellio",
@@ -15,13 +18,17 @@
     "nnnoise",
     "nosniff",
     "oooscillate",
+    "optus",
     "purgecss",
+    "sephira",
     "Sephira",
     "sinoe",
     "sourcerer",
+    "Streamezzo",
     "tada",
     "Unow",
-    "vitepress"
+    "vitepress",
+    "wesave"
   ],
   "explorer.autoRevealExclude": {
     "**/.vitepress/dist": true

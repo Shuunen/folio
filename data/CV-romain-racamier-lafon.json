@@ -1,0 +1,345 @@
+{
+  "basics": {
+    "email": "romain.racamier@gmail.com",
+    "label": "Développeur Web Full-Stack",
+    "name": "Romain Racamier-Lafon",
+    "summary": "Curieux et motivé j'aime l’innovation, la création et la dynamique de groupe."
+  },
+  "education": [
+    {
+      "endDate": "2020-01-31",
+      "institution": "Unow",
+      "startDate": "2020-07-01",
+      "studyType": "Tuteur en entreprise"
+    },
+    {
+      "endDate": "2011-09-01",
+      "institution": "IIA Laval",
+      "startDate": "2009-09-01",
+      "studyType": "Master en Ingénierie Informatique"
+    },
+    {
+      "endDate": "2009-09-01",
+      "institution": "IUT Laval",
+      "startDate": "2007-09-01",
+      "studyType": "DUT Service et Réseaux de Communication"
+    },
+    {
+      "endDate": "2007-09-01",
+      "institution": "Lycée Montesquieu",
+      "startDate": "2005-09-01",
+      "studyType": "Bac Scientifique"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Cinéma, films et quelques séries"
+    },
+    {
+      "name": "Photo, macro et retouche"
+    },
+    {
+      "name": "Création de design/logos"
+    },
+    {
+      "name": "Marche, vélo, natation"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [],
+      "name": "Javascript, Typescript"
+    },
+    {
+      "keywords": [],
+      "name": "Anglais : confirmé & technique (voyages pro & perso à l'étranger)"
+    },
+    {
+      "keywords": [],
+      "name": "Windows XP à Windows 11"
+    },
+    {
+      "keywords": [],
+      "name": "Google Lighthouse, YSlow... (Faire les audits et améliorer / corriger si besoin)"
+    },
+    {
+      "keywords": [
+        "Javascript, Typescript",
+        "HTML, HTML 4, HTML",
+        "CSS, CSS3, SASS, SCSS, BEM",
+        "Web Component, PWA",
+        "Angular, Vue, VanillaJS",
+        "NuxtJS, VitePress",
+        "Jest, Mocha, Ava, Nyc, Istanbul",
+        "NodeJs, ExpressJs",
+        "PHP, MySQL, SQLite"
+      ],
+      "name": "Développement"
+    },
+    {
+      "keywords": [],
+      "name": "HTML, HTML 4, HTML"
+    },
+    {
+      "keywords": [],
+      "name": "Ubuntu Server, Debian"
+    },
+    {
+      "keywords": [
+        "Google Lighthouse, YSlow... (Faire les audits et améliorer / corriger si besoin)",
+        "Npm, Yarn, Pnpm",
+        "EsBuild, Webpack, Parcel",
+        "Git, GitFlow, GitHub, GitLab,..."
+      ],
+      "name": "Outillage"
+    },
+    {
+      "keywords": [],
+      "name": "Npm, Yarn, Pnpm"
+    },
+    {
+      "keywords": [],
+      "name": "Français : langue maternelle"
+    },
+    {
+      "keywords": [],
+      "name": "CSS, CSS3, SASS, SCSS, BEM"
+    },
+    {
+      "keywords": [],
+      "name": "Ubuntu, Linux Mint, Pop!_OS"
+    },
+    {
+      "keywords": [],
+      "name": "EsBuild, Webpack, Parcel"
+    },
+    {
+      "keywords": [
+        "Anglais : confirmé &amp; technique (voyages pro &amp; perso à l'étranger)",
+        "Français : langue maternelle"
+      ],
+      "name": "Langues"
+    },
+    {
+      "keywords": [
+        "Windows XP à Windows 11",
+        "Ubuntu Server, Debian",
+        "Ubuntu, Linux Mint, Pop!_OS"
+      ],
+      "name": "Systèmes d'exploitation"
+    },
+    {
+      "keywords": [],
+      "name": "Web Component, PWA"
+    },
+    {
+      "keywords": [],
+      "name": "Git, GitFlow, GitHub, GitLab,..."
+    },
+    {
+      "keywords": [],
+      "name": "Angular, Vue, VanillaJS"
+    },
+    {
+      "keywords": [],
+      "name": "NuxtJS, VitePress"
+    },
+    {
+      "keywords": [],
+      "name": "Jest, Mocha, Ava, Nyc, Istanbul"
+    },
+    {
+      "keywords": [],
+      "name": "NodeJs, ExpressJs"
+    },
+    {
+      "keywords": [],
+      "name": "PHP, MySQL, SQLite"
+    }
+  ],
+  "work": [
+    {
+      "company": "WeSave, Amundi",
+      "highlights": [],
+      "images": [
+        "wesave-conseil-01.webp"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Nuxt",
+        "Vue 3",
+        "Vue 2",
+        "HTML",
+        "CSS",
+        "Tailwind",
+        "NodeJS",
+        "Git"
+      ],
+      "position": "Développeur Web Front-End",
+      "startDate": "2022-07-01"
+    },
+    {
+      "company": "Lyf, Euro Information, GFI, Inetum",
+      "highlights": [
+        "Création d'un catalogue de composants visant à centraliser l'UI et l'UX de tous les projets web existants et futurs",
+        "Refonte du site institutionnel Lyf.eu en NuxtJS, un générateur de site basé sur Vue : bit.ly/lyf-pay",
+        "Ajout de fonctionnalités et maintenance sur le framework interne de gestion des données liées à l'application Lyf Pay",
+        "Accompagnement et formation de mon stagiaire autour d'un projet applicatif de suivi d'activité"
+      ],
+      "images": [
+        "lyf-01.webp",
+        "lyf-02.webp"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Nuxt",
+        "Vue 2",
+        "Angular",
+        "HTML",
+        "CSS",
+        "Tailwind",
+        "NodeJS",
+        "Git"
+      ],
+      "position": "Développeur Web Full-Stack & Tuteur",
+      "startDate": "2018-09-01"
+    },
+    {
+      "company": "Auchan, Enedis, Système U, Niji",
+      "endDate": "2018-06-01",
+      "highlights": [
+        "Pour Auchan : Création d'un chatbot avec DialogFlow &amp; VueJS pour les visiteurs du drive en ligne",
+        "Pour la Cipav : Refonte de l'extranet en Angular pour les adhérents : bit.ly/cipav-extranet",
+        "Pour Enedis : maintenance d'une application Ionic pour iOS &amp; Android : bit.ly/app-enedis",
+        "Pour Verlingue Immobilier : Création d'un espace de souscription pour les pro",
+        "Pour Système U :  Création d'une web-app de gestion pour les employés du drive"
+      ],
+      "images": [
+        "enedis-01.webp"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Angular",
+        "Vue 2",
+        "AngularJs",
+        "HTML",
+        "CSS",
+        "Sass",
+        "Git"
+      ],
+      "position": "Développeur Web Full-Stack",
+      "startDate": "2016-10-01"
+    },
+    {
+      "company": "Optus, Streamezzo, Amdocs, Niji",
+      "endDate": "2016-09-01",
+      "highlights": [
+        "Réalisation de différentes applications web internes visant à gérer un catalogue d'offres télécoms",
+        "Responsable Front-End sur le projet principal qui a duré 2 ans",
+        "Création d'une interface de construction par blocs et drag &amp; drop",
+        "Mise en place des tests unitaires, tests E2E via PhantomJS et rapport de couverture"
+      ],
+      "images": [
+        "optus-01.webp"
+      ],
+      "keywords": [
+        "JavaScript",
+        "BackboneJS",
+        "JQuery",
+        "RequireJS",
+        "HTML",
+        "CSS",
+        "Sass",
+        "Perforce"
+      ],
+      "position": "Développeur Web Full-Stack",
+      "startDate": "2014-04-01"
+    },
+    {
+      "company": "Ouest-France, Alyotech",
+      "endDate": "2014-03-01",
+      "highlights": [
+        "Responsable Front-End lors de la refonte du site Ouest-France en Drupal 7 : bit.ly/of-web",
+        "Création de 3 thèmes Drupal : front (site public), back (pour les journalistes) et mobile (public)",
+        "Optimisation des performances et du référencement (SEO)"
+      ],
+      "images": [
+        "ouest-france-01.webp"
+      ],
+      "keywords": [
+        "JavaScript",
+        "Bootstrap 2",
+        "HTML",
+        "CSS",
+        "Google Analytics",
+        "Google Tag Manager",
+        "Git"
+      ],
+      "position": "Développeur Web Full-Stack",
+      "startDate": "2012-11-01"
+    },
+    {
+      "company": "ADEME, FCSAD, Alyotech",
+      "endDate": "2012-10-01",
+      "highlights": [
+        "Refonte d'un site d'information pour l'ADEME : bit.ly/sinoe-web",
+        "Création de pages et modules front",
+        "Maintien du cahier des charges AccessiWeb Bronze : bit.ly/acc-web"
+      ],
+      "images": [
+        "ademe-01.webp"
+      ],
+      "keywords": [
+        "Zend PHP",
+        "JavaScript",
+        "JQuery",
+        "HTML",
+        "CSS",
+        "SVN"
+      ],
+      "position": "Développeur Web",
+      "startDate": "2011-10-01"
+    },
+    {
+      "company": "ANTS, Jouve",
+      "endDate": "2011-09-01",
+      "highlights": [
+        "Création de page et modules pour l'Agence Nationale des Titres Sécurisés : bit.ly/ants-web",
+        "Prise en charge d'évolutions pour la fédération des clubs de la Défense : bit.ly/fcd-web"
+      ],
+      "images": [
+        "ants-01.webp"
+      ],
+      "keywords": [
+        "Cake PHP",
+        "Symfony",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "SVN"
+      ],
+      "position": "Développeur Web",
+      "startDate": "2009-09-01"
+    },
+    {
+      "company": "Sephira",
+      "endDate": "2008-05-01",
+      "highlights": [
+        "Corrections sur le logiciel embarqué dans le lecteur de carte vitale Intellio : bit.ly/intellio",
+        "Déploiement et intégration d'un service de traitement de données sur serveur"
+      ],
+      "images": [
+        "sephira-intellio-01.webp"
+      ],
+      "keywords": [
+        "C",
+        "C++",
+        "Bash",
+        "Linux",
+        "SVN"
+      ],
+      "position": "Développeur logiciel",
+      "startDate": "2008-03-01"
+    }
+  ]
+}
