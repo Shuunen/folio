@@ -30,7 +30,7 @@ it('setIds A', () => {
       highlights: ['Started the company'],
       position: 'President',
       startDate: '2013-01-01',
-      images: [],
+      photos: [],
       keywords: [],
       endDate: '',
     }],
