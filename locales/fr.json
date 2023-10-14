@@ -21,5 +21,10 @@
 		"savings-management": "gestion de l'épargne",
 		"sport": "sport",
 		"telecoms": "télécoms"
+	},
+	"work-timeline": {
+		"business-sectors": "secteurs d'activité",
+		"compagnies": "entreprises",
+		"position": "rôle"
 	}
 }

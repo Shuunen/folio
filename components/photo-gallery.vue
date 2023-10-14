@@ -31,7 +31,7 @@ onMounted(initLightGallery)
     <!-- eslint-disable sonar/no-vue-bypass-sanitization -->
     <a v-for="{ label, src, size, thumb }, index in photos" :key="`photo-${index}`" class="overflow-hidden"
       :class="[nbToShow && nbToShow <= index ? 'hidden' : '']" :data-lg-size="size" :href="src">
-      <img :alt="label" class="h-60 transition-transform duration-1000 hover:scale-110" :src="thumb ?? guessThumb(src)" />
+      <img :alt="label" class="h-60 object-cover transition-transform duration-1000 hover:scale-110" :src="thumb ?? guessThumb(src)" />
     </a>
   </div>
 </template>
