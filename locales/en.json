@@ -21,5 +21,10 @@
 		"savings-management": "savings management",
 		"sport": "sport",
 		"telecoms": "telecoms"
+	},
+	"work-timeline": {
+		"business-sectors": "business sectors",
+		"compagnies": "companies",
+		"position": "role"
 	}
 }
