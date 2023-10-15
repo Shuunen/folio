@@ -2,6 +2,7 @@
 <!-- eslint-disable vue/no-ref-object-destructure -->
 <!-- eslint-disable etc/no-commented-out-code -->
 <script setup lang="ts">
+import { DarkMode } from '@icon-park/vue-next'
 import { computed, ref } from 'vue'
 import { $t, isBrowser } from '../utils/translate.utils'
 
@@ -25,7 +26,7 @@ setTheme(theme.value)
 
 <template>
   <button type="button" @click="doSwitch">
-    <icon-dark class="app-link text-2xl" :theme="isDark ? 'outline' : 'filled'"
+    <DarkMode class="app-link text-2xl" :theme="isDark ? 'outline' : 'filled'"
       :title="isDark ? $t('general.use-light-theme') : $t('general.use-dark-theme')" />
   </button>
 </template>

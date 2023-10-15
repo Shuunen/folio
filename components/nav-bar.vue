@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { HamburgerButton } from '@icon-park/vue-next'
 import { ref } from 'vue'
 import { $t, localePath } from '../utils/translate.utils'
 
@@ -37,7 +38,7 @@ function toggle () {
           </div>
           <div class="-mr-2 flex md:hidden">
             <button type="button">
-              <icon-hamburger size="32" theme="outline" @click="toggle" />
+              <HamburgerButton size="32" theme="outline" @click="toggle" />
             </button>
           </div>
         </div>
