@@ -4,7 +4,7 @@ import { pickOne, slugify } from 'shuutils'
 import { ref } from 'vue'
 import { cv } from '../data/cv'
 import { logger } from '../utils/logger.utils'
-import { $t, lang, switchLang } from '../utils/translate.utils'
+import { $t } from '../utils/translate.utils'
 
 const tailwindColors = ['text-blue-400', 'text-cyan-300', 'text-cyan-500', 'text-emerald-300', 'text-emerald-500', 'text-fuchsia-300', 'text-green-300', 'text-green-500', 'text-indigo-400', 'text-lime-300', 'text-lime-600', 'text-orange-300', 'text-orange-400', 'text-pink-400', 'text-purple-400', 'text-purple-500', 'text-red-400', 'text-sky-300', 'text-sky-600', 'text-teal-300', 'text-teal-500', 'text-yellow-300', 'text-yellow-400']
 const colorByTag: Record<string, string> = {}
@@ -51,7 +51,6 @@ function iconForSector (sector: string) {
 
 <template>
   <div class="not-prose flex flex-col items-center justify-center">
-    <button type="button" @click="switchLang">Switch lang ({{ lang }})</button>
     <div class="app-date">{{ dateToMonthYear() }}</div>
     <template v-for="(work, index) in cv.work" :key="work.id">
       <div class="app-line" />

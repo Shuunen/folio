@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { $t, localePath } from '../utils/translate.utils'
 
-interface Entry {
-  label: string
-  url?: string
-}
+defineProps<{
+  pages: string[]
+}>()
 
-const entries = ref<Entry[]>([]) // [{ label: 'About' }, { label: 'Work' }, { label: 'Contact' }] as Entry[],
 const opened = ref(false)
 
 function toggle () {
@@ -26,8 +25,8 @@ function toggle () {
             </a>
             <div class="hidden md:block">
               <div class="ml-10 flex space-x-4">
-                <a v-for="entry, index in entries" :key="`entry-${index}`" class="app-link" :href="`/${entry.url ?? entry.label.toLowerCase()}`">
-                  {{ entry.label }}
+                <a v-for="page, index in pages" :key="`entry-${index}`" class="app-link" :href="localePath(page)">
+                  {{ $t(`pages.${page}`) }}
                 </a>
                 <dark-switch />
               </div>
@@ -45,8 +44,8 @@ function toggle () {
       </div>
       <div class="md:hidden">
         <div class="flex flex-col gap-4 text-right sm:px-3">
-          <a v-for="entry, index in entries" :key="`entry-${index}`" class="app-link" :href="`/${entry.url ?? entry.label.toLowerCase()}`">
-            {{ entry.label }}
+          <a v-for="page, index in pages" :key="`entry-${index}`" class="app-link" :href="localePath(page)">
+            {{ $t(`pages.${page}`) }}
           </a>
         </div>
       </div>

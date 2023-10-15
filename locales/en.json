@@ -1,4 +1,14 @@
 {
+	"general": {
+		"switch-lang": "voir la version française",
+		"use-dark-theme": "Join the dark side",
+		"use-light-theme": "Go towards the light"
+	},
+	"pages": {
+		"contact": "contact",
+		"index": "home",
+		"work": "work"
+	},
 	"positions": {
 		"frontend-dev": "Front-End Web Developer",
 		"fullstack-dev": "Full-Stack Web Developer",

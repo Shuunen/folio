@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import { $t, switchLang } from '../utils/translate.utils'
+</script>
+
 <template>
-  <div class="app-footer mt-24 flex h-24 flex-col justify-center bg-contain bg-center bg-no-repeat pb-12">
-    <div class="mt-8 flex justify-center space-x-6">
+  <div class="app-footer mt-24 flex h-24 flex-col justify-center gap-2 bg-contain bg-center bg-no-repeat pb-12">
+    <div class="flex justify-center space-x-6">
       <a class="app-link" href="https://www.linkedin.com/in/romainracamier">
         <span class="sr-only">LinkedIn</span>
         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
@@ -18,8 +22,12 @@
         </svg>
       </a>
     </div>
-    <p class="text-center text-sm font-bold text-primary-400" title="__unique-mark__">© {{ new Date().getFullYear() }} Romain.cloud - All rights
-      reserved.</p>
+    <button class="mx-auto mt-1 font-mono text-sm underline underline-offset-4 hover:font-bold hover:underline-offset-2" type="button"
+      @click="switchLang">
+      {{ $t('general.switch-lang') }}
+    </button>
+    <div class="text-center text-sm font-bold text-primary-400" title="__unique-mark__">© {{ new Date().getFullYear() }} Romain.cloud - All rights
+      reserved.</div>
   </div>
 </template>
 
