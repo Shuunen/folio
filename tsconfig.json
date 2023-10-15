@@ -49,6 +49,7 @@
     "*.ts",
     "components/**/*.vue",
     "data/**/*.ts",
+    "pages/*.ts",
     "postcss.config.cjs",
     "tailwind.config.cjs",
     "tests/*.ts",
