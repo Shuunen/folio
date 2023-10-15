@@ -1,3 +1,4 @@
+import components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vitepress'
 
 const name = 'Romain Racamier-Lafon'
@@ -35,6 +36,12 @@ export default defineConfig({
   srcDir: 'pages',
   title,
   vite: {
+    plugins: [
+      components({
+        dirs: ['../components'],
+        extensions: ['vue'],
+      }),
+    ],
     server: {
       port: 8080,
     },

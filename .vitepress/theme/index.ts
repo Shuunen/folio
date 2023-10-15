@@ -6,7 +6,7 @@ import './styles.css'
 const theme: Theme = {
   Layout, // eslint-disable-line @typescript-eslint/naming-convention
   enhanceApp ({ app }) {
-    // auto import all components in the components folder
+    // reference components to let them be used in md
     const components = import.meta.glob('../../components/*.vue', { eager: true }) // eslint-disable-line @typescript-eslint/naming-convention
     Object.entries(components).forEach(([path, definition]) => {
       const componentName = path.split('/').pop()?.replace(/\.\w+$/u, '')
