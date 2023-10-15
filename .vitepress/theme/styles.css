@@ -30,10 +30,6 @@ html, body, #app, .layout--content > div {
   @apply bg-primary-700 border border-current;
 }
 
-.header-anchor {
-  @apply hidden;
-}
-
 a[href^="/"]:not(.app-button), .app-link {
   @apply hover:text-accent-600 dark:hover:text-accent-400 no-underline border-b-2 border-transparent;
 }
@@ -44,4 +40,8 @@ a[href^="/"]:not(.app-button).app-link {
 
 a[href^="/"]:not(.app-button), .app-link, .accent {
   @apply dark:text-accent-300 text-accent-500 transition-colors;
+}
+
+.app-link.active {
+  @apply border-primary-300 dark:border-accent-100;
 }
