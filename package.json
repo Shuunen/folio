@@ -22,7 +22,7 @@
     "tailwindcss": "3",
     "typescript": "5.2",
     "vite": "*",
-    "vitepress": "1.0.0-rc.21",
+    "vitepress": "1.0.0-rc.22",
     "vue": "*"
   },
   "files": [
