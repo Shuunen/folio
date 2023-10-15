@@ -1,21 +1,11 @@
 // https://vitepress.dev/guide/custom-theme
-import { Copy, DarkMode, DEFAULT_ICON_CONFIGS, HamburgerButton, IconProvider } from '@icon-park/vue-next'
-import '@icon-park/vue-next/styles/index.css'
 import type { Theme } from 'vitepress'
 import Layout from './layouts/base.vue'
 import './styles.css'
 
 const theme: Theme = {
   Layout, // eslint-disable-line @typescript-eslint/naming-convention
-  setup () {
-    IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'icon' }) // eslint-disable-line new-cap
-  },
   enhanceApp ({ app }) {
-    // icon park
-    app.component('IconCopy', Copy)
-    app.component('IconDark', DarkMode)
-    app.component('IconHamburger', HamburgerButton)
-
     // auto import all components in the components folder
     const components = import.meta.glob('../../components/*.vue', { eager: true }) // eslint-disable-line @typescript-eslint/naming-convention
     Object.entries(components).forEach(([path, definition]) => {
