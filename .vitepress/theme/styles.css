@@ -42,6 +42,6 @@ a[href^="/"]:not(.app-button), .app-link, .accent {
   @apply dark:text-accent-300 text-accent-500 transition-colors;
 }
 
-.app-link.active {
-  @apply border-primary-300 dark:border-accent-100;
+.app-link.app-link--active {
+  @apply border-primary-300 dark:border-accent-400/70;
 }
