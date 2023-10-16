@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRoute } from 'vitepress'
 import { computed } from 'vue'
 import { getPage } from '../utils/browser.utils'
 import { $t, localePath } from '../utils/translate.utils'
@@ -7,7 +8,7 @@ defineProps<{
   pages: string[]
 }>()
 
-const actual = computed(() => getPage())
+const actual = computed(() => getPage(useRoute().path))
 </script>
 
 <template>
