@@ -41,6 +41,16 @@ export default defineConfig({
         dirs: ['../components'],
         extensions: ['vue'],
       }),
+      {
+        enforce: 'post',
+        name: 'html-inject-nonce-into-script-tag',
+        transformIndexHtml (html) {
+          // eslint-disable-next-line prefer-named-capture-group, regexp/prefer-named-capture-group, regexp/no-lazy-ends
+          const regex = /<script(.*?)/giu
+          const replacement = '<script nonce="shu7782n1"$1'
+          return html.replace(regex, replacement)
+        },
+      },
     ],
     server: {
       port: 8080,
