@@ -2,13 +2,13 @@ import { flatten } from 'shuutils'
 import { ref } from 'vue'
 import en from '../locales/en.json'
 import fr from '../locales/fr.json'
+import { getPath, isBrowser } from './browser.utils'
 import { logger } from './logger.utils'
 
 const translations = { fr: flatten(fr), en: flatten(en) }
 type Lang = keyof typeof translations
-const defaultLang: Lang = 'en'
 
-export const isBrowser = typeof document !== 'undefined'
+export const defaultLang: Lang = 'en'
 
 export function getLangFromPath (path: string) {
   const detected = /^\/(?<lang>en|fr)\//u.exec(path)?.groups?.lang ?? defaultLang
@@ -17,10 +17,8 @@ export function getLangFromPath (path: string) {
 
 export const lang = ref<Lang>(getLangFromPath(/* c8 ignore next */isBrowser ? document.location.pathname : ''))
 
-export function localePath (path: string, targetLang = lang.value) { // example with : /fr/contact & 'en'
-  let result = path.replace(/^\/[a-z]{2}\//u, '/') // remove any lang from path : /contact
-  if (targetLang !== defaultLang) result = `/${targetLang}/${result}` // add target lang to path : /fr//contact
-  return result.replace(/\/{2,}/gu, '/') // remove extra slashes : /fr/contact
+export function localePath (path: string, targetLang = lang.value) {
+  return getPath(path, targetLang === defaultLang ? '' : targetLang)
 }
 
 export function $t (key: string) {

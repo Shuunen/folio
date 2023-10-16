@@ -4,7 +4,8 @@
 <script setup lang="ts">
 import { DarkMode } from '@icon-park/vue-next'
 import { computed, ref } from 'vue'
-import { $t, isBrowser } from '../utils/translate.utils'
+import { isBrowser } from '../utils/browser.utils'
+import { $t } from '../utils/translate.utils'
 
 const theme = ref('dark')
 const isDark = computed(() => theme.value === 'dark')
