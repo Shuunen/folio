@@ -5,7 +5,7 @@ import { $t, switchLang } from '../utils/translate.utils'
 <template>
   <div class="app-footer mt-24 flex h-24 flex-col justify-center gap-2 bg-contain bg-center bg-no-repeat pb-12">
     <div class="flex justify-center space-x-6">
-      <a class="app-link" href="https://www.linkedin.com/in/romainracamier">
+      <a class="app-link" href="https://www.linkedin.com/in/romainracamier" rel="noopener noreferrer" target="_blank">
         <span class="sr-only">LinkedIn</span>
         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +13,7 @@ import { $t, switchLang } from '../utils/translate.utils'
           <circle cx="4" cy="4" r="2" />
         </svg>
       </a>
-      <a class="app-link" href="https://github.com/Shuunen">
+      <a class="app-link" href="https://github.com/Shuunen" rel="noopener noreferrer" target="_blank">
         <span class="sr-only">GitHub</span>
         <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
           <path clip-rule="evenodd"
@@ -26,8 +26,8 @@ import { $t, switchLang } from '../utils/translate.utils'
       @click="switchLang">
       {{ $t('general.switch-lang') }}
     </button>
-    <div class="text-center text-sm font-bold text-primary-400" title="__unique-mark__">© {{ new Date().getFullYear() }} Romain.cloud - All rights
-      reserved.</div>
+    <div class="text-center text-sm font-bold text-primary-400" title="__unique-mark__">© {{ new Date().getFullYear() }} Romain.cloud - {{
+      $t('general.copyright') }}</div>
   </div>
 </template>
 

@@ -17,7 +17,7 @@ const actual = computed(() => getPage(useRoute().path))
     <nav class="mb-12 md:mb-24">
       <div class="mx-auto">
         <div class="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2">
-          <a class="app-link relative ml-10 mr-auto flex shrink-0 flex-row items-center md:ml-0" href="/">
+          <a class="app-link relative ml-10 mr-auto flex shrink-0 flex-row items-center md:ml-0" :href="localePath('')">
             <span class="absolute -left-9 text-3xl">▷&nbsp;</span>
             <span class="hidden sm:block">Romain.cloud</span>
           </a>
