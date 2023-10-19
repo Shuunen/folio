@@ -13,6 +13,7 @@
 ## Todo
 
 - [ ] add a lang flag switch
+- [ ] add some illustrations (<https://iconpark.oceanengine.com/illustrations/18> maybe ?)
 
 ## Thanks
 
