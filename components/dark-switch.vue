@@ -5,24 +5,25 @@
 import { DarkMode } from '@icon-park/vue-next'
 import { computed, ref } from 'vue'
 import { isBrowser } from '../utils/browser.utils'
+import { logger } from '../utils/logger.utils'
+import { state } from '../utils/state.utils'
 import { $t } from '../utils/translate.utils'
 
-const theme = ref('dark')
+const theme = ref(state.theme)
 const isDark = computed(() => theme.value === 'dark')
 
-function setTheme (value: string): void {
-  // console.info('theme is now', value)
+function setTheme (value: string) {
+  logger.debug('theme is now', value)
   theme.value = value
+  state.theme = value
   if (isBrowser) document.documentElement.classList.toggle('dark', isDark.value)
 }
 
-function doSwitch (): void {
+function doSwitch () {
   setTheme(isDark.value ? 'light' : 'dark')
 }
 
-// eslint-disable-next-line vue/no-ref-object-reactivity-loss
-setTheme(theme.value)
-// watchState('theme', () => { setTheme(state.theme) })
+setTheme(state.theme)
 </script>
 
 <template>

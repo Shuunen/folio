@@ -156,6 +156,20 @@
     "max-statements-per-line": "off",
     "no-console": "error",
     "no-inline-comments": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "importNames": [
+              "storage"
+            ],
+            "message": "Please import 'storage' from '@/utils/storage.utils' instead.",
+            "name": "shuutils"
+          }
+        ]
+      }
+    ],
     "object-curly-spacing": [
       "error",
       "always"
