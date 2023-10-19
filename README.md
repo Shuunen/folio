@@ -12,55 +12,7 @@
 
 ## Todo
 
-Bring back `state.ts` :
-
-```ts
-import { createState, storage } from 'shuutils'
-
-export const { state, watchState } = createState({
-  theme: typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
-}, storage)
-```
-
-Bring back `logger.ts` :
-
-```ts
-import { Logger } from 'shuutils'
-
-export const logger = new Logger()
-```
-
-Bring back `dark-switch.vue` :
-
-```vue
-<script setup lang="ts">
-import { computed, ref } from 'vue'
-import { logger } from '../src/logger'
-import { state, watchState } from '../src/state'
-
-const theme = ref(state.theme)
-const isDark = computed(() => theme.value === 'dark')
-
-function setTheme (value: string): void {
-  logger.info('theme is now', value)
-  theme.value = value
-  if (typeof document !== 'undefined') document.documentElement.classList.toggle('dark', isDark.value)
-}
-
-function doSwitch (): void {
-  state.theme = isDark.value ? 'light' : 'dark'
-}
-
-setTheme(state.theme)
-watchState('theme', () => { setTheme(state.theme) })
-</script>
-
-<template>
-  <button type="button" @click="doSwitch">
-    <dark-mode class="link" :title="isDark ? 'Switch to sun mode' : 'Bring the night'" :theme="isDark ? 'outline' : 'filled'" />
-  </button>
-</template>
-```
+- [ ] add a lang flag switch
 
 ## Thanks
 
