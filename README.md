@@ -10,6 +10,8 @@
 
 ![logo](docs/banner.svg)
 
+![demo](pages/public/images/folio-4.1.0.webp)
+
 ## Todo
 
 - [ ] add a lang flag switch
@@ -30,10 +32,8 @@
 - [Shields.io](https://shields.io) : super platform centralizing badges
 - [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
+- [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Vite](https://github.com/vitejs/vite) : super fast frontend tooling
+- [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
 - [Vue](https://vuejs.org) : when I need a front framework, this is the one I choose <3
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
-
-## Notes
-
-This project does not need demo.
