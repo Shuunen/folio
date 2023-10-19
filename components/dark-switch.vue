@@ -5,7 +5,6 @@
 import { DarkMode } from '@icon-park/vue-next'
 import { computed, ref } from 'vue'
 import { isBrowser } from '../utils/browser.utils'
-import { logger } from '../utils/logger.utils'
 import { state } from '../utils/state.utils'
 import { $t } from '../utils/translate.utils'
 
@@ -13,7 +12,6 @@ const theme = ref(state.theme)
 const isDark = computed(() => theme.value === 'dark')
 
 function setTheme (value: string) {
-  logger.debug('theme is now', value)
   theme.value = value
   state.theme = value
   if (isBrowser) document.documentElement.classList.toggle('dark', isDark.value)
