@@ -4,7 +4,7 @@
   "bugs": "https://github.com/Shuunen/folio/issues",
   "dependencies": {
     "flowbite": "2.0",
-    "flowbite-vue": "0.0.17",
+    "flowbite-vue": "0.1.0",
     "lightgallery": "2.7",
     "shuutils": "7.3"
   },
