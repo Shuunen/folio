@@ -2,6 +2,8 @@
 
 # Kitchen sink
 
+<img src="/assets/illustrations/examination-passed.svg" alt="examination passed" width="600" class="absolute -top-12 -right-1/4 not-prose" />
+
 ## Typography
 
 <h1>Heading 1</h1>
