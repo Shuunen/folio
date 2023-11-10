@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   flowbite:
-    specifier: '2.0'
-    version: 2.0.0
+    specifier: '2.1'
+    version: 2.1.1
   flowbite-vue:
-    specifier: 0.0.17
-    version: 0.0.17(tailwindcss@3.3.5)(vue@3.3.8)
+    specifier: '0.1'
+    version: 0.1.0(tailwindcss@3.3.5)(vue@3.3.8)
   lightgallery:
     specifier: '2.7'
     version: 2.7.2
@@ -5401,8 +5401,8 @@ packages:
       vue-resize: 2.0.0-alpha.1(vue@3.3.8)
     dev: false
 
-  /flowbite-vue@0.0.17(tailwindcss@3.3.5)(vue@3.3.8):
-    resolution: {integrity: sha512-nrBkkHdqVGBVTAM4yGJmwAbkvSsK9JqNVDagrHJNGoQdkaShnUWqNc++iDke1bDCKA0wPDatp9DANyuC3MN8Bw==}
+  /flowbite-vue@0.1.0(tailwindcss@3.3.5)(vue@3.3.8):
+    resolution: {integrity: sha512-36SJbc4Wk+Gleh6G5RytYG4aChjSIXKSIdF9uryT8gB4EyAp863/yE10wiyFjj/B+a+awpefIuTzCg8lmF2p+A==}
     engines: {node: '>=14.x', npm: '>=6.x'}
     peerDependencies:
       tailwindcss: ^3
@@ -5429,8 +5429,8 @@ packages:
       mini-svg-data-uri: 1.4.4
     dev: false
 
-  /flowbite@2.0.0:
-    resolution: {integrity: sha512-gP/iC/WuznQ5XBzikhaSs4RDs49zrvoAdHbWMHSY3l7nVJX0xJz+dELIlLjh+czLdEVTMLxUjuARYYwCb5q34A==}
+  /flowbite@2.1.1:
+    resolution: {integrity: sha512-FkTwNXlfWRXUhSsiE9D4bEqLN8ywdunW2qOz1z7gN+Co7h9EQIJf/Fr4xgq1NJPFa+6MeMf08QLzviU7LqB/rQ==}
     dependencies:
       '@popperjs/core': 2.11.8
       mini-svg-data-uri: 1.4.4

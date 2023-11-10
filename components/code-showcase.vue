@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Copy } from '@icon-park/vue-next'
-import { Tab, Tabs } from 'flowbite-vue'
+import { FwbTab as Tab, FwbTabs as Tabs, FwbToast as Toast } from 'flowbite-vue'
 import { sleep } from 'shuutils'
 import { ref, useSlots } from 'vue'
 
@@ -15,19 +15,27 @@ const properties = first.props ?? {}
 
 const activeTab = ref('first')
 const isCopying = ref(false)
+const showToast = ref(false)
 
 async function copyCode () {
   isCopying.value = true
+  showToast.value = true
   // eslint-disable-next-line sonarjs/no-nested-template-literals
   const code = `<${name} ${Object.keys(properties).map(property => `${property}="${properties[property]}"`).join(' ')} />`
   void navigator.clipboard.writeText(code)
   await sleep(200) // eslint-disable-line @typescript-eslint/no-magic-numbers
   isCopying.value = false
+  await sleep(2000) // eslint-disable-line @typescript-eslint/no-magic-numbers
+  showToast.value = false
 }
 </script>
 
 <template>
   <div class="app-code-showcase not-prose">
+    <Toast class="fixed bottom-5 right-5 transition-all duration-200" :class="[showToast ? 'translate-y-0 opacity-100' : 'translate-x-52 opacity-0']"
+      type="success">
+      Code copied to clipboard !
+    </Toast>
     <Tabs v-model="activeTab" class="pt-5" variant="underline"> <!-- class appends to content DIV for all tabs -->
       <Tab name="first" title="Render">
         <slot />
