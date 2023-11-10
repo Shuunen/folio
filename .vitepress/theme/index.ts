@@ -1,10 +1,10 @@
 // https://vitepress.dev/guide/custom-theme
 import type { Theme } from 'vitepress'
-import Layout from './layouts/base.vue'
+import layout from './layouts/base.vue'
 import './styles.css'
 
 const theme: Theme = {
-  Layout, // eslint-disable-line @typescript-eslint/naming-convention
+  Layout: layout, // eslint-disable-line @typescript-eslint/naming-convention
   enhanceApp ({ app }) {
     // reference components to let them be used in md
     const components = import.meta.glob('../../components/*.vue', { eager: true }) // eslint-disable-line @typescript-eslint/naming-convention
