@@ -40,9 +40,7 @@ function cleanArray (input: Record<string, unknown>[] | string[]) {
 
 export function cleanObject (input: Record<string, unknown>) {
   const data = clone(input)
-  // eslint-disable-next-line guard-for-in
-  for (const key in data) {
-    const item = data[key]
+  for (const [key, item] of Object.entries(data)) {
     if (typeof item === 'string') data[key] = cleanString(item)
     if (typeof item === 'object' && item) data[key] = cleanObject(item as Record<string, unknown>) // eslint-disable-line @typescript-eslint/consistent-type-assertions
     if (Array.isArray(item)) data[key] = cleanArray(item)

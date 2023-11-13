@@ -182,6 +182,7 @@
       "consistent-as-needed"
     ],
     "quotes": "off",
+    "regexp/require-unicode-sets-regexp": "off",
     "require-atomic-updates": [
       "error",
       {

@@ -22,6 +22,7 @@ export function localePath (path: string, targetLang = lang.value) {
 }
 
 export function $t (key: string) {
+  // eslint-disable-next-line @typescript-eslint/prefer-destructuring
   const translated = translations[lang.value][key]
   if (translated !== undefined) return String(translated)
   if (/* c8 ignore next */isBrowser) logger.warn(`Translation not found for key "${key}"`)
