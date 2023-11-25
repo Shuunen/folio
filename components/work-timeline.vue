@@ -18,7 +18,6 @@ function dateToMonthYear (input?: string) {
 function getColorForTag (tag: string) {
   const id = slugify(tag.replace(/\s/gu, ''))
   if (selectedTag.value !== '' && selectedTag.value !== tag) return 'text-gray-400 opacity-50'
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (colorByTag[id] === undefined) colorByTag[id] = pickOne(tailwindColors.filter(color => !Object.values(colorByTag).includes(color))) ?? 'white'
   return colorByTag[id]
 }
