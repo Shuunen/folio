@@ -37,7 +37,6 @@ export default defineConfig({
   title,
   vite: {
     plugins: [
-      // @ts-expect-error types are not up to date
       components({
         dirs: ['../components'],
         extensions: ['vue'],
