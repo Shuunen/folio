@@ -56,7 +56,7 @@
   },
   "scripts": {
     "build": "pnpm build:vp && pnpm build:nonce && pnpm build:mark && echo build success",
-    "build:mark": "unique-mark .vitepress/dist/*.html",
+    "build:mark": "unique-mark .vitepress/dist/**/*.html",
     "build:nonce": "bash bin/inject-nonce.sh && echo build nonce success",
     "build:vp": "vitepress build && echo vitepress build",
     "check": "pnpm install && repo-check && pnpm build && pnpm lint && pnpm test && echo check success",
