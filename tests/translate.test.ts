@@ -10,8 +10,10 @@ it('localePath F', () => { expect(localePath('/contact', 'fr')).toMatchInlineSna
 
 it('lang A', () => { expect(lang.value).toMatchInlineSnapshot('"en"') })
 
-it('$t A', () => { expect($t('hello')).toMatchInlineSnapshot('"hello"') })
-it('$t B', () => { expect($t('general.switch-lang')).toMatchInlineSnapshot('"voir la version française"') })
+it('$t A root non-existing translation key', () => { expect($t('hello')).toMatchInlineSnapshot('"hello"') })
+it('$t B nested non-existing translation key', () => { expect($t('general.switch-lang')).toMatchInlineSnapshot('"voir la version française"') })
+it('$t C nested non-existing translation key with data', () => { expect($t('general.switch-lang', { lang: 'en' })).toMatchInlineSnapshot('"voir la version française"') })
+it('$t D nested existing translation key', () => { expect($t('general.copyright')).toMatchInlineSnapshot('"All rights reserved"') })
 
 it('getLangFromPath A', () => { expect(getLangFromPath('')).toMatchInlineSnapshot('"en"') })
 it('getLangFromPath B', () => { expect(getLangFromPath('/')).toMatchInlineSnapshot('"en"') })
