@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   flowbite:
-    specifier: '2.2'
-    version: 2.2.0
+    specifier: '2.3'
+    version: 2.3.0
   flowbite-vue:
     specifier: '0.1'
     version: 0.1.1(tailwindcss@3.3.6)(vue@3.3.11)
@@ -5717,8 +5717,8 @@ packages:
       mini-svg-data-uri: 1.4.4
     dev: false
 
-  /flowbite@2.2.0:
-    resolution: {integrity: sha512-Eq0qWz4a5nlxaGuUcspzpu+8Ny0A7lKEJEKcuPpkdSoF8tWjbKeuVVgKk8/q10ZE9bhXh1GHBXdCsRxu0LZTNQ==}
+  /flowbite@2.3.0:
+    resolution: {integrity: sha512-pm3JRo8OIJHGfFYWgaGpPv8E+UdWy0Z3gEAGufw+G/1dusaU/P1zoBLiQpf2/+bYAi+GBQtPVG86KYlV0W+AFQ==}
     dependencies:
       '@popperjs/core': 2.11.8
       mini-svg-data-uri: 1.4.4
