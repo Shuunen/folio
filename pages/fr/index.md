@@ -2,7 +2,7 @@
 verticallyCentered: true
 links:
   - label: Voir mon profil LinkedIn
-    to: https://www.linkedin.com/in/romainracamier
+    to: https://www.linkedin.com/in/romain-racamier
   - label: Contactez-moi
     to: /fr/contact
 ---

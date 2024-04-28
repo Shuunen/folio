@@ -2,7 +2,7 @@
 verticallyCentered: true
 links:
   - label: View my LinkedIn
-    to: https://www.linkedin.com/in/romainracamier
+    to: https://www.linkedin.com/in/romain-racamier
   - label: Back to home
     to: /
 ---

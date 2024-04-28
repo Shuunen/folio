@@ -13,5 +13,5 @@ and
 
 You can check my
 [Github](https://github.com/Shuunen "See Github profile") and even my
-[LinkedIn](https://fr.linkedin.com/in/romainracamier "See LinkedIn profile")
+[LinkedIn](https://fr.linkedin.com/in/romain-racamier "See LinkedIn profile")
 if you dare.

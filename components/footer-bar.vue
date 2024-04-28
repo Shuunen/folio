@@ -5,7 +5,7 @@ import { $t, switchLang } from '../utils/translate.utils'
 <template>
   <div class="app-footer mt-24 flex h-24 flex-col justify-center gap-2 bg-contain bg-center bg-no-repeat pb-12">
     <div class="flex justify-center space-x-6">
-      <a class="app-link" href="https://www.linkedin.com/in/romainracamier" rel="noopener noreferrer" target="_blank">
+      <a class="app-link" href="https://www.linkedin.com/in/romain-racamier" rel="noopener noreferrer" target="_blank">
         <span class="sr-only">LinkedIn</span>
         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
