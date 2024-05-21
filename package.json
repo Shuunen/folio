@@ -24,7 +24,7 @@
     "typescript": "5.4",
     "unplugin-vue-components": "0.27",
     "vite": "*",
-    "vitepress": "1.2.0",
+    "vitepress": "1.2.2",
     "vitest": "1.6",
     "vue": "*"
   },
