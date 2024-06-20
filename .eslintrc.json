@@ -34,12 +34,51 @@
     "project": "tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/brace-style": [
+    "@stylistic/array-element-newline": "off",
+    "@stylistic/arrow-parens": "off",
+    "@stylistic/brace-style": "off",
+    "@stylistic/comma-dangle": [
       "error",
-      "1tbs",
+      "always-multiline"
+    ],
+    "@stylistic/dot-location": "off",
+    "@stylistic/function-call-argument-newline": "off",
+    "@stylistic/indent": [
+      "error",
+      2
+    ],
+    "@stylistic/lines-around-comment": "off",
+    "@stylistic/lines-between-class-members": "off",
+    "@stylistic/max-len": "off",
+    "@stylistic/member-delimiter-style": [
+      "error",
       {
-        "allowSingleLine": true
+        "multiline": {
+          "delimiter": "none"
+        }
       }
+    ],
+    "@stylistic/multiline-comment-style": "off",
+    "@stylistic/multiline-ternary": "off",
+    "@stylistic/no-extra-parens": "off",
+    "@stylistic/object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "@stylistic/object-property-newline": "off",
+    "@stylistic/padded-blocks": "off",
+    "@stylistic/padding-line-between-statements": "off",
+    "@stylistic/quote-props": [
+      "error",
+      "consistent-as-needed"
+    ],
+    "@stylistic/quotes": [
+      "error",
+      "single"
+    ],
+    "@stylistic/semi": [
+      "error",
+      "never"
     ],
     "@typescript-eslint/comma-dangle": [
       "error",
@@ -55,10 +94,6 @@
       }
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
     "@typescript-eslint/lines-around-comment": "off",
     "@typescript-eslint/member-delimiter-style": [
       "error",
@@ -76,15 +111,8 @@
         "varsIgnorePattern": "^(_|global)"
       }
     ],
-    "@typescript-eslint/object-curly-spacing": [
-      "error",
-      "always"
-    ],
+    "@typescript-eslint/prefer-destructuring": "off",
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
-    "@typescript-eslint/quotes": [
-      "error",
-      "single"
-    ],
     "@typescript-eslint/semi": [
       "error",
       "never"
@@ -94,6 +122,7 @@
       "error",
       "always-multiline"
     ],
+    "compat/compat": "off",
     "curly": [
       "error",
       "multi"
@@ -103,6 +132,7 @@
     "etc/no-deprecated": "off",
     "etc/no-enum": "off",
     "etc/no-internal": "off",
+    "etc/no-misused-generics": "off",
     "etc/prefer-interface": "off",
     "ext/lines-between-object-properties": "off",
     "func-names": [
@@ -170,11 +200,27 @@
         ]
       }
     ],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "message": "Avoid using Class, just use good old unit-testable functions :)",
+        "selector": "ClassDeclaration"
+      },
+      {
+        "message": "Don't specify return type on function",
+        "selector": "FunctionDeclaration[returnType]"
+      },
+      {
+        "message": "Don't specify return type on function",
+        "selector": "FunctionExpression[returnType]"
+      }
+    ],
     "object-curly-spacing": [
       "error",
       "always"
     ],
     "padding-line-between-statements": "off",
+    "prefer-destructuring": "off",
     "prettier/prettier": "off",
     "putout/putout": "off",
     "quote-props": [
@@ -198,8 +244,10 @@
       "error",
       "always"
     ],
+    "space-before-function-parent": "off",
     "total-functions/no-partial-division": "off",
     "total-functions/no-unsafe-readonly-mutable-assignment": "off",
+    "typescript-compat/compat": "off",
     "unicorn/no-array-for-each": "off",
     "unicorn/no-process-exit": "off",
     "unicorn/prefer-module": "off",
@@ -223,6 +271,7 @@
     "vue/html-self-closing": "off",
     "vue/max-attributes-per-line": "off",
     "vue/no-multiple-template-root": "off",
+    "vue/require-explicit-slots": "off",
     "vue/singleline-html-element-content-newline": "off",
     "vue/static-class-names-order": "off"
   },

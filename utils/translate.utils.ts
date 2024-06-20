@@ -21,8 +21,8 @@ export function localePath (path: string, targetLang = lang.value) {
   return getPath(path, targetLang === defaultLang ? '' : targetLang)
 }
 
+ 
 export function $t (key: string, data?: Record<string, unknown>) {
-  // eslint-disable-next-line @typescript-eslint/prefer-destructuring
   const translated = translations[lang.value][key]
   if (translated !== undefined) return fillTemplate(String(translated), data)
   if (/* c8 ignore next */isBrowser) logger.warn(`Translation not found for key "${key}"`)

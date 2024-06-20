@@ -31,6 +31,7 @@ function cleanString (input: string) {
 }
 
 function cleanArray (input: Record<string, unknown>[] | string[]) {
+  // eslint-disable-next-line sonar/function-return-type
   return input.map((item) => {
     if (typeof item === 'string') return cleanString(item)
     if (typeof item === 'object') return cleanObject(item) // eslint-disable-line @typescript-eslint/no-use-before-define

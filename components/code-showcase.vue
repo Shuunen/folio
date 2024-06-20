@@ -48,7 +48,7 @@ async function copyCode () {
   </div>
 </template>
 
-<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type -->
+<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type, vue/enforce-style-attribute -->
 <style>
 .app-code-showcase + .app-code-showcase {
   @apply mt-10;

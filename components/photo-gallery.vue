@@ -10,7 +10,7 @@ defineProps<{
 
 const wrapper = ref<HTMLElement>()
 
-function initLightGallery (): void {
+function initLightGallery () {
   if (!wrapper.value) throw new Error('no wrapper found for lightgallery')
   lightGallery(wrapper.value, {
     thumbnail: true, // eslint-disable-line @typescript-eslint/naming-convention
@@ -18,7 +18,7 @@ function initLightGallery (): void {
   })
 }
 
-function guessThumb (source: string): string {
+function guessThumb (source: string) {
   // eslint-disable-next-line regexp/no-super-linear-move
   return source.replace(/(?<name>.+)\.(?=(?:gif|jpg|png)$)/u, '$<name>-thumb.')
 }
@@ -36,7 +36,7 @@ onMounted(initLightGallery)
   </div>
 </template>
 
-<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type -->
+<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type, vue/enforce-style-attribute -->
 <style>
 @import url("lightgallery/css/lightgallery.css");
 @import url("lightgallery/css/lg-thumbnail.css");
