@@ -47,8 +47,8 @@ devDependencies:
     specifier: '8'
     version: 8.4.38
   repo-check:
-    specifier: '1.34'
-    version: 1.34.0
+    specifier: '1.35'
+    version: 1.35.1
   tailwindcss:
     specifier: '3'
     version: 3.4.4
@@ -8782,12 +8782,12 @@ packages:
     engines: {node: '>=16'}
     dev: true
 
-  /repo-check@1.34.0:
-    resolution: {integrity: sha512-jdOkk9EEYvpTOSiKha7MKdnymQA53+Tjxb7u5kFWMTO4iWvA4R4RUDAX6gXZ0E8+7ZGh8CLnmL1tlM93swnOgg==}
+  /repo-check@1.35.1:
+    resolution: {integrity: sha512-aB6SHcQONYOALH4uoU/ULfwKaryb+lTCY33jJjAMz2nlt+eTk0cWaig7aarY+KfPqZQlYc5y8TnOn8T2ZcNMLw==}
     hasBin: true
     dependencies:
       arg: 5.0.2
-      shuutils: 7.3.2
+      shuutils: 7.7.0
       sort-json: 2.0.1
     dev: true
 
@@ -9024,8 +9024,8 @@ packages:
       '@shikijs/core': 1.7.0
     dev: true
 
-  /shuutils@7.3.2:
-    resolution: {integrity: sha512-HiX6I+r18wQl427FQt4nT0msgMFcNb8NccwunjAUplX1ql5lQTJKMOSCgsFPSBmAxHzevaxM27ePg4t7ktgLJw==}
+  /shuutils@7.7.0:
+    resolution: {integrity: sha512-ultnGsBIR9zdHCFDxqWO9YlUBfDa5+oXSi5Gi45o5ne30cNunDzr6sKRntks73VhmgBXQG4IhlbxW3t3cIpfLw==}
     hasBin: true
     dependencies:
       tiny-glob: 0.2.9
