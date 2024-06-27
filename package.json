@@ -3,7 +3,7 @@
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/folio/issues",
   "dependencies": {
-    "flowbite": "2.3",
+    "flowbite": "2.4",
     "flowbite-vue": "0.1",
     "lightgallery": "2.7",
     "shuutils": "8.0"
