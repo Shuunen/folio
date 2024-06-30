@@ -6,7 +6,7 @@
     "flowbite": "2.4",
     "flowbite-vue": "0.1",
     "lightgallery": "2.7",
-    "shuutils": "8.0"
+    "shuutils": "8.1"
   },
   "description": "My personal portfolio",
   "devDependencies": {
