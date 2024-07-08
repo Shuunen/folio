@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable no-undef */
 /* eslint-disable max-lines */
 /* eslint-disable no-useless-escape */
-'use strict'
 
 /** @type {import('dependency-cruiser').IConfiguration} */
 module.exports = {
@@ -27,10 +28,10 @@ module.exports = {
       from: {
         orphan: true,
         pathNot: [
-          '(^|/)\\.[^/]+\\.(js|cjs|mjs|ts|json)$', // dot files
-          '\\.d\\.ts$',                            // TypeScript declaration files
-          '(^|/)tsconfig\\.json$',                 // TypeScript config
-          '(^|/)(babel|webpack)\\.config\\.(js|cjs|mjs|ts|json)$', // other configs
+          String.raw`(^|/)\.[^/]+\.(js|cjs|mjs|ts|json)$`, // dot files
+          String.raw`\.d\.ts$`,                            // TypeScript declaration files
+          String.raw`(^|/)tsconfig\.json$`,                 // TypeScript config
+          String.raw`(^|/)(babel|webpack)\.config\.(js|cjs|mjs|ts|json)$`, // other configs
           'components/.*',                         // components are auto loaded
           'pages/.vitepress/cache',
         ],
@@ -114,7 +115,7 @@ module.exports = {
         'module: add it to your package.json. In all other cases you likely already know what to do.',
       from: {
         pathNot: [
-          '\\.d\\.ts$',                            // TypeScript declaration files
+          String.raw`\.d\.ts$`,                            // TypeScript declaration files
         ],
       },
       name: 'not-to-unresolvable',
@@ -167,7 +168,7 @@ module.exports = {
       name: 'not-to-spec',
       severity: 'error',
       to: {
-        path: '\\.(spec|test)\\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\\.md)$',
+        path: String.raw`\.(spec|test)\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\.md)$`,
       },
     },
     {
@@ -179,7 +180,7 @@ module.exports = {
         'from.pathNot re of the not-to-dev-dep rule in the dependency-cruiser configuration',
       from: {
         path: '^(src)',
-        pathNot: '\\.(spec|test)\\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\\.md)$',
+        pathNot: String.raw`\.(spec|test)\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\.md)$`,
       },
       name: 'not-to-dev-dep',
       severity: 'error',

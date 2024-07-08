@@ -1,8 +1,8 @@
-/* eslint-disable regexp/require-unicode-regexp */
-/* eslint-disable regexp/prefer-named-capture-group */
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable prefer-named-capture-group */
 /* eslint-disable require-unicode-regexp */
-'use strict'
 
 /** @type {import('tailwindcss').Config} */
 const config = {

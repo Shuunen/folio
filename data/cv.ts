@@ -1,12 +1,13 @@
 import { clone, slugify } from 'shuutils'
+import type { DeepReadonly } from 'vue'
 import rawCv from './CV-romain-racamier-lafon.json'
 import type { Photo } from './types'
 
-type JsonResume = typeof rawCv
+type JsonResume = DeepReadonly<typeof rawCv>
 
-type ResumeEducation = JsonResume['education'][0] & { id: string }
+type ResumeEducation = DeepReadonly<{ id: string } & JsonResume['education'][0]>
 
-type ResumeWork = {
+type ResumeWork = DeepReadonly<{
   company: string
   endDate: string
   highlights: string[]
@@ -16,13 +17,18 @@ type ResumeWork = {
   position: string
   sectors: string[]
   startDate: string
-}
+}>
 
-type Resume = {
+type Resume = DeepReadonly<{
   education: ResumeEducation[]
   work: ResumeWork[]
-}
+}>
 
+/**
+ * Clean a string
+ * @param input - String to clean
+ * @returns Cleaned string
+ */
 function cleanString (input: string) {
   return input
     .trim()
@@ -30,8 +36,12 @@ function cleanString (input: string) {
     .replace(/\s+/gu, ' ')
 }
 
-function cleanArray (input: Record<string, unknown>[] | string[]) {
-  // eslint-disable-next-line sonar/function-return-type
+/**
+ * Clean an array
+ * @param input - Array to clean
+ * @returns Cleaned array
+ */
+function cleanArray (input: Readonly<Readonly<Record<string, unknown>>[]> | Readonly<Readonly<string>[]>) {
   return input.map((item) => {
     if (typeof item === 'string') return cleanString(item)
     if (typeof item === 'object') return cleanObject(item) // eslint-disable-line @typescript-eslint/no-use-before-define
@@ -39,7 +49,12 @@ function cleanArray (input: Record<string, unknown>[] | string[]) {
   })
 }
 
-export function cleanObject (input: Record<string, unknown>) {
+/**
+ * Clean an object
+ * @param input - Object to clean
+ * @returns Cleaned object
+ */
+export function cleanObject (input: Readonly<Record<string, unknown>>) {
   const data = clone(input)
   for (const [key, item] of Object.entries(data)) {
     if (typeof item === 'string') data[key] = cleanString(item)
@@ -49,6 +64,11 @@ export function cleanObject (input: Record<string, unknown>) {
   return data
 }
 
+/**
+ * Set IDs
+ * @param input - Input data
+ * @returns Data with IDs
+ */
 export function setIds (input: JsonResume) {
   const data: Resume = {
     education: input.education.map((item) => ({

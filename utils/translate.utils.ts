@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-jsdoc */
 import { fillTemplate, flatten } from 'shuutils'
 import { ref } from 'vue'
 import en from '../locales/en.json'
@@ -5,7 +6,7 @@ import fr from '../locales/fr.json'
 import { getPath, isBrowser } from './browser.utils'
 import { logger } from './logger.utils'
 
-const translations = { fr: flatten(fr), en: flatten(en) }
+const translations = { en: flatten(en), fr: flatten(fr) }
 type Lang = keyof typeof translations
 
 export const defaultLang: Lang = 'en'
@@ -21,8 +22,8 @@ export function localePath (path: string, targetLang = lang.value) {
   return getPath(path, targetLang === defaultLang ? '' : targetLang)
 }
 
- 
-export function $t (key: string, data?: Record<string, unknown>) {
+
+export function $t (key: string, data?: Readonly<Record<string, unknown>>) {
   const translated = translations[lang.value][key]
   if (translated !== undefined) return fillTemplate(String(translated), data)
   if (/* c8 ignore next */isBrowser) logger.warn(`Translation not found for key "${key}"`)

@@ -44,10 +44,14 @@ export default defineConfig({
       {
         enforce: 'post',
         name: 'html-inject-nonce-into-script-tag',
+        /**
+         * Transform the index.html content
+         * @param html - HTML content
+         * @returns Transformed HTML content
+         */
         transformIndexHtml (html) {
-          // eslint-disable-next-line prefer-named-capture-group, regexp/prefer-named-capture-group, regexp/no-lazy-ends
-          const regex = /<script(.*?)/giu
-          const replacement = '<script nonce="shu7782n1"$1'
+          const regex = /<script(?<rest>.*?)/giu
+          const replacement = '<script nonce="shu7782n1"$<rest>'
           return html.replace(regex, replacement)
         },
       },

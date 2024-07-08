@@ -18,24 +18,24 @@ it('cleanObject C', () => {
 })
 
 it('cleanObject D', () => {
-  expect(cleanObject({ level0: { wow: ['Damn !', 12, { hello: 'Que tal <image src="plop.jpg" /> ?' }, 'I <b>love</b> this\n'], another: { key: '' } } })).toMatchSnapshot()
+  expect(cleanObject({ level0: { another: { key: '' }, wow: ['Damn !', 12, { hello: 'Que tal <image src="plop.jpg" /> ?' }, 'I <b>love</b> this\n'] } })).toMatchSnapshot()
 })
 
 it('setIds A', () => {
   expect(setIds({
-    basics: { name: 'John Doe', label: 'Programmer', email: '' },
+    basics: { email: '', label: 'Programmer', name: 'John Doe' },
     education: [],
-    work: [{
-      company: 'ACME Inc.',
-      highlights: ['Started the company'],
-      position: 'President',
-      startDate: '2013-01-01',
-      photos: [],
-      keywords: [],
-      sectors: [],
-      endDate: '',
-    }],
     interests: [],
     skills: [],
+    work: [{
+      company: 'ACME Inc.',
+      endDate: '',
+      highlights: ['Started the company'],
+      keywords: [],
+      photos: [],
+      position: 'President',
+      sectors: [],
+      startDate: '2013-01-01',
+    }],
   })).toMatchSnapshot()
 })
