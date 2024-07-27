@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable no-undef */
 /* eslint-disable max-lines */
 /* eslint-disable no-useless-escape */
 

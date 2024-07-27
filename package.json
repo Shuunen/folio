@@ -16,7 +16,7 @@
     "autoprefixer": "10",
     "dependency-cruiser": "latest",
     "eslint": "*",
-    "eslint-plugin-shuunen": "0.1",
+    "eslint-plugin-shuunen": "0.3",
     "postcss": "8",
     "repo-check": "1.37",
     "tailwindcss": "3",
