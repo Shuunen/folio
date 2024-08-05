@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   flowbite:
-    specifier: '2.4'
-    version: 2.4.1
+    specifier: '2.5'
+    version: 2.5.1
   flowbite-vue:
     specifier: '0.1'
     version: 0.1.5(tailwindcss@3.4.7)(vue@3.4.34)
@@ -2258,7 +2258,7 @@ packages:
     resolution: {integrity: sha512-CLVqzuoE2vkUvWYK/lJ6GzT0be5dlTbH3uuhVwyB67+PjqJWABm2wv68xhBf5BqjpBxvTSQ3mrmLHpPJ2tvrSQ==}
     dependencies:
       '@rollup/plugin-node-resolve': 15.2.3
-      flowbite: 2.4.1
+      flowbite: 2.5.1
     transitivePeerDependencies:
       - rollup
     dev: false
@@ -2291,8 +2291,8 @@ packages:
       mini-svg-data-uri: 1.4.4
     dev: false
 
-  /flowbite@2.4.1:
-    resolution: {integrity: sha512-I++vDsSOOlzHNuxY2OcFMNVC4CNzpPU2K14YHJ81cYrANXdzgizqniMB/1KQ219x8fqw+S0msY9Q45ZSXDqAPw==}
+  /flowbite@2.5.1:
+    resolution: {integrity: sha512-7jP1jy9c3QP7y+KU9lc8ueMkTyUdMDvRP+lteSWgY5TigSZjf9K1kqZxmqjhbx2gBnFQxMl1GAjVThCa8cEpKA==}
     dependencies:
       '@popperjs/core': 2.11.8
       flowbite-datepicker: 1.3.0
