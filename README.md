@@ -15,6 +15,13 @@
 
 - [ ] add a lang flag switch
 - [ ] add some illustrations (<https://iconpark.oceanengine.com/illustrations/18> maybe ?)
+- [ ] migrate to "eslint": "*" & "eslint-plugin-shuunen": "0.3" ?
+- [ ] bring back repo-check in check task (after eslint 9 migration)
+- [ ] use [flowbite](https://flowbite.com/docs/getting-started/next-js/)
+- [ ] remove paths alias from tsconfig
+- [ ] extend from tsconfig strictest ^^
+- [ ] use dependency-cruiser
+- [ ] setup custom i18n
 
 ## Thanks
 
@@ -26,13 +33,12 @@
 - [Gtmetrix](https://gtmetrix.com) : great tool to check & monitor websites performances
 - [IconPark](https://iconpark.oceanengine.com/official): nice svg icons and [illustrations](https://iconpark.oceanengine.com/illustrations/18)
 - [Netlify](https://netlify.com) : awesome company that offers hosting for OSS
+- [Next.js](https://nextjs.org) : super fast frontend framework powering this website
 - [Nnnoise](https://fffuel.co) : sexy svg noise texture generator
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : super platform centralizing badges
 - [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
 - [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
-- [Vite](https://github.com/vitejs/vite) : super fast frontend tooling
 - [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
-- [Vue](https://vuejs.org) : when I need a front framework, this is the one I choose <3
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily

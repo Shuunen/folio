@@ -2,13 +2,8 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "checkJs": true,
     "esModuleInterop": true,
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
@@ -17,42 +12,30 @@
       "ESNext"
     ],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "./dist",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
-    "target": "ESNext",
-    "types": [
-      "vite/client"
-    ],
-    "useDefineForClassFields": true,
-    "verbatimModuleSyntax": true
+    "strict": true
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
-    ".dependency-cruiser.cjs",
-    ".vitepress/**/*.ts",
-    ".vitepress/**/*.vue",
-    ".vitepress/config.mts",
-    "*.js",
-    "*.json",
-    "*.ts",
-    "components/**/*.vue",
-    "data/**/*.ts",
-    "pages/*.ts",
-    "postcss.config.cjs",
-    "tailwind.config.cjs",
-    "tests/*.ts",
-    "utils/*.ts"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "dist/types/**/*.ts"
   ]
 }
