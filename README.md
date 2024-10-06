@@ -18,7 +18,6 @@
 - [ ] migrate to "eslint": "*" & "eslint-plugin-shuunen": "0.3" ?
 - [ ] bring back repo-check in check task (after eslint 9 migration)
 - [ ] use [flowbite](https://flowbite.com/docs/getting-started/next-js/)
-- [ ] remove paths alias from tsconfig
 - [ ] extend from tsconfig strictest ^^
 - [ ] use dependency-cruiser
 - [ ] setup custom i18n
