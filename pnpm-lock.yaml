@@ -15,8 +15,8 @@ dependencies:
     specifier: '2.7'
     version: 2.7.2
   shuutils:
-    specifier: '8.1'
-    version: 8.1.0
+    specifier: '9.0'
+    version: 9.0.0
 
 devDependencies:
   '@icon-park/vue-next':
@@ -3461,6 +3461,14 @@ packages:
     hasBin: true
     dependencies:
       tiny-glob: 0.2.9
+    dev: true
+
+  /shuutils@9.0.0:
+    resolution: {integrity: sha512-MfWfhceiekvjZV5PFF3CTWjVBBNOPaREQZ72cBPt3W2WFJ8OMorHuRgaCgqdl7UGQzA651u0xNH3ZZAfm4t+sA==}
+    hasBin: true
+    dependencies:
+      tiny-glob: 0.2.9
+    dev: false
 
   /siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
