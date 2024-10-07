@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   redirects() {
     return [
       // redirect url without language to default language
