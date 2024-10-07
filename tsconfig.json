@@ -33,6 +33,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "dist/types/**/*.ts",
-    "next.config.mjs"
+    "next.config.mjs",
+    "vitest.config.mts"
   ]
 }
