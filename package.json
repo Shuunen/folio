@@ -39,7 +39,7 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "next build && pnpm build:mark && echo build success",
+    "build": "next build && echo build success",
     "build:mark": "unique-mark .next/server/app/**/page.js",
     "check": "pnpm install && pnpm build && pnpm lint && pnpm test && echo check success",
     "dev": "next dev",
