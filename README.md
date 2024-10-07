@@ -20,7 +20,6 @@
 - [ ] use [flowbite](https://flowbite.com/docs/getting-started/next-js/)
 - [ ] extend from tsconfig strictest ^^
 - [ ] use dependency-cruiser
-- [ ] setup custom i18n
 
 ## Thanks
 

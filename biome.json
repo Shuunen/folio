@@ -38,7 +38,8 @@
         "useImportExtensions": "off"
       },
       "style": {
-        "noDefaultExport": "off"
+        "noDefaultExport": "off",
+        "useBlockStatements": "off"
       },
       "suspicious": {
         "noReactSpecificProps": "off"
