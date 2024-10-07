@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 import type { ReactNode } from 'react'
 import { formatDate } from 'shuutils'
-import pkg from '../../../package.json'
+import pkg from '../../package.json'
 import './globals.css'
 
 const fontSans = localFont({
