@@ -16,6 +16,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        'spin-zoom': {
+          '0%': { transform: 'rotate(0deg) scale(2)' },
+          '100%': { transform: 'rotate(360deg) scale(3)' },
+        },
+      },
+      animation: {
+        'spin-zoom': 'spin-zoom 114s linear infinite alternate',
+      },
       colors: {
         // http://vis4.net/palettes/#/21|d|000000,ff7c27,ffffff|ffffff,005fb4,000000|0|0
         accent: {

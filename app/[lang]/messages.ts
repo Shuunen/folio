@@ -26,8 +26,19 @@ export const messages = {
       fr: 'version {version} crée le {date}',
       en: 'version {version} builded on {date}',
     },
+    firstName: 'Romain',
+    lastName: 'Racamier-Lafon',
+    fullName: 'Romain Racamier-Lafon',
   },
   pages: {
+    home: {
+      description: {
+        en: "I'm a freelance developer and tutor, I'm working remotely from Strasbourg.",
+        fr: 'Je suis développeur freelance et tuteur, je travaille à distance depuis Strasbourg.',
+      },
+    },
+  },
+  navigation: {
     contact: {
       fr: 'contact',
       en: 'contact',
