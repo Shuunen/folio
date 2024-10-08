@@ -147,3 +147,9 @@
 ![keystroke-03](./inspiration-keystroke-03.jpg)
 
 ![keystroke-04](./inspiration-keystroke-04.jpg)
+
+## Cool portfolio
+
+[Link](https://www.behance.net/gallery/157781767/Design-a-cool-portfolio-for-a-web-developer)
+
+![cool-portfolio-01](./inspiration-cool-portfolio.jpg)
