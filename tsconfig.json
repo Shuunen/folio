@@ -12,13 +12,15 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noEmit": true,
+    "outDir": "./dist",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "resolveJsonModule": true,
-    "target": "ESNext"
+    "target": "ESNext",
+    "verbatimModuleSyntax": true
   },
   "exclude": [
     "node_modules"

@@ -19,7 +19,6 @@
 - [ ] bring back repo-check in check task (after eslint 9 migration)
 - [ ] use [flowbite](https://flowbite.com/docs/getting-started/next-js/)
 - [ ] use dependency-cruiser
-- [ ] mark build after next build
 
 ## Thanks
 
