@@ -22,6 +22,9 @@ devDependencies:
   '@biomejs/biome':
     specifier: ^1.9
     version: 1.9.3
+  '@tsconfig/strictest':
+    specifier: ^2.0.5
+    version: 2.0.5
   '@types/node':
     specifier: ^20
     version: 20.16.10
@@ -773,6 +776,10 @@ packages:
       '@swc/counter': 0.1.3
       tslib: 2.7.0
     dev: false
+
+  /@tsconfig/strictest@2.0.5:
+    resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
+    dev: true
 
   /@types/estree@1.0.6:
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}

@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  redirects() {
+  // biome-ignore lint/suspicious/useAwait: it's ok buddy ( ͡° ͜ʖ ͡°)
+  async redirects() {
     return [
       // redirect url without language to default language
       {

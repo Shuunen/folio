@@ -2,9 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowJs": true,
-    "esModuleInterop": true,
     "incremental": true,
-    "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
       "DOM",
@@ -19,14 +17,13 @@
         "name": "next"
       }
     ],
-    "target": "ESNext",
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true
+    "target": "ESNext"
   },
   "exclude": [
     "node_modules"
   ],
+  "extends": "@tsconfig/strictest/tsconfig.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",
