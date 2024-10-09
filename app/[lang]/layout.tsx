@@ -1,7 +1,9 @@
 import localFont from 'next/font/local'
 import type { ReactNode } from 'react'
-import { formatDate } from 'shuutils'
-import pkg from '../../package.json'
+import { type Lang, getTranslator } from 'shuutils'
+import { BgLines } from '../components/bg-lines'
+import { Footer } from '../components/footer'
+import { Header } from '../components/header'
 import './globals.css'
 
 const fontSans = localFont({
@@ -16,16 +18,17 @@ const fontMono = localFont({
   weight: '100 900',
 })
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({ children, params: { lang } }: Readonly<{ children: ReactNode; params: { lang: Lang } }>) {
+  const $t = getTranslator(lang)
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} antialiased text-primary-900 dark:text-primary-100 bg-primary-100 dark:bg-primary-900 flex flex-col text-center justify-center align-middle`}
+        className={`${fontSans.variable} ${fontMono.variable} h-full relative antialiased text-primary-900 dark:text-primary-100 bg-primary-100 dark:bg-primary-900 flex flex-col`}
       >
+        <Header $t={$t} lang={lang} />
+        <BgLines />
         {children}
-        <div className="text-sm font-bold text-primary-400 opacity-50 lowercase absolute bottom-4 w-full text-center" title="__unique-mark__">
-          version {pkg.version} builded on {formatDate(new Date(), 'MMMM yyyy')}
-        </div>
+        <Footer />
       </body>
     </html>
   )

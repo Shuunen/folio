@@ -6,9 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  @apply h-full;
+.container {
+  @apply mx-auto px-8;
 }
 
 ::-webkit-scrollbar {

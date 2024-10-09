@@ -1,3 +1,4 @@
+/* c8 ignore start */
 export const messages = {
   actions: {
     switchLang: {
@@ -29,16 +30,43 @@ export const messages = {
     firstName: 'Romain',
     lastName: 'Racamier-Lafon',
     fullName: 'Romain Racamier-Lafon',
+    humaCode: 'HumaCode',
   },
   pages: {
     home: {
+      title: {
+        fr: 'accueil',
+        en: 'home',
+      },
       description: {
         en: "I'm a freelance developer and tutor, I'm working remotely from Strasbourg.",
         fr: 'Je suis développeur freelance et tuteur, je travaille à distance depuis Strasbourg.',
       },
     },
+    services: {
+      title: {
+        fr: 'services',
+        en: 'services',
+      },
+    },
+    about: {
+      title: {
+        fr: 'à propos',
+        en: 'about',
+      },
+    },
+    contact: {
+      title: {
+        fr: 'contact',
+        en: 'contact',
+      },
+    },
   },
   navigation: {
+    about: {
+      fr: 'à propos',
+      en: 'about',
+    },
     contact: {
       fr: 'contact',
       en: 'contact',
@@ -46,6 +74,10 @@ export const messages = {
     index: {
       fr: 'accueil',
       en: 'home',
+    },
+    services: {
+      fr: 'services',
+      en: 'services',
     },
     work: {
       fr: 'expériences',
