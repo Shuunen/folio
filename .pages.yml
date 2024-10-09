@@ -1,7 +1,0 @@
-content:
-  - name: pages
-    label: Pages
-    path: pages
-    type: collection
-    fields:
-      - { name: body, label: Body, type: rich-text }

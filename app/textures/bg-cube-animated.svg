@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" display="block" preserveAspectRatio="xMidYMid" viewBox="0 0 2000 1300">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="-.1" x2="1.1" y1=".5" y2=".5">
+      <stop offset="0" stop-color="#002648">
+        <animate attributeName="stop-color" values="#002648;#003666;#002648" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#001324">
+        <animate attributeName="stop-color" values="#001324;#002648;#001324" dur="10s" repeatCount="indefinite"/>
+      </linearGradient>
+    
+    <!-- Left wall gradient -->
+    <linearGradient id="left" x1="-.1" x2="1.1" y1=".5" y2=".5">
+      <stop offset="0" stop-color="#002648">
+        <animate attributeName="stop-color" values="#002648;#003a70;#002648" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#001324">
+        <animate attributeName="stop-color" values="#001324;#002d54;#001324" dur="12s" repeatCount="indefinite"/>
+      </linearGradient>
+    
+    <!-- Right wall gradient -->
+    <linearGradient id="right" x1="-.1" x2="1.1" y1=".5" y2=".5">
+      <stop offset="0" stop-color="#002648">
+        <animate attributeName="stop-color" values="#002648;#003460;#002648" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#001324">
+        <animate attributeName="stop-color" values="#001324;#002440;#001324" dur="8s" repeatCount="indefinite"/>
+      </linearGradient>
+    
+    <!-- Floor gradient -->
+    <linearGradient id="floor" x1="-.1" x2="1.1" y1=".5" y2=".5">
+      <stop offset="0" stop-color="#002648">
+        <animate attributeName="stop-color" values="#002648;#003868;#002648" dur="15s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#001324">
+        <animate attributeName="stop-color" values="#001324;#002850;#001324" dur="15s" repeatCount="indefinite"/>
+      </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <path fill="url(#bg)" d="M0 0h2000v1300H0z"/>
+  
+  <!-- Left wall -->
+  <path fill="url(#left)" d="M0 0h1030l21 560L0 1300Z"/>
+  
+  <!-- Right wall -->
+  <path fill="url(#right)" d="M2000 0h-970l21 560 949 740Z"/>
+  
+  <!-- Floor -->
+  <path fill="url(#floor)" d="m0 1300 1051-740 949 740Z"/>
+</svg>

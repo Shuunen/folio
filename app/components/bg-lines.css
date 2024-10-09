@@ -1,0 +1,217 @@
+:root {
+  --color1: #007aff;
+  --color2: #49ccff;
+  --color3: #7a19ff;
+  --color4: #ffcd3e;
+  --color5: #00d09c;
+  --color6: #702fff;
+  --color7: #00cfff;
+  --color8: #ff8a5b;
+  --border-color: hsla(0, 0%, 100%, 0.1);
+  --border-color-first: hsla(0, 0%, 100%, 0.6);
+  --animation1: line1 8s ease-out infinite;
+  --animation2: line2 8s ease-out infinite;
+  --animation3: line3 8s ease-out infinite;
+  --animation4: line4 8s ease-out infinite;
+  --animation5: line5 8s ease-out infinite;
+}
+
+.app-lines .line {
+  width: 10%;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  z-index: -1;
+
+  &:first-child {
+    border-left: 1px solid var(--border-color-first);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      width: 1px;
+      height: 50px;
+      animation: var(--animation2);
+      background: var(--color1);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -2px;
+      width: 1px;
+      height: 50px;
+      animation: var(--animation1);
+      background: var(--color2);
+    }
+  }
+
+  &:nth-child(2) {
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -2px;
+      width: 1px;
+      height: 50px;
+      animation: var(--animation1);
+      background: var(--color3);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      width: 1px;
+      height: 50px;
+      animation: var(--animation2);
+      background: var(--color4);
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(5) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 500px;
+      right: -2px;
+      width: 1px;
+      height: 50px;
+      animation: var(--animation3);
+    }
+  }
+
+  &:nth-child(3):before {
+    background: var(--color6);
+  }
+
+  &:nth-child(4):before {
+    content: "";
+    position: absolute;
+    bottom: 400px;
+    right: -2px;
+    width: 1px;
+    height: 50px;
+    animation: var(--animation5);
+    background: var(--color3);
+  }
+
+  &:nth-child(5):before {
+    background: var(--color5);
+  }
+
+  &:nth-child(6):before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -2px;
+    width: 1px;
+    height: 50px;
+    animation: var(--animation1);
+    background: var(--color3);
+  }
+
+  &:nth-child(7),
+  &:nth-child(9) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 300px;
+      right: -2px;
+      width: 1px;
+      height: 50px;
+      animation: var(--animation4);
+    }
+  }
+
+  &:nth-child(7):before {
+    background: var(--color7);
+  }
+
+  &:nth-child(9):before {
+    background: var(--color8);
+  }
+}
+@keyframes line1 {
+  0% {
+    opacity: 1;
+    bottom: 0;
+  }
+  30% {
+    bottom: 30%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  70% {
+    bottom: 70%;
+  }
+  to {
+    bottom: 100%;
+    opacity: 0.5;
+  }
+}
+@keyframes line2 {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  30% {
+    bottom: 30%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  70% {
+    bottom: 70%;
+  }
+  to {
+    top: 100%;
+    opacity: 0.5;
+  }
+}
+@keyframes line3 {
+  0% {
+    opacity: 1;
+    top: 500px;
+  }
+  50% {
+    top: 50%;
+  }
+  to {
+    top: 100%;
+    opacity: 0.5;
+  }
+}
+@keyframes line4 {
+  0% {
+    opacity: 1;
+    top: 300px;
+  }
+  50% {
+    top: 50%;
+  }
+  to {
+    top: 100%;
+    opacity: 0.5;
+  }
+}
+@keyframes line5 {
+  0% {
+    opacity: 1;
+    bottom: 400px;
+  }
+  50% {
+    bottom: 50%;
+  }
+  to {
+    bottom: 100%;
+    opacity: 0.5;
+  }
+}
