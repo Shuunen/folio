@@ -17,7 +17,6 @@
 - [ ] add some illustrations (<https://iconpark.oceanengine.com/illustrations/18> maybe ?)
 - [ ] migrate to "eslint": "*" & "eslint-plugin-shuunen": "0.3" ? (wait until site is complete)
 - [ ] bring back repo-check in check task (after eslint 9 migration)
-- [ ] use [flowbite](https://flowbite.com/docs/getting-started/next-js/)
 - [ ] use dependency-cruiser
 
 ## Thanks

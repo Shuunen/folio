@@ -1,14 +1,9 @@
+import flowbite from 'flowbite-react/tailwind'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    // 'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}',
-    // 'node_modules/flowbite/**/*.{js,jsx,ts,tsx}',
-  ],
-  plugins: [
-    // require('flowbite/plugin'),
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', flowbite.content()],
+  plugins: [flowbite.plugin()],
   safelist: [
     {
       pattern: /(accent|primary)-\d/,

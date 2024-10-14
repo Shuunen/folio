@@ -1,6 +1,9 @@
+import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from 'flowbite-react'
+import { FaCode } from 'react-icons/fa6'
 import { messages } from '../utils/messages'
 import type { Lang, Translator } from '../utils/types'
 import { LangSwitch } from './lang-switch'
+import { ThemeSwitch } from './theme-switch'
 
 const links = [
   { href: '#about', title: messages.navigation.about },
@@ -11,22 +14,23 @@ const links = [
 
 export function Header({ $t, lang }: { $t: Translator; lang: Lang }) {
   return (
-    <header className="flex container justify-between mx-auto  w-full items-center text-2xl z-10 sticky h-24">
-      <a href="/" className="text-2xl font-bold">
-        {$t(messages.general.humaCode)}
-      </a>
-      <nav className="ml-auto mr-8 hidden lg:flex">
-        <ul className="list-decimal flex gap-12 uppercase">
-          {links.map(({ href, title }) => (
-            <li key={href}>
-              <a href={href} className="list-decimal">
-                {$t(title)}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <LangSwitch lang={lang} />
-    </header>
+    <Navbar rounded={true}>
+      <NavbarBrand href="https://flowbite.com/">
+        <FaCode className="mr-3 size-9 text-accent-200" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">{$t(messages.general.humaCode)}</span>
+      </NavbarBrand>
+      <div className="flex md:order-2">
+        <ThemeSwitch />
+        <LangSwitch lang={lang} />
+        <NavbarToggle />
+      </div>
+      <NavbarCollapse>
+        {links.map(link => (
+          <NavbarLink key={link.href} active={link.href === '#about'} href={link.href}>
+            {$t(link.title)}
+          </NavbarLink>
+        ))}
+      </NavbarCollapse>
+    </Navbar>
   )
 }

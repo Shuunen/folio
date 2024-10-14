@@ -1,3 +1,5 @@
+import { Skeleton } from './skeleton'
+
 export function AboutMe() {
   return (
     <div className="flex flex-col container mx-auto py-32 bg-accent-200/20 justify-start gap-6">
@@ -8,6 +10,7 @@ export function AboutMe() {
       <p className="text-lg">
         I am always looking to learn new things and improve my skills. I am currently working on a number of side projects in my spare time, including this website.
       </p>
+      <Skeleton />
     </div>
   )
 }
