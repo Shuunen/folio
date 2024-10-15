@@ -9,7 +9,7 @@ export default function Home({ params: { lang } }: { params: { lang: Lang } }) {
   return (
     <div className="flex flex-col">
       <Hero $t={$t} />
-      <AboutMe />
+      <AboutMe $t={$t} />
     </div>
   )
 }

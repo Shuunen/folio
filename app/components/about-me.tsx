@@ -1,16 +1,19 @@
+import { messages } from '../utils/messages'
+import type { Translator } from '../utils/types'
+import { BgLines } from './bg-lines'
+import { Heading } from './heading'
 import { Skeleton } from './skeleton'
 
-export function AboutMe() {
+export function AboutMe({ $t }: { $t: Translator }) {
   return (
-    <div className="flex flex-col container mx-auto py-32 bg-accent-200/20 justify-start gap-6">
-      <h1 className="text-4xl font-bold mb-6 text-center">About Me</h1>
-      <p className="text-lg">
-        I am a fullstack developer with a passion for web technologies. I have been working in the industry for over 5 years and have experience with a wide range of technologies.
-      </p>
-      <p className="text-lg">
-        I am always looking to learn new things and improve my skills. I am currently working on a number of side projects in my spare time, including this website.
-      </p>
-      <Skeleton />
+    <div className="py-32 bg-gradient-to-b from-primary-100 to-accent-100 dark:from-primary-700 dark:to-primary-900 relative z-0">
+      <BgLines />
+      <div className="container mx-auto grid md:grid-cols-4 gap-14">
+        <Heading level={2}>{$t(messages.pages.about.title)}</Heading>
+        <p className="text-lg">{$t(messages.pages.about.description)}</p>
+        <Skeleton />
+        <Skeleton />
+      </div>
     </div>
   )
 }

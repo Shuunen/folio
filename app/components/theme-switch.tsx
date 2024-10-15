@@ -9,7 +9,7 @@ export function ThemeSwitch() {
 
   return (
     <button type="button" onClick={toggleMode} className="mx-6">
-      <IoSunny className={cn(mode === 'dark' ? '' : 'text-accent-500', 'si')} />
+      <IoSunny className={cn(mode === 'dark' ? '' : 'text-accent-500')} />
     </button>
   )
 }

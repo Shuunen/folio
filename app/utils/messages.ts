@@ -31,13 +31,13 @@ export const messages = {
     lastName: 'Racamier-Lafon',
     fullName: 'Romain Racamier-Lafon',
     humaCode: 'HumaCode',
+    tagLine: {
+      en: 'Apps, websites, your story',
+      fr: 'Apps, sites web, votre histoire',
+    },
   },
   pages: {
     home: {
-      title: {
-        fr: 'accueil',
-        en: 'home',
-      },
       description: {
         en: "I'm a freelance developer and tutor, I'm working remotely from Strasbourg.",
         fr: 'Je suis développeur freelance et tuteur, je travaille à distance depuis Strasbourg.',
@@ -45,20 +45,24 @@ export const messages = {
     },
     services: {
       title: {
-        fr: 'services',
-        en: 'services',
+        fr: 'nos services',
+        en: 'nos services',
       },
     },
     about: {
       title: {
         fr: 'à propos',
-        en: 'about',
+        en: 'about me',
+      },
+      description: {
+        fr: "Je suis un développeur fullstack passionné par les technologies web. Je travaille dans l'industrie depuis plus de 5 ans et j'ai de l'expérience avec un large éventail de technologies.",
+        en: 'I am a fullstack developer with a passion for web technologies. I have been working in the industry for over 5 years and have experience with a wide range of technologies.',
       },
     },
     contact: {
       title: {
-        fr: 'contact',
-        en: 'contact',
+        fr: 'contactez-moi',
+        en: 'contact me',
       },
     },
   },
