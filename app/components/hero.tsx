@@ -1,30 +1,53 @@
+'use client'
+
+import { gsap } from 'gsap'
 import Image from 'next/image'
-import portrait from '../images/romain-racamier-lafon.avif'
+import type { MouseEvent } from 'react'
+import { getTranslator } from 'shuutils'
+import mockupLaptop from '../images/mockup-laptop.avif'
+import mockupPhone from '../images/mockup-phone.avif'
+import mockupTablet from '../images/mockup-tablet.avif'
 import { messages } from '../utils/messages'
-import type { Translator } from '../utils/types'
+import type { Lang } from '../utils/types'
 import { BgLines } from './bg-lines'
 import { Heading } from './heading'
 
-export function Hero({ $t }: { $t: Translator }) {
+function moveMockups(event: MouseEvent<HTMLElement>) {
+  gsap.to('#mockup-tablet', {
+    x: -((event.clientX - window.innerWidth / 2) / 10),
+    y: -((event.clientY - window.innerHeight / 2) / 10),
+    duration: 0.2,
+  })
+  gsap.to('#mockup-laptop', {
+    x: -((event.clientX - window.innerWidth / 2) / 35),
+    y: -((event.clientY - window.innerHeight / 2) / 35),
+    duration: 0.2,
+  })
+  gsap.to('#mockup-phone', {
+    x: -((event.clientX - window.innerWidth / 2) / 15),
+    y: -((event.clientY - window.innerHeight / 2) / 15),
+    duration: 0.2,
+  })
+}
+
+export function Hero({ lang }: { lang: Lang }) {
+  const $t = getTranslator(lang)
   return (
-    <div className="bg-gradient-to-t from-primary-100 to-accent-100 text-2xl dark:from-primary-800 dark:to-accent-900 relative z-0">
+    <section id="hero" onMouseMove={moveMockups}>
       <BgLines />
-      <div className="flex justify-between container md:flex-row md:py-64 py-24 flex-col gap-12">
-        <div className="flex flex-col gap-12">
-          <h2 className="text-4xl uppercase font-thin">{$t(messages.positions.fullstackDev)}</h2>
+      <div className="container pt-24 lg:py-72 relative">
+        <div className="grid lg:grid-cols-3 gap-14">
           <Heading level={1}>
-            <span className="text-primary-500 dark:text-accent-100">{$t(messages.general.firstName)}</span>
-            <br />
-            <span className="text-primary-700 dark:text-accent-300">{$t(messages.general.lastName)}</span>
+            <span className="underline underline-offset-8 dark:decoration-primary-700/70 decoration-primary-300/30">{$t(messages.general.hero)}</span>
+            <span className="text-primary-400 dark:text-accent-500 ml-1">.</span>
           </Heading>
-          <p className="border-current border-l pl-5 w-80">{$t(messages.pages.home.description)}</p>
+          <div className="h-96 flex col-span-2 -ml-48 -mt-24">
+            <Image src={mockupTablet} alt="Tablet mockup" id="mockup-tablet" className="h-auto w-96 self-end -mb-80" />
+            <Image src={mockupLaptop} alt="Laptop mockup" id="mockup-laptop" className="h-120 w-auto" />
+            <Image src={mockupPhone} alt="Phone mockup" id="mockup-phone" className="h-80 w-auto -ml-32 -mt-36" />
+          </div>
         </div>
-        <Image
-          src={portrait}
-          alt={$t(messages.general.fullName)}
-          className="rounded-full bg-gradient-to-tr mx-auto size-full max-w-80 lg:max-w-md dark:from-accent-300 from-primary-300 via-transparent border-primary-400 dark:border-accent-400 aspect-square object-contain border-4 "
-        />
       </div>
-    </div>
+    </section>
   )
 }

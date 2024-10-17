@@ -7,26 +7,25 @@
   --color6: #702fff;
   --color7: #00cfff;
   --color8: #ff8a5b;
-  --border-color: hsla(0, 0%, 100%, 0.1);
-  --border-color-first: hsla(0, 0%, 100%, 0.6);
-  --animation1: line1 8s ease-out infinite;
-  --animation2: line2 8s ease-out infinite;
-  --animation3: line3 8s ease-out infinite;
-  --animation4: line4 8s ease-out infinite;
-  --animation5: line5 8s ease-out infinite;
+  --animation-duration: 8s;
+  --animation-timing: ease-out;
+  --animation-iteration: infinite alternate;
+  --animation1: line1 var(--animation-duration) var(--animation-timing) var(--animation-iteration);
+  --animation2: line2 var(--animation-duration) var(--animation-timing) var(--animation-iteration);
+  --animation3: line3 var(--animation-duration) var(--animation-timing) var(--animation-iteration);
+  --animation4: line4 var(--animation-duration) var(--animation-timing) var(--animation-iteration);
+  --animation5: line5 var(--animation-duration) var(--animation-timing) var(--animation-iteration);
 }
 
 .app-lines .line {
   width: 10%;
   height: 100%;
   box-sizing: border-box;
-  border-right: 1px solid var(--border-color);
   position: relative;
   z-index: -1;
+  @apply border-r dark:border-primary-100/10 border-white/50;
 
   &:first-child {
-    border-left: 1px solid var(--border-color-first);
-
     &:before {
       content: "";
       position: absolute;

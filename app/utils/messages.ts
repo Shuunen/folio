@@ -35,18 +35,16 @@ export const messages = {
       en: 'Apps, websites, your story',
       fr: 'Apps, sites web, votre histoire',
     },
+    hero: {
+      fr: 'Des apps et des sites web pour vous',
+      en: 'Apps and websites for you',
+    },
   },
   pages: {
-    home: {
-      description: {
-        en: "I'm a freelance developer and tutor, I'm working remotely from Strasbourg.",
-        fr: 'Je suis développeur freelance et tuteur, je travaille à distance depuis Strasbourg.',
-      },
-    },
     services: {
       title: {
-        fr: 'nos services',
-        en: 'nos services',
+        fr: 'services',
+        en: 'services',
       },
     },
     about: {
@@ -58,11 +56,29 @@ export const messages = {
         fr: "Je suis un développeur fullstack passionné par les technologies web. Je travaille dans l'industrie depuis plus de 5 ans et j'ai de l'expérience avec un large éventail de technologies.",
         en: 'I am a fullstack developer with a passion for web technologies. I have been working in the industry for over 5 years and have experience with a wide range of technologies.',
       },
+      me: {
+        description: {
+          en: "I'm a freelance developer and tutor, I'm working remotely from Strasbourg.",
+          fr: 'Je suis développeur freelance et tuteur, je travaille à distance depuis Strasbourg.',
+        },
+      },
+      company: {
+        description: {
+          fr: "C'est l'entreprise que j'ai créée en 2024 pour proposer mes services.",
+          en: 'This is the company I created in 2024 to offer my web development services.',
+        },
+      },
+    },
+    work: {
+      title: {
+        fr: 'expériences',
+        en: 'experiences',
+      },
     },
     contact: {
       title: {
-        fr: 'contactez-moi',
-        en: 'contact me',
+        fr: 'Contactez-moi',
+        en: 'Contact me',
       },
     },
   },
