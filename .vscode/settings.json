@@ -1,4 +1,13 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
   "cSpell.words": [
     "Accessi",
     "ademe",
@@ -6,6 +15,7 @@
     "Amdocs",
     "Amundi",
     "FCSAD",
+    "gsap",
     "GTmetrix",
     "intellio",
     "Intellio",
@@ -30,12 +40,7 @@
     "vitepress",
     "wesave"
   ],
-  "explorer.autoRevealExclude": {
-    "**/.vitepress/dist": true
-  },
-  "search.exclude": {
-    "**/.vitepress/dist": true
-  },
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "workbench.colorCustomizations": {
     "activityBar.background": "#382258",
     "titleBar.activeBackground": "#4E2F7B",
