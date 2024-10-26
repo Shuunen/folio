@@ -9,7 +9,10 @@ import './globals.css'
 
 const sansFont = DM_Sans({ subsets: ['latin'], display: 'swap' }) // don't know why latin won't load
 
-export default function RootLayout({ children, params: { lang } }: Readonly<{ children: ReactNode; params: { lang: Lang } }>) {
+export default async function RootLayout(props: { children: ReactNode; params: Promise<{ lang: Lang }> }) {
+  const params = await props.params
+  const { lang } = params
+  const { children } = props
   return (
     <html lang={lang} suppressHydrationWarning={true}>
       <head>

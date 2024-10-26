@@ -4,7 +4,6 @@ const urlRegex = /url/
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   // biome-ignore lint/suspicious/useAwait: it's ok buddy ( ͡° ͜ʖ ͡°)
   async redirects() {
     return [
