@@ -16,9 +16,14 @@ const config: Config = {
           '0%': { transform: 'rotate(0deg) scale(2)' },
           '100%': { transform: 'rotate(360deg) scale(3)' },
         },
+        'slide-down': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
       },
       animation: {
         'spin-zoom': 'spin-zoom 114s linear infinite alternate',
+        'slide-down': 'slide-down 0.3s ease-in-out',
       },
       height: {
         100: '28rem',
@@ -35,6 +40,7 @@ const config: Config = {
       colors: {
         // http://vis4.net/palettes/#/21|d|000000,ff7c27,ffffff|ffffff,005fb4,000000|0|0
         accent: {
+          50: '#fff2e9',
           100: '#ffe5d4',
           200: '#ffcba9',
           300: '#ffb07e',
@@ -46,6 +52,7 @@ const config: Config = {
           900: '#331908',
         },
         primary: {
+          50: '#f0f5f9',
           100: '#ccdff0',
           200: '#99bfe1',
           300: '#669fd2',

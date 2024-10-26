@@ -24,14 +24,17 @@ export function Hero({ lang }: { lang: Lang }) {
           <Heading level={1}>
             <span className="inline-flex w-100 ">
               <span className="inline underline underline-offset-8 dark:decoration-primary-700/70 decoration-primary-300/30">
-                {$t(messages.general.hero)}
+                <span className="text-primary-800 dark:text-primary-100">{$t(messages.general.apps)}</span>
+                <span>{$t(messages.general.and)}</span>
+                <span className="text-primary-500 dark:text-accent-200">{$t(messages.general.websites)}</span>
+                <span>{$t(messages.general.forYou)}</span>
                 <span className="-ml-1  text-primary-400 dark:text-accent-500 pl-1">.</span>
               </span>
             </span>
           </Heading>
-          <Blob01 alt="blob 01" className="text-accent-200 absolute w-44 lg:bottom-8 -bottom-24 lg:left-56" />
-          <Blob02 alt="blob 02" className="text-accent-200 absolute w-44 top-8 xl:right-56 -right-24" />
-          <Blob03 alt="blob 03" className="text-primary-200 absolute w-96 xl:bottom-36 -bottom-32 xl:right-72 right-0 " />
+          <Blob01 alt="blob 01" className="text-accent-500 dark:text-accent-200 absolute w-44 lg:bottom-8 -bottom-24 lg:left-56" />
+          <Blob02 alt="blob 02" className="text-primary-500 dark:text-accent-200 absolute w-44 top-8 xl:right-56 -right-24" />
+          <Blob03 alt="blob 03" className="text-accent-500 dark:text-primary-200 absolute w-96 xl:bottom-36 -bottom-32 xl:right-72 right-0 " />
           <div className="h-96 flex col-span-2 -ml-48 -mt-24 z-0">
             <Image src={mockupTablet} alt="Tablet mockup" id="mockup-tablet" className="h-auto w-96 self-end -mb-80" />
             <Image src={mockupLaptop} alt="Laptop mockup" id="mockup-laptop" className="h-120 w-auto" />

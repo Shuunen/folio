@@ -39,6 +39,19 @@ export const messages = {
       fr: 'Des apps et des sites web pour vous',
       en: 'Apps and websites for you',
     },
+    apps: 'Apps ',
+    and: {
+      fr: 'et ',
+      en: 'and ',
+    },
+    websites: {
+      fr: 'sites web ',
+      en: 'websites ',
+    },
+    forYou: {
+      fr: 'pour vous',
+      en: 'for you',
+    },
   },
   pages: {
     services: {
