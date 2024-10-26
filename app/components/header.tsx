@@ -23,6 +23,7 @@ export function Header({ lang }: { lang: Lang }) {
       <div className="flex md:order-2 mt-1">
         <ThemeSwitch />
         <LangSwitch lang={lang} />
+        <div className="w-4" />
         <NavbarToggle />
       </div>
       <NavbarCollapse className="ml-auto items-center">

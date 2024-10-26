@@ -23,7 +23,7 @@ html {
 }
 
 section {
-  @apply py-40 relative z-0 bg-gradient-to-t from-primary-100 to-accent-100 text-2xl dark:from-primary-800 dark:to-accent-900/80;
+  @apply py-40 overflow-hidden relative z-0 bg-gradient-to-t from-primary-100 to-accent-100 text-2xl dark:from-primary-800 dark:to-accent-900/80;
 }
 
 section:nth-child(even) {

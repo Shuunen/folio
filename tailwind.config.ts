@@ -26,6 +26,12 @@ const config: Config = {
         120: '36rem',
         130: '40rem',
       },
+      width: {
+        100: '28rem',
+        110: '32rem',
+        120: '36rem',
+        130: '40rem',
+      },
       colors: {
         // http://vis4.net/palettes/#/21|d|000000,ff7c27,ffffff|ffffff,005fb4,000000|0|0
         accent: {

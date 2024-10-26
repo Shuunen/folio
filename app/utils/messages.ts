@@ -64,8 +64,8 @@ export const messages = {
       },
       company: {
         description: {
-          fr: "C'est l'entreprise que j'ai créée en 2024 pour proposer mes services.",
-          en: 'This is the company I created in 2024 to offer my web development services.',
+          fr: "C'est l'entreprise que j'ai créé en 2024 pour proposer mes services.",
+          en: 'This is the company I created in 2024 to offer my development skills.',
         },
       },
     },
