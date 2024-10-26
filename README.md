@@ -45,3 +45,7 @@
 ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/Shuunen/folio.svg?variant=adaptive)](https://starchart.cc/Shuunen/folio)
+
+## Page views
+
+[![Free Website Counter](https://www.websitecounterfree.com/c.php?d=9&id=60667&s=12)](https://www.websitecounterfree.com)
