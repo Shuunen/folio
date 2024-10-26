@@ -1,15 +1,14 @@
 # Folio
 
 [![GitHub license](https://img.shields.io/github/license/shuunen/folio.svg?color=success)](https://github.com/Shuunen/folio/blob/master/LICENSE)
-[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/folio?style=flat)](https://codeclimate.com/github/Shuunen/folio)
-[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/rrl-folio.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/rrl-folio.netlify.app)
-[![Website](https://img.shields.io/website/https/rrl-folio.netlify.app.svg)](https://rrl-folio.netlify.app)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/romain.cloud.svg?publish)](https://observatory.mozilla.org/analyze/romain.cloud)
+[![Website](https://img.shields.io/website/https/romain.cloud.svg)](https://romain.cloud)
 
 > This is my personal promoting / landing / minimalist page.
 
 ![logo](docs/banner.svg)
 
-![demo](pages/public/images/folio-4.1.0.webp)
+![demo](docs/folio-4.1.0.webp)
 
 ## Todo
 
@@ -42,3 +41,7 @@
 - [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Shuunen/folio.svg?variant=adaptive)](https://starchart.cc/Shuunen/folio)
