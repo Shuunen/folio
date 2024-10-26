@@ -1,10 +1,14 @@
 import { formatDate } from 'shuutils'
-import pkg from '../../package.json'
+import project from '../../package.json'
 
+/**
+ * Footer component
+ * @returns JSX.Element
+ */
 export function Footer() {
   return (
-    <div className="text-sm h-24 flex items-center justify-center font-bold text-primary-400 dark:bg-primary-700 opacity-50 lowercase w-full text-center" title="__unique-mark__">
-      version {pkg.version} builded on {formatDate(new Date(), 'MMMM yyyy')}
+    <div className="flex h-24 w-full items-center justify-center text-center text-sm font-bold lowercase text-primary-400 opacity-50 dark:bg-primary-700" title="__unique-mark__">
+      version {project.version} builded on {formatDate(new Date(), 'MMMM yyyy')}
     </div>
   )
 }

@@ -15,15 +15,11 @@
 
 - [ ] add a lang flag switch
 - [ ] add some illustrations (<https://iconpark.oceanengine.com/illustrations/18> maybe ?)
-- [ ] migrate to "eslint": "*" & "eslint-plugin-shuunen": "0.3" ? (wait until site is complete)
-- [ ] bring back repo-check in check task (after eslint 9 migration)
-- [ ] use dependency-cruiser
 
 ## Thanks
 
 - [Boxy SVG](https://boxy-svg.com) : for providing a simple & full featured svg editor
 - [Claude](https://claude.ai) : great AI companion for various tasks
-- [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) : handy tool to validate and visualize dependencies
 - [DoYouBuzz](https://doyoubuzz.com) : for their awesome resume builder that I use to generate the JSON resume file
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Feather Icons](https://feathericons.com) : nice looking svg icons
@@ -38,7 +34,6 @@
 - [React](https://react.dev) : great library for building user interfaces
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [RIOT Optimizer](https://riot-optimizer.com) : Radical Image Optimization Tool, the best software I found to compress images
-- [Servor](https://github.com/lukejacksonn/servor) : dependency free dev server for single page app development
 - [Shields.io](https://shields.io) : super platform centralizing badges
 - [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
 - [SvgOmg](https://jakearchibald.github.io/svgomg) : awesome tool to optimize svg files

@@ -6,9 +6,16 @@ import { Hero } from '../components/hero'
 import { Services } from '../components/services'
 import { logger } from '../utils/logger'
 
-export default async function Home(props: { params: Promise<{ lang: Lang }> }) {
-  const params = await props.params
-  const { lang } = params
+/**
+ * Home page
+ * @param properties the properties
+ * @param properties.params the parameters
+ * @returns JSX.Element
+ */
+// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+export default async function Home(properties: { params: Promise<{ lang: Lang }> }) {
+  const parameters = await properties.params
+  const { lang } = parameters
   logger.info('Home render with lang:', lang)
   const $t = getTranslator(lang)
   return (

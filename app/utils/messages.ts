@@ -2,72 +2,90 @@
 export const messages = {
   actions: {
     switchLang: {
-      fr: 'see the english version',
       en: 'voir la version française',
+      fr: 'see the english version',
     },
     useDarkTheme: {
-      fr: 'Aller du côté obscur',
       en: 'Join the dark side',
+      fr: 'Aller du côté obscur',
     },
     useLightTheme: {
-      fr: 'Aller vers la lumière',
       en: 'Go towards the light',
+      fr: 'Aller vers la lumière',
     },
   },
   general: {
+    and: {
+      en: 'and ',
+      fr: 'et ',
+    },
+    apps: 'Apps ',
     copyright: {
-      fr: 'Tous droits réservés',
       en: 'All rights reserved',
-    },
-    helloWorld: {
-      fr: 'Bonjour le monde',
-      en: 'Hello world',
-    },
-    identifier: {
-      fr: 'version {version} crée le {date}',
-      en: 'version {version} builded on {date}',
+      fr: 'Tous droits réservés',
     },
     firstName: 'Romain',
-    lastName: 'Racamier-Lafon',
+    forYou: {
+      en: 'for you',
+      fr: 'pour vous',
+    },
     fullName: 'Romain Racamier-Lafon',
+    helloWorld: {
+      en: 'Hello world',
+      fr: 'Bonjour le monde',
+    },
+    hero: {
+      en: 'Apps and websites for you',
+      fr: 'Des apps et des sites web pour vous',
+    },
     humaCode: 'HumaCode',
+    identifier: {
+      en: 'version {version} builded on {date}',
+      fr: 'version {version} crée le {date}',
+    },
+    lastName: 'Racamier-Lafon',
     tagLine: {
       en: 'Apps, websites, your story',
       fr: 'Apps, sites web, votre histoire',
     },
-    hero: {
-      fr: 'Des apps et des sites web pour vous',
-      en: 'Apps and websites for you',
-    },
-    apps: 'Apps ',
-    and: {
-      fr: 'et ',
-      en: 'and ',
-    },
     websites: {
-      fr: 'sites web ',
       en: 'websites ',
+      fr: 'sites web ',
     },
-    forYou: {
-      fr: 'pour vous',
-      en: 'for you',
+  },
+  navigation: {
+    about: {
+      en: 'about',
+      fr: 'à propos',
+    },
+    contact: {
+      en: 'contact',
+      fr: 'contact',
+    },
+    index: {
+      en: 'home',
+      fr: 'accueil',
+    },
+    services: {
+      en: 'services',
+      fr: 'services',
+    },
+    work: {
+      en: 'work',
+      fr: 'expériences',
     },
   },
   pages: {
-    services: {
-      title: {
-        fr: 'services',
-        en: 'services',
-      },
-    },
     about: {
-      title: {
-        fr: 'à propos',
-        en: 'about me',
+      company: {
+        description: {
+          en: 'This is the company I created in 2024 to offer my development skills.',
+          fr: "C'est l'entreprise que j'ai créé en 2024 pour proposer mes services.",
+        },
       },
       description: {
-        fr: "Je suis un développeur fullstack passionné par les technologies web. Je travaille dans l'industrie depuis plus de 5 ans et j'ai de l'expérience avec un large éventail de technologies.",
         en: 'I am a fullstack developer with a passion for web technologies. I have been working in the industry for over 5 years and have experience with a wide range of technologies.',
+        fr: "Je suis un développeur fullstack passionné par les technologies web. Je travaille dans l'industrie depuis plus de 5 ans et j'ai de l'expérience avec un large éventail de technologies.",
       },
       me: {
         description: {
@@ -75,144 +93,126 @@ export const messages = {
           fr: 'Je suis développeur freelance et tuteur, je travaille à distance depuis Strasbourg.',
         },
       },
-      company: {
-        description: {
-          fr: "C'est l'entreprise que j'ai créé en 2024 pour proposer mes services.",
-          en: 'This is the company I created in 2024 to offer my development skills.',
-        },
-      },
-    },
-    work: {
       title: {
-        fr: 'expériences',
-        en: 'experiences',
+        en: 'about me',
+        fr: 'à propos',
       },
     },
     contact: {
       title: {
-        fr: 'Contactez-moi',
         en: 'Contact me',
+        fr: 'Contactez-moi',
       },
-    },
-  },
-  navigation: {
-    about: {
-      fr: 'à propos',
-      en: 'about',
-    },
-    contact: {
-      fr: 'contact',
-      en: 'contact',
-    },
-    index: {
-      fr: 'accueil',
-      en: 'home',
     },
     services: {
-      fr: 'services',
-      en: 'services',
+      title: {
+        en: 'services',
+        fr: 'services',
+      },
     },
     work: {
-      fr: 'expériences',
-      en: 'work',
+      title: {
+        en: 'experiences',
+        fr: 'expériences',
+      },
     },
   },
   positions: {
     frontendDev: {
-      fr: 'Développeur Web Front-End',
       en: 'Front-End Web Developer',
+      fr: 'Développeur Web Front-End',
     },
     fullstackDev: {
-      fr: 'Développeur Web Full-Stack',
       en: 'Full-Stack Web Developer',
+      fr: 'Développeur Web Full-Stack',
     },
     fullstackDevTutor: {
-      fr: 'Développeur Web Full-Stack & Tuteur',
       en: 'Full-Stack Web Developer & Tutor',
+      fr: 'Développeur Web Full-Stack & Tuteur',
     },
     softwareDev: {
-      fr: 'Développeur logiciel',
       en: 'Software Developer',
+      fr: 'Développeur logiciel',
+    },
+  },
+  sectors: {
+    energy: {
+      en: 'energy',
+      fr: 'énergie',
+    },
+    environment: {
+      en: 'environment',
+      fr: 'environnement',
+    },
+    finance: {
+      en: 'finance',
+      fr: 'finance',
+    },
+    government: {
+      en: 'government',
+      fr: 'gouvernement',
+    },
+    health: {
+      en: 'health',
+      fr: 'santé',
+    },
+    insurance: {
+      en: 'insurance',
+      fr: 'assurance',
+    },
+    matriculation: {
+      en: 'matriculation',
+      fr: 'immatriculation',
+    },
+    media: {
+      en: 'media',
+      fr: 'média',
+    },
+    mobile: {
+      en: 'mobile',
+      fr: 'mobile',
+    },
+    'mobile-payment': {
+      en: 'mobile payment',
+      fr: 'paiement mobile',
+    },
+    press: {
+      en: 'press',
+      fr: 'presse',
+    },
+    retail: {
+      en: 'retail',
+      fr: 'vente',
+    },
+    'savings-management': {
+      en: 'savings management',
+      fr: "gestion de l'épargne",
+    },
+    sport: {
+      en: 'sport',
+      fr: 'sport',
+    },
+    telecoms: {
+      en: 'telecoms',
+      fr: 'télécoms',
     },
   },
   validation: {
     maxChar: 'Le champ doit contenir un seul caractère | Le champ doit contenir {count} caractères maximum',
     minChar: "Le champ doit contenir au moins un caractère | Le champ doit contenir plus d'un caractère | Le champ doit contenir au moins {count} caractères",
   },
-  sectors: {
-    energy: {
-      fr: 'énergie',
-      en: 'energy',
-    },
-    environment: {
-      fr: 'environnement',
-      en: 'environment',
-    },
-    finance: {
-      fr: 'finance',
-      en: 'finance',
-    },
-    government: {
-      fr: 'gouvernement',
-      en: 'government',
-    },
-    health: {
-      fr: 'santé',
-      en: 'health',
-    },
-    insurance: {
-      fr: 'assurance',
-      en: 'insurance',
-    },
-    matriculation: {
-      fr: 'immatriculation',
-      en: 'matriculation',
-    },
-    media: {
-      fr: 'média',
-      en: 'media',
-    },
-    mobile: {
-      fr: 'mobile',
-      en: 'mobile',
-    },
-    'mobile-payment': {
-      fr: 'paiement mobile',
-      en: 'mobile payment',
-    },
-    press: {
-      fr: 'presse',
-      en: 'press',
-    },
-    retail: {
-      fr: 'vente',
-      en: 'retail',
-    },
-    'savings-management': {
-      fr: "gestion de l'épargne",
-      en: 'savings management',
-    },
-    sport: {
-      fr: 'sport',
-      en: 'sport',
-    },
-    telecoms: {
-      fr: 'télécoms',
-      en: 'telecoms',
-    },
-  },
   workTimeline: {
     businessSectors: {
-      fr: "secteurs d'activité",
       en: 'business sectors',
+      fr: "secteurs d'activité",
     },
     compagnies: {
-      fr: 'entreprises',
       en: 'companies',
+      fr: 'entreprises',
     },
     position: {
-      fr: 'rôle',
       en: 'role',
+      fr: 'rôle',
     },
   },
 } as const

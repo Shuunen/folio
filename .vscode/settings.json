@@ -41,6 +41,10 @@
     "vitepress",
     "wesave"
   ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.organizeImports.biome": "always"
+  },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "workbench.colorCustomizations": {
     "activityBar.background": "#382258",

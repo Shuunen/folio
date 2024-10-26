@@ -15,14 +15,17 @@
   "description": "My personal portfolio",
   "devDependencies": {
     "@biomejs/biome": "^1.9",
+    "@eslint/eslintrc": "^3.1",
+    "@eslint/js": "^9.13",
     "@svgr/webpack": "^8.1",
     "@tsconfig/strictest": "^2.0",
     "@types/node": "^20.16",
     "@types/react": "^18.3",
     "@types/react-dom": "^18.3",
     "@vitest/coverage-v8": "^2.1",
-    "eslint": "^9.13",
+    "eslint": "*",
     "eslint-config-next": "^15.0",
+    "eslint-plugin-shuunen": "^0.3",
     "postcss": "^8.4",
     "repo-check": "^1.37",
     "sharp": "^0.33",
@@ -39,6 +42,9 @@
     "page",
     "portfolio"
   ],
+  "files": [
+    ".next"
+  ],
   "license": "GPL-3.0",
   "name": "folio",
   "private": true,
@@ -51,7 +57,7 @@
     "build:mark": "unique-mark .next/server/app/**/page.{js}",
     "check": "pnpm install && pnpm build && pnpm lint && pnpm test && echo check success",
     "dev": "next dev",
-    "lint": "pnpm lint:biome && pnpm lint:eslint && pnpm lint:tsc && echo lint success",
+    "lint": "pnpm lint:biome && repo-check && pnpm lint:eslint && pnpm lint:tsc && echo lint success",
     "lint:biome": "biome check --error-on-warnings --write --unsafe && echo lint:biome success",
     "lint:eslint": "next lint && echo lint:eslint success",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
@@ -63,5 +69,6 @@
     "test:update": "vitest --run --coverage --update && echo test update success",
     "test:watch": "vitest --coverage"
   },
+  "type": "module",
   "version": "5.0.0"
 }

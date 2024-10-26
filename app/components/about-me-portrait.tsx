@@ -4,13 +4,19 @@ import Image from 'next/image'
 import Tilt from 'react-parallax-tilt'
 import portrait from '../images/romain-racamier-lafon.avif'
 
-export function AboutMePortrait({ alt }: { alt: string }) {
+/**
+ * About me portrait component, shows my face ^^
+ * @param params the parameters
+ * @param params.alt the alt text for the image
+ * @returns JSX.Element
+ */
+export function AboutMePortrait({ alt }: Readonly<{ alt: string }>) {
   return (
     <Tilt tiltMaxAngleX={9} tiltMaxAngleY={9}>
       <Image
-        src={portrait}
         alt={alt}
-        className="rounded-full max-w-md bg-gradient-to-tr mx-auto size-full w-full dark:from-accent-300 from-primary-300 via-transparent border-primary-400 dark:border-accent-400 aspect-square object-contain border-4 "
+        className="mx-auto aspect-square size-full w-full max-w-md rounded-full border-4 border-primary-400 bg-gradient-to-tr from-primary-300 via-transparent object-contain dark:border-accent-400 dark:from-accent-300 "
+        src={portrait}
       />
     </Tilt>
   )

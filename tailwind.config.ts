@@ -6,36 +6,14 @@ const config: Config = {
   plugins: [flowbite.plugin()],
   safelist: [
     {
-      pattern: /(accent|primary)-\d/,
+      pattern: /(?:accent|primary)-\d/u,
     },
   ],
   theme: {
     extend: {
-      keyframes: {
-        'spin-zoom': {
-          '0%': { transform: 'rotate(0deg) scale(2)' },
-          '100%': { transform: 'rotate(360deg) scale(3)' },
-        },
-        'slide-down': {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(0)' },
-        },
-      },
       animation: {
-        'spin-zoom': 'spin-zoom 114s linear infinite alternate',
         'slide-down': 'slide-down 0.3s ease-in-out',
-      },
-      height: {
-        100: '28rem',
-        110: '32rem',
-        120: '36rem',
-        130: '40rem',
-      },
-      width: {
-        100: '28rem',
-        110: '32rem',
-        120: '36rem',
-        130: '40rem',
+        'spin-zoom': 'spin-zoom 114s linear infinite alternate',
       },
       colors: {
         // http://vis4.net/palettes/#/21|d|000000,ff7c27,ffffff|ffffff,005fb4,000000|0|0
@@ -63,6 +41,28 @@ const config: Config = {
           800: '#002648',
           900: '#001324',
         },
+      },
+      height: {
+        100: '28rem',
+        110: '32rem',
+        120: '36rem',
+        130: '40rem',
+      },
+      keyframes: {
+        'slide-down': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'spin-zoom': {
+          '0%': { transform: 'rotate(0deg) scale(2)' },
+          '100%': { transform: 'rotate(360deg) scale(3)' },
+        },
+      },
+      width: {
+        100: '28rem',
+        110: '32rem',
+        120: '36rem',
+        130: '40rem',
       },
     },
   },
