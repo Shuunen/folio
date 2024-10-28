@@ -1,27 +1,32 @@
-const svgRegex = /\.svg$/i
-const urlRegex = /url/
+/* eslint-disable jsdoc/require-jsdoc */
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+import type { NextConfig } from 'next'
+
+const svgRegex = /\.svg$/iu
+const urlRegex = /url/u
+
+const nextConfig: NextConfig = {
+  /* eslint-disable @typescript-eslint/require-await, @typescript-eslint/naming-convention */
   // biome-ignore lint/suspicious/useAwait: it's ok buddy ( ͡° ͜ʖ ͡°)
   async redirects() {
     return [
       // redirect url without language to default language
       {
-        source: '/',
         destination: '/en',
         permanent: true,
+        source: '/',
       },
       // redirect url with non-handled language to default language
       {
-        source: '/:lang((?!en|fr).*)/:path*',
         destination: '/en/:path*',
         permanent: true,
+        source: '/:lang((?!en|fr).*)/:path*',
       },
     ]
   },
+  /* eslint-enable @typescript-eslint/require-await, @typescript-eslint/naming-convention */
   webpack(config) {
+    /* eslint-disable @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call */
     // @ts-expect-error unknown type here
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'))
@@ -30,14 +35,14 @@ const nextConfig = {
       // Reapply the existing rule, but only for svg imports ending in ?url
       {
         ...fileLoaderRule,
-        test: svgRegex,
         resourceQuery: urlRegex, // *.svg?url
+        test: svgRegex,
       },
       // Convert all other *.svg imports to React components
       {
-        test: svgRegex,
         issuer: fileLoaderRule.issuer,
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, urlRegex] }, // exclude if *.svg?url
+        test: svgRegex,
         use: ['@svgr/webpack'],
       },
     )
@@ -46,6 +51,7 @@ const nextConfig = {
     fileLoaderRule.exclude = svgRegex
 
     return config
+    /* eslint-enable @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call */
   },
 }
 
