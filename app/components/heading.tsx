@@ -11,7 +11,9 @@ const base = cn('first-letter:uppercase')
 const themes = {
   1: cn(base, tw('text-7xl'), serifFont.className),
   2: cn(base, tw('mb-12 text-6xl'), sansFont.className),
-  3: cn(base, tw('text-4xl font-extralight uppercase')),
+  3: cn(base, tw('text-4xl font-extralight uppercase'), sansFont.className),
+  4: cn(base, tw('mb-2 text-2xl font-bold'), sansFont.className),
+  5: cn(base, tw('text-xl font-light'), sansFont.className),
 }
 
 /**
@@ -23,7 +25,7 @@ const themes = {
  * @returns JSX.Element
  */
 // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types, @typescript-eslint/no-magic-numbers
-export function Heading({ children, id = '', level }: { children: ReactNode; id?: string; level: 1 | 2 | 3 }) {
+export function Heading({ children, id = '', level }: { children: ReactNode; id?: string; level: 1 | 2 | 3 | 4 | 5 }) {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   const HeadingTag = `h${level}` as const
   return (

@@ -197,6 +197,50 @@ export const messages = {
       fr: 'télécoms',
     },
   },
+  showcase: {
+    auchan: {
+      subtitle: {
+        en: 'Creation of a chatbot for Auchan',
+        fr: 'Création d’un chatbot pour Auchan',
+      },
+      title: 'Auchan',
+    },
+    collectifEnergie: {
+      subtitle: {
+        en: 'Monorepo with Nx, React & Storybook',
+        fr: 'Monorepo avec Nx, React & Storybook',
+      },
+      title: 'Collectif Energie',
+    },
+    enedis: {
+      subtitle: {
+        en: 'Maintenance of the Ionic app',
+        fr: 'Maintenance de l’application Ionic',
+      },
+      title: 'Enedis',
+    },
+    lyf: {
+      subtitle: {
+        en: 'Overhaul of the main website in Nuxt',
+        fr: 'Refonte du site principal en Nuxt',
+      },
+      title: 'Lyf - Crédit Mutuel',
+    },
+    ouestFrance: {
+      subtitle: {
+        en: 'Overhaul of the main website in Drupal',
+        fr: 'Refonte du site principal en Drupal',
+      },
+      title: 'Ouest-France',
+    },
+    weSave: {
+      subtitle: {
+        en: 'Nuxt 2 migration towards Nuxt 3',
+        fr: 'Migration de Nuxt 2 vers Nuxt 3',
+      },
+      title: 'WeSave Conseil',
+    },
+  },
   validation: {
     maxChar: 'Le champ doit contenir un seul caractère | Le champ doit contenir {count} caractères maximum',
     minChar: "Le champ doit contenir au moins un caractère | Le champ doit contenir plus d'un caractère | Le champ doit contenir au moins {count} caractères",

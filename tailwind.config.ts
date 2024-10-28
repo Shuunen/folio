@@ -29,6 +29,11 @@ const config: Config = {
           800: '#663210',
           900: '#331908',
         },
+        auchan: '#D6170D',
+        'collectif-energie': '#0147BC',
+        enedis: '#93C223',
+        lyf: '#FF606A',
+        'ouest-france': '#DD2629',
         primary: {
           50: '#f0f5f9',
           100: '#ccdff0',
@@ -41,6 +46,7 @@ const config: Config = {
           800: '#002648',
           900: '#001324',
         },
+        'we-save': '#3CECA3',
       },
       height: {
         100: '28rem',
