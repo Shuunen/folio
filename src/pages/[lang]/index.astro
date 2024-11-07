@@ -1,20 +1,9 @@
 ---
-import type { Lang } from "shuutils";
-import Layout from "../../layouts/layout.astro";
-import { Hero } from "../../components/hero";
-import { Services } from "../../components/services";
-import { logger } from "../../utils/logger";
+import Home from "../_home.astro";
 
 export function getStaticPaths() {
   return [{ params: { lang: "fr" } }, { params: { lang: "en" } }];
 }
-
-const { lang } = Astro.params as { lang: Lang };
-logger.info("preferredLocale", Astro.preferredLocale);
-logger.info("currentLocale", Astro.currentLocale);
 ---
 
-<Layout title="Welcome to Astro." lang={lang}>
-  <Hero lang={lang} client:load />
-  <Services lang={lang} client:load />
-</Layout>
+<Home />

@@ -1,6 +1,6 @@
-import { slugify } from 'shuutils'
+import { getTranslator, slugify } from 'shuutils'
 import { messages } from '../utils/messages'
-import type { Translator } from '../utils/types'
+import type { Lang } from '../utils/types'
 import { AboutMePortrait } from './about-me-portrait'
 import { BgLines } from './bg-lines'
 import { Heading } from './heading'
@@ -8,10 +8,11 @@ import { Heading } from './heading'
 /**
  * About me component.
  * @param params the parameters
- * @param params.$t the translator
+ * @param params.lang the language like 'en' or 'fr'
  * @returns JSX.Element
  */
-export function AboutMe({ $t }: Readonly<{ $t: Translator }>) {
+export function AboutMe({ lang }: Readonly<{ lang: Lang }>) {
+  const $t = getTranslator(lang)
   return (
     <section id={slugify($t(messages.navigation.about))}>
       <BgLines />

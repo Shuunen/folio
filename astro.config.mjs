@@ -5,10 +5,14 @@ import svgr from 'vite-plugin-svgr'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind()],
-  redirects: {
-    '/': '/en',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    routing: {
+      prefixDefaultLocale: true,
+    },
   },
+  integrations: [react(), tailwind()],
   vite: {
     plugins: [svgr()],
   },

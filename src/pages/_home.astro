@@ -1,0 +1,21 @@
+---
+import { getTranslator, type Lang } from "shuutils";
+import Layout from "../layouts/layout.astro";
+import { Hero } from "../components/hero";
+import { Services } from "../components/services";
+import { messages } from "../utils/messages";
+import { AboutMe } from "../components/about-me";
+
+const lang = Astro.currentLocale as Lang;
+const $t = getTranslator(lang);
+const title = [
+  $t(messages.general.humaCode),
+  $t(messages.general.tagLine),
+].join(" - ");
+---
+
+<Layout title={title} lang={lang}>
+  <Hero lang={lang} client:load />
+  <AboutMe lang={lang} client:load />
+  <Services lang={lang} client:load />
+</Layout>
