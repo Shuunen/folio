@@ -32,14 +32,14 @@ export function Hero({ lang }: Readonly<{ lang: Lang }>) {
               <span className="inline underline decoration-primary-300/30 underline-offset-8 dark:decoration-primary-700/70">
                 <span className="text-primary-800 dark:text-primary-100">{$t(messages.general.apps)}</span>
                 <span>{$t(messages.general.and)}</span>
-                <span className="text-primary-500 dark:text-accent-200">{$t(messages.general.websites)}</span>
+                <span className="text-primary-500 dark:text-orange-300">{$t(messages.general.websites)}</span>
                 <span>{$t(messages.general.forYou)}</span>
-                <span className="-ml-1  pl-1 text-primary-400 dark:text-accent-500">.</span>
+                <span className="-ml-1  pl-1 text-primary-400 dark:text-orange-400">.</span>
               </span>
             </span>
           </Heading>
-          <Blob01 alt="blob 01" className="absolute -bottom-24 w-44 text-accent-500 dark:text-accent-200 lg:bottom-8 lg:left-56" />
-          <Blob02 alt="blob 02" className="absolute -right-24 top-8 w-44 text-primary-500 dark:text-accent-200 xl:right-56" />
+          <Blob01 alt="blob 01" className="absolute -bottom-24 w-44 text-primary-300 dark:text-accent-200 lg:bottom-8 lg:left-56" />
+          <Blob02 alt="blob 02" className="absolute -right-24 top-8 w-44 text-primary-300 dark:text-accent-200 xl:right-56" />
           <Blob03 alt="blob 03" className="absolute -bottom-32 right-0 w-96 text-accent-500 dark:text-primary-200 xl:bottom-36 xl:right-72 " />
           <div className="z-0 col-span-2 -ml-48 -mt-24 flex h-96">
             <Image alt="Tablet mockup" className="-mb-80 h-auto w-96 self-end" id="mockup-tablet" src={mockupTablet} />

@@ -19,7 +19,7 @@
     "@eslint/js": "^9.13",
     "@svgr/webpack": "^8.1",
     "@tsconfig/strictest": "^2.0",
-    "@types/node": "^20.16",
+    "@types/node": "^22.9",
     "@types/react": "^18.3",
     "@types/react-dom": "^18.3",
     "@vitest/coverage-v8": "^2.1",

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" xmlns:bx="https://boxy-svg.com">
+  <rect x="-84.159" y="-28.579" width="689.516" height="566.896" style="stroke: rgb(0, 0, 0); fill: rgb(165, 0, 255); visibility: hidden;"/>
+  <g style="visibility: hidden;">
+    <title>base forms</title>
+    <path d="M 138.057 102.939 L 186.745 102.939 L 186.745 397.06 L 138.057 397.06 Z M 361.941 102.939 L 361.941 397.06 L 314.051 397.06 L 314.051 237.38 L 203.106 237.38 L 203.106 204.655 L 314.051 204.655 L 314.051 102.939 Z" style="fill: rgb(255, 255, 255); text-wrap-mode: nowrap; stroke-linejoin: round; stroke-linecap: round; stroke-dashoffset: -31px; stroke-width: 48px;">
+      <title>h</title>
+    </path>
+    <path d="M 26.391 26.391 H 473.609 V 473.609 H 26.391 V 26.391 Z" style="stroke-miterlimit: 30; stroke-linejoin: round; stroke-width: 50px; fill: rgb(255, 90, 31); stroke: rgb(255, 90, 31);">
+      <title>rounded-bg</title>
+    </path>
+  </g>
+  <path d="M 34.637 0 L 455.363 0 C 468.969 0 490 21.031 490 34.637 L 490 455.363 C 490 468.969 468.969 490 455.363 490 L 34.637 490 C 21.031 490 0 468.969 0 455.363 L 0 34.637 C 0 21.031 21.031 0 34.637 0 Z M 134.682 389.925 L 182.663 389.925 L 182.663 100.074 L 134.682 100.074 L 134.682 389.925 Z M 308.121 100.074 L 308.121 200.313 L 198.787 200.313 L 198.787 232.563 L 308.121 232.563 L 308.121 389.925 L 355.316 389.925 L 355.316 100.074 L 308.121 100.074 Z" style="fill: rgb(255, 90, 31);">
+    <title>bg</title>
+  </path>
+  <path d="M 73.395 368.897 L 73.395 121.102 L 132.936 121.102 L 132.936 140.662 L 96.259 140.662 L 96.259 349.337 L 132.936 349.337 L 132.936 368.897 L 73.395 368.897 Z" style="text-wrap-mode: nowrap; fill: rgba(255, 255, 255, 0.282);">
+    <title>b-left</title>
+  </path>
+  <path d="M 416.605 121.102 L 416.605 368.897 L 357.064 368.897 L 357.064 349.337 L 393.741 349.337 L 393.741 140.662 L 357.064 140.662 L 357.064 121.102 L 416.605 121.102 Z" style="text-wrap-mode: nowrap; fill: rgba(255, 255, 255, 0.282);">
+    <title>b-right</title>
+  </path>
+  <defs>
+    <style bx:fonts="Allerta Stencil">@import url(https://fonts.googleapis.com/css2?family=Allerta+Stencil%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+    <bx:grid x="0" y="0" width="35" height="35"/>
+    <bx:export>
+      <bx:file format="svg" normalization="{&quot;removeAnimations&quot;:true,&quot;convertTextsToPaths&quot;:true,&quot;splitCompoundPaths&quot;:true,&quot;embedExternalFonts&quot;:true,&quot;removeBoxySVGMetadata&quot;:true,&quot;removeForeignMetadata&quot;:true,&quot;resetTransformOrigins&quot;:true}" path="humacode-logo.svg"/>
+    </bx:export>
+  </defs>
+  <text style="fill: rgb(255, 255, 255); font-family: &quot;Lucida Console&quot;; font-size: 285.6px; font-weight: 700; letter-spacing: -36.4px; white-space: pre; visibility: hidden;" x="22.983" y="12.18"><tspan x="36.279" y="345.917" style="font-size: 285.6px; word-spacing: 0px; letter-spacing: -36.4px;">[</tspan><tspan style="font-family: &quot;Allerta Stencil&quot;; font-size: 285.6px; word-spacing: 0px; letter-spacing: -36.4px;">H</tspan><tspan style="font-size: 285.6px; word-spacing: 0px; letter-spacing: -36.4px;">]</tspan></text>
+  <path d="M 704.728 188.264 L 704.728 393.818 L 671.259 393.818 L 671.259 282.221 L 593.723 282.221 L 593.723 259.351 L 671.259 259.351 L 671.259 188.264 L 704.728 188.264 Z M 548.262 188.264 L 582.288 188.264 L 582.288 393.818 L 548.262 393.818 L 548.262 188.264 Z" style="fill: rgb(255, 255, 255); text-wrap-mode: nowrap; visibility: hidden;">
+    <title>h copy</title>
+  </path>
+</svg>

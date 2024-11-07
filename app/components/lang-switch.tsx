@@ -17,12 +17,12 @@ export function LangSwitch({ lang: currentLang }: Readonly<{ lang: Lang }>) {
    */
   function classes(lang: Lang) {
     const list = ['uppercase']
-    if (lang === currentLang) list.push('text-accent-500')
-    if (lang === 'fr') list.push(tw('ml-4 border-l border-neutral-500 pl-4'))
+    if (lang === currentLang) list.push('app-active')
+    if (lang === 'fr') list.push(tw('ml-4 border-l border-primary-950 pl-4'))
     return list.join(' ')
   }
   return (
-    <div className="app-lang-switch flex items-center text-lg">
+    <div className="app-lang-switch flex items-center text-lg font-semibold">
       {langs.map(lang => (
         <a className={classes(lang)} href={`/${lang}`} key={lang}>
           {lang}

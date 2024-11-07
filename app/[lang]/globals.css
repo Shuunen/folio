@@ -23,11 +23,11 @@ html {
 }
 
 section {
-  @apply py-40 overflow-hidden relative z-0 bg-gradient-to-t from-primary-100 to-accent-100 text-2xl dark:from-primary-800 dark:to-accent-900/80;
+  @apply py-40 overflow-hidden relative z-0 bg-gradient-to-tr from-purple-100 via-orange-50 to-yellow-50 text-2xl dark:from-primary-800 dark:to-accent-900/80;
 }
 
 section:nth-child(even) {
-  @apply dark:from-neutral-900 dark:to-neutral-900 from-neutral-100 to-neutral-100;
+  @apply dark:from-primary-900 dark:via-primary-900 dark:to-primary-950 bg-gradient-to-br from-green-100 to-pink-100;
 }
 
 section > div {
@@ -35,5 +35,9 @@ section > div {
 }
 
 a {
-  @apply text-primary-500 hover:text-accent-500 transition-colors duration-300 ease-in-out dark:text-primary-300 dark:hover:text-accent-300;
+  @apply text-primary-500 hover:text-accent-500 transition-colors duration-300 ease-in-out dark:text-primary-200 dark:hover:text-white;
+}
+
+a.app-active {
+  @apply text-accent-500 dark:text-accent-300 hover:text-accent-700 dark:hover:text-accent-100;
 }
