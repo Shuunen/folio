@@ -1,0 +1,12 @@
+---
+import { Skeleton } from "../components/skeleton";
+import Layout from "../layouts/layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="container text-white mx-auto">
+    <h1>Documentation</h1>
+    <p>The famous !</p>
+    <Skeleton client:load />
+  </main>
+</Layout>

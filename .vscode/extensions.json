@@ -1,10 +1,24 @@
 {
   "recommendations": [
-    "mikeburgh.xml-format",
+    "astro-build.astro-vscode",
+    "biomejs.biome",
     "bradlc.vscode-tailwindcss",
-    "yzhang.markdown-all-in-one",
-    "heybourn.headwind",
+    "christian-kohler.npm-intellisense",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "meganrogge.template-string-converter",
     "michelemelluso.gitignore",
-    "EditorConfig.EditorConfig"
-  ]
+    "mikeburgh.xml-format",
+    "richie5um2.vscode-sort-json",
+    "ryanluker.vscode-coverage-gutters",
+    "simonsiefke.svg-preview",
+    "streetsidesoftware.code-spell-checker-french",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "vincaslt.highlight-matching-tag",
+    "yoavbls.pretty-ts-errors",
+    "yzhang.markdown-all-in-one"
+  ],
+  "unwantedRecommendations": []
 }
