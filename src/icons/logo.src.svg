@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 960 225" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Source Sans 3">@import url(https://fonts.googleapis.com/css2?family=Source+Sans+3%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);</style>
+    <style bx:fonts="Bebas Neue">@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+    <bx:guide x="500" y="10" angle="0"/>
+    <bx:guide x="572" y="130" angle="90"/>
+    <bx:guide x="10" y="168" angle="0"/>
+    <bx:guide x="500" y="10" angle="90"/>
+    <bx:guide x="690" y="215" angle="90"/>
+  </defs>
+  <text style="fill: rgb(51, 51, 51); font-family: 'Bebas Neue'; font-size: 190px; font-weight: 500; letter-spacing: 3.7px; white-space: pre;" x="1.618" y="142.878"><tspan style="fill: rgb(54, 79, 107); font-size: 190px; word-spacing: 0px; letter-spacing: 3.7px;">HUMA</tspan><tspan style="fill: rgb(63, 193, 201); font-size: 190px; word-spacing: 0px; letter-spacing: 3.7px;">CODE</tspan></text>
+  <text style="fill: rgb(102, 102, 102); font-family: 'Source Sans 3'; font-size: 51px; text-transform: uppercase; white-space: pre;" x="8.942" y="214.544"><title>slogan</title>apps, websites, your story.</text>
+  <path d="M 756.252 9.845 L 784.116 9.845 L 703.165 215.155 L 675.302 215.155 L 756.252 9.845 Z" style="fill: rgb(208, 208, 208);"/>
+  <path d="M 796.283 156.822 L 901.361 112.5 L 796.283 68.178 L 796.283 28.338 L 948.671 94.074 L 948.671 130.926 L 796.283 196.662 L 796.283 156.822 Z" style="fill: rgb(208, 208, 208);"/>
+</svg>

@@ -45,6 +45,10 @@ export default {
         'slide-down': 'slide-down 0.3s ease-in-out',
         'spin-zoom': 'spin-zoom 114s linear infinite alternate',
       },
+      fontFamily: {
+        sans: ['DM Sans Variable', 'sans-serif'], // https://fontsource.org/fonts/dm-sans/install
+        serif: ['DM Serif Display', 'serif'], // https://fontsource.org/fonts/dm-serif-display/install
+      },
       height: {
         100: '28rem',
         110: '32rem',

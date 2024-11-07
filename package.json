@@ -6,15 +6,22 @@
     "@astrojs/check": "0.9",
     "@astrojs/react": "3.6",
     "@astrojs/tailwind": "5.1",
+    "@fontsource-variable/dm-sans": "^5.1.0",
+    "@fontsource/dm-serif-display": "^5.1.0",
     "astro": "4.16",
     "flowbite-react": "0.10",
+    "gsap": "^3.12.5",
     "react": "18.3",
     "react-dom": "18.3",
+    "react-icons": "^5.3.0",
+    "react-parallax-tilt": "^1.7.253",
     "shuutils": "10.1"
   },
   "description": "My personal portfolio",
   "devDependencies": {
     "@biomejs/biome": "1.9",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
     "@types/react": "18.3",
     "@types/react-dom": "18.3",
     "@vitest/coverage-v8": "2.1",
@@ -24,6 +31,7 @@
     "repo-check": "1.39",
     "tailwindcss": "3.4",
     "typescript": "5.6",
+    "vite-plugin-svgr": "^4.3.0",
     "vitest": "2.1"
   },
   "files": [

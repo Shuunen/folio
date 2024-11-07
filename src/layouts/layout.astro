@@ -1,51 +1,77 @@
 ---
+import "@fontsource/dm-serif-display";
+import "@fontsource-variable/dm-sans";
+import type { Lang } from "shuutils";
+import { Header } from "../components/header";
+import { BgLines } from "../components/bg-lines";
+import { Footer } from "../components/footer";
+
 interface Props {
-  title: string
+  title: string;
+  lang: Lang;
 }
 
-const { title } = Astro.props
+const { title, lang } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="h-full relative antialiased text-2xl text-primary-800 dark:text-primary-100 bg-primary-100 dark:bg-primary-900 flex flex-col font-sans"
+  >
+    <Header lang={lang} />
+    <BgLines />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    @apply mx-auto px-8;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary-500;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-700 border border-current;
+  }
+
+  section {
+    @apply py-40 overflow-hidden relative z-0 bg-gradient-to-tr from-purple-100 via-orange-50 to-yellow-50 text-2xl dark:from-primary-800 dark:to-accent-900/80;
+  }
+
+  section:nth-child(even) {
+    @apply dark:from-primary-900 dark:via-primary-900 dark:to-primary-950 bg-gradient-to-br from-green-100 to-pink-100;
+  }
+
+  section > div {
+    @apply z-10 relative;
+  }
+
+  a {
+    @apply text-primary-500 hover:text-accent-500 transition-colors duration-300 ease-in-out dark:text-primary-200 dark:hover:text-white;
+  }
+
+  a.app-active {
+    @apply text-accent-500 dark:text-accent-300 hover:text-accent-700 dark:hover:text-accent-100;
+  }
 </style>

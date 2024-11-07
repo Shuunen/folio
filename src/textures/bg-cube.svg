@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 1300">
+  <linearGradient id="a" x1="-.1" x2="1.1" y1=".5" y2=".5">
+    <stop offset="0" stop-color="#002648"/>
+    <stop offset="1" stop-color="#001324"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M0 0h2000v1300H0z" />
+  <path fill="url(#a)" d="M0 0h1030l21 560L0 1300Z" />
+  <path fill="url(#a)" d="M2000 0h-970l21 560 949 740Z" />
+  <path fill="url(#a)" d="m0 1300 1051-740 949 740Z" />
+</svg>

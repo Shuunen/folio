@@ -1,0 +1,207 @@
+{
+  "basics": {
+    "email": "romain.racamier@gmail.com",
+    "label": "Développeur Web - Lead Tech",
+    "name": "Romain Racamier-Lafon",
+    "summary": "Curieux et motivé j'aime l’innovation, la création et la dynamique de groupe."
+  },
+  "education": [
+    {
+      "endDate": "2020-01-31",
+      "institution": "Unow",
+      "startDate": "2020-07-01",
+      "studyType": "Tuteur en entreprise"
+    },
+    {
+      "endDate": "2011-09-01",
+      "institution": "IIA Laval",
+      "startDate": "2009-09-01",
+      "studyType": "Master en Ingénierie Informatique"
+    },
+    {
+      "endDate": "2009-09-01",
+      "institution": "IUT Laval",
+      "startDate": "2007-09-01",
+      "studyType": "DUT Service et Réseaux de Communication"
+    },
+    {
+      "endDate": "2007-09-01",
+      "institution": "Lycée Montesquieu",
+      "startDate": "2005-09-01",
+      "studyType": "Bac Scientifique"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Bénévolat, accompagnement"
+    },
+    {
+      "name": "Photo, macro et retouche"
+    },
+    {
+      "name": "Création de design/logos"
+    },
+    {
+      "name": "Randonnée"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "Typescript, Javascript, ES6+",
+        "React, Next, Material-UI",
+        "Vue 2, Vue 3, Nuxt, Vuetify",
+        "Angular, AngularJs",
+        "TailwindCSS, Bootstrap, CSS3",
+        "HTML 5, HTML 4, XHTML",
+        "Web Component, PWA",
+        "Jest, Vitest, Mocha, C8",
+        "NodeJs, ExpressJs",
+        "PHP, MySQL, SQLite"
+      ],
+      "name": "Développement"
+    },
+    {
+      "keywords": [
+        "Google Lighthouse, YSlow",
+        "Eslint, Biome, Prettier",
+        "Npm, Yarn, Pnpm",
+        "Vite, EsBuild, Webpack",
+        "Git, GitFlow, GitHub, GitLab"
+      ],
+      "name": "Outillage"
+    },
+    {
+      "keywords": [
+        "Français : langue maternelle",
+        "Anglais : confirmé & technique (voyages pro & perso à l'étranger)"
+      ],
+      "name": "Langues"
+    },
+    {
+      "keywords": [
+        "Scrum, Agile",
+        "Écoute active, PNL",
+        "TDD, BDD, Gherkin"
+      ],
+      "name": "Méthodologies"
+    }
+  ],
+  "work": [
+    {
+      "company": "Collectif Energie",
+      "endDate": "2024-09-01",
+      "highlights": [
+        "Lead tech dans une équipe de 6 personnes",
+        "Ajout de fonctionnalités et maintenance d'une application Nuxt 3",
+        "Création d'un monorepo pour industrialiser les développements, centraliser les librairies et aligner les pratiques",
+        "Migrations des sites et libraries existantes au sein du monorepo",
+        "Création d'un catalogue de composants React basés sur ShadCn, RadixUI & Tailwind CSS",
+        "Mise en place et participation au processus de recrutement",
+        "Environnement : TypeScript, Nx, Vue 3, Nuxt 3, React 18, NestJs, Vite, Vitest, Tailwind, NodeJs 20, EsLint, Git"
+      ],
+      "position": "Développeur Web - Lead Tech",
+      "startDate": "2024-01-01"
+    },
+    {
+      "company": "WeSave",
+      "endDate": "2023-12-01",
+      "highlights": [
+        "Co-Lead tech dans une équipe de 4 personnes",
+        "Migration du projet Nuxt : JS & Vue 2 vers TypeScript & Vue 2.7",
+        "Ajout de fonctionnalités et maintenance de l'application principale",
+        "Création d'un plugin EsLint custom",
+        "Participation au processus de recrutement",
+        "Environnement : TypeScript, Vue 2, Vue 2.7, Nuxt 2, HTML 5, CSS 3, Tailwind, NodeJS 18, EsLint, Git"
+      ],
+      "position": "Développeur Web - Lead Tech",
+      "startDate": "2022-09-01"
+    },
+    {
+      "company": "Euro Information (en mission pour GFI / Inetum)",
+      "endDate": "2022-09-01",
+      "highlights": [
+        "Création d'un catalogue de composants visant à centraliser l'UI et l'UX de tous les projets web existants et futurs",
+        "Refonte du site institutionnel Lyf.eu Angular en Nuxt avec Vue & Tailwind CSS",
+        "Ajout de fonctionnalités et maintenance sur le framework interne de gestion des données liées à l'application Lyf Pay",
+        "Accompagnement et formation de mon stagiaire autour d'un projet applicatif de suivi d'activité",
+        "Environnement : Angular 6 à 13, Vue 2, Nuxt 2, TypeScript, HTML 5, CSS 3, Tailwind, NodeJS 8 à 14, Git"
+      ],
+      "position": "Développeur Web - Lead Tech & Tuteur",
+      "startDate": "2018-09-01"
+    },
+    {
+      "company": "Niji",
+      "endDate": "2018-06-01",
+      "highlights": [
+        "Pour Auchan : Création d'un chatbot avec DialogFlow & VueJS pour les visiteurs du drive en ligne",
+        "Pour la Cipav : Refonte de l'extranet en Angular pour les adhérents",
+        "Pour Enedis : maintenance d'une application Ionic pour iOS & Android",
+        "Pour Verlingue Immobilier : Création d'un espace de souscription pro",
+        "Pour Système U :  Création d'une web-app de gestion pour les employés du drive",
+        "Environnement : TypeScript, Angular 4, Vue 2,  HTML 5, CSS 3, Git"
+      ],
+      "position": "Développeur Web - Lead Tech",
+      "startDate": "2016-10-01"
+    },
+    {
+      "company": "Amdocs (en mission pour Niji)",
+      "endDate": "2016-09-01",
+      "highlights": [
+        "Réalisation de différentes applications web internes visant à gérer un catalogue d'offres télécoms",
+        "Responsable Front-End sur le projet principal qui a duré 2 ans",
+        "Création d'une interface de construction par blocs et drag & drop",
+        "Mise en place des tests unitaires et tests E2E via PhantomJS",
+        "Environnement : JavaScript, BackboneJS, JQuery, RequireJS, HTML5, CSS3, Sass, Perforce"
+      ],
+      "position": "Développeur Web - Lead Tech",
+      "startDate": "2014-04-01"
+    },
+    {
+      "company": "Ouest-France (en mission pour Alyotech)",
+      "endDate": "2014-03-01",
+      "highlights": [
+        "Responsable Front-End lors de la refonte du site Ouest-France",
+        "Création de 3 thèmes Drupal : front, back et mobile",
+        "Optimisation des performances et du référencement (SEO)",
+        "Environnement : JavaScript, JQuery, JQuery UI, Bootstrap 2, Drupal 7, HTML5, CSS3, Google Analytics, Google Tag Manager, Git"
+      ],
+      "position": "Développeur Web - Lead Tech",
+      "startDate": "2012-11-01"
+    },
+    {
+      "company": "Alyotech",
+      "endDate": "2012-10-01",
+      "highlights": [
+        "Refonte d'un site d'information pour l'ADEME : bit.ly/sinoe-web",
+        "Création de pages et modules front",
+        "Maintien du cahier des charges AccessiWeb Bronze : bit.ly/acc-web",
+        "Environnement : Zend PHP, Javascript, JQuery, XHTML 1.0, CSS 2, SVN"
+      ],
+      "position": "Développeur Web",
+      "startDate": "2011-10-01"
+    },
+    {
+      "company": "Jouve",
+      "endDate": "2011-09-01",
+      "highlights": [
+        "Création de page et modules pour l'ANTS",
+        "Prise en charge d'évolutions pour la fédération des clubs de la Défense",
+        "Environnement : Cake PHP, Symfony, Javascript, HTML, CSS 2, SVN"
+      ],
+      "position": "Développeur Web",
+      "startDate": "2009-09-01"
+    },
+    {
+      "company": "Sephira",
+      "endDate": "2008-05-01",
+      "highlights": [
+        "Corrections sur le logiciel embarqué du lecteur de carte vitale Intellio",
+        "Déploiement et intégration d'un service de traitement de données",
+        "Environnement : C, C++, Bash, Linux, SVN"
+      ],
+      "position": "Développeur logiciel",
+      "startDate": "2008-03-01"
+    }
+  ]
+}

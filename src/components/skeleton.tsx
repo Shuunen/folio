@@ -1,25 +1,10 @@
-import { logger } from '../utils/logger'
-
-/**
- * React when the skeleton is clicked.
- */
-function onClick() {
-  logger.info('Skeleton clicked')
-}
-
 /**
  * Skeleton component.
  * @returns JSX.Element
  */
 export function Skeleton() {
   return (
-    <div
-      className="max-w-sm animate-pulse"
-      data-here="13"
-      onClick={() => {
-        onClick()
-      }}
-    >
+    <div className="max-w-sm animate-pulse">
       <div className="mb-4 h-2.5 w-48 rounded-full bg-gray-400 dark:bg-gray-700" />
       <div className="mb-2.5 h-2 max-w-[360px] rounded-full bg-gray-400 dark:bg-gray-700" />
       <div className="mb-2.5 h-2 rounded-full bg-gray-400 dark:bg-gray-700" />
