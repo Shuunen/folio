@@ -1,58 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "checkJs": true,
-    "esModuleInterop": true,
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "./dist",
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ESNext",
-    "types": [
-      "vite/client"
-    ],
-    "useDefineForClassFields": true,
-    "verbatimModuleSyntax": true
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
+  "extends": "astro/tsconfigs/strictest",
   "include": [
-    ".dependency-cruiser.cjs",
-    ".vitepress/**/*.ts",
-    ".vitepress/**/*.vue",
-    ".vitepress/config.mts",
-    "*.js",
-    "*.json",
-    "*.ts",
-    "components/**/*.vue",
-    "data/**/*.ts",
-    "pages/*.ts",
-    "postcss.config.cjs",
-    "tailwind.config.cjs",
-    "tests/*.ts",
-    "utils/*.ts"
+    ".*.cjs",
+    "*.config.js",
+    "*.config.mjs",
+    "src"
   ]
 }

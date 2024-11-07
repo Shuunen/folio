@@ -1,0 +1,9 @@
+---
+import Home from "../_home.astro";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "fr" } }, { params: { lang: "en" } }];
+}
+---
+
+<Home />

@@ -13,11 +13,11 @@
 
 ## Todo
 
-- [ ] add a lang flag switch
-- [ ] add some illustrations (<https://iconpark.oceanengine.com/illustrations/18> maybe ?)
+- [ ] correctly round the logo
 
 ## Thanks
 
+- [Astro](https://astro.build/) : super fast static site generator
 - [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) : handy tool to validate and visualize dependencies
 - [DoYouBuzz](https://doyoubuzz.com) : for their awesome resume builder that I use to generate the JSON resume file
 - [Eslint](https://eslint.org) : super tool to find & fix problems
@@ -34,5 +34,4 @@
 - [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Vite](https://github.com/vitejs/vite) : super fast frontend tooling
 - [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
-- [Vue](https://vuejs.org) : when I need a front framework, this is the one I choose <3
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
