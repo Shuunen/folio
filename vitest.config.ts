@@ -3,7 +3,8 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
   test: {
     coverage: {
-      include: ['utils'],
+      include: ['app/utils'],
+      exclude: ['**/*.client.ts'],
       reporter: ['text', 'lcov', 'html'],
       thresholds: {
         100: true,

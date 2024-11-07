@@ -1,11 +1,23 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
   "cSpell.words": [
     "Accessi",
     "ademe",
     "Alyotech",
     "Amdocs",
     "Amundi",
+    "auchan",
+    "energie",
     "FCSAD",
+    "gsap",
     "GTmetrix",
     "intellio",
     "Intellio",
@@ -14,6 +26,7 @@
     "l'UI",
     "l'UX",
     "lightgallery",
+    "niji",
     "Niji",
     "nnnoise",
     "nosniff",
@@ -25,17 +38,17 @@
     "sinoe",
     "sourcerer",
     "Streamezzo",
+    "svgr",
     "tada",
     "Unow",
     "vitepress",
     "wesave"
   ],
-  "explorer.autoRevealExclude": {
-    "**/.vitepress/dist": true
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.organizeImports.biome": "always"
   },
-  "search.exclude": {
-    "**/.vitepress/dist": true
-  },
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "workbench.colorCustomizations": {
     "activityBar.background": "#382258",
     "titleBar.activeBackground": "#4E2F7B",
