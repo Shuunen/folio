@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="122.7" height="86" x="69" y="73" fill="#f5f5f5" stroke="#d4d4d4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="10" paint-order="fill markers" rx="6" ry="6" transform="rotate(-10 58 20)" transform-origin="130.122px 115.894px"/>
+  <rect width="113" height="80.9" x="63" y="69" fill="#f5f5f5" stroke="#d4d4d4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="10" paint-order="fill markers" rx="6" ry="6" style="transform-box:fill-box" transform="rotate(8 -116 122)" transform-origin="50% 50%"/>
+  <circle cx="113" cy="110.9" r="9.7" fill="#dedede"/>
+  <path fill="#dedede" d="m159 137 10-9 6 33-86-13h-1c7-15 25-13 37-8l22-25 12 22Z"/>
+</svg>
