@@ -30,12 +30,6 @@
     "vitepress",
     "wesave"
   ],
-  "explorer.autoRevealExclude": {
-    "**/.vitepress/dist": true
-  },
-  "search.exclude": {
-    "**/.vitepress/dist": true
-  },
   "workbench.colorCustomizations": {
     "activityBar.background": "#382258",
     "titleBar.activeBackground": "#4E2F7B",

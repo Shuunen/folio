@@ -33,6 +33,7 @@ export default defineConfig({
       lang: 'en',
     },
   },
+  outDir: 'dist',
   srcDir: 'pages',
   title,
   vite: {
