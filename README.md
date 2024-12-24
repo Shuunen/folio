@@ -36,3 +36,11 @@
 - [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
 - [Vue](https://vuejs.org) : when I need a front framework, this is the one I choose <3
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Shuunen/folio.svg?variant=adaptive)](https://starchart.cc/Shuunen/folio)
+
+## Page views
+
+[![Free Website Counter](https://www.websitecounterfree.com/c.php?d=9&id=64404&s=12)](https://www.websitecounterfree.com)
