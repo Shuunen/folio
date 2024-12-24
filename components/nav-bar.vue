@@ -8,7 +8,8 @@ defineProps<{
   pages: string[]
 }>()
 
-const actual = computed(() => getPage(useRoute().path))
+const route = useRoute()
+const actual = computed(() => getPage(route.path))
 </script>
 
 <template>
