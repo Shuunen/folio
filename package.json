@@ -20,7 +20,7 @@
     "postcss": "8.4",
     "repo-check": "1.37",
     "tailwindcss": "3.4",
-    "typescript": "5.6",
+    "typescript": "5.7",
     "unplugin-vue-components": "0.27",
     "vite": "*",
     "vitepress": "1.3",
