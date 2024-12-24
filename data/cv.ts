@@ -5,7 +5,7 @@ import type { Photo } from './types'
 
 type JsonResume = DeepReadonly<typeof rawCv>
 
-type ResumeEducation = DeepReadonly<{ id: string } & JsonResume['education'][0]>
+type ResumeEducation = DeepReadonly<JsonResume['education'][0] & { id: string }>
 
 type ResumeWork = DeepReadonly<{
   company: string
@@ -58,7 +58,8 @@ export function cleanObject (input: Readonly<Record<string, unknown>>) {
   const data = clone(input)
   for (const [key, item] of Object.entries(data)) {
     if (typeof item === 'string') data[key] = cleanString(item)
-    if (typeof item === 'object' && item) data[key] = cleanObject(item as Record<string, unknown>) // eslint-disable-line @typescript-eslint/consistent-type-assertions
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/consistent-type-assertions
+    if (typeof item === 'object' && item) data[key] = cleanObject(item as Record<string, unknown>)
     if (Array.isArray(item)) data[key] = cleanArray(item)
   }
   return data
@@ -90,5 +91,5 @@ export function setIds (input: JsonResume) {
   return data
 }
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions, @typescript-eslint/no-unsafe-type-assertion
 export const cv = setIds(cleanObject(rawCv) as JsonResume)

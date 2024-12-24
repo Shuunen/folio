@@ -5,8 +5,8 @@
   "dependencies": {
     "flowbite": "2.5",
     "flowbite-vue": "0.1",
-    "lightgallery": "2.7",
-    "shuutils": "9.0"
+    "lightgallery": "2.8.2",
+    "shuutils": "10.1"
   },
   "description": "My personal portfolio",
   "devDependencies": {
@@ -16,14 +16,14 @@
     "autoprefixer": "10.4",
     "dependency-cruiser": "latest",
     "eslint": "*",
-    "eslint-plugin-shuunen": "0.3",
+    "eslint-plugin-shuunen": "0.4",
     "postcss": "8.4",
-    "repo-check": "1.37",
+    "repo-check": "1.40",
     "tailwindcss": "3.4",
-    "typescript": "5.6",
-    "unplugin-vue-components": "0.27",
+    "typescript": "5.7.2",
+    "unplugin-vue-components": "0.28",
     "vite": "*",
-    "vitepress": "1.3",
+    "vitepress": "1.5",
     "vitest": "2.1",
     "vue": "*"
   },
@@ -55,12 +55,15 @@
   },
   "scripts": {
     "build": "pnpm build:vp && pnpm build:nonce && pnpm build:mark && echo build success",
-    "build:mark": "unique-mark .vitepress/dist/**/*.html",
+    "build:mark": "unique-mark .vitepress/dist/**/*.{html}",
     "build:nonce": "bash bin/inject-nonce.sh && echo build nonce success",
     "build:vp": "vitepress build && echo vitepress build",
     "check": "pnpm install && repo-check && pnpm build && pnpm lint && pnpm test && echo check success",
     "dev": "vitepress dev",
-    "lint": "tsc --noEmit && echo tsc success && eslint --cache . && echo eslint success && depcruise components pages --config && echo lint success",
+    "lint": "pnpm lint:tsc && pnpm lint:eslint && pnpm lint:dep && echo lint success",
+    "lint:dep": "depcruise components pages --config && echo lint:dep success",
+    "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
+    "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags",
     "preversion": "pnpm lint",
     "serve": "vitepress serve",

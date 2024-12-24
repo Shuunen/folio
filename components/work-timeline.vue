@@ -18,7 +18,9 @@ function dateToMonthYear (input?: string) {
 function getColorForTag (tag: string) {
   const id = slugify(tag.replace(/\s/gu, ''))
   if (selectedTag.value !== '' && selectedTag.value !== tag) return 'text-gray-400 opacity-50'
-  if (colorByTag[id] === undefined) colorByTag[id] = pickOne(tailwindColors.filter(color => !Object.values(colorByTag).includes(color))) ?? 'white'
+  if (colorByTag[id] !== undefined) return colorByTag[id]
+  const list = tailwindColors.filter(color => !Object.values(colorByTag).includes(color))
+  colorByTag[id] = pickOne(list.length > 0 ? list : ['white'])
   return colorByTag[id]
 }
 

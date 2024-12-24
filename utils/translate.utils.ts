@@ -33,7 +33,7 @@ export function $t (key: string, data?: Readonly<Record<string, unknown>>) {
 /* c8 ignore next 6 */
 export function switchLang () {
   lang.value = lang.value === 'en' ? 'fr' : 'en'
-  const updatedPath = localePath(window.location.pathname)
+  const updatedPath = localePath(globalThis.location.pathname)
   logger.info('switch lang to', lang.value, ', redirecting to', updatedPath)
   document.location.href = updatedPath
 }
