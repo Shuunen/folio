@@ -1,41 +1,46 @@
 {
-	"general": {
-		"copyright": "All rights reserved",
-		"switch-lang": "voir la version française",
-		"use-dark-theme": "Join the dark side",
-		"use-light-theme": "Go towards the light"
-	},
-	"pages": {
-		"contact": "contact",
-		"index": "home",
-		"work": "work"
-	},
-	"positions": {
-		"frontend-dev": "Front-End Web Developer",
-		"fullstack-dev": "Full-Stack Web Developer",
-		"fullstack-dev-tutor": "Full-Stack Web Developer & Tutor",
-		"software-dev": "Software Developer"
-	},
-	"sectors": {
-		"energy": "energy",
-		"environment": "environment",
-		"finance": "finance",
-		"government": "government",
-		"health": "health",
-		"insurance": "insurance",
-		"matriculation": "matriculation",
-		"media": "media",
-		"mobile": "mobile",
-		"mobile-payment": "mobile payment",
-		"press": "press",
-		"retail": "retail",
-		"savings-management": "savings management",
-		"sport": "sport",
-		"telecoms": "telecoms"
-	},
-	"work-timeline": {
-		"business-sectors": "business sectors",
-		"compagnies": "companies",
-		"position": "role"
-	}
+  "general": {
+    "copyright": "All rights reserved",
+    "switch-lang": "voir la version française",
+    "use-dark-theme": "Join the dark side",
+    "use-light-theme": "Go towards the light"
+  },
+  "pages": {
+    "contact": "contact",
+    "index": "home",
+    "work": "work"
+  },
+  "positions": {
+    "dev-web": "Web Developer",
+    "dev-web-tl": "Web Developer - Tech Lead",
+    "dev-web-tl-tutor": "Web Developer - Tech Lead & Mentor",
+    "frontend-dev": "Front-End Web Developer",
+    "fullstack-dev": "Full-Stack Web Developer",
+    "fullstack-dev-tutor": "Full-Stack Web Developer & Tutor",
+    "software-dev": "Software Developer"
+  },
+  "sectors": {
+    "ai": "artificial intelligence",
+    "energy": "energy",
+    "environment": "environment",
+    "finance": "finance",
+    "government": "government",
+    "health": "health",
+    "insurance": "insurance",
+    "matriculation": "matriculation",
+    "media": "media",
+    "mobile": "mobile",
+    "mobile-payment": "mobile payment",
+    "press": "press",
+    "retail": "retail",
+    "savings-management": "savings management",
+    "sport": "sport",
+    "telecoms": "telecoms",
+    "voice": "voice"
+  },
+  "work-timeline": {
+    "business-sectors": "business sectors",
+    "compagnies": "companies",
+    "position": "role"
+  }
 }

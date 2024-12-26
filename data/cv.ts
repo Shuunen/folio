@@ -78,7 +78,7 @@ export function setIds (input: JsonResume) {
     })),
     work: input.work.map((item) => ({
       company: item.company,
-      endDate: item.endDate ?? '',
+      endDate: item.endDate ,
       highlights: item.highlights,
       id: slugify(item.company),
       keywords: item.keywords,

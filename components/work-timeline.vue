@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Airplay, ArrowLeft, BarCode, Basketball, CategoryManagement, Dollar, EnergySocket, FileQuestion, HospitalFour, Iphone, Palace, PhoneOne, ReadBook, Seedling, Shield, TagOne } from '@icon-park/vue-next'
+import { Airplay, ArrowLeft, BarCode, Basketball, MessageEmoji, Voice, CategoryManagement, Dollar, EnergySocket, FileQuestion, HospitalFour, Iphone, Palace, PhoneOne, ReadBook, Seedling, Shield, TagOne } from '@icon-park/vue-next'
 import { pickOne, slugify } from 'shuutils'
 import { ref } from 'vue'
 import { cv } from '../data/cv'
@@ -45,6 +45,8 @@ function iconForSector (sector: string) {
   if (sector === 'retail') return TagOne
   if (sector === 'media') return Airplay
   if (sector === 'government') return Palace
+  if (sector === 'ai') return MessageEmoji
+  if (sector === 'voice') return Voice
   logger.warn(`No icon for sector ${sector}`)
   return FileQuestion
 }

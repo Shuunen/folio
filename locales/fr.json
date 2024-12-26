@@ -1,41 +1,46 @@
 {
-	"general": {
-		"copyright": "Tous droits réservés",
-		"switch-lang": "see the english version",
-		"use-dark-theme": "Aller du côté obscur",
-		"use-light-theme": "Aller vers la lumière"
-	},
-	"pages": {
-		"contact": "contact",
-		"index": "accueil",
-		"work": "expériences"
-	},
-	"positions": {
-		"frontend-dev": "Développeur Web Front-End",
-		"fullstack-dev": "Développeur Web Full-Stack",
-		"fullstack-dev-tutor": "Développeur Web Full-Stack & Tuteur",
-		"software-dev": "Développeur logiciel"
-	},
-	"sectors": {
-		"energy": "énergie",
-		"environment": "environnement",
-		"finance": "finance",
-		"government": "gouvernement",
-		"health": "santé",
-		"insurance": "assurance",
-		"matriculation": "immatriculation",
-		"media": "média",
-		"mobile": "mobile",
-		"mobile-payment": "paiement mobile",
-		"press": "presse",
-		"retail": "vente",
-		"savings-management": "gestion de l'épargne",
-		"sport": "sport",
-		"telecoms": "télécoms"
-	},
-	"work-timeline": {
-		"business-sectors": "secteurs d'activité",
-		"compagnies": "entreprises",
-		"position": "rôle"
-	}
+  "general": {
+    "copyright": "Tous droits réservés",
+    "switch-lang": "see the english version",
+    "use-dark-theme": "Aller du côté obscur",
+    "use-light-theme": "Aller vers la lumière"
+  },
+  "pages": {
+    "contact": "contact",
+    "index": "accueil",
+    "work": "expériences"
+  },
+  "positions": {
+    "dev-web": "Développeur Web",
+    "dev-web-tl": "Développeur Web - Lead Tech",
+    "dev-web-tl-tutor": "Développeur Web - Lead Tech & Tuteur",
+    "frontend-dev": "Développeur Web Front-End",
+    "fullstack-dev": "Développeur Web Full-Stack",
+    "fullstack-dev-tutor": "Développeur Web Full-Stack & Tuteur",
+    "software-dev": "Développeur logiciel"
+  },
+  "sectors": {
+    "ai": "intelligence artificielle",
+    "energy": "énergie",
+    "environment": "environnement",
+    "finance": "finance",
+    "government": "gouvernement",
+    "health": "santé",
+    "insurance": "assurance",
+    "matriculation": "immatriculation",
+    "media": "média",
+    "mobile": "mobile",
+    "mobile-payment": "paiement mobile",
+    "press": "presse",
+    "retail": "vente",
+    "savings-management": "gestion de l'épargne",
+    "sport": "sport",
+    "telecoms": "télécoms",
+    "voice": "voix"
+  },
+  "work-timeline": {
+    "business-sectors": "secteurs d'activité",
+    "compagnies": "entreprises",
+    "position": "rôle"
+  }
 }

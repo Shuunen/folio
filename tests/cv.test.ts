@@ -23,7 +23,8 @@ it('cleanObject D', () => {
 
 it('setIds A', () => {
   expect(setIds({
-    basics: { email: '', label: 'Programmer', name: 'John Doe' },
+    $schema: 'http://jsonresume.org/schema',
+    basics: { email: '', label: 'Programmer', name: 'John Doe', summary: '' },
     education: [],
     interests: [],
     skills: [],

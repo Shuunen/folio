@@ -1,8 +1,10 @@
 {
+  "$schema": "./cv.schema.json",
   "basics": {
     "email": "romain.racamier@gmail.com",
-    "label": "position.fullstack-dev",
-    "name": "Romain Racamier-Lafon"
+    "label": "Développeur Web - Lead Tech",
+    "name": "Romain Racamier-Lafon",
+    "summary": "Curieux et motivé j'aime l’innovation, la création et la dynamique de groupe."
   },
   "education": [
     {
@@ -32,7 +34,7 @@
   ],
   "interests": [
     {
-      "name": "Cinéma, films et quelques séries"
+      "name": "Bénévolat, accompagnement"
     },
     {
       "name": "Photo, macro et retouche"
@@ -41,125 +43,128 @@
       "name": "Création de design/logos"
     },
     {
-      "name": "Marche, vélo, natation"
+      "name": "Randonnée"
     }
   ],
   "skills": [
     {
-      "keywords": [],
-      "name": "Javascript, Typescript"
-    },
-    {
-      "keywords": [],
-      "name": "Anglais : confirmé & technique (voyages pro & perso à l'étranger)"
-    },
-    {
-      "keywords": [],
-      "name": "Windows XP à Windows 11"
-    },
-    {
-      "keywords": [],
-      "name": "Google Lighthouse, YSlow... (Faire les audits et améliorer / corriger si besoin)"
-    },
-    {
       "keywords": [
-        "Javascript, Typescript",
-        "HTML, HTML 4, HTML",
-        "CSS, CSS3, SASS, SCSS, BEM",
+        "Typescript, Javascript, ES6+",
+        "React, Next, Material-UI",
+        "Vue 2, Vue 3, Nuxt, Vuetify",
+        "Angular, AngularJs",
+        "TailwindCSS, Bootstrap, CSS3",
+        "HTML 5, HTML 4, XHTML",
         "Web Component, PWA",
-        "Angular, Vue, VanillaJS",
-        "NuxtJS, VitePress",
-        "Jest, Mocha, Ava, Nyc, Istanbul",
+        "Jest, Vitest, Mocha, C8",
         "NodeJs, ExpressJs",
         "PHP, MySQL, SQLite"
       ],
       "name": "Développement"
     },
     {
-      "keywords": [],
-      "name": "HTML, HTML 4, HTML"
-    },
-    {
-      "keywords": [],
-      "name": "Ubuntu Server, Debian"
-    },
-    {
       "keywords": [
-        "Google Lighthouse, YSlow... (Faire les audits et améliorer / corriger si besoin)",
+        "Google Lighthouse, YSlow",
+        "Eslint, Biome, Prettier",
         "Npm, Yarn, Pnpm",
-        "EsBuild, Webpack, Parcel",
-        "Git, GitFlow, GitHub, GitLab,..."
+        "Vite, EsBuild, Webpack",
+        "Git, GitFlow, GitHub, GitLab"
       ],
       "name": "Outillage"
     },
     {
-      "keywords": [],
-      "name": "Npm, Yarn, Pnpm"
-    },
-    {
-      "keywords": [],
-      "name": "Français : langue maternelle"
-    },
-    {
-      "keywords": [],
-      "name": "CSS, CSS3, SASS, SCSS, BEM"
-    },
-    {
-      "keywords": [],
-      "name": "Ubuntu, Linux Mint, Pop!_OS"
-    },
-    {
-      "keywords": [],
-      "name": "EsBuild, Webpack, Parcel"
-    },
-    {
       "keywords": [
-        "Anglais : confirmé & technique (voyages pro & perso à l'étranger)",
-        "Français : langue maternelle"
+        "Français : langue maternelle",
+        "Anglais : confirmé & technique (voyages pro & perso à l'étranger)"
       ],
       "name": "Langues"
     },
     {
       "keywords": [
-        "Windows XP à Windows 11",
-        "Ubuntu Server, Debian",
-        "Ubuntu, Linux Mint, Pop!_OS"
+        "Scrum, Agile",
+        "Écoute active, PNL",
+        "TDD, BDD, Gherkin"
       ],
-      "name": "Systèmes d'exploitation"
-    },
-    {
-      "keywords": [],
-      "name": "Web Component, PWA"
-    },
-    {
-      "keywords": [],
-      "name": "Git, GitFlow, GitHub, GitLab,..."
-    },
-    {
-      "keywords": [],
-      "name": "Angular, Vue, VanillaJS"
-    },
-    {
-      "keywords": [],
-      "name": "NuxtJS, VitePress"
-    },
-    {
-      "keywords": [],
-      "name": "Jest, Mocha, Ava, Nyc, Istanbul"
-    },
-    {
-      "keywords": [],
-      "name": "NodeJs, ExpressJs"
-    },
-    {
-      "keywords": [],
-      "name": "PHP, MySQL, SQLite"
+      "name": "Méthodologies"
     }
   ],
   "work": [
     {
-      "company": "WeSave, Anatec, Amundi",
+      "company": "BatVoice AI",
+      "endDate": "2024-02-15",
       "highlights": [],
+      "keywords": [
+        "TypeScript",
+        "Vue 2",
+        "Vue 3",
+        "Vite",
+        "Vitest",
+        "Tailwind",
+        "NodeJS"
+      ],
+      "photos": [
+        {
+          "label": "BatVoice AI",
+          "size": "1459-1018",
+          "src": "public:/images/batvoice-ai-01.svg",
+          "thumb": "public:/images/batvoice-ai-01.svg"
+        }
+      ],
+      "position": "dev-web-tl",
+      "sectors": [
+        "voice",
+        "ai"
+      ],
+      "startDate": "2024-11-15"
+    },
+    {
+      "company": "Collectif Energie",
+      "endDate": "2024-09-01",
+      "highlights": [
+        "Lead tech dans une équipe de 6 personnes",
+        "Ajout de fonctionnalités et maintenance d'une application Nuxt 3",
+        "Création d'un monorepo pour industrialiser les développements, centraliser les librairies et aligner les pratiques",
+        "Migrations des sites et libraries existantes au sein du monorepo",
+        "Création d'un catalogue de composants React basés sur ShadCn, RadixUI & Tailwind CSS",
+        "Mise en place et participation au processus de recrutement"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Nx",
+        "Vue 3",
+        "Nuxt 3",
+        "React",
+        "NestJs",
+        "Vite",
+        "Vitest",
+        "Tailwind",
+        "NodeJS"
+      ],
+      "photos": [
+        {
+          "label": "Collectif Energie",
+          "size": "1440-1018",
+          "src": "public:/images/collectif-energie-01.svg",
+          "thumb": "public:/images/collectif-energie-01.svg"
+        }
+      ],
+      "position": "dev-web-tl",
+      "sectors": [
+        "energy",
+        "savings-management"
+      ],
+      "startDate": "2024-01-01"
+    },
+    {
+      "company": "WeSave",
+      "endDate": "2023-12-01",
+      "highlights": [
+        "Co-Lead tech dans une équipe de 4 personnes",
+        "Migration du projet Nuxt : JS & Vue 2 vers TypeScript & Vue 2.7",
+        "Ajout de fonctionnalités et maintenance de l'application principale",
+        "Création d'un plugin EsLint custom",
+        "Participation au processus de recrutement"
+      ],
       "keywords": [
         "TypeScript",
         "Nuxt",
@@ -168,18 +173,17 @@
         "HTML",
         "CSS",
         "Tailwind",
-        "NodeJS",
-        "Git"
+        "NodeJS"
       ],
       "photos": [
         {
           "label": "WeSave conseil",
           "size": "1440-998",
-          "src": "/images/wesave-conseil-01.webp",
-          "thumb": "/images/wesave-conseil-01-w410.webp"
+          "src": "public:/images/wesave-conseil-01.webp",
+          "thumb": "public:/images/wesave-conseil-01-w410.webp"
         }
       ],
-      "position": "fullstack-dev",
+      "position": "dev-web-tl",
       "sectors": [
         "finance",
         "savings-management"
@@ -188,11 +192,13 @@
     },
     {
       "company": "Lyf, Euro Information, GFI, Inetum",
+      "endDate": "2022-09-01",
       "highlights": [
         "Création d'un catalogue de composants visant à centraliser l'UI et l'UX de tous les projets web existants et futurs",
-        "Refonte du site institutionnel Lyf.eu en NuxtJS, un générateur de site basé sur Vue : bit.ly/lyf-pay",
+        "Refonte du site institutionnel Lyf.eu Angular en Nuxt avec Vue & Tailwind CSS",
         "Ajout de fonctionnalités et maintenance sur le framework interne de gestion des données liées à l'application Lyf Pay",
-        "Accompagnement et formation de mon stagiaire autour d'un projet applicatif de suivi d'activité"
+        "Accompagnement et formation de mon stagiaire autour d'un projet applicatif de suivi d'activité",
+        "Environnement : Angular 6 à 13, Vue 2, Nuxt 2, TypeScript, HTML 5, CSS 3, Tailwind, NodeJS 8 à 14, Git"
       ],
       "keywords": [
         "TypeScript",
@@ -209,17 +215,17 @@
         {
           "label": "Lyf.eu - Page accueil",
           "size": "1701-1079",
-          "src": "/images/lyf-01.webp",
-          "thumb": "/images/lyf-01-w410.webp"
+          "src": "public:/images/lyf-01.webp",
+          "thumb": "public:/images/lyf-01-w410.webp"
         },
         {
           "label": "Lyf.eu - Page smartphone",
           "size": "1720-1657",
-          "src": "/images/lyf-02.webp",
-          "thumb": "/images/lyf-02-w410.webp"
+          "src": "public:/images/lyf-02.webp",
+          "thumb": "public:/images/lyf-02-w410.webp"
         }
       ],
-      "position": "fullstack-dev-tutor",
+      "position": "dev-web-tl-tutor",
       "sectors": [
         "finance",
         "mobile-payment"
@@ -231,10 +237,11 @@
       "endDate": "2018-06-01",
       "highlights": [
         "Pour Auchan : Création d'un chatbot avec DialogFlow & VueJS pour les visiteurs du drive en ligne",
-        "Pour la Cipav : Refonte de l'extranet en Angular pour les adhérents : bit.ly/cipav-extranet",
-        "Pour Enedis : maintenance d'une application Ionic pour iOS & Android : bit.ly/app-enedis",
-        "Pour Verlingue Immobilier : Création d'un espace de souscription pour les pro",
-        "Pour Système U : Création d'une web-app de gestion pour les employés du drive"
+        "Pour la Cipav : Refonte de l'extranet en Angular pour les adhérents",
+        "Pour Enedis : maintenance d'une application Ionic pour iOS & Android",
+        "Pour Verlingue Immobilier : Création d'un espace de souscription pro",
+        "Pour Système U :  Création d'une web-app de gestion pour les employés du drive",
+        "Environnement : TypeScript, Angular 4, Vue 2,  HTML 5, CSS 3, Git"
       ],
       "keywords": [
         "TypeScript",
@@ -250,11 +257,11 @@
         {
           "label": "Enedis - Présentation smartphone",
           "size": "4096-2730",
-          "src": "/images/enedis-01.webp",
-          "thumb": "/images/enedis-01-w410.webp"
+          "src": "public:/images/enedis-01.webp",
+          "thumb": "public:/images/enedis-01-w410.webp"
         }
       ],
-      "position": "fullstack-dev",
+      "position": "dev-web-tl",
       "sectors": [
         "retail",
         "energy",
@@ -269,7 +276,8 @@
         "Réalisation de différentes applications web internes visant à gérer un catalogue d'offres télécoms",
         "Responsable Front-End sur le projet principal qui a duré 2 ans",
         "Création d'une interface de construction par blocs et drag & drop",
-        "Mise en place des tests unitaires, tests E2E via PhantomJS et rapport de couverture"
+        "Mise en place des tests unitaires et tests E2E via PhantomJS",
+        "Environnement : JavaScript, BackboneJS, JQuery, RequireJS, HTML5, CSS3, Sass, Perforce"
       ],
       "keywords": [
         "JavaScript",
@@ -285,11 +293,11 @@
         {
           "label": "Optus - Interface smartphone",
           "size": "1369-772",
-          "src": "/images/optus-01.webp",
-          "thumb": "/images/optus-01-w410.webp"
+          "src": "public:/images/optus-01.webp",
+          "thumb": "public:/images/optus-01-w410.webp"
         }
       ],
-      "position": "fullstack-dev",
+      "position": "dev-web-tl",
       "sectors": [
         "telecoms",
         "mobile"
@@ -300,9 +308,10 @@
       "company": "Ouest-France, Alyotech",
       "endDate": "2014-03-01",
       "highlights": [
-        "Responsable Front-End lors de la refonte du site Ouest-France en Drupal 7 : bit.ly/of-web",
-        "Création de 3 thèmes Drupal : front (site public), back (pour les journalistes) et mobile (public)",
-        "Optimisation des performances et du référencement (SEO)"
+        "Responsable Front-End lors de la refonte du site Ouest-France",
+        "Création de 3 thèmes Drupal : front, back et mobile",
+        "Optimisation des performances et du référencement (SEO)",
+        "Environnement : JavaScript, JQuery, JQuery UI, Bootstrap 2, Drupal 7, HTML5, CSS3, Google Analytics, Google Tag Manager, Git"
       ],
       "keywords": [
         "JavaScript",
@@ -317,11 +326,11 @@
         {
           "label": "Ouest-France - Multi-écrans",
           "size": "1551-790",
-          "src": "/images/ouest-france-01.webp",
-          "thumb": "/images/ouest-france-01-w410.webp"
+          "src": "public:/images/ouest-france-01.webp",
+          "thumb": "public:/images/ouest-france-01-w410.webp"
         }
       ],
-      "position": "fullstack-dev",
+      "position": "dev-web-tl",
       "sectors": [
         "press",
         "media"
@@ -334,7 +343,8 @@
       "highlights": [
         "Refonte d'un site d'information pour l'ADEME : bit.ly/sinoe-web",
         "Création de pages et modules front",
-        "Maintien du cahier des charges AccessiWeb Bronze : bit.ly/acc-web"
+        "Maintien du cahier des charges AccessiWeb Bronze : bit.ly/acc-web",
+        "Environnement : Zend PHP, Javascript, JQuery, XHTML 1.0, CSS 2, SVN"
       ],
       "keywords": [
         "Zend PHP",
@@ -348,11 +358,11 @@
         {
           "label": "Agence De l'Environnement et de la Maîtrise de l'Énergie - Page d'accueil",
           "size": "1260-800",
-          "src": "/images/ademe-01.webp",
-          "thumb": "/images/ademe-01-w410.webp"
+          "src": "public:/images/ademe-01.webp",
+          "thumb": "public:/images/ademe-01-w410.webp"
         }
       ],
-      "position": "frontend-dev",
+      "position": "dev-web",
       "sectors": [
         "environment",
         "energy"
@@ -363,8 +373,9 @@
       "company": "ANTS, FCSAD, Jouve",
       "endDate": "2011-09-01",
       "highlights": [
-        "Création de page et modules pour l'Agence Nationale des Titres Sécurisés : bit.ly/ants-web",
-        "Prise en charge d'évolutions pour la fédération des clubs de la Défense : bit.ly/fcd-web"
+        "Création de page et modules pour l'ANTS",
+        "Prise en charge d'évolutions pour la fédération des clubs de la Défense",
+        "Environnement : Cake PHP, Symfony, Javascript, HTML, CSS 2, SVN"
       ],
       "keywords": [
         "Cake PHP",
@@ -377,12 +388,18 @@
       "photos": [
         {
           "label": "Agence Nationale des Titres Sécurisés - Page d'accueil",
+          "size": "1121-629",
+          "src": "public:/images/ants-01.webp",
+          "thumb": "public:/images/ants-01-w410.webp"
+        },
+        {
+          "label": "Agence Nationale des Titres Sécurisés - Page d'accueil",
           "size": "1121-1638",
-          "src": "/images/ants-01.webp",
-          "thumb": "/images/ants-01-w410.webp"
+          "src": "public:/images/ants-02.webp",
+          "thumb": "public:/images/ants-01-w410.webp"
         }
       ],
-      "position": "frontend-dev",
+      "position": "dev-web",
       "sectors": [
         "government",
         "sport",
@@ -394,8 +411,9 @@
       "company": "Sephira",
       "endDate": "2008-05-01",
       "highlights": [
-        "Corrections sur le logiciel embarqué dans le lecteur de carte vitale Intellio : bit.ly/intellio",
-        "Déploiement et intégration d'un service de traitement de données sur serveur"
+        "Corrections sur le logiciel embarqué du lecteur de carte vitale Intellio",
+        "Déploiement et intégration d'un service de traitement de données",
+        "Environnement : C, C++, Bash, Linux, SVN"
       ],
       "keywords": [
         "C",
@@ -408,8 +426,8 @@
         {
           "label": "Sephira - Terminal Intellio",
           "size": "1184-1638",
-          "src": "/images/sephira-intellio-01.webp",
-          "thumb": "/images/sephira-intellio-01-w410.webp"
+          "src": "public:/images/sephira-intellio-01.webp",
+          "thumb": "public:/images/sephira-intellio-01-w410.webp"
         }
       ],
       "position": "software-dev",

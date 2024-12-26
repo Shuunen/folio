@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "basics": {
+      "properties": {
+        "email": {
+          "format": "email",
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "label",
+        "name",
+        "summary"
+      ],
+      "type": "object"
+    },
+    "education": {
+      "items": {
+        "properties": {
+          "endDate": {
+            "format": "date",
+            "type": "string"
+          },
+          "institution": {
+            "type": "string"
+          },
+          "startDate": {
+            "format": "date",
+            "type": "string"
+          },
+          "studyType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "endDate",
+          "institution",
+          "startDate",
+          "studyType"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "interests": {
+      "items": {
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "skills": {
+      "items": {
+        "properties": {
+          "keywords": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "keywords",
+          "name"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "work": {
+      "items": {
+        "properties": {
+          "company": {
+            "type": "string"
+          },
+          "endDate": {
+            "format": "date",
+            "type": "string"
+          },
+          "highlights": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "keywords": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "photos": {
+            "items": {
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "src": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "thumb": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "label",
+                "size",
+                "src",
+                "thumb"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "position": {
+            "type": "string"
+          },
+          "sectors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "startDate": {
+            "format": "date",
+            "type": "string"
+          }
+        },
+        "required": [
+          "company",
+          "endDate",
+          "highlights",
+          "keywords",
+          "photos",
+          "position",
+          "sectors",
+          "startDate"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "basics",
+    "education",
+    "interests",
+    "skills",
+    "work"
+  ],
+  "title": "CV",
+  "type": "object"
+}

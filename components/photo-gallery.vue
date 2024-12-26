@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import lightGallery from 'lightgallery'
+import lgZoom from 'lightgallery/plugins/zoom'
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
 import { onMounted, ref } from 'vue'
 import type { Photo } from '../data/types'
 
@@ -13,6 +15,8 @@ const wrapper = ref<HTMLElement>()
 function initLightGallery () {
   if (!wrapper.value) throw new Error('no wrapper found for lightgallery')
   lightGallery(wrapper.value, {
+    plugins: [lgZoom, lgThumbnail],
+    mode: 'lg-fade', // https://www.lightgalleryjs.com/demos/transitions/
     thumbnail: true, // eslint-disable-line @typescript-eslint/naming-convention
     licenseKey: 'B71019E7-24F2485D-9D04849F-4F8C909F',
   })
@@ -20,7 +24,11 @@ function initLightGallery () {
 
 function guessThumb (source: string) {
   // eslint-disable-next-line regexp/no-super-linear-move
-  return source.replace(/(?<name>.+)\.(?=(?:gif|jpg|png)$)/u, '$<name>-thumb.')
+  return handlePublicScheme(source).replace(/(?<name>.+)\.(?=(?:gif|jpg|png)$)/u, '$<name>-thumb.')
+}
+
+function handlePublicScheme (source = '') {
+  return source.replace(/^public:\//u, '/')
 }
 
 onMounted(initLightGallery)
@@ -29,9 +37,9 @@ onMounted(initLightGallery)
 <template>
   <div ref="wrapper" class="app-photo-gallery not-prose flex flex-wrap gap-4">
     <!-- eslint-disable sonar/no-vue-bypass-sanitization -->
-    <a v-for="{ label, src, size, thumb }, index in photos" :key="`photo-${index}`" class="overflow-hidden"
-      :class="[nbToShow && nbToShow <= index ? 'hidden' : '']" :data-lg-size="size" :href="src">
-      <img :alt="label" class="h-60 object-cover transition-transform duration-1000 hover:scale-110" :src="thumb ?? guessThumb(src)" />
+    <a v-for="{ label, src, size, thumb }, index in photos" :key="`photo-${index}`" class="overflow-hidden w-full"
+      :class="[nbToShow && nbToShow <= index ? 'hidden' : '']" :data-lg-size="size" :href="handlePublicScheme(src)">
+      <img :alt="label" class="w-full h-60 object-cover object-top transition-transform duration-1000 hover:scale-110" :src="handlePublicScheme(thumb) ?? guessThumb(src)" />
     </a>
   </div>
 </template>
