@@ -21,7 +21,7 @@
     "repo-check": "1.40",
     "tailwindcss": "3.4",
     "typescript": "5.7",
-    "unplugin-vue-components": "28.1",
+    "unplugin-vue-components": "28.2",
     "vite": "*",
     "vitepress": "1.6",
     "vitest": "3.0",
