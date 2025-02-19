@@ -55,8 +55,8 @@ importers:
         specifier: '5.7'
         version: 5.7.2
       unplugin-vue-components:
-        specifier: '28.2'
-        version: 28.2.0(@babel/parser@7.26.3)(vue@3.5.13(typescript@5.7.2))
+        specifier: '28.4'
+        version: 28.4.0(@babel/parser@7.26.3)(vue@3.5.13(typescript@5.7.2))
       vite:
         specifier: '*'
         version: 6.0.9(jiti@1.21.7)(yaml@2.6.1)
@@ -2519,8 +2519,8 @@ packages:
     resolution: {integrity: sha512-8U/MtpkPkkk3Atewj1+RcKIjb5WBimZ/WSLhhR3w6SsIj8XJuKTacSP8g+2JhfSGw0Cb125Y+2zA/IzJZDVbhA==}
     engines: {node: '>=18.12.0'}
 
-  unplugin-vue-components@28.2.0:
-    resolution: {integrity: sha512-FMncMZRnOcVs81BligpZL4tPFHE+VX1P1SYgzzl4D6ZgLiJHoZWNx743z+Vfyz701GsZ8WX/ENvYrIZ4mvJPeA==}
+  unplugin-vue-components@28.4.0:
+    resolution: {integrity: sha512-fnamX2RiKM30nPK4tihEas+bHnbLICo6MmOiP4jGg7fAlgNEuaLvN9yx96JwZDOYfLQcrNzikDdPhZ8k6pkhMg==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -5208,7 +5208,7 @@ snapshots:
       pathe: 2.0.2
       picomatch: 4.0.2
 
-  unplugin-vue-components@28.2.0(@babel/parser@7.26.3)(vue@3.5.13(typescript@5.7.2)):
+  unplugin-vue-components@28.4.0(@babel/parser@7.26.3)(vue@3.5.13(typescript@5.7.2)):
     dependencies:
       chokidar: 3.6.0
       debug: 4.4.0
