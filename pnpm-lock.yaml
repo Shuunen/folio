@@ -18,8 +18,8 @@ importers:
         specifier: '2.8'
         version: 2.8.2
       shuutils:
-        specifier: '10.4'
-        version: 10.4.0
+        specifier: '10.5'
+        version: 10.5.0
     devDependencies:
       '@icon-park/vue-next':
         specifier: '1.4'
@@ -2222,9 +2222,6 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  resultx@2.0.2:
-    resolution: {integrity: sha512-wWaAwKrlQlIa4IIGkQi7UE4tt3XwoDI+XRDTYY8hVVaqQSwnQR4tDkLweSSvjtKNsUC86MKfok65+hNNLbZW4Q==}
-
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
@@ -2275,10 +2272,6 @@ packages:
 
   shiki@2.0.3:
     resolution: {integrity: sha512-njF3iF97mxWcEFxxB591EeVFgf5VPpXJKFIB3RCFSkcgINetMIb+9CfNInmzkz8BlPWlEEY1nSGd0F1807YhCg==}
-
-  shuutils@10.4.0:
-    resolution: {integrity: sha512-PMeon5coA7kQEjB0HQUalqqWBd9RLbeopVW3CwGd1sE9wFsgwNm1aBTKi+QMhym+toHLHoSr9ai5kFMe/VUa7g==}
-    hasBin: true
 
   shuutils@10.5.0:
     resolution: {integrity: sha512-XIBlpWI8zIRYV1f1hdIApAPtsThzqBkIoLfBpmbQY+RVTwDn3mtfJ/ir3ifhdsnoQjcDKkcdiJGdnoLje/KU3w==}
@@ -4858,8 +4851,6 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resultx@2.0.2: {}
-
   reusify@1.0.4: {}
 
   rfdc@1.4.1: {}
@@ -4946,11 +4937,6 @@ snapshots:
       '@shikijs/types': 2.0.3
       '@shikijs/vscode-textmate': 10.0.1
       '@types/hast': 3.0.4
-
-  shuutils@10.4.0:
-    dependencies:
-      resultx: 2.0.2
-      tiny-glob: 0.2.9
 
   shuutils@10.5.0:
     dependencies:
