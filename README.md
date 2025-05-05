@@ -31,6 +31,7 @@
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : super platform centralizing badges
 - [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
+- [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
 - [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Vite](https://github.com/vitejs/vite) : super fast frontend tooling
