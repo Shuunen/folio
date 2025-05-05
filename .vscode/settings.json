@@ -30,6 +30,8 @@
     "vitepress",
     "wesave"
   ],
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
   "workbench.colorCustomizations": {
     "activityBar.background": "#382258",
     "titleBar.activeBackground": "#4E2F7B",
