@@ -3,7 +3,6 @@
 /* eslint-disable prefer-named-capture-group */
 /* eslint-disable require-unicode-regexp */
 
-/** @type {import('tailwindcss').Config} */
 const config = {
   content: [
     './.vitepress/theme/**/*.{ts,vue}',

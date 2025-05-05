@@ -1,5 +1,7 @@
 import components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vitepress'
+// @ts-expect-error type issue
+import tailwindcss from '@tailwindcss/vite'
 
 const name = 'Romain Racamier-Lafon'
 const title = `${name} - Folio`
@@ -37,8 +39,10 @@ export default defineConfig({
   srcDir: 'pages',
   title,
   vite: {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     plugins: [
-      // @ts-expect-error type issue
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      tailwindcss(),
       components({
         dirs: ['../components'],
         extensions: ['vue'],

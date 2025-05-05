@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import lightGallery from 'lightgallery'
-import lgZoom from 'lightgallery/plugins/zoom'
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgZoom from 'lightgallery/plugins/zoom'
 import { onMounted, ref } from 'vue'
 import type { Photo } from '../data/types'
 
 defineProps<{
   nbToShow?: number
-  photos: Photo[]
+  photos: Readonly<Photo[]>
 }>()
 
 const wrapper = ref<HTMLElement>()
@@ -39,7 +39,8 @@ onMounted(initLightGallery)
     <!-- eslint-disable sonar/no-vue-bypass-sanitization -->
     <a v-for="{ label, src, size, thumb }, index in photos" :key="`photo-${index}`" class="overflow-hidden w-full"
       :class="[nbToShow && nbToShow <= index ? 'hidden' : '']" :data-lg-size="size" :href="handlePublicScheme(src)">
-      <img :alt="label" class="w-full h-60 object-cover object-top transition-transform duration-1000 hover:scale-110" :src="handlePublicScheme(thumb) ?? guessThumb(src)" />
+      <img :alt="label" class="w-full h-60 object-cover object-top transition-transform duration-1000 hover:scale-110"
+        :src="handlePublicScheme(thumb) ?? guessThumb(src)" />
     </a>
   </div>
 </template>

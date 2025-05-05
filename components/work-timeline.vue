@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Airplay, ArrowLeft, BarCode, Basketball, MessageEmoji, Voice, CategoryManagement, Dollar, EnergySocket, FileQuestion, HospitalFour, Iphone, Palace, PhoneOne, ReadBook, Seedling, Shield, TagOne } from '@icon-park/vue-next'
+import { Airplay, ArrowLeft, BarCode, Basketball, CategoryManagement, Dollar, EnergySocket, FileQuestion, HospitalFour, Iphone, MessageEmoji, Palace, PhoneOne, ReadBook, Seedling, Shield, TagOne, Voice } from '@icon-park/vue-next'
 import { pickOne, slugify } from 'shuutils'
 import { ref } from 'vue'
 import { cv } from '../data/cv'
@@ -95,6 +95,8 @@ function iconForSector (sector: string) {
 </template>
 
 <style scoped>
+@reference "tailwindcss";
+
 .app-date {
   @apply text-3xl font-thin px-5 py-2 shadow-xl;
 }

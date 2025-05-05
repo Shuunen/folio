@@ -34,10 +34,11 @@ const actual = computed(() => getPage(route.path))
 </template>
 
 <style scoped>
+@reference "tailwindcss";
+
 @media (max-width: 400px) {
   .app-link--index {
     @apply hidden;
   }
 }
 </style>
-

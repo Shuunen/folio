@@ -50,6 +50,8 @@ async function copyCode () {
 
 <!-- eslint-disable-next-line vue-scoped-css/enforce-style-type, vue/enforce-style-attribute -->
 <style>
+@reference "tailwindcss";
+
 .app-code-showcase + .app-code-showcase {
   @apply mt-10;
 }
