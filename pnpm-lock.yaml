@@ -38,7 +38,7 @@ importers:
         version: 3.2.0(vitest@3.2.0(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.1))
       dependency-cruiser:
         specifier: latest
-        version: 16.10.3
+        version: 16.10.4
       eslint:
         specifier: '*'
         version: 9.26.0(jiti@2.4.2)
@@ -46,8 +46,8 @@ importers:
         specifier: '1.3'
         version: 1.3.0(eslint@9.26.0(jiti@2.4.2))(tailwindcss@4.1.5)(typescript@5.8.3)(vue-eslint-parser@9.4.3(eslint@9.26.0(jiti@2.4.2)))
       repo-check:
-        specifier: '1.45'
-        version: 1.45.0
+        specifier: '1.46'
+        version: 1.46.0
       tailwindcss:
         specifier: '4.1'
         version: 4.1.5
@@ -1167,8 +1167,8 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn-loose@8.5.1:
-    resolution: {integrity: sha512-H68u/wiI8PAsSBclEIWwUg3dqEaDZXQHCovulbedgp78zJstjn7gDjfGgwUtW0BHi+KasryFLreHAGX/iXU85A==}
+  acorn-loose@8.5.2:
+    resolution: {integrity: sha512-PPvV6g8UGMGgjrMu+n/f9E/tCSkNQ2Y97eFvuVdJfG11+xdIeDcLyNdC8SHcrHbRqkfwLASdplyR6B6sKM1U4A==}
     engines: {node: '>=0.4.0'}
 
   acorn-walk@8.3.4:
@@ -1426,8 +1426,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.10.3:
-    resolution: {integrity: sha512-5fUuitVV6yFe6xSbFTMF1DH8vBvjxbYVUaOa4lowQyC5SwiR3oGQwlMryMbADtfVHscgFnOj2WtF3j+xQMTkSg==}
+  dependency-cruiser@16.10.4:
+    resolution: {integrity: sha512-hrxVOjIm8idZ9ZVDGSyyG3SHiNcEUPhL6RTEmO/3wfQWLepH5pA3nuDMMrcJ1DkZztFA7xg3tk8OVO+MmwwH9w==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -1478,6 +1478,10 @@ packages:
 
   enhanced-resolve@5.18.1:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
+    engines: {node: '>=10.13.0'}
+
+  enhanced-resolve@5.18.2:
+    resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
     engines: {node: '>=10.13.0'}
 
   entities@4.5.0:
@@ -2399,8 +2403,8 @@ packages:
     resolution: {integrity: sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==}
     hasBin: true
 
-  repo-check@1.45.0:
-    resolution: {integrity: sha512-H1TjmpbOWImWMFsJKsWSzdhfDQWCPlmiIUKhybpFGen0WtlShB5QsnGKPBSVpCV95b7KfQFRt4x0w9/pnxtQKw==}
+  repo-check@1.46.0:
+    resolution: {integrity: sha512-BekT7/1cpw8iP6vc77gGNnXfnK4VmqzDi54tmx/gnwJ97ZderVIhe/oBi4USxm7hu3w1+CvFH7j6/j772RjxBw==}
     hasBin: true
 
   require-from-string@2.0.2:
@@ -3925,7 +3929,7 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
-  acorn-loose@8.5.1:
+  acorn-loose@8.5.2:
     dependencies:
       acorn: 8.15.0
 
@@ -4166,16 +4170,16 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.10.3:
+  dependency-cruiser@16.10.4:
     dependencies:
       acorn: 8.15.0
       acorn-jsx: 5.3.2(acorn@8.15.0)
       acorn-jsx-walk: 2.0.0
-      acorn-loose: 8.5.1
+      acorn-loose: 8.5.2
       acorn-walk: 8.3.4
       ajv: 8.17.1
       commander: 13.1.0
-      enhanced-resolve: 5.18.1
+      enhanced-resolve: 5.18.2
       ignore: 7.0.5
       interpret: 3.1.1
       is-installed-globally: 1.0.0
@@ -4224,6 +4228,11 @@ snapshots:
   encodeurl@2.0.0: {}
 
   enhanced-resolve@5.18.1:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.2.1
+
+  enhanced-resolve@5.18.2:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -4448,8 +4457,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.14.1
-      acorn-jsx: 5.3.2(acorn@8.14.1)
+      acorn: 8.15.0
+      acorn-jsx: 5.3.2(acorn@8.15.0)
       eslint-visitor-keys: 3.4.3
 
   esquery@1.6.0:
@@ -5231,7 +5240,7 @@ snapshots:
     dependencies:
       jsesc: 3.0.2
 
-  repo-check@1.45.0:
+  repo-check@1.46.0:
     dependencies:
       arg: 5.0.2
       shuutils: 10.6.0
@@ -5513,7 +5522,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.18.1
+      enhanced-resolve: 5.18.2
       tapable: 2.2.1
       tsconfig-paths: 4.2.0
 
@@ -5764,7 +5773,7 @@ snapshots:
       espree: 9.6.1
       esquery: 1.6.0
       lodash: 4.17.21
-      semver: 7.7.1
+      semver: 7.7.2
     transitivePeerDependencies:
       - supports-color
 
