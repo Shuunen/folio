@@ -4,7 +4,7 @@
   "bugs": "https://github.com/Shuunen/folio/issues",
   "dependencies": {
     "@tailwindcss/vite": "4.1",
-    "flowbite": "3.1",
+    "flowbite": "4.0",
     "flowbite-vue": "0.2",
     "lightgallery": "2.9",
     "shuutils": "10.6"
