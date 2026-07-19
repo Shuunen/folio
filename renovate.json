@@ -1,5 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "dependencyDashboard": false,
-  "extends": ["config:semverAllMonthly", ":automergeAll", ":preserveSemverRanges"]
+  "extends": ["config:base", "config:semverAllMonthly", ":automergeAll", ":preserveSemverRanges"]
 }
