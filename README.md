@@ -15,7 +15,7 @@
 
 `pnpm render` renders every resume in `data/` to html & pdf with each theme below, output lands in `dist/resumes/` along with an `index.html` listing them as cards, browse it with `pnpm dev`.
 
-`--theme <name>` narrows the render to one or more themes, repeat it or separate the names with commas, and `pnpm render:blue` is the shortcut for the english resume with `blue-buzz`. Note that the `index.html` is rebuilt from what the run produced, so a narrowed render leaves it listing only those cards until the next full `pnpm render`.
+`--theme <name>` narrows the render to one or more themes, repeat it or separate the names with commas, and `pnpm render:blue` is the shortcut for rendering every resume with `blue-buzz`. Note that the `index.html` is rebuilt from what the run produced, so a narrowed render leaves it listing only those cards until the next full `pnpm render`.
 
 The pdf export drives Chrome through Puppeteer, `pnpm install` downloads it, set `PUPPETEER_EXECUTABLE_PATH` to use another browser.
 

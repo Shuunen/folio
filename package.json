@@ -58,7 +58,7 @@
     "render:blue:watch": "node --watch-path=src/themes/blue-buzz --watch-path=src/bin --watch-path=data src/bin/json-resume-render.cli.ts --theme blue-buzz",
     "test": "turbo run test:unit",
     "test:unit": "vitest run --coverage && echo test:unit completed successfully || (echo Please fix test errors and run pnpm run test:unit to check for remaining test issues && exit 1)",
-    "test:update": "vitest test --update && echo test:update completed successfully",
+    "test:update": "vitest run --update && echo test:update completed successfully",
     "test:watch": "vitest"
   },
   "type": "module",
