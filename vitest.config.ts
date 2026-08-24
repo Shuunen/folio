@@ -1,14 +1,17 @@
 import { defineConfig } from 'vitest/config'
 
+// oxlint-disable-next-line import/no-default-export
 export default defineConfig({
   test: {
     coverage: {
-      include: ['utils'],
+      exclude: ['src/**/*.{json,css}'],
+      include: ['src'],
       reporter: ['text', 'lcov', 'html'],
       thresholds: {
         100: true,
       },
     },
-    pool: 'threads',
+    include: ['src/**/*.test.ts'],
+    reporters: ['minimal'],
   },
 })

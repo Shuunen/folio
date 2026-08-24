@@ -2,34 +2,30 @@
   "$schema": "https://json.schemastore.org/package.json",
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/folio/issues",
-  "dependencies": {
-    "@tailwindcss/vite": "4.3",
-    "flowbite": "4.0",
-    "flowbite-vue": "0.3",
-    "lightgallery": "2.9",
-    "shuutils": "10.6"
-  },
   "description": "My personal portfolio",
   "devDependencies": {
-    "@icon-park/vue-next": "1.4",
-    "@tailwindcss/postcss": "4.3",
-    "@tailwindcss/typography": "0.5",
-    "@vitest/coverage-v8": "3.2",
-    "dependency-cruiser": "latest",
-    "eslint": "*",
-    "eslint-plugin-shuunen": "1.3",
-    "repo-check": "1.45",
-    "tailwindcss": "4.3",
-    "typescript": "5.9",
-    "unplugin-vue-components": "32.1",
-    "vite": "*",
-    "vitepress": "1.6",
-    "vitest": "3.2",
-    "vue": "*"
+    "@jsonresume/jsonresume-theme-tokyo-modernist": "catalog:",
+    "@jsonresume/schema": "catalog:",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "ajv": "catalog:",
+    "ajv-formats": "catalog:",
+    "jsonresume-theme-berlin-grid": "catalog:",
+    "jsonresume-theme-blue-buzz": "workspace:*",
+    "jsonresume-theme-modern-classic": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "puppeteer": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "resumed": "catalog:",
+    "serve": "catalog:",
+    "shuutils": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
-  "files": [
-    "public"
-  ],
   "homepage": "https://github.com/Shuunen/folio#readme",
   "keywords": [
     "Romain Racamier-Lafon",
@@ -40,36 +36,30 @@
   ],
   "license": "GPL-3.0",
   "name": "folio",
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "search-insights"
-      ]
-    }
-  },
+  "packageManager": "pnpm@11.22.0+sha512.1ff870c4c6133dfd88fb2afc46dd13d47f09c9794b438c6fdb47ca98caf3bc16381ee0be93a091b8e3824cf01f889f46d7d9e20910fb0be1ab0fb5baa80dd621",
   "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "build": "pnpm build:vp && pnpm build:nonce && pnpm build:mark && echo build success",
-    "build:mark": "unique-mark dist/**/*.{html}",
-    "build:nonce": "bash bin/inject-nonce.sh && echo build nonce success",
-    "build:vp": "vitepress build && echo vitepress build",
-    "check": "pnpm install && repo-check && pnpm build && pnpm lint && pnpm test && echo check success",
-    "dev": "vitepress dev",
-    "lint": "pnpm lint:tsc && pnpm lint:eslint && pnpm lint:dep && echo lint success",
-    "lint:dep": "depcruise components pages --config && echo lint:dep success",
-    "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
-    "lint:tsc": "tsc --noEmit && echo lint:tsc success",
-    "postversion": "git push && git push --tags",
-    "preversion": "pnpm lint",
-    "serve": "vitepress serve",
-    "test": "vitest --run --coverage && echo test success",
-    "test:update": "vitest --run --update && echo test update success",
-    "test:watch": "vitest --coverage"
+    "check": "turbo run lint:types lint:format lint:issues check:resume:custom check:resume:resumed test:unit && echo check success",
+    "check:resume:custom": "node src/bin/json-resume-validator.cli.ts \"data/*.json\" || exit 1 && echo custom check success",
+    "check:resume:resumed": "for file in data/*\"(JsonResume)\".json; do resumed validate \"$file\" || exit 1; done && echo resumed check success",
+    "dev": "serve dist/resumes -l 8089",
+    "lint": "turbo run lint:types lint:format lint:issues && echo lint completed successfully",
+    "lint:format": "oxfmt --check && echo lint:format completed successfully || (echo Please run pnpm run lint:format:fix to automatically fix formatting issues && exit 1)",
+    "lint:format:fix": "oxfmt --write && echo lint:format:fix completed successfully || (echo Please run pnpm run lint:format to check for remaining formatting issues && exit 1)",
+    "lint:issues": "oxlint --type-aware --deny-warnings --report-unused-disable-directives && echo lint:issues completed successfully || (echo Please run pnpm run lint:issues:fix to automatically fix linting issues && exit 1)",
+    "lint:issues:fix": "oxlint --fix --fix-suggestions --fix-dangerously --type-aware --deny-warnings --report-unused-disable-directives && echo lint:issues:fix completed successfully || (echo Please run pnpm run lint:issues to check for remaining linting issues && exit 1)",
+    "lint:types": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && echo lint:types completed successfully || (echo Please fix type errors and run pnpm run lint:types to check for remaining type issues && exit 1)",
+    "render": "node src/bin/json-resume-render.cli.ts",
+    "render:blue": "node src/bin/json-resume-render.cli.ts --theme blue-buzz",
+    "render:blue:watch": "node --watch-path=src/themes/blue-buzz --watch-path=src/bin --watch-path=data src/bin/json-resume-render.cli.ts --theme blue-buzz",
+    "test": "turbo run test:unit",
+    "test:unit": "vitest run --coverage && echo test:unit completed successfully || (echo Please fix test errors and run pnpm run test:unit to check for remaining test issues && exit 1)",
+    "test:update": "vitest test --update && echo test:update completed successfully",
+    "test:watch": "vitest"
   },
   "type": "module",
   "version": "4.1.0"
