@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "globalDependencies": ["package.json", "pnpm-lock.yaml", "tsconfig*.json"],
+  "tasks": {
+    "//#check:resume:custom": {
+      "inputs": ["src/bin/json-resume-validator.cli.ts", "data/*.json"],
+      "outputLogs": "errors-only"
+    },
+    "//#check:resume:resumed": {
+      "inputs": ["data/*.json"],
+      "outputLogs": "errors-only"
+    },
+    "//#lint:format": {
+      "outputLogs": "errors-only"
+    },
+    "//#lint:issues": {
+      "inputs": ["src/**", "*.config.ts", ".oxlintrc.json"],
+      "outputLogs": "errors-only"
+    },
+    "//#lint:types": {
+      "inputs": ["src/**", "*.config.ts"],
+      "outputLogs": "errors-only"
+    },
+    "//#test:unit": {
+      "inputs": ["src/**", "data/**", "vitest.config.ts"],
+      "outputs": ["coverage/**"],
+      "outputLogs": "errors-only"
+    }
+  }
+}
