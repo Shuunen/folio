@@ -1,0 +1,19 @@
+{
+  "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
+  "dependencies": {
+    "shuutils": "catalog:"
+  },
+  "description": "A JSON Resume theme mimicking the DoYouBuzz minimal design : blue accent, profile on top, 70/30 columns",
+  "keywords": [
+    "jsonresume",
+    "theme",
+    "doyoubuzz",
+    "blue"
+  ],
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "name": "jsonresume-theme-blue-buzz",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0"
+}
