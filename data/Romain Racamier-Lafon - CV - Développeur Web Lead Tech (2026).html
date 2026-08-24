@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Romain Racamier-Lafon - Lead Tech – Développeur Front-end Senior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" />
+    <style>
+      /* blue-buzz : a JSON Resume theme mimicking the DoYouBuzz "minimal" design, blue accent, profile on top then 70/30 columns */
+
+      :root {
+        --accent: #0069ad;
+        --accent-dark: #336483;
+        --accent-light: #e4edf7;
+        --ink: #000000;
+        --ink-soft: #555555;
+        --rule: #cccccc;
+        --paper: whitesmoke;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        /* 1rem equals 10px, like DoYouBuzz does, so the sizes below read as the ones picked in their designer */
+        font-size: 62.5%;
+      }
+
+      /* on screen the page is not constrained by paper, so zoom the whole thing 1.2x : every size below is in rem, the layout stays identical to the PDF, only bigger and readable */
+      @media screen {
+        html {
+          font-size: 75%;
+        }
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-decoration-color: rgb(80 163 217 / 50%);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.2em;
+        word-wrap: break-word;
+      }
+
+      a:hover {
+        text-decoration-color: var(--accent);
+      }
+
+      /* the small arrow hinting the link goes somewhere, painted as a background image because chromium drops css masks when printing to pdf */
+      a[href^='http']::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2350a3d9' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: inline-block;
+        height: 0.75em;
+        margin-left: 0.25em;
+        opacity: 0.6;
+        vertical-align: middle;
+        width: 0.75em;
+      }
+
+      a[href^='http']:hover::after {
+        opacity: 1;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      /*----- page -----*/
+
+      .cv {
+        margin: 0 auto;
+        /* 21cm and 29.7cm at the print root size, in rem so the screen zoom scales the page with the text */
+        max-width: 79.4rem;
+        min-height: 112.3rem;
+        padding: 3rem 3.6rem 4rem;
+      }
+
+      /*----- header -----*/
+
+      .header {
+        align-items: flex-start;
+        display: flex;
+        gap: 2rem;
+        padding-bottom: 1.6rem;
+      }
+
+      .header__avatar {
+        border-radius: 1.2rem;
+        flex: none;
+        height: 11rem;
+        object-fit: cover;
+        width: 11rem;
+      }
+
+      .header__identity {
+        flex: 1;
+      }
+
+      .header__name {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1em;
+        padding-bottom: 0.5rem;
+      }
+
+      .header__title {
+        color: var(--accent);
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 1em;
+        margin-bottom: 1rem;
+      }
+
+      .header__infos {
+        color: var(--ink-soft);
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.2rem;
+        gap: 0.2rem 0.6rem;
+      }
+
+      .header__infos + .header__infos {
+        margin-top: 0.2rem;
+      }
+
+      .header__info + .header__info::before {
+        color: var(--accent);
+        content: '•';
+        margin-right: 0.6rem;
+      }
+
+      .summary {
+        border-top: 1px solid var(--rule);
+        margin-bottom: 2.4rem;
+        padding-top: 1.6rem;
+        text-align: justify;
+      }
+
+      /*----- columns, 70% for the timeline, 30% for the side widgets -----*/
+
+      .columns {
+        display: flex;
+        gap: 3rem;
+      }
+
+      .columns__main {
+        flex: 0 0 68%;
+        max-width: 68%;
+      }
+
+      .columns__aside {
+        flex: 1;
+        min-width: 0;
+      }
+
+      /*----- widget -----*/
+
+      .widget {
+        margin-bottom: 2rem;
+      }
+
+      .widget__title {
+        border-bottom: 1px solid var(--rule);
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.4rem;
+        text-transform: uppercase;
+      }
+
+      /* the full width block below the columns, kept on a single page so projects & references stay together */
+      .full {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      /* the full width widgets lay their entries out in columns, the title spans them all */
+      .widget--grid-2,
+      .widget--grid-3 {
+        column-gap: 1.6rem;
+        display: grid;
+        row-gap: 1.4rem;
+      }
+
+      .widget--grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .widget--grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .widget--grid-2 .widget__title,
+      .widget--grid-3 .widget__title {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+      }
+
+      .widget--grid-2 .element,
+      .widget--grid-3 .element {
+        margin-bottom: 0;
+        min-width: 0;
+      }
+
+      .element {
+        margin-bottom: 1rem;
+        page-break-inside: avoid;
+      }
+
+      .columns__main .element {
+        margin-bottom: 3rem;
+      }
+
+      .element:last-child {
+        margin-bottom: 0;
+      }
+
+      /* the experience header, the company logo sits on the right of the position & subtitle, like DoYouBuzz does */
+      .element__header {
+        align-items: flex-start;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+      }
+
+      .element__head {
+        min-width: 0;
+      }
+
+      .element__logo {
+        flex: none;
+        height: 3.4rem;
+        /* wordmarks are wider than square badges, `contain` keeps both undistorted inside the same height */
+        max-width: 8rem;
+        object-fit: contain;
+        object-position: right center;
+      }
+
+      .element__title {
+        color: var(--accent);
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      /* the company name leads the title line but stays black, so the position keeps the accent */
+      .element__company {
+        color: var(--ink);
+      }
+
+      .element__company::after {
+        content: ' · ';
+      }
+
+      .element__subtitle {
+        color: var(--ink-soft);
+        font-size: 1.2rem;
+      }
+
+      .element__subtitle span + span::before {
+        content: ' · ';
+      }
+
+      .element__text {
+        margin-top: 0.4rem;
+        line-height: 1.5;
+        text-align: justify;
+      }
+
+      .element__list {
+        margin-top: 0.4rem;
+        margin-left: 0.2rem;
+      }
+
+      /* the company & product names listed in data/keyword.txt, emphasized wherever they appear in a free text */
+      .keyword {
+        font-weight: 600;
+      }
+
+      /* the small black triangle DoYouBuzz uses as a bullet */
+      .element__item {
+        padding-left: 1.2rem;
+        position: relative;
+      }
+
+      .element__item::before {
+        border-color: transparent transparent transparent var(--ink);
+        border-style: solid;
+        border-width: 0.4rem 0 0.4rem 0.5rem;
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0.7rem;
+        opacity: 0.6;
+      }
+
+      /* the "Impact:" line sums up the outcome of the mission, the accent color makes it stand out */
+      .element__item--impact {
+        color: var(--accent-dark);
+        font-weight: 500;
+      }
+
+      .element__item--impact::before {
+        border-left-color: var(--accent-dark);
+      }
+
+      .full .widget:last-child {
+        margin-bottom: 0;
+      }
+
+      /* the note under the projects & references spans the whole widget */
+      .widget__note {
+        color: var(--ink-soft);
+        grid-column: 1 / -1;
+        margin-top: 0.4rem;
+      }
+
+      /*----- tags, used for skills & interests keywords -----*/
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.7rem;
+      }
+
+      .tags__item {
+        background: var(--accent-light);
+        border-radius: 4px;
+        color: var(--accent-dark);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding: 3px 8px;
+        font-family: sans-serif;
+      }
+
+      /*----- environment, the tech stack line of an experience -----*/
+
+      .environment {
+        margin-top: 0.4rem;
+      }
+
+      /*----- reference -----*/
+
+      .reference__quote {
+        margin-top: 0.4rem;
+        text-align: justify;
+        line-height: 1.5;
+      }
+
+      /*----- footer -----*/
+
+      .footer {
+        border-top: 1px solid var(--rule);
+        color: var(--ink-soft);
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+        padding-top: 0.8rem;
+        text-align: center;
+      }
+
+      /*----- print -----*/
+
+      @page {
+        margin: 0;
+        size: A4;
+      }
+
+      @media print {
+        /*
+   * The page has no margin so the paper background bleeds to the edges, the breathing room is padding instead.
+   * `box-decoration-break: clone` repeats that padding on every page fragment, so pages 2+ get the same top gap :
+   * a real `@page` margin would work too but chromium always paints its margin area white, which breaks the paper.
+   */
+        .cv {
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+          max-width: none;
+          min-height: 0;
+          padding: 3.8rem 3.6rem;
+        }
+
+        .widget__title {
+          page-break-after: avoid;
+        }
+      }
+
+      /*----- small screens, the columns stack -----*/
+
+      @media screen and (max-width: 840px) {
+        .columns {
+          display: block;
+        }
+
+        .widget--grid-2,
+        .widget--grid-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .columns__main {
+          max-width: none;
+        }
+
+        .columns__aside {
+          margin-top: 2rem;
+        }
+
+        .header {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="cv">
+      <header class="header">
+        <img alt="Romain Racamier-Lafon" class="header__avatar" src="https://i.imgur.com/1YZctO6.jpeg" />
+        <div class="header__identity">
+          <h1 class="header__name">Romain Racamier-Lafon</h1>
+          <p class="header__title">Lead Tech – Développeur Front-end Senior</p>
+          <ul class="header__infos">
+            <li class="header__info">romain.racamier@gmail.com</li>
+            <li class="header__info">06 58 47 67 88</li>
+            <li class="header__info">Strasbourg, FR</li>
+            <li class="header__info">37 ans</li>
+          </ul>
+          <ul class="header__infos">
+            <li class="header__info"><a href="https://github.com/Shuunen">github.com/Shuunen</a></li>
+            <li class="header__info"><a href="https://www.linkedin.com/in/romain-racamier">linkedin.com/in/romain-racamier</a></li>
+            <li class="header__info"><a href="https://humacode.fr">humacode.fr</a></li>
+          </ul>
+        </div>
+      </header>
+      <p class="summary">
+        Lead tech et spécialiste front-end, 15 ans d’expérience et 5 rôles de lead consécutifs. Je reprends des front-ends qui ont dérivé — <strong class="keyword">Vue 2</strong> vers <strong class="keyword">Vue 3</strong>,
+        <strong class="keyword">JavaScript</strong> vers <strong class="keyword">TypeScript</strong>, <strong class="keyword">AngularJS</strong> vers <strong class="keyword">React</strong> — et je rends une bibliothèque de composants
+        partagée, des outils et une suite de tests que l’équipe peut maintenir sans moi. J’ai encadré des équipes de 2 à 8 développeurs chez <strong class="keyword">Eu-Lisa</strong>, <strong class="keyword">Amundi WeSave</strong> et
+        <strong class="keyword">Collectif Energie</strong> : architecture, standards techniques, revue de code, recrutement et mentorat, un rôle que je tiens aussi bénévolement auprès de personnes en reconversion. Mainteneur d’une
+        bibliothèque open source <strong class="keyword">TypeScript</strong>.
+      </p>
+      <div class="columns">
+        <div class="columns__main">
+          <section class="widget">
+            <h2 class="widget__title">Expériences</h2>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Eu-Lisa</span>Développeur Web – Lead Tech</h3>
+                  <p class="element__subtitle"><span>Strasbourg</span><span>Freelance · Sur site</span><span>mars 2025 → Aujourd'hui</span></p>
+                </div>
+                <img alt="Eu-Lisa" class="element__logo" src="icons/logo-eu-lisa.svg" />
+              </div>
+              <p class="element__text">
+                L’agence européenne pour les systèmes d’information à grande échelle, avait besoin de deux nouvelles applications web. Je les ai construites avec une bibliothèque de composants partagés et des outils internes, répartis sur
+                plusieurs dépô<strong class="keyword">ts</strong>.
+              </p>
+              <ul class="element__list">
+                <li class="element__item">Lead Tech d’une équipe de 8 développeurs et participation au recrutement</li>
+                <li class="element__item">Création de deux applications web pour des processus européens</li>
+                <li class="element__item">Création d’une bibliothèque de composants partagés et d’outils internes, publiés sur un registre <strong class="keyword">Artifactory</strong> privé</li>
+                <li class="element__item">Structuration du code sur plusieurs dépô<strong class="keyword">ts</strong>, dont des monorepos en pnpm workspace pilotés par <strong class="keyword">Turbo</strong></li>
+                <li class="element__item">Définition de l’architecture et des standards, revue de code et accompagnement de l’équipe</li>
+                <li class="element__item element__item--impact">
+                  Impact : deux applications livrées, <strong class="keyword">UX</strong> / <strong class="keyword">UI</strong> unifiée par les bibliothèques partagées, couverture de tests unitaires et <strong class="keyword">E2E</strong>
+                </li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">TypeScript</span><span class="tags__item">React</span><span class="tags__item">ShadCN</span><span class="tags__item">Tailwind CSS</span><span class="tags__item">Zod</span
+                  ><span class="tags__item">Vite</span><span class="tags__item">Vitest</span><span class="tags__item">Storybook</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Batvoice AI</span>Développeur Web – Lead Tech</h3>
+                  <p class="element__subtitle"><span>Paris</span><span>Freelance · À distance</span><span>nov. 2024 → févr. 2025</span></p>
+                </div>
+                <img alt="Batvoice AI" class="element__logo" src="icons/logo-batvoice.svg" />
+              </div>
+              <p class="element__text">
+                Un éditeur de produit d’intelligence artificielle avait un front-end sur <strong class="keyword">Vue 2</strong>, dont la fin de vie approchait. En tant que lead tech, j’ai mené la migration vers
+                <strong class="keyword">Vue 3</strong> et les pratiques pour garder l’application maintenable.
+              </p>
+              <ul class="element__list">
+                <li class="element__item">Lead Tech d’une équipe de 3 personnes</li>
+                <li class="element__item">Migration complète de l’application de <strong class="keyword">Vue 2</strong> vers <strong class="keyword">Vue 3</strong></li>
+                <li class="element__item">Création d’un catalogue de composants pour supprimer la duplication et accélérer les interfaces</li>
+                <li class="element__item">Ajout de fonctionnalités et correction de bugs sur le produit</li>
+                <li class="element__item">Mise en place des tests <strong class="keyword">E2E</strong> avec <strong class="keyword">Cypress</strong> pour sécuriser la non-régression</li>
+                <li class="element__item element__item--impact">
+                  Impact : migration <strong class="keyword">Vue 2</strong> vers <strong class="keyword">Vue 3</strong> terminée dans les 3 mois de mission sur une application de 5 ans, non-régression sécurisée par les tests
+                  <strong class="keyword">E2E</strong>
+                </li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">TypeScript</span><span class="tags__item">Vue 3</span><span class="tags__item">Vuetify</span><span class="tags__item">Vite</span><span class="tags__item">Cypress</span
+                  ><span class="tags__item">Node.js</span><span class="tags__item">ESLint</span><span class="tags__item">Git</span><span class="tags__item">Agile</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Collectif Energie</span>Développeur Web – Lead Tech</h3>
+                  <p class="element__subtitle"><span>Nantes</span><span>Freelance · Hybride</span><span>janv. 2024 → sept. 2024</span></p>
+                </div>
+                <img alt="Collectif Energie" class="element__logo" src="icons/logo-collectif-energie.svg" />
+              </div>
+              <p class="element__text">Un courtier en énergie, m’a confié le rôle de lead tech pour structurer l’équipe technique autour d’un <strong class="keyword">monorepo</strong>.</p>
+              <ul class="element__list">
+                <li class="element__item">Lead Tech d’une équipe de 6 personnes</li>
+                <li class="element__item">Ajout de fonctionnalités et maintenance d’une application <strong class="keyword">Nuxt 3</strong></li>
+                <li class="element__item">Création d’un <strong class="keyword">monorepo</strong> pour industrialiser les développements, centraliser les librairies et aligner les pratiques</li>
+                <li class="element__item">Migrations des sites et librairies existants au sein du <strong class="keyword">monorepo</strong></li>
+                <li class="element__item">
+                  Catalogue de composants <strong class="keyword">React</strong> basés sur <strong class="keyword">ShadCN</strong>, <strong class="keyword">Radix</strong> <strong class="keyword">UI</strong> &amp;
+                  <strong class="keyword">Tailwind</strong>
+                </li>
+                <li class="element__item">Mise en place et participation au processus de recrutement</li>
+                <li class="element__item element__item--impact">
+                  Impact : sites et librairies dans un <strong class="keyword">monorepo</strong> unique, pratiques alignées sur 6 personnes, <strong class="keyword">UX</strong> / <strong class="keyword">UI</strong> unifiée, expérience
+                  développeur améliorée
+                </li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">TypeScript</span><span class="tags__item">Nx</span><span class="tags__item">Vue 3</span><span class="tags__item">Nuxt 3</span><span class="tags__item">React 18</span
+                  ><span class="tags__item">NestJS</span><span class="tags__item">Vite</span><span class="tags__item">Vitest</span><span class="tags__item">Tailwind</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Amundi WeSave</span>Développeur Web – Co-Lead Tech</h3>
+                  <p class="element__subtitle"><span>Paris</span><span>CDI · Hybride</span><span>sept. 2022 → déc. 2023</span></p>
+                </div>
+                <img alt="Amundi WeSave" class="element__logo" src="icons/logo-amundi.svg" />
+              </div>
+              <p class="element__text">
+                Un spécialiste de la gestion de patrimoine a souhaité moderniser son application de gestion des contrats. J’ai mené la migration de la stack front-end vers des technologies plus récentes, tout en supervisant le développement
+                et la maintenance.
+              </p>
+              <ul class="element__list">
+                <li class="element__item">Co-Lead Tech d’une équipe de 4 personnes</li>
+                <li class="element__item">
+                  Migration du projet <strong class="keyword">Nuxt</strong> : <strong class="keyword">JS</strong> &amp; <strong class="keyword">Vue 2</strong> vers <strong class="keyword">TypeScript</strong> &amp;
+                  <strong class="keyword">Vue 2</strong>.7
+                </li>
+                <li class="element__item">Ajout de fonctionnalités et maintenance de l’application principale</li>
+                <li class="element__item">Création d’un plugin <strong class="keyword">ESLint</strong> custom</li>
+                <li class="element__item">Participation au processus de recrutement</li>
+                <li class="element__item element__item--impact">Impact : application principale entièrement typée, améliorations de performances, maintenance facilitée pour une équipe de 4 personnes</li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">TypeScript</span><span class="tags__item">Vue 2</span><span class="tags__item">Vue 2.7</span><span class="tags__item">Nuxt 2</span><span class="tags__item">HTML 5</span
+                  ><span class="tags__item">CSS 3</span><span class="tags__item">Tailwind CSS</span><span class="tags__item">Node.js</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Euro Information</span>Développeur Web – Lead Tech &amp; Tuteur</h3>
+                  <p class="element__subtitle"><span>Strasbourg</span><span>CDI · Sur site</span><span>sept. 2018 → sept. 2022</span></p>
+                </div>
+                <img alt="Euro Information" class="element__logo" src="icons/logo-euro-information.svg" />
+              </div>
+              <p class="element__text">
+                Salarié de <strong class="keyword">Inetum</strong> et en mission pour leur client <strong class="keyword">Euro Information</strong>, j’ai pris en charge la direction technique de plusieurs projets web stratégiques, avec pour
+                mission de centraliser l’<strong class="keyword">UI</strong>/<strong class="keyword">UX</strong> des projets futurs via un catalogue de composants unifié, et de réaliser la refonte du site institutionnel Lyf.eu. J’ai aussi
+                été tuteur d’un jeune développeur.
+              </p>
+              <ul class="element__list">
+                <li class="element__item">Création d’un catalogue de composants visant à centraliser l’<strong class="keyword">UI</strong> et l’<strong class="keyword">UX</strong> de tous les projets web existant et futur</li>
+                <li class="element__item">
+                  Refonte du site institutionnel Lyf.eu <strong class="keyword">Angular</strong> en <strong class="keyword">Nuxt</strong> avec <strong class="keyword">Vue</strong> &amp; <strong class="keyword">Tailwind</strong>
+                  <strong class="keyword">CSS</strong>
+                </li>
+                <li class="element__item">Ajout de fonctionnalités et maintenance sur le framework interne de gestion des données liées à l’application Lyf Pay</li>
+                <li class="element__item">Accompagnement et formation de mon stagiaire autour d’un projet applicatif de suivi d’activité</li>
+                <li class="element__item element__item--impact">
+                  Impact : <strong class="keyword">UI</strong>/<strong class="keyword">UX</strong> cohérente entre les projets, temps de développement réduit, client satisfait des nouveaux processus, embauche de mon tutoré
+                </li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">TypeScript</span><span class="tags__item">Angular 6 à 13</span><span class="tags__item">Vue 2</span><span class="tags__item">Nuxt 2</span><span class="tags__item">Sass</span
+                  ><span class="tags__item">Tailwind CSS</span><span class="tags__item">Node.js</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Niji</span>Développeur Web – Lead Tech</h3>
+                  <p class="element__subtitle"><span>Nantes</span><span>CDI · Sur site</span><span>oct. 2016 → juin 2018</span></p>
+                </div>
+                <img alt="Niji" class="element__logo" src="icons/logo-niji.svg" />
+              </div>
+              <p class="element__text">Chez <strong class="keyword">Niji</strong>, une agence digitale nantaise, j’ai livré cinq front-ends clients en vingt mois, dans la grande distribution, l’assurance, l’énergie et l’immobilier.</p>
+              <ul class="element__list">
+                <li class="element__item">Pour <strong class="keyword">Auchan</strong> : chatbot <strong class="keyword">DialogFlow</strong> &amp; <strong class="keyword">Vue.js</strong> pour les visiteurs du drive en ligne</li>
+                <li class="element__item">Pour <strong class="keyword">Cipav</strong> : refonte de l’extranet en <strong class="keyword">Angular</strong> <a href="https://espace-personnel.lacipav.fr">espace-personnel.lacipav.fr</a></li>
+                <li class="element__item">
+                  Pour <strong class="keyword">Enedis</strong> : maintenance d’une app <strong class="keyword">Ionic</strong> <strong class="keyword">iOS</strong> &amp; <strong class="keyword">Android</strong>
+                  <a href="https://play.google.com/store/apps/details?id=com.erdf.clients.amescotes">play.google.com</a>
+                </li>
+                <li class="element__item">Pour <strong class="keyword">Verlingue Immobilier</strong> : création d’un espace de souscription pro</li>
+                <li class="element__item">Pour <strong class="keyword">Système U</strong> : création d’une app de gestion sur tablette pour les employés</li>
+                <li class="element__item element__item--impact">Impact : 5 front-ends clients livrés en 20 mois, 2 applications publiées sur l’App Store et Google Play Store</li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">TypeScript</span><span class="tags__item">Angular 4</span><span class="tags__item">AngularJS</span><span class="tags__item">Vue 2</span><span class="tags__item">Ionic</span
+                  ><span class="tags__item">HTML 5</span><span class="tags__item">CSS 3</span><span class="tags__item">Sass</span><span class="tags__item">Git</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Amdocs</span>Développeur Web – Lead Front-end</h3>
+                  <p class="element__subtitle"><span>Rennes</span><span>CDI · Sur site</span><span>avr. 2014 → sept. 2016</span></p>
+                </div>
+                <img alt="Amdocs" class="element__logo" src="icons/logo-amdocs.svg" />
+              </div>
+              <p class="element__text">Salarié de <strong class="keyword">Niji</strong> et en mission pour leur client <strong class="keyword">Amdocs</strong>, j’ai pris en charge le développement Front-End de plusieurs projets.</p>
+              <ul class="element__list">
+                <li class="element__item">Responsable Front-End sur le projet principal qui a duré 2 ans</li>
+                <li class="element__item">Réalisation de différentes applications web internes visant à gérer un catalogue d’offres télécoms</li>
+                <li class="element__item">Tests unitaires, tests <strong class="keyword">E2E</strong> via <strong class="keyword">PhantomJS</strong> et rapport de couverture</li>
+                <li class="element__item">Envoyé en renfort d’urgence pendant 6 semaines à Sydney, en Australie, pour aider l’opérateur télécom <strong class="keyword">Optus</strong> à livrer la refonte de son site</li>
+                <li class="element__item element__item--impact">Impact : temps de manipulation des offres réduit sur 2 ans, bonne adoption par les utilisateurs internes, stabilité sécurisée par les tests</li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">JavaScript</span><span class="tags__item">Backbone.js</span><span class="tags__item">jQuery</span><span class="tags__item">RequireJS</span><span class="tags__item">HTML 5</span
+                  ><span class="tags__item">CSS 3</span><span class="tags__item">Sass</span><span class="tags__item">Perforce</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Ouest-France</span>Développeur Web – Lead Front-end</h3>
+                  <p class="element__subtitle"><span>Rennes</span><span>CDI · Sur site</span><span>nov. 2012 → mars 2014</span></p>
+                </div>
+                <img alt="Ouest-France" class="element__logo" src="icons/logo-ouest-france.svg" />
+              </div>
+              <ul class="element__list">
+                <li class="element__item">
+                  Responsable front-end de la refonte en <strong class="keyword">Drupal 7</strong> d’un site d’information national <a href="https://www.ouest-france.fr">ouest-france.fr</a>, 3 thèmes livrés (public, back-office rédaction et
+                  mobile), temps de chargement et référencement optimisés
+                </li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">JavaScript</span><span class="tags__item">jQuery</span><span class="tags__item">Bootstrap 2</span><span class="tags__item">Drupal 7</span><span class="tags__item">Google Analytics</span
+                  ><span class="tags__item">Google Tag Manager</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Alyotech</span>Développeur Web</h3>
+                  <p class="element__subtitle"><span>Rennes</span><span>Contrat pro.</span><span>oct. 2011 → oct. 2012</span></p>
+                </div>
+                <img alt="Alyotech" class="element__logo" src="icons/logo-alyotech.svg" />
+              </div>
+              <ul class="element__list">
+                <li class="element__item">
+                  Refonte du site SINOE pour l’<strong class="keyword">ADEME</strong> <a href="https://www.sinoe.org">sinoe.org</a>, pages et modules front, certification d’accessibilité <strong class="keyword">AccessiWeb</strong> Bronze
+                  obtenue (WCAG / WAI-ARIA)
+                </li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">Zend PHP</span><span class="tags__item">JavaScript</span><span class="tags__item">jQuery 1.4</span><span class="tags__item">XHTML 1.0</span><span class="tags__item">CSS 2</span
+                  ><span class="tags__item">SVN</span>
+                </div>
+              </div>
+            </article>
+            <article class="element">
+              <div class="element__header">
+                <div class="element__head">
+                  <h3 class="element__title"><span class="element__company">Jouve</span>Développeur Web</h3>
+                  <p class="element__subtitle"><span>Mayenne</span><span>Contrat d’alternance</span><span>sept. 2009 → sept. 2011</span></p>
+                </div>
+                <img alt="Jouve" class="element__logo" src="icons/logo-jouve.svg" />
+              </div>
+              <ul class="element__list">
+                <li class="element__item">
+                  Pages et modules livrés en production sur 2 ans d’alternance pour deux clients du secteur public, l’Agence Nationale des Titres Sécurisés <a href="https://ants.gouv.fr">ants.gouv.fr</a> et la fédération des clubs de la
+                  Défense
+                </li>
+              </ul>
+              <div class="environment">
+                <div class="tags">
+                  <span class="tags__item">CakePHP</span><span class="tags__item">Symfony</span><span class="tags__item">JavaScript</span><span class="tags__item">HTML</span><span class="tags__item">CSS 2</span
+                  ><span class="tags__item">SVN</span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+        <aside class="columns__aside">
+          <section class="widget">
+            <h2 class="widget__title">Compétences</h2>
+            <article class="element">
+              <h3 class="element__title">Front-end</h3>
+              <ul class="element__list">
+                <li class="element__item">TypeScript, JavaScript, ES6+</li>
+                <li class="element__item">React, Next.js, Material-UI</li>
+                <li class="element__item">Vue 2, Vue 3, Nuxt, Vuetify</li>
+                <li class="element__item">Angular, AngularJS, VanillaJS</li>
+                <li class="element__item">Tailwind CSS, ShadCN, Radix</li>
+                <li class="element__item">Sass, Scss, BEM, CSS 3, HTML 5</li>
+                <li class="element__item">Design systems, bibliothèques de composants</li>
+                <li class="element__item">Web Components, PWA, SPA, SSR, SSG</li>
+              </ul>
+            </article>
+            <article class="element">
+              <h3 class="element__title">Tests &amp; qualité</h3>
+              <ul class="element__list">
+                <li class="element__item">Vitest, Jest, Mocha</li>
+                <li class="element__item">Cypress, Playwright, Storybook</li>
+                <li class="element__item">TDD, BDD, Gherkin</li>
+                <li class="element__item">ESLint, Oxlint, Biome, Prettier</li>
+                <li class="element__item">Couverture de code, Google Lighthouse</li>
+                <li class="element__item">Accessibilité, WCAG, RGAA</li>
+                <li class="element__item">Core Web Vitals, optimisation des performances</li>
+              </ul>
+            </article>
+            <article class="element">
+              <h3 class="element__title">Back-end &amp; données</h3>
+              <ul class="element__list">
+                <li class="element__item">Node.js, Express.js, NestJS</li>
+                <li class="element__item">REST, JSON, Zod</li>
+                <li class="element__item">PHP, MySQL, SQLite</li>
+              </ul>
+            </article>
+            <article class="element">
+              <h3 class="element__title">Outillage &amp; industrialisation</h3>
+              <ul class="element__list">
+                <li class="element__item">Vite, EsBuild, Webpack, Parcel</li>
+                <li class="element__item">Pnpm, Npm, Yarn, Bun</li>
+                <li class="element__item">Monorepos, Turbo, Nx, Artifactory</li>
+                <li class="element__item">Git, GitFlow, GitHub, GitLab</li>
+                <li class="element__item">CI/CD, GitHub Actions</li>
+              </ul>
+            </article>
+            <article class="element">
+              <h3 class="element__title">Encadrement &amp; méthodes</h3>
+              <ul class="element__list">
+                <li class="element__item">Direction technique, architecture &amp; standards</li>
+                <li class="element__item">Revue de code, mentorat, tutorat</li>
+                <li class="element__item">Recrutement &amp; entretiens techniques</li>
+                <li class="element__item">Scrum, cérémonies agiles</li>
+                <li class="element__item">Écoute active, Programmation Neuro-linguistique (PNL)</li>
+              </ul>
+            </article>
+          </section>
+          <section class="widget">
+            <h2 class="widget__title">Langues</h2>
+            <article class="element">
+              <h3 class="element__title">Français</h3>
+              <p class="element__subtitle"><span>Langue maternelle</span></p>
+            </article>
+            <article class="element">
+              <h3 class="element__title">Anglais</h3>
+              <p class="element__subtitle"><span>Capacité professionnelle complète : technique et conversationnelle, pratiquée au quotidien en contexte international</span></p>
+            </article>
+          </section>
+          <section class="widget">
+            <h2 class="widget__title">Centres d'intérêt</h2>
+            <article class="element">
+              <h3 class="element__title">Loisirs</h3>
+              <ul class="element__list">
+                <li class="element__item">Bénévolat, accompagnement</li>
+                <li class="element__item">Projets personnels</li>
+                <li class="element__item">Photo, macro et retouche</li>
+                <li class="element__item">Création de design/logos</li>
+                <li class="element__item">Randonnée, marche, vélo</li>
+                <li class="element__item">Cinéma, films et quelques séries</li>
+              </ul>
+            </article>
+          </section>
+          <section class="widget">
+            <h2 class="widget__title">Formations</h2>
+            <article class="element">
+              <h3 class="element__title"><a href="https://iia-formation.fr">Master Manager en Ingénierie Informatique (alternance, titre RNCP niveau I)</a></h3>
+              <p class="element__subtitle"><span>IIA Laval</span><span>sept. 2010 → sept. 2011</span></p>
+              <ul class="element__list">
+                <li class="element__item">Programmation web</li>
+                <li class="element__item">Gestion de projet</li>
+                <li class="element__item">C#</li>
+                <li class="element__item">SQL Server</li>
+                <li class="element__item">Pattern MVC</li>
+              </ul>
+            </article>
+            <article class="element">
+              <h3 class="element__title"><a href="https://iia-formation.fr">Licence Ingénierie Informatique Réseaux et Télécoms (alternance)</a></h3>
+              <p class="element__subtitle"><span>IIA Laval</span><span>sept. 2009 → sept. 2010</span></p>
+              <ul class="element__list">
+                <li class="element__item">Java</li>
+                <li class="element__item">Langage C</li>
+                <li class="element__item">XML</li>
+                <li class="element__item">UML 2</li>
+                <li class="element__item">SGBD</li>
+                <li class="element__item">TCP/IP</li>
+                <li class="element__item">UNIX</li>
+                <li class="element__item">Télécoms SIP</li>
+                <li class="element__item">Gestion de projet</li>
+              </ul>
+            </article>
+            <article class="element">
+              <h3 class="element__title"><a href="http://www.iut-laval.univ-lemans.fr">DUT Service et Réseaux de Communication</a></h3>
+              <p class="element__subtitle"><span>IUT Laval</span><span>sept. 2007 → sept. 2009</span></p>
+              <ul class="element__list">
+                <li class="element__item">Communication</li>
+                <li class="element__item">Design</li>
+                <li class="element__item">Photographie</li>
+                <li class="element__item">PHP</li>
+                <li class="element__item">Java</li>
+                <li class="element__item">JavaScript</li>
+                <li class="element__item">XHTML</li>
+                <li class="element__item">CSS</li>
+              </ul>
+            </article>
+            <article class="element">
+              <h3 class="element__title">Bac Scientifique - Spécialité Mathématique</h3>
+              <p class="element__subtitle"><span>Lycée Montesquieu</span><span>sept. 2005 → sept. 2007</span></p>
+            </article>
+          </section>
+          <section class="widget">
+            <h2 class="widget__title">Certifications</h2>
+            <article class="element">
+              <h3 class="element__title"><a href="https://astree-institut.fr/produit/formations-lecoute-active-et-la-relation-daide-niveau-1-sensibilisation/">Écoute active</a></h3>
+              <p class="element__subtitle"><span>Institut ASTREE</span><span>juil. 2024</span></p>
+            </article>
+            <article class="element">
+              <h3 class="element__title"><a href="https://www.unow.fr/formations/tuteur-en-entreprise/">Tuteur en entreprise</a></h3>
+              <p class="element__subtitle"><span>Unow</span><span>août 2020</span></p>
+            </article>
+            <article class="element">
+              <h3 class="element__title"><a href="https://paulpyronnetinstitut.com/formations/pnl/technicien-pnl/">Technicien PNL</a></h3>
+              <p class="element__subtitle"><span>Paul Pyronnet Institut</span><span>août 2011</span></p>
+            </article>
+          </section>
+        </aside>
+      </div>
+      <div class="full">
+        <section class="widget">
+          <h2 class="widget__title">Bénévolat</h2>
+          <article class="element">
+            <div class="element__header">
+              <div class="element__head">
+                <h3 class="element__title"><span class="element__company">ExplorJob</span><a href="https://explorjob.com">Bénévole</a></h3>
+                <p class="element__subtitle"><span>sept. 2022 → Aujourd'hui</span></p>
+              </div>
+              <img alt="ExplorJob" class="element__logo" src="icons/logo-explorjob.svg" />
+            </div>
+            <p class="element__text">
+              J’accompagne des étudiants ainsi que des personnes déjà en poste souhaitant se reconvertir, pour les aider à devenir développeur web ou simplement découvrir le métier. Les échanges se font en visio, je réponds aux questions :
+              à quoi ressemble vraiment une journée de développeur, quelles études comptent, quelles compétences et quel salaire viser, où se former. Je relis aussi leurs CV et je les accompagne dans leur recherche d’emploi.
+            </p>
+          </article>
+          <article class="element">
+            <div class="element__header">
+              <div class="element__head">
+                <h3 class="element__title"><span class="element__company">Dema1n.org</span><a href="https://dema1n.org">Bénévole</a></h3>
+                <p class="element__subtitle"><span>avr. 2022 → Aujourd'hui</span></p>
+              </div>
+              <img alt="Dema1n.org" class="element__logo" src="icons/logo-dema1n.svg" />
+            </div>
+            <p class="element__text">
+              J’accompagne plusieurs étudiants dans la construction de leur parcours professionnel et dans leurs choix face au marché de l’emploi. Je suis les mêmes personnes sur plusieurs mois ou années et je relis leurs CV et leurs
+              candidatures, mais la plupart du temps c’est un accompagnement humain avant d’être professionnel : les aider à traverser le stress, l’anxiété et le manque de confiance en soi, des fardeaux qui les bloquent ou les ralentissent.
+            </p>
+          </article>
+        </section>
+        <section class="widget widget--grid-3">
+          <h2 class="widget__title">Projets</h2>
+          <article class="element">
+            <h3 class="element__title"><a href="https://github.com/Shuunen/shuutils">Shuutils</a></h3>
+            <p class="element__subtitle"><span>Bibliothèque open source</span></p>
+            <p class="element__text">Bibliothèque d’utilitaires <strong class="keyword">TypeScript</strong> sans dépendance, environ 13 000 téléchargements par an.</p>
+            <div class="tags"><span class="tags__item">TypeScript</span><span class="tags__item">Vitest</span><span class="tags__item">Zéro dépendance</span></div>
+          </article>
+          <article class="element">
+            <h3 class="element__title"><a href="https://github.com/Shuunen/vue-image-compare">Vue-image-compare</a></h3>
+            <p class="element__subtitle"><span>Composant open source</span></p>
+            <p class="element__text">Composant <strong class="keyword">Vue 3</strong> pour comparer deux images avec un curseur, mon projet open source le plus étoilé.</p>
+            <div class="tags"><span class="tags__item">Vue 3</span><span class="tags__item">Composant</span><span class="tags__item">CSS</span></div>
+          </article>
+          <article class="element">
+            <h3 class="element__title"><a href="https://github.com/Shuunen/what-now">What-now</a></h3>
+            <p class="element__subtitle"><span>Application web personnelle</span></p>
+            <p class="element__text">Coach de tâches minimaliste en <strong class="keyword">PWA</strong>, utilisable <strong class="keyword">hors ligne</strong> avec un backend <strong class="keyword">Convex</strong> optionnel.</p>
+            <div class="tags"><span class="tags__item">React 19</span><span class="tags__item">PWA</span><span class="tags__item">Convex</span></div>
+          </article>
+          <article class="element">
+            <h3 class="element__title"><a href="https://github.com/Shuunen/invest">Invest</a></h3>
+            <p class="element__subtitle"><span>Application web personnelle</span></p>
+            <p class="element__text">Suivi et simulateur de portefeuille ETF, <strong class="keyword">PWA</strong> utilisable <strong class="keyword">hors ligne</strong>, typé et testé de bout en bout.</p>
+            <div class="tags"><span class="tags__item">React 19</span><span class="tags__item">TypeScript</span><span class="tags__item">Playwright</span></div>
+          </article>
+          <article class="element">
+            <h3 class="element__title"><a href="https://github.com/Shuunen/stuff-finder">Stuff-finder</a></h3>
+            <p class="element__subtitle"><span>Application web personnelle</span></p>
+            <p class="element__text">Application web responsive pour indexer et ranger mes affaires avec une DB et des QR codes.</p>
+            <div class="tags"><span class="tags__item">TypeScript</span><span class="tags__item">PWA</span><span class="tags__item">React</span></div>
+          </article>
+          <article class="element">
+            <h3 class="element__title"><a href="https://github.com/Shuunen/folio">Folio</a></h3>
+            <p class="element__subtitle"><span>Projet personnel</span></p>
+            <p class="element__text">Le projet derrière ce CV : des données <strong class="keyword">JSON Resume</strong> validées par mon CLI, rendues en <strong class="keyword">HTML</strong> et <strong class="keyword">PDF</strong>.</p>
+            <div class="tags"><span class="tags__item">TypeScript</span><span class="tags__item">JSON Resume</span><span class="tags__item">Vitest</span></div>
+          </article>
+          <p class="widget__note">Ces projets et bien d’autres sont sur mon profil GitHub : <a href="https://github.com/Shuunen">github.com/Shuunen</a></p>
+        </section>
+        <section class="widget widget--grid-2">
+          <h2 class="widget__title">Recommandations</h2>
+          <p class="widget__note">Mes recommandations sont sur mon profil LinkedIn : <a href="https://www.linkedin.com/in/romain-racamier">linkedin.com/in/romain-racamier</a></p>
+        </section>
+      </div>
+      <footer class="footer">Mis à jour en août 2026</footer>
+    </main>
+  </body>
+</html>

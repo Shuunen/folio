@@ -1,0 +1,384 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "birthDate": "1989",
+    "email": "romain.racamier@gmail.com",
+    "hasDrivingLicense": true,
+    "image": "https://i.imgur.com/1YZctO6.jpeg",
+    "label": "Tech Lead – Senior Front-end Engineer",
+    "location": {
+      "city": "Strasbourg",
+      "countryCode": "FR",
+      "postalCode": "67100",
+      "region": "Grand Est"
+    },
+    "name": "Romain Racamier-Lafon",
+    "phone": "+33 6 58 47 67 88",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "url": "https://github.com/Shuunen",
+        "username": "Shuunen"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/romain-racamier",
+        "username": "Romain-Racamier"
+      },
+      {
+        "network": "HumaCode",
+        "url": "https://humacode.fr",
+        "username": "HumaCode"
+      }
+    ],
+    "summary": "Tech Lead and front-end specialist, 15 years of experience across 5 consecutive lead roles. I take over front-ends that have drifted — Vue 2 to Vue 3, JavaScript to TypeScript, AngularJS to React — and hand back a shared component library, tools and a test suite the team can maintain without me. I have led teams of 2 to 8 developers at Eu-Lisa, Amundi WeSave and Collectif Energie: architecture, technical standards, code review, recruitment and mentoring, a role I also fill as a volunteer for people retraining into the field. Maintainer of multiple open-source projects."
+  },
+  "certificates": [
+    {
+      "date": "2024-07-01",
+      "issuer": "Institut ASTREE",
+      "name": "Active listening",
+      "url": "https://astree-institut.fr/produit/formations-lecoute-active-et-la-relation-daide-niveau-1-sensibilisation/"
+    },
+    {
+      "credentialId": "270924187656144684",
+      "date": "2020-08-14",
+      "issuer": "Unow",
+      "name": "Business tutor",
+      "url": "https://www.unow.fr/formations/tuteur-en-entreprise/"
+    },
+    {
+      "date": "2011-08-16",
+      "issuer": "Paul Pyronnet Institut",
+      "name": "NLP Practitioner",
+      "url": "https://paulpyronnetinstitut.com/formations/pnl/technicien-pnl/"
+    }
+  ],
+  "education": [
+    {
+      "courses": ["Web programming", "Project management", "C#", "SQL Server", "MVC pattern"],
+      "endDate": "2011-09-01",
+      "institution": "IIA Laval",
+      "startDate": "2010-09-01",
+      "studyType": "Master, Computer Engineering Manager (work-study, French RNCP level I)",
+      "url": "https://iia-formation.fr"
+    },
+    {
+      "courses": ["Java", "C", "XML", "UML 2", "Databases", "TCP/IP", "UNIX", "SIP telecoms", "Project management"],
+      "endDate": "2010-09-01",
+      "institution": "IIA Laval",
+      "startDate": "2009-09-01",
+      "studyType": "Bachelor in Computer Engineering, Networks and Telecoms (work-study)",
+      "url": "https://iia-formation.fr"
+    },
+    {
+      "courses": ["Communication", "Design", "Photography", "PHP", "Java", "JavaScript", "XHTML", "CSS"],
+      "endDate": "2009-09-01",
+      "institution": "IUT Laval",
+      "startDate": "2007-09-01",
+      "studyType": "DUT Communication Services and Networks",
+      "url": "http://www.iut-laval.univ-lemans.fr"
+    },
+    {
+      "area": "Mathematics Specialty",
+      "endDate": "2007-09-01",
+      "institution": "Montesquieu High School",
+      "startDate": "2005-09-01",
+      "studyType": "Scientific Baccalaureate"
+    }
+  ],
+  "interests": [
+    {
+      "keywords": ["Volunteering, support", "Personal projects", "Photo, macro and digital editing", "Design/logo creation", "Hiking, walking, cycling", "Cinema, movies and a few series"],
+      "name": "Hobbies"
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Mother tongue",
+      "language": "French"
+    },
+    {
+      "fluency": "Full professional proficiency: technical and conversational, used daily in international teams",
+      "language": "English"
+    }
+  ],
+  "meta": {
+    "language": "en",
+    "lastModified": "2026-08-21T00:00:00",
+    "version": "1.0.0"
+  },
+  "projects": [
+    {
+      "description": "Dependency-free TypeScript utility library I have maintained for years, 13,000 downloads a year.",
+      "keywords": ["TypeScript", "Vitest", "Zero dependency"],
+      "name": "Shuutils",
+      "type": "Open-source library",
+      "url": "https://github.com/Shuunen/shuutils"
+    },
+    {
+      "description": "Vue 3 component to compare two images with a slider, my most starred open-source project.",
+      "keywords": ["Vue 3", "Component", "CSS"],
+      "name": "Vue-image-compare",
+      "type": "Open-source component",
+      "url": "https://github.com/Shuunen/vue-image-compare"
+    },
+    {
+      "description": "Minimalist task coach PWA, offline first with an optional Convex backend to synchronize multiple devices.",
+      "keywords": ["React 19", "PWA", "Convex"],
+      "name": "What-now",
+      "type": "Personal web app",
+      "url": "https://github.com/Shuunen/what-now"
+    },
+    {
+      "description": "Offline-first ETF portfolio tracker and simulator, PWA & local persistence, fully typed and tested.",
+      "keywords": ["React 19", "TypeScript", "Playwright"],
+      "name": "Invest",
+      "type": "Personal web app",
+      "url": "https://github.com/Shuunen/invest"
+    },
+    {
+      "description": "Responsive web app to index, track and find my belongings, paired with an online DB and QR codes.",
+      "keywords": ["TypeScript", "PWA", "React"],
+      "name": "Stuff-finder",
+      "type": "Personal web app",
+      "url": "https://github.com/Shuunen/stuff-finder"
+    },
+    {
+      "description": "The project behind this resume: JSON Resume data validated by my own CLI, rendered to HTML and PDF.",
+      "keywords": ["TypeScript", "JSON Resume", "Vitest"],
+      "name": "Folio",
+      "type": "Personal project",
+      "url": "https://github.com/Shuunen/folio"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "TypeScript, JavaScript, ES6+",
+        "React, Next.js, Material-UI",
+        "Vue 2, Vue 3, Nuxt, Vuetify",
+        "Angular, AngularJS, VanillaJS",
+        "Tailwind CSS, ShadCN, Radix",
+        "Sass, Scss, BEM, CSS 3, HTML 5",
+        "Design systems, component libraries",
+        "Web Components, PWA, SPA, SSR, SSG"
+      ],
+      "name": "Front-end"
+    },
+    {
+      "keywords": [
+        "Vitest, Jest, Mocha",
+        "Cypress, Playwright, Storybook",
+        "TDD, BDD, Gherkin",
+        "ESLint, Oxlint, Biome, Prettier",
+        "Code coverage, Google Lighthouse",
+        "Accessibility, WCAG, RGAA",
+        "Core Web Vitals, performance optimization"
+      ],
+      "name": "Testing & quality"
+    },
+    {
+      "keywords": ["Node.js, Express.js, NestJS", "REST, JSON, Zod", "PHP, MySQL, SQLite"],
+      "name": "Back-end & data"
+    },
+    {
+      "keywords": ["Vite, EsBuild, Webpack, Parcel", "Pnpm, Npm, Yarn, Bun", "Monorepos, Turbo, Nx, Artifactory", "Git, GitFlow, GitHub, GitLab", "CI/CD, GitHub Actions"],
+      "name": "Tooling & delivery"
+    },
+    {
+      "keywords": ["Technical direction, architecture & standards", "Code review, mentoring, tutoring", "Recruitment & technical interviews", "Scrum, Agile ceremonies", "Active listening, Neuro-Linguistic Programming (NLP)"],
+      "name": "Leadership & methods"
+    }
+  ],
+  "volunteer": [
+    {
+      "image": "icons/logo-explorjob.svg",
+      "organization": "ExplorJob",
+      "position": "Volunteer",
+      "startDate": "2022-09-30",
+      "summary": "I guide students as well as working professionals looking for a career change, helping them become web developers or simply discover the job. The exchanges happen over video calls, where I answer their questions: what a developer’s day really looks like, which studies matter, the skills and salary to aim for, where to learn. I also review their CVs and support them through the job hunt.",
+      "url": "https://explorjob.com"
+    },
+    {
+      "image": "icons/logo-dema1n.svg",
+      "organization": "Dema1n.org",
+      "position": "Volunteer",
+      "startDate": "2022-04-01",
+      "summary": "I guide several students in navigating their career paths and making informed decisions in the job market. I follow the same people over months or years, reviewing their CVs and applications, but most of the time the support is human before it is professional: helping them through the stress, anxiety and self-doubt that hold them back or slow them down.",
+      "url": "https://dema1n.org"
+    }
+  ],
+  "work": [
+    {
+      "description": "Freelance · On-site",
+      "highlights": [
+        "Tech Lead in a team of 8 developers, participated in recruitment",
+        "Built two new web applications supporting Europe-wide processes",
+        "Created a shared component library and a set of internal tools, released to a private Artifactory registry",
+        "Structured the codebase across several repositories, including pnpm workspace monorepos driven by Turbo",
+        "Defined the architecture and technical standards, reviewed code and mentored the team",
+        "Impact: two applications delivered, unified UX/UI through the shared library, unit and E2E test coverage",
+        "Environment: TypeScript, React, ShadCN, Tailwind CSS, Zod, Vite, Vitest, Storybook"
+      ],
+      "image": "icons/logo-eu-lisa.svg",
+      "location": "Strasbourg",
+      "name": "Eu-Lisa",
+      "position": "Web Developer – Tech Lead",
+      "startDate": "2025-03-01",
+      "summary": "The European Union agency for large-scale IT systems, needed two new web applications to handle Europe-wide processes. I built them alongside a shared component library and tooling, distributed across several repositories through an internal registry."
+    },
+    {
+      "description": "Freelance · Remote",
+      "endDate": "2025-02-01",
+      "highlights": [
+        "Tech Lead in a team of 2 people",
+        "Migrated the whole application from Vue 2 to Vue 3",
+        "Created a component catalog to remove duplication and speed up UI development",
+        "Developed new features and fixed bugs on the product",
+        "Set up the Cypress E2E test suite to secure non-regression",
+        "Impact: Vue 2 to Vue 3 migration completed within the 3-month mission on a 5-year-old application, non-regression secured by E2E tests",
+        "Environment: TypeScript, Vue 3, Vuetify, Vite, Cypress, Node.js, ESLint, Git, Agile"
+      ],
+      "image": "icons/logo-batvoice.svg",
+      "location": "Paris",
+      "name": "Batvoice AI",
+      "position": "Web Developer – Tech Lead",
+      "startDate": "2024-11-01",
+      "summary": "An artificial intelligence product company, had a front-end running on Vue 2, which was reaching end of life. As tech lead, I led the migration to Vue 3 and put the practices in place to keep the application maintainable."
+    },
+    {
+      "description": "Freelance · Hybrid",
+      "endDate": "2024-09-01",
+      "highlights": [
+        "Tech Lead in a team of 6 people",
+        "Developed new features and maintained a Nuxt 3 application",
+        "Created a monorepo to speed up development, centralize libraries, and align practices",
+        "Migrated existing sites and libraries to the monorepo",
+        "Built a React component library based on ShadCN, Radix UI & Tailwind CSS",
+        "Implemented and participated in the recruitment process",
+        "Impact: sites and libraries centralized in a single monorepo, practices aligned across a team of 6, unified UX / UI, improved developer experience",
+        "Environment: TypeScript, Nx, Vue 3, Nuxt 3, React 18, NestJS, Vite, Vitest, Tailwind"
+      ],
+      "image": "icons/logo-collectif-energie.svg",
+      "location": "Nantes",
+      "name": "Collectif Energie",
+      "position": "Web Developer – Tech Lead",
+      "startDate": "2024-01-01",
+      "summary": "An energy broker, entrusted me with the tech lead role to support and structure the technical team through the creation of a monorepo."
+    },
+    {
+      "description": "Full-time · Hybrid",
+      "endDate": "2023-12-01",
+      "highlights": [
+        "Co-Tech Lead in a team of 4 people",
+        "Migrated a Nuxt project from JS & Vue 2 to TypeScript & Vue 2.7",
+        "Developed new features and maintained the main application",
+        "Created a custom ESLint plugin",
+        "Participated in the recruitment process",
+        "Impact: main application fully typed, performance improvements, easier maintenance for a team of 4",
+        "Environment: TypeScript, Vue 2, Vue 2.7, Nuxt 2, HTML 5, CSS 3, Tailwind CSS, Node.js"
+      ],
+      "image": "icons/logo-amundi.svg",
+      "location": "Paris",
+      "name": "Amundi WeSave",
+      "position": "Web Developer – Co-Tech Lead",
+      "startDate": "2022-09-01",
+      "summary": "A company specialized in wealth management, wanted to modernize its main application to handle contracts. I led the migration of the front-end stack to more recent technologies, while supervising the ongoing development and maintenance of the application."
+    },
+    {
+      "description": "Full-time · On-site",
+      "endDate": "2022-09-01",
+      "highlights": [
+        "Built a component library to centralize the UI/UX of all current and future web projects",
+        "Redesigned the Lyf.eu website, migrating from an old AngularJS stack to a fresh Nuxt SSG using Vue & Tailwind CSS",
+        "Developed new features and maintained the internal framework used to manage Lyf Pay application data",
+        "Mentored and trained my intern on an activity tracking project",
+        "Impact: consistent UI/UX across projects, reduced development time, client satisfaction with the new processes, my mentee got hired",
+        "Environment: TypeScript, Angular 6 to 13, Vue 2, Nuxt 2, Sass, Tailwind CSS, Node.js"
+      ],
+      "image": "icons/logo-euro-information.svg",
+      "location": "Strasbourg",
+      "name": "Euro Information",
+      "position": "Web Developer – Tech Lead & Mentor",
+      "startDate": "2018-09-01",
+      "summary": "Employed by Inetum and on assignment for their client Euro Information, I took charge of the technical direction of several strategic web projects, with the mission of centralizing the UI/UX of future projects through a unified component library, and of redesigning the Lyf.eu website with modern technologies. In this context, I also acted as a tutor to support the training of a junior developer."
+    },
+    {
+      "description": "Full-time · On-site",
+      "endDate": "2018-06-01",
+      "highlights": [
+        "For Auchan: created a chatbot with DialogFlow for online drive visitors",
+        "For Cipav: redesigned the extranet in Angular https://espace-personnel.lacipav.fr",
+        "For Enedis: maintained Ionic application for iOS & Android https://play.google.com/store/apps/details?id=com.erdf.clients.amescotes",
+        "For Verlingue Immobilier: created a professional subscription portal",
+        "For Système U: created a management web app on tablet for drive employees",
+        "Impact: 5 client front-ends delivered in 20 months across retail, insurance, energy and real estate, 2 applications published on Apple and Google stores",
+        "Environment: TypeScript, Angular 4, AngularJS, Vue 2, Ionic, HTML 5, CSS 3, Sass, Git"
+      ],
+      "image": "icons/logo-niji.svg",
+      "location": "Nantes",
+      "name": "Niji",
+      "position": "Web Developer – Tech Lead",
+      "startDate": "2016-10-01",
+      "summary": "At Niji, a digital agency in Nantes, I delivered five client front-ends in twenty months, across retail, insurance, energy and real estate."
+    },
+    {
+      "description": "Full-time · On-site",
+      "endDate": "2016-09-01",
+      "highlights": [
+        "Front-end lead on the main project which lasted 2 years",
+        "Creation of web applications aimed at managing a catalog of telecom offers",
+        "Setting up unit tests, E2E tests via PhantomJS and the coverage report",
+        "Sent to Sydney, Australia for 6 weeks as emergency reinforcement to help the telecom operator Optus ship the rework of their website",
+        "Impact: reduced time spent handling offers over a 2-year project, positive adoption by internal users, stability secured by unit and E2E tests",
+        "Environment: JavaScript, Backbone.js, jQuery, RequireJS, HTML 5, CSS 3, Sass, Perforce"
+      ],
+      "image": "icons/logo-amdocs.svg",
+      "location": "Rennes",
+      "name": "Amdocs",
+      "position": "Web Developer – Front-end Lead",
+      "startDate": "2014-04-01",
+      "summary": "Employed by Niji and on assignment for their client Amdocs, I took charge of the front-end development of a main project aimed at optimizing the management of a telecom offer catalog."
+    },
+    {
+      "description": "Full-time · On-site",
+      "endDate": "2014-03-01",
+      "highlights": [
+        "Front-end lead on the Drupal 7 redesign of a national news website https://www.ouest-france.fr, 3 themes shipped (public, editorial back-office and mobile), loading times and SEO optimized",
+        "Environment: JavaScript, jQuery, Bootstrap 2, Drupal 7, Google Analytics, Google Tag Manager"
+      ],
+      "image": "icons/logo-ouest-france.svg",
+      "location": "Rennes",
+      "name": "Ouest-France",
+      "position": "Web Developer – Front-end Lead",
+      "startDate": "2012-11-01"
+    },
+    {
+      "description": "Professional training contract",
+      "endDate": "2012-10-01",
+      "highlights": [
+        "Redesign of the SINOE website for ADEME https://www.sinoe.org, pages and modules, AccessiWeb Bronze accessibility certification obtained (WCAG / WAI-ARIA)",
+        "Environment: Zend PHP, JavaScript, jQuery 1.4, XHTML 1.0, CSS 2, SVN"
+      ],
+      "image": "icons/logo-alyotech.svg",
+      "location": "Rennes",
+      "name": "Alyotech",
+      "position": "Web Developer",
+      "startDate": "2011-10-01"
+    },
+    {
+      "description": "Apprenticeship · Work-study",
+      "endDate": "2011-09-01",
+      "highlights": [
+        "Pages and modules delivered to production over 2 years of work-study for two public-sector clients, the National Agency for Secure Documents https://ants.gouv.fr and the Defense clubs federation",
+        "Environment: CakePHP, Symfony, JavaScript, HTML, CSS 2, SVN"
+      ],
+      "image": "icons/logo-jouve.svg",
+      "location": "Mayenne",
+      "name": "Jouve",
+      "position": "Web Developer",
+      "startDate": "2009-09-01"
+    }
+  ]
+}
