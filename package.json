@@ -66,7 +66,8 @@
     "test": "turbo run test:unit",
     "test:unit": "vitest run --coverage && echo test:unit completed successfully || (echo Please fix test errors and run pnpm run test:unit to check for remaining test issues && exit 1)",
     "test:update": "vitest run --update && echo test:update completed successfully",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "up:deps": "pnpm update --latest && echo up:deps completed successfully"
   },
   "type": "module",
   "version": "5.0.0"
