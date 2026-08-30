@@ -40,5 +40,6 @@
     "activityBar.background": "#382258",
     "titleBar.activeBackground": "#4E2F7B",
     "titleBar.activeForeground": "#FDFCFE"
-  }
+  },
+  "js/ts.experimental.useTsgo": false
 }

@@ -1,4 +1,5 @@
 allowBuilds:
+  esbuild: true
   puppeteer: true
 
 packages:
@@ -13,6 +14,7 @@ catalog:
   '@vitest/coverage-v8': ^4.1.11
   ajv: ^8.20.0
   ajv-formats: ^3.0.1
+  astro: ^7.2.6
   jsonresume-theme-berlin-grid: ^0.2.5
   jsonresume-theme-modern-classic: ^1.1.4
   oxfmt: ^0.59.0
@@ -27,3 +29,7 @@ catalog:
   turbo: ^2.10.11
   typescript: ^7.0.2
   vitest: ^4.1.11
+
+minimumReleaseAgeExclude:
+  - '@astrojs/markdown-satteri@0.3.8'
+  - astro@7.2.6

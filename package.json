@@ -2,6 +2,9 @@
   "$schema": "https://json.schemastore.org/package.json",
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/folio/issues",
+  "dependencies": {
+    "astro": "catalog:"
+  },
   "description": "My personal portfolio",
   "devDependencies": {
     "@jsonresume/jsonresume-theme-tokyo-modernist": "catalog:",
@@ -43,16 +46,20 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
+    "astro": "astro",
+    "build:site": "astro build",
     "check": "turbo run lint:types lint:format lint:issues check:resume:custom check:resume:resumed test:unit && echo check success",
     "check:resume:custom": "node src/bin/json-resume-validator.cli.ts \"data/*.json\" || exit 1 && echo custom check success",
     "check:resume:resumed": "for file in data/*\"(JsonResume)\".json; do resumed validate \"$file\" || exit 1; done && echo resumed check success",
-    "dev": "serve dist/resumes -l 8089",
+    "dev": "astro dev",
+    "dev:resumes": "serve dist/resumes -l 8089",
     "lint": "turbo run lint:types lint:format lint:issues && echo lint completed successfully",
     "lint:format": "oxfmt --check && echo lint:format completed successfully || (echo Please run pnpm run lint:format:fix to automatically fix formatting issues && exit 1)",
     "lint:format:fix": "oxfmt --write && echo lint:format:fix completed successfully || (echo Please run pnpm run lint:format to check for remaining formatting issues && exit 1)",
     "lint:issues": "oxlint --type-aware --deny-warnings --report-unused-disable-directives && echo lint:issues completed successfully || (echo Please run pnpm run lint:issues:fix to automatically fix linting issues && exit 1)",
     "lint:issues:fix": "oxlint --fix --fix-suggestions --fix-dangerously --type-aware --deny-warnings --report-unused-disable-directives && echo lint:issues:fix completed successfully || (echo Please run pnpm run lint:issues to check for remaining linting issues && exit 1)",
     "lint:types": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && echo lint:types completed successfully || (echo Please fix type errors and run pnpm run lint:types to check for remaining type issues && exit 1)",
+    "preview:site": "astro preview",
     "render": "node src/bin/json-resume-render.cli.ts",
     "render:blue": "node src/bin/json-resume-render.cli.ts --theme blue-buzz",
     "render:blue:watch": "node --watch-path=src/themes/blue-buzz --watch-path=src/bin --watch-path=data src/bin/json-resume-render.cli.ts --theme blue-buzz",
