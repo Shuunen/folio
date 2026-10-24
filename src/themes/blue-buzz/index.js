@@ -107,7 +107,7 @@ export function parseKeywords(content) {
  */
 export function buildKeywordsRegex(keywords) {
   if (keywords.length === 0) return undefined
-  const alternatives = keywords.map(keyword => esc(keyword).replace(regexSpecialsRegex, String.raw`\$&`))
+  const alternatives = keywords.map(keyword => esc(keyword).replaceAll(regexSpecialsRegex, String.raw`\$&`))
   // the lookarounds keep "Niji" from matching inside a longer word like "Nijitech"
   return new RegExp(String.raw`(?<![\w-])(?:${alternatives.join('|')})(?![\w-])`, 'giu')
 }

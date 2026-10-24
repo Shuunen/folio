@@ -174,7 +174,7 @@ describe(typographyErrors, () => {
 
   it.each([['$schema'], ['email'], ['image'], ['language'], ['url']])('accepts a lowercase %s, which is an identifier rather than a sentence', key => {
     expect.hasAssertions()
-    expect(typographyErrors({ ...cleanResume, work: [{ name: 'Acme', position: 'Engineer', [key]: 'acme' }] })).toStrictEqual([])
+    expect(typographyErrors({ ...cleanResume, work: [{ [key]: 'acme', name: 'Acme', position: 'Engineer' }] })).toStrictEqual([])
   })
 
   it('accepts a lowercase language inside the languages section, not just in meta', () => {

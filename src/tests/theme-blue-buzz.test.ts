@@ -523,16 +523,16 @@ describe('empty entries', () => {
   })
 })
 
-describe('environment highlights', () => {
-  /**
-   * Render a single work entry with the given highlights
-   * @param highlights the `work[0].highlights` array
-   * @returns the rendered body, without its stylesheet
-   */
-  function renderHighlights(highlights: string[]) {
-    return body(render({ basics: { name: 'Ada Lovelace' }, work: [{ highlights, name: 'Analytical Engine Ltd', position: 'Lead' }] }))
-  }
+/**
+ * Render a single work entry with the given highlights
+ * @param highlights the `work[0].highlights` array
+ * @returns the rendered body, without its stylesheet
+ */
+function renderHighlights(highlights: string[]) {
+  return body(render({ basics: { name: 'Ada Lovelace' }, work: [{ highlights, name: 'Analytical Engine Ltd', position: 'Lead' }] }))
+}
 
+describe('environment highlights', () => {
   it('turns an english environment highlight into a row of tags', () => {
     expect.hasAssertions()
     const html = renderHighlights(['Environment: TypeScript, Vite, Git'])
@@ -609,16 +609,16 @@ describe('environment highlights', () => {
   })
 })
 
-describe('urls in free texts', () => {
-  /**
-   * Render a single work entry with the given highlight
-   * @param highlight the `work[0].highlights[0]` value
-   * @returns the rendered body, without its stylesheet
-   */
-  function renderHighlight(highlight: string) {
-    return body(render({ basics: { name: 'Ada Lovelace' }, work: [{ highlights: [highlight], name: 'Analytical Engine Ltd', position: 'Lead' }] }))
-  }
+/**
+ * Render a single work entry with the given highlight
+ * @param highlight the `work[0].highlights[0]` value
+ * @returns the rendered body, without its stylesheet
+ */
+function renderHighlight(highlight: string) {
+  return body(render({ basics: { name: 'Ada Lovelace' }, work: [{ highlights: [highlight], name: 'Analytical Engine Ltd', position: 'Lead' }] }))
+}
 
+describe('urls in free texts', () => {
   it('turns a url inside a highlight into a link labelled with its domain only', () => {
     expect.hasAssertions()
     expect(renderHighlight('Shipped the engine: https://www.acme.com/engine')).toContain('<li class="element__item">Shipped the engine: <a href="https://www.acme.com/engine">acme.com</a></li>')
@@ -683,16 +683,16 @@ describe('urls in free texts', () => {
   })
 })
 
-describe('keywords', () => {
-  /**
-   * Render a single work entry with the given highlight
-   * @param highlight the `work[0].highlights[0]` value
-   * @returns the rendered body, without its stylesheet
-   */
-  function renderKeywordHighlight(highlight: string) {
-    return body(render({ basics: { name: 'Ada Lovelace' }, work: [{ highlights: [highlight], position: 'Lead' }] }))
-  }
+/**
+ * Render a single work entry with the given highlight
+ * @param highlight the `work[0].highlights[0]` value
+ * @returns the rendered body, without its stylesheet
+ */
+function renderKeywordHighlight(highlight: string) {
+  return body(render({ basics: { name: 'Ada Lovelace' }, work: [{ highlights: [highlight], position: 'Lead' }] }))
+}
 
+describe('keywords', () => {
   it('keeps a keyword per line, drops the blanks and the comments', () => {
     expect.hasAssertions()
     expect(parseKeywords('# companies\nHumaCode\n\n  Niji  \n')).toStrictEqual(['HumaCode', 'Niji'])
