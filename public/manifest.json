@@ -1,0 +1,8 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "folio",
+  "short_name": "folio",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}

@@ -348,7 +348,7 @@ function widget(name, entries, modifier) {
  */
 function logo(image, name) {
   if (typeof image !== 'string' || image === '') return ''
-  return `<img alt="${esc(typeof name === 'string' ? name : '')}" class="element__logo" src="${esc(image)}">`
+  return `<img alt="${esc(typeof name === 'string' ? name : '')}" class="element__logo" height="34" src="${esc(image)}" width="80">`
 }
 
 /**
@@ -509,7 +509,7 @@ function header(basics, lang) {
   const location = [basics.location?.city, basics.location?.countryCode].filter(Boolean).join(', ')
   const contacts = [basics.email, basics.phone, location, formatAge(basics.birthDate, lang)]
   const links = [basics.url, ...(basics.profiles ?? []).map(profile => profile.url)]
-  const avatar = typeof basics.image === 'string' && basics.image !== '' ? `<img alt="${esc(basics.name)}" class="header__avatar" src="${esc(basics.image)}">` : ''
+  const avatar = typeof basics.image === 'string' && basics.image !== '' ? `<img alt="${esc(basics.name)}" class="header__avatar" height="110" src="${esc(basics.image)}" width="110">` : ''
   const lists = [contacts, links].map(infos => headerInfos(infos)).join('')
   return `<header class="header">${avatar}<div class="header__identity"><h1 class="header__name">${esc(basics.name)}</h1><p class="header__title">${esc(basics.label)}</p>${lists}</div></header>`
 }

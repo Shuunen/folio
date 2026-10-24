@@ -303,13 +303,13 @@ describe('company logos', () => {
   it('renders the logo of a work entry, labelled with the company name', () => {
     expect.hasAssertions()
     const html = render({ basics: { name: 'Ada' }, work: [{ image: 'icons/acme.png', name: 'Acme', position: 'Lead' }] })
-    expect(html).toContain('<img alt="Acme" class="element__logo" src="icons/acme.png">')
+    expect(html).toContain('<img alt="Acme" class="element__logo" height="34" src="icons/acme.png" width="80">')
   })
 
   it('renders the logo of a volunteer entry, labelled with the organization name', () => {
     expect.hasAssertions()
     const html = render({ basics: { name: 'Ada' }, volunteer: [{ image: 'icons/ngo.svg', organization: 'Ngo', position: 'Mentor' }] })
-    expect(html).toContain('<img alt="Ngo" class="element__logo" src="icons/ngo.svg">')
+    expect(html).toContain('<img alt="Ngo" class="element__logo" height="34" src="icons/ngo.svg" width="80">')
   })
 
   it('renders no logo when the entry has no image', () => {

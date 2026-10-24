@@ -17,6 +17,10 @@
       "inputs": ["src/**", "*.config.ts", ".oxlintrc.json"],
       "outputLogs": "errors-only"
     },
+    "//#lint:knip": {
+      "inputs": ["src/**", "*.config.ts", "package.json", "knip.json*"],
+      "outputLogs": "errors-only"
+    },
     "//#lint:types": {
       "inputs": ["src/**", "*.config.ts"],
       "outputLogs": "errors-only"
