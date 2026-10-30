@@ -1,6 +1,10 @@
 allowBuilds:
   puppeteer: true
 
+# serve pins compression 1.8.1 which has a known denial of service, remove when serve ships 1.8.2 or later
+overrides:
+  compression: ^1.8.2
+
 packages:
   - src/themes/*
 
@@ -9,15 +13,15 @@ packages:
 catalog:
   '@jsonresume/jsonresume-theme-tokyo-modernist': ^1.0.8
   '@jsonresume/schema': ^1.7.0
-  '@types/node': ^26.6.5
+  '@types/node': ^26.6.6
   '@vitest/coverage-v8': ^5.0.5
   ajv: ^8.20.0
   ajv-formats: ^3.0.1
-  knip: ~6.42.1
+  knip: ~6.44.0
   jsonresume-theme-berlin-grid: ^0.2.10
   jsonresume-theme-modern-classic: ^1.1.9
-  oxfmt: ^0.74.0
-  oxlint: ^1.89.0
+  oxfmt: ^0.75.0
+  oxlint: ^1.90.0
   oxlint-tsgolint: ^7.0.2005
   puppeteer: ^25.16.0
   react: ^19.3.1
