@@ -40,6 +40,7 @@ See [TODOS.md](TODOS.md).
 ## Thanks
 
 - [Boxy SVG](https://boxy-svg.com/) : simple & effective svg editor
+- [Bun](https://bun.sh) : super fast runtime for JavaScript and TypeScript
 - [DoYouBuzz](https://doyoubuzz.com) : for their awesome resume builder that I use to generate the JSON resume file
 - [Feather Icons](https://feathericons.com) : nice looking svg icons
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
