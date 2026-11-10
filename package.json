@@ -10,10 +10,10 @@
     "@vitest/coverage-v8": "catalog:",
     "ajv": "catalog:",
     "ajv-formats": "catalog:",
+    "bun": "catalog:",
     "jsonresume-theme-berlin-grid": "catalog:",
     "jsonresume-theme-blue-buzz": "workspace:*",
     "jsonresume-theme-modern-classic": "catalog:",
-    "bun": "catalog:",
     "knip": "catalog:",
     "oxfmt": "catalog:",
     "oxlint": "catalog:",
@@ -21,6 +21,7 @@
     "puppeteer": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "repo-check": "^2.0.0-rc.1",
     "resumed": "catalog:",
     "serve": "catalog:",
     "shuutils": "catalog:",
@@ -45,7 +46,7 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
-    "check": "turbo run lint:types lint:knip lint:format lint:issues check:resume:custom check:resume:resumed test:unit && echo check success",
+    "check": "repo-check && turbo run lint:types lint:knip lint:format lint:issues check:resume:custom check:resume:resumed test:unit && echo check success",
     "check:resume:custom": "bun src/bin/json-resume-validator.cli.ts \"data/*.json\" || exit 1 && echo custom check success",
     "check:resume:resumed": "bun src/bin/json-resume-resumed.cli.ts",
     "dev": "serve dist/resumes -l 8089",
