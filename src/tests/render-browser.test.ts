@@ -65,6 +65,7 @@ async function makeFolder(files: Record<string, unknown>) {
 
 /** give every mock back its default behaviour, puppeteer knowing where its own chrome sits */
 function resetMocks() {
+  vi.unstubAllEnvs()
   vi.restoreAllMocks()
   vi.clearAllMocks()
   executablePath.mockReturnValue(execPath)
@@ -82,18 +83,20 @@ describe(createBrowser, () => {
 
   it('falls back to a system browser when puppeteer has no chrome of its own', async () => {
     expect.hasAssertions()
+    vi.stubEnv('PUPPETEER_EXECUTABLE_PATH', '/custom/chrome')
     executablePath.mockReturnValue('')
     await createBrowser()
-    expect(launch).toHaveBeenCalledWith({ executablePath: expect.anything() })
+    expect(launch).toHaveBeenCalledWith({ executablePath: '/custom/chrome' })
   })
 
   it('falls back to a system browser when puppeteer cannot even tell where its chrome is', async () => {
     expect.hasAssertions()
+    vi.stubEnv('PUPPETEER_EXECUTABLE_PATH', '/custom/chrome')
     executablePath.mockImplementation(() => {
       throw new Error('no browser configured')
     })
     await createBrowser()
-    expect(launch).toHaveBeenCalledWith({ executablePath: expect.anything() })
+    expect(launch).toHaveBeenCalledWith({ executablePath: '/custom/chrome' })
   })
 
   it('prints a page to pdf and always closes it', async () => {

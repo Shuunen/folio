@@ -131,7 +131,7 @@ describe(localAssets, () => {
   it('resolves each target next to the resume file', () => {
     expect.hasAssertions()
     const content = { work: [{ image: 'icons/acme.png' }] }
-    expect(localAssets(content, inputPath)[0]?.source).toBe(path.join(path.sep, 'home', 'ada', 'data', 'icons', 'acme.png'))
+    expect(localAssets(content, inputPath)[0]?.source).toBe(path.resolve(path.sep, 'home', 'ada', 'data', 'icons', 'acme.png'))
   })
 
   it('keeps a logo shared by two entries only once', () => {
@@ -336,7 +336,7 @@ describe(findBrowser, () => {
   it('returns a system browser path or undefined, never an arbitrary string', () => {
     expect.hasAssertions()
     const found = findBrowser()
-    if (found !== undefined) expect(found).toMatch(/chrom/iu)
+    expect(found === undefined || /chrom/iu.test(found)).toBe(true)
   })
 })
 

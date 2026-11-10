@@ -4,7 +4,7 @@
     ".": {
       "entry": ["src/bin/*.cli.ts", "src/tests/*.test.ts"],
       "project": ["src/**/*.ts"],
-      "ignoreDependencies": ["@jsonresume/jsonresume-theme-tokyo-modernist", "jsonresume-theme-berlin-grid", "jsonresume-theme-blue-buzz", "jsonresume-theme-modern-classic", "react", "react-dom", "shuutils"]
+      "ignoreDependencies": ["@jsonresume/jsonresume-theme-tokyo-modernist", "jsonresume-theme-berlin-grid", "jsonresume-theme-blue-buzz", "jsonresume-theme-modern-classic", "react", "react-dom", "resumed", "shuutils"]
     }
   }
 }

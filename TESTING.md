@@ -29,7 +29,7 @@ Tests live in `src/tests/`, one file per unit under test:
 
 - **Unit**: the exported helpers of each CLI, called directly. Fast, no I/O beyond a temporary folder. This is where argument parsing, date formatting, escaping and the essential-field checks are pinned down.
 - **Integration**: the theme's `render` is called with whole resume objects, including the two real resumes in `data/`. It exercises every internal helper through the public contract, which is exactly what `resumed` calls.
-- **Smoke / E2E**: `src/tests/cli-e2e.test.ts` spawns `node src/bin/*.cli.ts` and asserts exit codes and output. Both CLIs export their helpers for the unit tests and only auto-run behind an `import.meta.url` guard, so these tests exist to prove that guard never breaks the real command line entry point.
+- **Smoke / E2E**: `src/tests/cli-e2e.test.ts` spawns `bun src/bin/*.cli.ts` and asserts exit codes and output. Both CLIs export their helpers for the unit tests and only auto-run behind an `import.meta.url` guard, so these tests exist to prove that guard never breaks the real command line entry point.
 
 The PDF/screenshot path of the render CLI is deliberately not covered: it drives a real Chrome through puppeteer, which is too slow and too environment-dependent for CI. Only `--help` is smoke tested there.
 

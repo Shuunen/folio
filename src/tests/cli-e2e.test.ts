@@ -15,11 +15,12 @@ const escapeChar = String.fromCodePoint(27)
  * the scripts export their helpers for the unit tests, they must still run as real clis
  * @param script the script path, relative to the repo root
  * @param args the command line arguments
+ * @param runner the runtime executing the script
  * @returns the exit code and both output streams
  */
-async function runCli(script: string, args: string[]) {
+async function runCli(script: string, args: string[], runner = 'bun') {
   try {
-    const { stderr, stdout } = await run('node', [script, ...args])
+    const { stderr, stdout } = await run(runner, [script, ...args])
     return { code: 0, stderr, stdout }
   } catch (error) {
     const failure = error as { code?: number; stderr?: string; stdout?: string }
@@ -151,5 +152,21 @@ describe('json-resume-render cli', () => {
     const { code, stdout } = await runCli(renderer, [path.join(tmpdir(), 'folio-render-missing-xyz.json')])
     expect(code).toBe(1)
     expect(stdout).toContain('no resume file found')
+  })
+})
+
+describe('json-resume-resumed cli', () => {
+  it('exits 0 and reports success on a valid resume', async () => {
+    expect.hasAssertions()
+    const { code, stdout } = await runCli('src/bin/json-resume-resumed.cli.ts', [await writeResume(validResume)])
+    expect(code).toBe(0)
+    expect(stdout).toContain('resumed check success')
+  })
+
+  it('exits 1 when no file matches the glob', async () => {
+    expect.hasAssertions()
+    const { code, stdout } = await runCli('src/bin/json-resume-resumed.cli.ts', ['nowhere/*.json'])
+    expect(code).toBe(1)
+    expect(stdout).toContain('No file matches')
   })
 })

@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 /**
  * Validate one or more JSON files against the official JSON Resume schema,
  * plus a few essential checks the schema itself does not enforce, see essentialErrors & typographyErrors below.
  * Schema source : https://github.com/jsonresume/jsonresume.org/tree/main/packages/schema
- * Usage : node src/bin/json-resume-validator.cli.ts [options] <files...>
+ * Usage : bun src/bin/json-resume-validator.cli.ts [options] <files...>
  */
 
 import { globSync } from 'node:fs'
@@ -33,13 +33,13 @@ const colors = {
 /** the number of spaces used to indent the JSON report */
 const jsonIndent = 2
 
-/** the number of leading argv entries to skip, the node binary & the script path */
+/** the number of leading argv entries to skip, the bun binary & the script path */
 const cliArgvOffset = 2
 
 const usage = `${colors.bold}json-resume-validator${colors.reset} : validate JSON files against the JSON Resume schema
 
 ${colors.bold}Usage${colors.reset}
-  node src/bin/json-resume-validator.cli.ts [options] <files or globs...>
+  bun src/bin/json-resume-validator.cli.ts [options] <files or globs...>
 
 ${colors.bold}Options${colors.reset}
   -h, --help     show this help
@@ -48,8 +48,8 @@ ${colors.bold}Options${colors.reset}
   --no-color     disable colored output
 
 ${colors.bold}Examples${colors.reset}
-  node src/bin/json-resume-validator.cli.ts resume.json
-  node src/bin/json-resume-validator.cli.ts "data/cv/*JsonResume*.json"
+  bun src/bin/json-resume-validator.cli.ts resume.json
+  bun src/bin/json-resume-validator.cli.ts "data/cv/*JsonResume*.json"
 
 Beware, in globs the parenthesis are extglob operators, quote & escape them if needed.
 

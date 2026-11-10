@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 /**
  * Render JSON Resume files to standalone HTML & PDF using the JSON Resume themes listed in the README,
  * plus an index.html listing every render as a card with a preview screenshot.
  * Themes source : https://registry.jsonresume.org
- * Usage : node src/bin/json-resume-render.cli.ts [options] [files or globs...]
+ * Usage : bun src/bin/json-resume-render.cli.ts [options] [files or globs...]
  */
 
 import { existsSync, globSync } from 'node:fs'
@@ -61,7 +61,7 @@ const themes: Theme[] = [
   { entry: 'jsonresume-theme-modern-classic/dist', name: 'modern-classic' },
 ]
 
-/** the number of leading argv entries to skip, the node binary & the script path */
+/** the number of leading argv entries to skip, the bun binary & the script path */
 const cliArgvOffset = 2
 
 /** system browsers to fall back on when puppeteer has no downloaded chrome, see `pnpm exec puppeteer browsers install chrome` */
@@ -82,7 +82,7 @@ const defaultOutput = 'dist/resumes'
 const usage = `${colors.bold}json-resume-render${colors.reset} : render JSON Resume files to html & pdf with every theme listed in the README
 
 ${colors.bold}Usage${colors.reset}
-  node src/bin/json-resume-render.cli.ts [options] [files or globs...]
+  bun src/bin/json-resume-render.cli.ts [options] [files or globs...]
 
 ${colors.bold}Options${colors.reset}
   -h, --help          show this help
@@ -93,9 +93,9 @@ ${colors.bold}Environment${colors.reset}
   PUPPETEER_EXECUTABLE_PATH  browser to use for the pdf export, defaults to puppeteer's chrome then to a system one
 
 ${colors.bold}Examples${colors.reset}
-  node src/bin/json-resume-render.cli.ts
-  node src/bin/json-resume-render.cli.ts --out dist/cv "data/my resume.json"
-  node src/bin/json-resume-render.cli.ts --theme blue-buzz "data/my resume.json"
+  bun src/bin/json-resume-render.cli.ts
+  bun src/bin/json-resume-render.cli.ts --out dist/cv "data/my resume.json"
+  bun src/bin/json-resume-render.cli.ts --theme blue-buzz "data/my resume.json"
 `
 
 /**
