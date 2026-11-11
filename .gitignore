@@ -1,6 +1,7 @@
 .cache
 .env
 .temp
+.turbo
 *.log
 *.tgz
 cache

@@ -1,34 +1,41 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
-  "globalDependencies": ["package.json", "pnpm-lock.yaml", "tsconfig*.json"],
   "tasks": {
     "//#check:resume:custom": {
-      "inputs": ["src/bin/json-resume-validator.cli.ts", "data/*.json"],
+      "dependsOn": ["//#lint:install"],
       "outputLogs": "errors-only"
     },
     "//#check:resume:resumed": {
-      "inputs": ["data/*.json"],
+      "dependsOn": ["//#lint:install"],
       "outputLogs": "errors-only"
     },
     "//#lint:format": {
+      "dependsOn": ["//#lint:install"],
       "outputLogs": "errors-only"
     },
+    "//#lint:install": {
+      "inputs": ["package.json", "pnpm-lock.yaml", "pnpm-workspace.yaml"]
+    },
     "//#lint:issues": {
-      "inputs": ["src/**", "*.config.ts", ".oxlintrc.json"],
+      "dependsOn": ["//#lint:install"],
       "outputLogs": "errors-only"
     },
     "//#lint:knip": {
-      "inputs": ["src/**", "*.config.ts", "package.json", "knip.json*"],
+      "dependsOn": ["//#lint:install"],
       "outputLogs": "errors-only"
     },
+    "//#lint:repo": {
+      "dependsOn": ["//#lint:install"],
+      "inputs": ["$TURBO_DEFAULT$", "dist/**"]
+    },
     "//#lint:types": {
-      "inputs": ["src/**", "*.config.ts"],
+      "dependsOn": ["//#lint:install"],
       "outputLogs": "errors-only"
     },
     "//#test:unit": {
-      "inputs": ["src/**", "data/**", "vitest.config.ts"],
-      "outputs": ["coverage/**"],
-      "outputLogs": "errors-only"
+      "dependsOn": ["//#lint:install"],
+      "outputLogs": "errors-only",
+      "outputs": ["coverage/**"]
     }
   }
 }
