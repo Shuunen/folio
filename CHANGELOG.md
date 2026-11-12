@@ -7,6 +7,7 @@ All notable changes to this project are documented in this file.
 ### Changed
 
 - Ignore the `*.tsbuildinfo` files in git
+- Drop the redundant `#readme` from the package homepage
 ## [5.0.0] - 2026-08-24
 
 The folio is now a JSON Resume repository. The resumes themselves are the source of truth, and they are rendered to standalone HTML and PDF with a set of themes instead of being hand maintained as a website.
