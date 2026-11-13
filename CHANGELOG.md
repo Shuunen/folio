@@ -10,6 +10,7 @@ All notable changes to this project are documented in this file.
 - Drop the redundant `#readme` from the package homepage
 - Remove a duplicated Renovate preset
 - Add a `VERSION` file
+- Cache the pnpm store in the CI
 
 ## [5.0.0] - 2026-08-24
 
