@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Send a `Content-Security-Policy` header that only runs scripts from the site and from the CDNs the resume themes use
+
 ## [5.0.1] - 2026-11-13
 
 ### Changed
