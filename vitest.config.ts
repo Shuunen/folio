@@ -11,11 +11,10 @@ export default defineConfig({
         100: true,
       },
     },
-
+    globals: true,
     include: ['src/**/*.test.ts'],
-
     pool: 'threads',
-
-    reporters: ['minimal'],
+    reporters: ['dot'],
+    silent: true,
   },
 })

@@ -11,6 +11,7 @@ All notable changes to this project are documented in this file.
 - Remove a duplicated Renovate preset
 - Add a `VERSION` file
 - Cache the pnpm store in the CI
+- Silence the test output with the dot reporter
 
 ## [5.0.0] - 2026-08-24
 
