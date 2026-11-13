@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [5.0.1] - 2026-11-13
+
 ### Changed
 
 - Ignore the `*.tsbuildinfo` files in git
