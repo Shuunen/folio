@@ -8,6 +8,7 @@ All notable changes to this project are documented in this file.
 
 - Send a `Content-Security-Policy` header that only runs scripts from the site and from the CDNs the resume themes use
 - Serve a `robots.txt` that lets crawlers index the site
+- App icons (favicon, 64, 192 and 512 pixel icons and a maskable one) listed in the web app manifest, so the app can be installed
 
 ## [5.0.1] - 2026-11-13
 
