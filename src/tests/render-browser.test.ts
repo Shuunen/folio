@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { execPath } from 'node:process'
 import { pathToFileURL } from 'node:url'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, vi } from 'vitest'
 import { createBrowser, start, type Theme } from '../bin/json-resume-render.cli.ts'
 
 vi.mock(import('node:fs/promises'), async importOriginal => {

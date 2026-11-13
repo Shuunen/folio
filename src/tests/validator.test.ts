@@ -4,7 +4,7 @@ import path from 'node:path'
 import schema from '@jsonresume/schema/schema.json' with { type: 'json' }
 import Ajv, { type ValidateFunction } from 'ajv'
 import addFormats from 'ajv-formats'
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, vi } from 'vitest'
 import { essentialErrors, expandPatterns, formatError, parseArgs, printReports, start, typographyErrors, validateFile } from '../bin/json-resume-validator.cli.ts'
 
 vi.mock(import('node:fs/promises'), async importOriginal => {

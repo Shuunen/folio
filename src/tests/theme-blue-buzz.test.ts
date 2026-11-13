@@ -1,5 +1,4 @@
 import { readFile } from 'node:fs/promises'
-import { describe, expect, it } from 'vitest'
 import theme, { buildKeywordsRegex, emphasize, parseKeywords, render } from '../themes/blue-buzz/index.js'
 
 /**

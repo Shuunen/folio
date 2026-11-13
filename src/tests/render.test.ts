@@ -1,7 +1,7 @@
 import { mkdtemp, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
-import { afterEach, beforeEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeEach } from 'vitest'
 import { buildCard, buildIndex, escapeHtml, findBrowser, isLocalImage, langOrder, localAssets, parseArgs, readResume, renderWith, selectThemes, type Theme } from '../bin/json-resume-render.cli.ts'
 
 describe(parseArgs, () => {
