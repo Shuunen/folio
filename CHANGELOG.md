@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Align the web manifest colors and the VS Code window colors on the theme color
+
 ### Added
 
 - Send a `Content-Security-Policy` header that only runs scripts from the site and from the CDNs the resume themes use

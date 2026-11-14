@@ -1,10 +1,10 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#281840",
   "display": "standalone",
   "name": "folio",
   "short_name": "folio",
   "start_url": "/",
-  "theme_color": "#ffffff",
+  "theme_color": "#4e2f7b",
   "icons": [
     {
       "src": "pwa-64x64.png",

@@ -37,8 +37,17 @@
     "wesave"
   ],
   "workbench.colorCustomizations": {
-    "activityBar.background": "#382258",
-    "titleBar.activeBackground": "#4E2F7B",
-    "titleBar.activeForeground": "#FDFCFE"
+    "activityBar.background": "#281840",
+    "activityBar.foreground": "#f9fafb",
+    "activityBarBadge.background": "#4e2f7b",
+    "activityBarBadge.foreground": "#f9fafb",
+    "statusBar.background": "#281840",
+    "statusBar.foreground": "#f9fafbcc",
+    "statusBar.inactiveBackground": "#1a102a",
+    "tab.activeBorderTop": "#4e2f7b",
+    "titleBar.activeBackground": "#4e2f7b",
+    "titleBar.activeForeground": "#f9fafb",
+    "titleBar.inactiveBackground": "#281840",
+    "titleBar.inactiveForeground": "#f9fafbaa"
   }
 }
