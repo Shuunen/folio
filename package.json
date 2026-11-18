@@ -47,6 +47,7 @@
     "url": "git+https://github.com/Shuunen/folio.git"
   },
   "scripts": {
+    "build:assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg && echo build:assets completed successfully",
     "check": "turbo run --output-logs=errors-only lint:install lint:types lint:knip lint:format lint:issues check:resume:custom check:resume:resumed test:unit lint:repo && echo check completed successfully",
     "check:resume:custom": "bun src/bin/json-resume-validator.cli.ts \"data/*.json\" || exit 1 && echo custom check success",
     "check:resume:resumed": "bun src/bin/json-resume-resumed.cli.ts",
@@ -60,7 +61,6 @@
     "lint:knip": "knip && echo lint:knip completed successfully",
     "lint:repo": "repo-check && echo lint:repo completed successfully",
     "lint:types": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && echo lint:types completed successfully || (echo Please fix type errors and run pnpm run lint:types to check for remaining type issues && exit 1)",
-    "pwa:assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg",
     "render": "bun src/bin/json-resume-render.cli.ts",
     "render:blue": "bun src/bin/json-resume-render.cli.ts --theme blue-buzz",
     "render:blue:watch": "node --watch-path=src/themes/blue-buzz --watch-path=src/bin --watch-path=data src/bin/json-resume-render.cli.ts --theme blue-buzz",

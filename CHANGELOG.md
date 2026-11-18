@@ -7,6 +7,7 @@ All notable changes to this project are documented in this file.
 ### Changed
 
 - Align the web manifest colors and the VS Code window colors on the theme color
+- Rename the icons script to `build:assets` and list the manifest icons with absolute paths
 
 ### Added
 
