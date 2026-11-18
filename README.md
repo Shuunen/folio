@@ -1,9 +1,8 @@
 # Folio
 
 [![GitHub license](https://img.shields.io/github/license/shuunen/folio.svg?color=success)](https://github.com/Shuunen/folio/blob/master/LICENSE)
-[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/folio?style=flat)](https://codeclimate.com/github/Shuunen/folio)
-[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/rrl-folio.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/rrl-folio.netlify.app)
-[![Website](https://img.shields.io/website/https/rrl-folio.netlify.app.svg)](https://rrl-folio.netlify.app)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/romain.cloud.svg?publish)](https://observatory.mozilla.org/analyze/romain.cloud)
+[![Website](https://img.shields.io/website/https/romain.cloud.svg)](https://romain.cloud)
 [![Visitors](https://hits.sh/github.com/Shuunen/folio.svg?label=visitors&color=informational)](https://hits.sh/github.com/Shuunen/folio/)
 
 > This is my personal promoting / landing / minimalist page.
