@@ -1,0 +1,24 @@
+{
+  "preset": {
+    "apple": {
+      "padding": 0,
+      "resizeOptions": {
+        "background": "#4e2f7b",
+        "fit": "contain"
+      },
+      "sizes": [180]
+    },
+    "maskable": {
+      "padding": 0,
+      "resizeOptions": {
+        "background": "#4e2f7b",
+        "fit": "contain"
+      },
+      "sizes": [512]
+    },
+    "transparent": {
+      "favicons": [[48, "favicon.ico"]],
+      "sizes": [64, 192, 512]
+    }
+  }
+}
