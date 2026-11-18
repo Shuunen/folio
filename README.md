@@ -57,4 +57,4 @@ See [TODOS.md](TODOS.md).
 - [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
-- [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate manifest.json easily
+- [Web App Manifest Generator](https://app-manifest.firebaseapp.com) : generate a manifest.webmanifest easily

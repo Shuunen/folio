@@ -8,6 +8,7 @@ All notable changes to this project are documented in this file.
 
 - Align the web manifest colors and the VS Code window colors on the theme color
 - Rename the icons script to `build:assets` and list the manifest icons with absolute paths
+- Rename the web app manifest to `manifest.webmanifest`, the standard extension
 
 ### Added
 
@@ -17,7 +18,7 @@ All notable changes to this project are documented in this file.
 
 ## [5.0.1] - 2026-11-13
 
-### Changed
+### Changed in 5.0.1
 
 - Ignore the `*.tsbuildinfo` files in git
 - Drop the redundant `#readme` from the package homepage
