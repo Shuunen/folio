@@ -1,5 +1,6 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
+  "noUpdateNotifier": true,
   "tasks": {
     "//#check:resume:custom": {
       "dependsOn": ["//#lint:install"],
